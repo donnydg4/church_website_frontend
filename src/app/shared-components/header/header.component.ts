@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {Platform} from "@ionic/angular";
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private platform: Platform) {
+    this.onResize();
+  }
+
+  public platformWidth = this.platform.width()
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event?) {
+    this.platformWidth = this.platform.width();
+    console.log(this.platformWidth);
+  }
 
   ngOnInit() {}
 

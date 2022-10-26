@@ -1,32 +1,45 @@
+  <ion-toolbar style="--min-height: 10vh">
 
-<ion-toolbar style="height: 100%;">
+    <ion-buttons slot="start" class="left-side">
+      <a href ="/home"><img src="assets/icon/church_home_logo.svg" style="height: 7vh;"> </a>
+    </ion-buttons>
 
-  <ion-buttons slot="start">
-    <ion-button> Logo</ion-button>
-  </ion-buttons>
+    <ng-container *ngIf="platformWidth > 700">
+      <ion-buttons slot="end" class="right-side">
 
-  <ion-buttons slot="end">
+        <ion-button>
+          About
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </ion-button>
 
-    <ion-button>
-      About
-    </ion-button>
+        <ion-button>
+          Connect
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </ion-button>
 
-     <ion-button>
-      Connect
-    </ion-button>
+        <ion-button>
+          Watch
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </ion-button>
 
-     <ion-button>
-      Watch
-    </ion-button>
+        <ion-button size="large">
+          Events
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </ion-button>
 
-     <ion-button>
-      Events
-    </ion-button>
+        <ion-button fill="outline">
+          Give
+        </ion-button>
 
-     <ion-button>
-      Give
-    </ion-button>
+      </ion-buttons>
+    </ng-container>
 
-  </ion-buttons>
+    <ng-container *ngIf="platformWidth < 700">
+      <ion-buttons slot="end" class="right-side">
+        <ion-button>
+          <ion-icon class="size"name="menu-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ng-container>
 
-</ion-toolbar>
+  </ion-toolbar>
