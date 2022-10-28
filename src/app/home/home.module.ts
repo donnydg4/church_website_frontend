@@ -6,6 +6,10 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {HeaderComponent} from "../shared-components/header/header.component";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
+
 
 
 @NgModule({
@@ -13,7 +17,10 @@ import {HeaderComponent} from "../shared-components/header/header.component";
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   declarations: [HomePage, HeaderComponent]
 })
