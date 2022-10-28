@@ -9,6 +9,7 @@ import {HeaderComponent} from "../shared-components/header/header.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import {FooterComponent} from "../shared-components/footer/footer.component";
 
 
 
@@ -22,6 +23,6 @@ import {MatMenuModule} from "@angular/material/menu";
     MatButtonModule,
     MatMenuModule
   ],
-  declarations: [HomePage, HeaderComponent]
+    declarations: [HomePage, HeaderComponent, FooterComponent]
 })
 export class HomePageModule {}
