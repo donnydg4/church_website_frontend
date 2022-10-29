@@ -1,15 +1,20 @@
-ion-title {
-  text-align: center;
-}
+
 ion-grid {
   height: 100%;
   padding-top: 25px;
 }
 ion-text {
   letter-spacing: 1px;
+  line-height: 1.75;
+  text-align: center;
 }
 ion-button {
   font-size: 15px;
   letter-spacing: 1px;
   margin-top: 2%;
+}
+
+ion-icon {
+  font-size: 28px;
+  margin-right: 5%;
 }
