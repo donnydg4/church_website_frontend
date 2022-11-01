@@ -1,6 +1,6 @@
 video {
   width: 100%;
-  height: 800px;
+  height: 920px;
   object-fit: fill;
 }
 
@@ -17,5 +17,12 @@ div.about {
 
 ion-text.about {
   font-size: 20px;
+}
+
+ion-button.about {
+  font-size: 15px;
+  height: 3.85em;
+  font-family: Roboto;
+  font-weight: bold;
 }
 
