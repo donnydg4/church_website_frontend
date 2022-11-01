@@ -1,18 +1,18 @@
 video {
   width: 100%;
-  height: 920px;
+  height: 800px;
   object-fit: fill;
 }
 
 ion-title.about {
   font-size: 40px;
-  margin-top: 5%;
+  margin-top: 8%;
   padding: 0px;
   font-family: Roboto;
 }
 
 div.about {
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 ion-text.about {
@@ -25,4 +25,7 @@ ion-button.about {
   font-family: Roboto;
   font-weight: bold;
 }
-
+ion-icon.app {
+  font-size: 35px;
+  color: #595959;
+}
