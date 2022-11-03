@@ -4,6 +4,7 @@ video {
   object-fit: fill;
 }
 
+//about section
 ion-title.about {
   font-size: 40px;
   margin-top: 8%;
@@ -25,7 +26,29 @@ ion-button.about {
   font-family: Roboto;
   font-weight: bold;
 }
+
 ion-icon.app {
   font-size: 35px;
   color: #595959;
+}
+
+//new here section
+ion-title.new_here {
+  margin-top: 1%;
+  padding: 0;
+  font-size: 40px;
+  font-family: Roboto;
+  color: white;
+}
+div.new_here {
+  margin-top: 2%;
+  color: white;
+}
+ion-button.new_here {
+  font-size: 15px;
+  height: 3.85em;
+  font-family: Roboto;
+  font-weight: bold;
+  color: white;
+  --border-color: white;
 }
