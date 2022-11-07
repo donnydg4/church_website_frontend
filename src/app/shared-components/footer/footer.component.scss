@@ -32,3 +32,8 @@ ion-icon {
 .mixed {
   color: #f54c0f;
 }
+
+ion-item {
+  width: 50%;
+  --background-hover-opacity: .15;
+}

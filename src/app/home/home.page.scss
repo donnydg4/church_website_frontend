@@ -17,7 +17,10 @@ div.about {
 }
 
 ion-text.about {
-  font-size: 20px;
+  font-size: 1.3em;
+  font-weight: lighter;
+  font-family: Arial;
+  line-height: 1.5em;
 }
 
 ion-button.about {
@@ -39,16 +42,22 @@ ion-title.new_here {
   font-size: 40px;
   font-family: Roboto;
   color: white;
+  font-weight: normal;
 }
 div.new_here {
-  margin-top: 2%;
+  margin-top: 5%;
   color: white;
 }
 ion-button.new_here {
   font-size: 15px;
   height: 3.85em;
   font-family: Roboto;
-  font-weight: bold;
   color: white;
   --border-color: white;
+}
+ion-text.new_here {
+  font-size: 1.3em;
+  font-weight: lighter;
+  font-family: Arial;
+  line-height: 1.5em;
 }
