@@ -13,49 +13,93 @@
     <ng-container *ngIf="platformWidth > 725">
       <ion-buttons slot="end" class="right-side">
 
-        <ion-button [matMenuTriggerFor]="about">
-          About
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-        <mat-menu #about="matMenu">
-          <button mat-menu-item>OUR CHURCH</button>
-          <button mat-menu-item>OUR MINISTRIES</button>
-          <button mat-menu-item>MINISTRIES WE SUPPORT</button>
-          <button mat-menu-item>LEADERSHIP</button>
-        </mat-menu>
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">About</ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
 
-        <ion-button [matMenuTriggerFor]="connect">
-          Connect
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-        <mat-menu #connect="matMenu">
-          <button mat-menu-item>SERVICE TIMES</button>
-          <button mat-menu-item>PRAYER</button>
-          <button mat-menu-item>DIRECTIONS</button>
-          <button mat-menu-item>CONTACT US</button>
-        </mat-menu>
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Connect</ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
 
-        <ion-button [matMenuTriggerFor]="watch">
-          Watch
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-        <mat-menu #watch="matMenu">
-          <button mat-menu-item>SERMONS</button>
-          <button mat-menu-item>SERIES</button>
-          <button mat-menu-item>DEVOTIONALS</button>
-          <button mat-menu-item>GUEST SPEAKERS</button>
-        </mat-menu>
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Watch</ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
 
-        <ion-button [matMenuTriggerFor]="events">
-          Events
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-        <mat-menu #events="matMenu">
-          <button mat-menu-item>CALENDAR</button>
-          <button mat-menu-item>COMMUNITY EVENTS</button>
-          <button mat-menu-item>MISSIONS TRIPS</button>
-          <button mat-menu-item>UPCOMING EVENTS</button>
-        </mat-menu>
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Events</ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
+<!--        <ion-button [matMenuTriggerFor]="about">-->
+<!--          About-->
+<!--          <ion-icon name="chevron-down-outline"></ion-icon>-->
+<!--        </ion-button>-->
+<!--        <mat-menu #about="matMenu">-->
+<!--          <button mat-menu-item>OUR CHURCH</button>-->
+<!--          <button mat-menu-item>OUR MINISTRIES</button>-->
+<!--          <button mat-menu-item>MINISTRIES WE SUPPORT</button>-->
+<!--          <button mat-menu-item>LEADERSHIP</button>-->
+<!--        </mat-menu>-->
+
+<!--        <ion-button [matMenuTriggerFor]="connect">-->
+<!--          Connect-->
+<!--          <ion-icon name="chevron-down-outline"></ion-icon>-->
+<!--        </ion-button>-->
+<!--        <mat-menu #connect="matMenu">-->
+<!--          <button mat-menu-item>SERVICE TIMES</button>-->
+<!--          <button mat-menu-item>PRAYER</button>-->
+<!--          <button mat-menu-item>DIRECTIONS</button>-->
+<!--          <button mat-menu-item>CONTACT US</button>-->
+<!--        </mat-menu>-->
+
+<!--        <ion-button [matMenuTriggerFor]="watch">-->
+<!--          Watch-->
+<!--          <ion-icon name="chevron-down-outline"></ion-icon>-->
+<!--        </ion-button>-->
+<!--        <mat-menu #watch="matMenu">-->
+<!--          <button mat-menu-item>SERMONS</button>-->
+<!--          <button mat-menu-item>SERIES</button>-->
+<!--          <button mat-menu-item>DEVOTIONALS</button>-->
+<!--          <button mat-menu-item>GUEST SPEAKERS</button>-->
+<!--        </mat-menu>-->
+
+<!--        <ion-button [matMenuTriggerFor]="events">-->
+<!--          Events-->
+<!--          <ion-icon name="chevron-down-outline"></ion-icon>-->
+<!--        </ion-button>-->
+<!--        <mat-menu #events="matMenu">-->
+<!--          <button mat-menu-item>CALENDAR</button>-->
+<!--          <button mat-menu-item>COMMUNITY EVENTS</button>-->
+<!--          <button mat-menu-item>MISSIONS TRIPS</button>-->
+<!--          <button mat-menu-item>UPCOMING EVENTS</button>-->
+<!--        </mat-menu>-->
 
         <ion-button>
           Store
