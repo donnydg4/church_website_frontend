@@ -3,7 +3,7 @@ ion-icon.size {
 }
 
 ion-button {
-  width: 100px;
+  width: 105px;
 }
 
 ion-buttons.right-side {
@@ -20,4 +20,24 @@ ion-icon {
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.button {
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.mat-menu-item {
+  font-family: Arial;
+  font-weight: bold;
+  color: white;
+}
+
+.mat-menu-content.mat-menu-panel {
+  background-color: red !important;
+  color: green;
+}
+.mat-menu-panel {
+  color: red;
+  background-color: red;
 }

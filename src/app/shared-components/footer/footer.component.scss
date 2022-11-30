@@ -1,7 +1,6 @@
 
 ion-grid {
-  height: 100%;
-  padding-top: 25px;
+  padding: 50px;
 }
 ion-text {
   letter-spacing: 1px;
@@ -16,7 +15,7 @@ ion-button {
 
 ion-icon {
   font-size: 28px;
-  margin-right: 5%;
+  //margin-right: 5%;
 }
 
 .red {
@@ -36,4 +35,6 @@ ion-icon {
 ion-item {
   width: 50%;
   --background-hover-opacity: .15;
+  margin: 0 auto;
+  text-align: center;
 }
