@@ -12,4 +12,8 @@ export class CalendarPage implements OnInit {
   ngOnInit() {
   }
 
+  hello() {
+    console.log('hello');
+  }
+
 }

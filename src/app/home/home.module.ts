@@ -14,14 +14,18 @@ import {FooterComponent} from "../shared-components/footer/footer.component";
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule
+    ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
   ],
     declarations: [HomePage, HeaderComponent, FooterComponent]
 })

@@ -2,17 +2,19 @@ ion-icon.size {
   font-size: 40px;
 }
 
+mat-toolbar {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
 ion-button {
-  width: 105px;
+  width: auto;
+  font-weight: bold;
+  font-family: Arial;
+  display: inline-block;
+  margin: 0px;
 }
 
-ion-buttons.right-side {
-  margin-right: 3%;
-}
-
-ion-buttons.left-side {
-  margin-left: 2%
-}
 
 ion-icon {
   font-size: 15px;
@@ -20,11 +22,6 @@ ion-icon {
 
 .spacer {
   flex: 1 1 auto;
-}
-
-.button {
-  font-weight: bold;
-  font-family: Arial;
 }
 
 //Drop-down button group
@@ -37,6 +34,7 @@ ion-icon {
   position: relative;
   display: inline-block;
 }
+
 .inner-center-div {
   display: flex;
   text-align: center;
@@ -45,21 +43,31 @@ ion-icon {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  padding: 15px;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 10px 12px;
   text-decoration: none;
+  display: block;
+  font-size: .70em;
+  font-family: "Segoe UI";
+  font-weight: bold
+}
+
+.dropdown-content a:hover {
+  color: purple;
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  border-bottom: 3px solid purple;
+}
