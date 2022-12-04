@@ -1,12 +1,16 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { CalendarPage } from './calendar.page';
+import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.component";
+import {CalendarPage} from "./calendar.page";
 
 const routes: Routes = [
   {
-    path: '',
-    component: CalendarPage
+    path: 'calendar',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', component: CalendarPage},
+    ]
   }
 ];
 

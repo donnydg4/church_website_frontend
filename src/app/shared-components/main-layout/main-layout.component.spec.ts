@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { MainLayoutComponent } from './main-layout.component';
+import {MainLayoutComponent} from './main-layout.component';
 
 describe('MainLayoutComponent', () => {
   let component: MainLayoutComponent;
