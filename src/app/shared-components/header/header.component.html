@@ -1,33 +1,79 @@
-  <ion-toolbar style="--min-height: 10vh">
+<ion-header style="height: 100%">
 
-    <ion-buttons slot="start" class="left-side">
-      <a href ="/home"><img src="assets/icon/church_home_logo.svg" style="height: 7vh;"> </a>
+  <mat-toolbar style="height: 12vh; background: white">
+
+    <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
+      <a routerLink="/home">
+        <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
+      </a>
     </ion-buttons>
+
+    <span class="spacer"></span>
 
     <ng-container *ngIf="platformWidth > 725">
       <ion-buttons slot="end" class="right-side">
 
-        <ion-button>
-          About
-          <ion-icon name="chevron-down-outline"></ion-icon>
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">ABOUT
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a routerLink="#">OUR CHURCH</a>
+            <a routerLink="#">OUR MINISTRIES</a>
+            <a routerLink="#">LEADERSHIP</a>
+            <a routerLink="#">MINISTRIES WE SUPPORT</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Connect
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </ion-button>
+          </div>
+          <div class="dropdown-content">
+              <a routerLink="#">SERVICE TIMES</a>
+              <a routerLink="#">PRAYER</a>
+              <a routerLink="#">DIRECTIONS</a>
+              <a routerLink="#">CONTACT US</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Watch
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a routerLink="#">SERMONS</a>
+            <a routerLink="#">SERIES</a>
+            <a routerLink="#">DEVOTIONALS</a>
+            <a routerLink="#">GUEST SPEAKERS</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Events
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a routerLink="/calendar">CALENDAR</a>
+            <a routerLink="#">MISSIONS TRIPS</a>
+            <a routerLink="#">COMMUNITY EVENTS</a>
+            <a routerLink="#">UPCOMING EVENTS</a>
+          </div>
+        </div>
+
+        <ion-button style="margin-right: 2%">
+          Store
         </ion-button>
 
-        <ion-button>
-          Connect
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-
-        <ion-button>
-          Watch
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-
-        <ion-button size="large">
-          Events
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </ion-button>
-
-        <ion-button fill="outline">
+        <ion-button fill="outline" style="width: 80px;">
           Give
         </ion-button>
 
@@ -37,9 +83,10 @@
     <ng-container *ngIf="platformWidth < 725">
       <ion-buttons slot="end" class="right-side">
         <ion-button>
-          <ion-icon class="size"name="menu-outline"></ion-icon>
+          <ion-icon class="size" name="menu-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ng-container>
 
-  </ion-toolbar>
+  </mat-toolbar>
+</ion-header>
