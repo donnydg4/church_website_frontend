@@ -57,16 +57,22 @@
               {{dateTime}}
             </ion-text>
           </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="4" style="padding: 10px">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Tuesday</ion-card-title>
-            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
-          </ion-card-header>
-
+          <ion-card-content>
+            <ion-title class="in-card">
+              {{title}}
+            </ion-title>
+            <ion-text>
+              {{dateTime}}
+            </ion-text>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-title class="in-card">
+              {{title}}
+            </ion-title>
+            <ion-text>
+              {{dateTime}}
+            </ion-text>
+          </ion-card-content>
           <ion-card-content>
             <ion-title class="in-card">
               {{title}}
@@ -85,6 +91,40 @@
             <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
           </ion-card-header>
 
+          <ion-card-content>
+            <ion-title class="in-card">
+              {{title}}
+            </ion-title>
+            <ion-text>
+              {{dateTime}}
+            </ion-text>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-title class="in-card">
+              {{title}}
+            </ion-title>
+            <ion-text>
+              {{dateTime}}
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="4" style="padding: 10px">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Tuesday</ion-card-title>
+            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-title class="in-card">
+              {{title}}
+            </ion-title>
+            <ion-text>
+              {{dateTime}}
+            </ion-text>
+          </ion-card-content>
           <ion-card-content>
             <ion-title class="in-card">
               {{title}}
@@ -98,5 +138,6 @@
 
     </ion-row>
   </ion-grid>
+  <br><br><br>
   <app-footer></app-footer>
 </ion-content>
