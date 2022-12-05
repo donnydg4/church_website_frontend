@@ -20,7 +20,7 @@
           <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
         <p>selected range: {{dateRange.value | json}}</p>
-        <p>selected range: {{dateRange.value.start | json}}</p>
+        <p>selected range: {{dateRange.value.start | date: 'MM-dd-yyyy'}}</p>
       </ion-col>
     </ion-row>
   </ion-grid>
