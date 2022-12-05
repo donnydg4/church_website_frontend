@@ -9,6 +9,7 @@ ion-title {
 ion-grid.calendar {
   padding-top: 90px;
   margin-left: 13%;
+  margin-right: 13%;
 }
 
 mat-form-field {
@@ -37,6 +38,28 @@ mat-form-field {
   .mat-calendar-body-cell-content.mat-focus-indicator {
     border-radius: 5px;
   }
+}
+
+//card for calendar
+ion-card {
+  margin: 0px;
+  padding: 10px
+}
+ion-card-title {
+  font-size: 28px;
+  font-weight: normal;
+}
+ion-card-subtitle {
+  font-size: 16px;
+}
+ion-card-content {
+  font-size: 14px;
+  color: black
+}
+ion-title {
+  font-size: 20px;
+  color: darkblue;
+  padding-right: 0px;
 }
 
 

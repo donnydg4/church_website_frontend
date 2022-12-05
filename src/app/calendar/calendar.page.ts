@@ -13,7 +13,8 @@ export class CalendarPage implements OnInit {
   minDate: Date;
   maxDate: Date;
   twoWeeksDate: Date;
-
+  title: string = 'Christmas Community Outreach'
+  dateTime: string = "4:30pm @ The Father's House Church"
 
 
   constructor() {

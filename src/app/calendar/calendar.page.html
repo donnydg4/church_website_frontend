@@ -18,16 +18,30 @@
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
-        <p>selected range: {{dateRange.value | json}}</p>
-        <p>selected range: {{dateRange.value.start | date: 'MM-dd-yyyy'}}</p>
+<!--        <p>selected range: {{dateRange.value | json}}</p>-->
+<!--        <p>selected range: {{dateRange.value.start | date: 'MM-dd-yyyy'}}</p>-->
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
+      <!--*ngfor will be used here to loop through the objects-->
+      <ion-col size="4" style="padding: 0px">
         <ion-card>
+          <ion-card-header>
+            <ion-card-title>Tuesday</ion-card-title>
+            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
+          </ion-card-header>
 
+          <ion-card-content>
+            <ion-title>
+              {{title}}
+            </ion-title>
+            <ion-text>
+              {{dateTime}}
+            </ion-text>
+          </ion-card-content>
         </ion-card>
       </ion-col>
+
     </ion-row>
   </ion-grid>
   <app-footer></app-footer>
