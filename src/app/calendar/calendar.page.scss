@@ -1,10 +1,12 @@
 ion-title {
-  font-size: 54px;
+  font-size: 58px;
+  font-family: Arial;
   font-weight: normal;
   padding-left: 0px;
+  margin-bottom: 1%;
 }
 
-ion-row.calendar {
-  padding-top: 100px;
-  margin-left: 7%;
+ion-grid.calendar {
+  padding-top: 90px;
+  margin-left: 13%;
 }
