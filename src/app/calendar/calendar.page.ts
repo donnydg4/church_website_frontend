@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {DatePipe} from "@angular/common";
 import {D} from "@angular/cdk/keycodes";
 import {FormControl, FormGroup} from "@angular/forms";
+import {AllChurchInformationService} from "../service/all-church-information.service";
+import {CalendarEvents} from "../models/calendar-events.model";
+import {CalendarModel} from "../models/calendar.model";
 
 @Component({
   selector: 'app-calendar',
@@ -13,11 +16,12 @@ export class CalendarPage implements OnInit {
   minDate: Date;
   maxDate: Date;
   twoWeeksDate: Date;
-  title: string = 'Christmas Community Outreach'
-  dateTime: string = "4:30pm @ The Father's House Church"
+  calendarEvents: CalendarModel[] = this.calendarArray.getCalendar();
+  options = { weekday: 'long' } as const;
 
 
-  constructor() {
+
+  constructor(private calendarArray: AllChurchInformationService) {
     const date = new Date();
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth(); //getMonth starts at 0
@@ -28,6 +32,8 @@ export class CalendarPage implements OnInit {
     this.twoWeeksDate = new Date(currentYear, currentMonth, currentDate + 14);
     this.maxDate = new Date(currentYear, currentMonth, currentDate + 21);
 
+    console.log(this.calendarEvents);
+    console.log(this.calendarEvents);
 
   }
 
@@ -37,5 +43,7 @@ export class CalendarPage implements OnInit {
       end: new FormControl<Date | null>(this.twoWeeksDate)
     });
   }
+
+
 
 }

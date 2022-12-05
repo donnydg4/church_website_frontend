@@ -22,115 +22,21 @@
 <!--        <p>selected range: {{dateRange.value.start | date: 'MM-dd-yyyy'}}</p>-->
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row *ngIf="calendarEvents">
+
       <!--*ngfor will be used here to loop through the objects-->
-      <ion-col size="4" style="padding: 10px">
+      <ion-col size="4" style="padding: 10px" *ngFor="let events of calendarEvents">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Tuesday</ion-card-title>
-            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
+            <ion-card-title>{{events.date.toLocaleDateString('en-us', options)}}</ion-card-title>
+            <ion-card-subtitle>{{events.date | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
           </ion-card-header>
-
-          <ion-card-content>
+          <ion-card-content *ngFor="let content of events.events">
             <ion-title class="in-card">
-              {{title}}
+              {{content.title}}
             </ion-title>
             <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="4" style="padding: 10px">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Tuesday</ion-card-title>
-            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="4" style="padding: 10px">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Tuesday</ion-card-title>
-            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="4" style="padding: 10px">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Tuesday</ion-card-title>
-            <ion-card-subtitle>{{dateRange.value.start | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
-            </ion-text>
-          </ion-card-content>
-          <ion-card-content>
-            <ion-title class="in-card">
-              {{title}}
-            </ion-title>
-            <ion-text>
-              {{dateTime}}
+              {{content.description}}
             </ion-text>
           </ion-card-content>
         </ion-card>
