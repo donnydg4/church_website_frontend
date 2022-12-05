@@ -10,3 +10,33 @@ ion-grid.calendar {
   padding-top: 90px;
   margin-left: 13%;
 }
+
+mat-form-field {
+  font-size: 16px;
+  font-family: Roboto;
+  width: auto;
+}
+
+//change border of mat form field on click as well
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: purple;
+  }
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-datepicker-toggle-active {
+    color: purple;
+  }
+  .mat-calendar-body-selected {
+    background-color: purple;
+    color: white;
+    opacity: .75;
+  }
+  .mat-calendar-body-cell-content.mat-focus-indicator {
+    border-radius: 5px;
+  }
+}
+
+

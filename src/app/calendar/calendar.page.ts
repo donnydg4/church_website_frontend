@@ -25,7 +25,7 @@ export class CalendarPage implements OnInit {
     console.log(currentYear, currentMonth, currentDate)
     this.minDate = new Date(currentYear, currentMonth, currentDate);
     this.twoWeeksDate = new Date(currentYear, currentMonth, currentDate + 14);
-    this.maxDate = new Date(currentYear, currentMonth + 1, currentDate);
+    this.maxDate = new Date(currentYear, currentMonth, currentDate + 21);
 
 
   }
@@ -35,9 +35,6 @@ export class CalendarPage implements OnInit {
       start: new FormControl<Date | null>(this.minDate),
       end: new FormControl<Date | null>(this.twoWeeksDate)
     });
-  }
-
-  method() {
   }
 
 }
