@@ -5,6 +5,10 @@ import {IonicModule} from '@ionic/angular';
 import {CalendarPageRoutingModule} from './calendar-routing.module';
 import {CalendarPage} from './calendar.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   imports: [
@@ -12,7 +16,11 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
     FormsModule,
     IonicModule,
     CalendarPageRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
   declarations: [CalendarPage]
 })
