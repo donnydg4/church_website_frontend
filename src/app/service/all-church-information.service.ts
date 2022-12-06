@@ -20,17 +20,17 @@ export class AllChurchInformationService {
     },
     {
       date: new Date(2022, 11, 8), events: [
-        {title: 'fast', description: '5:00pm @ fasting'},
-        {title: 'gui', description: '5:00pm @ gui'},
-        {title: 'sleep', description: '5:00pm @ sleeping'},
+        {title: 'Christmas Community Outreach', description: '5:00pm @ fasting'},
+        {title: 'July 4th Community Outreach', description: '5:00pm @ gui'},
+        {title: 'Thanksgiving Community Outreach', description: '5:00pm @ sleeping'},
       ]
     },
     {
       date: new Date(2022, 11, 17), events: [
-        {title: 'asdf', description: '5:00pm @ asdf'},
-        {title: 'reter', description: '5:00pm @ reter'},
-        {title: 'qwerty', description: '5:00pm @ qwerty'},
-        {title: 'vgrf', description: '5:00pm @ vgrf'},
+        {title: 'Guest Speaker: Ivan Tait', description: '5:00pm @ asdf'},
+        {title: 'Worship Night', description: '5:00pm @ reter'},
+        {title: 'Guest Speaker: Craig', description: '5:00pm @ qwerty'},
+        {title: 'Guest Speaker: Ivan Tait', description: '5:00pm @ vgrf'},
       ]
     }
   ];

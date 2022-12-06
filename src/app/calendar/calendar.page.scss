@@ -56,12 +56,16 @@ ion-card-subtitle {
 }
 ion-card-content {
   font-size: 14px;
-  color: black
+  color: black;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 ion-title.in-card {
   font-size: 20px;
   color: darkblue;
   padding-right: 0px;
+  text-overflow: unset;
+  font-family: Roboto;
 }
 
 

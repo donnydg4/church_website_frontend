@@ -6,7 +6,7 @@
           <ion-title>Calendar</ion-title>
         </div>
       </ion-col>
-      <ion-col>
+      <ion-col style="padding-left: 10px">
         <mat-form-field appearance="outline">
           <mat-label style="color: purple">Enter a date range</mat-label>
           <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker"
@@ -18,14 +18,12 @@
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
-<!--        <p>selected range: {{dateRange.value | json}}</p>-->
-<!--        <p>selected range: {{dateRange.value.start | date: 'MM-dd-yyyy'}}</p>-->
       </ion-col>
     </ion-row>
     <ion-row *ngIf="calendarEvents">
 
       <!--*ngfor will be used here to loop through the objects-->
-      <ion-col size="4" style="padding: 10px" *ngFor="let events of calendarEvents">
+      <ion-col size-lg="4" style="padding: 10px" *ngFor="let events of calendarEvents" size-xs="12">
         <ion-card>
           <ion-card-header>
             <ion-card-title>{{events.date.toLocaleDateString('en-us', options)}}</ion-card-title>
@@ -33,7 +31,9 @@
           </ion-card-header>
           <ion-card-content *ngFor="let content of events.events">
             <ion-title class="in-card">
-              {{content.title}}
+              <div class="ion-text-wrap">
+                {{content.title}}
+              </div>
             </ion-title>
             <ion-text>
               {{content.description}}
