@@ -10,7 +10,7 @@
 
     <span class="spacer"></span>
 
-    <ng-container *ngIf="platformWidth > 725">
+    <ng-container *ngIf="platformWidth > 780">
       <ion-buttons slot="end" class="right-side">
 
         <div class="dropdown">
@@ -69,18 +69,18 @@
           </div>
         </div>
 
-        <ion-button style="margin-right: 2%">
+        <ion-button style="min-width: 80px; padding-right: 10px">
           Store
         </ion-button>
 
-        <ion-button fill="outline" style="width: 80px;">
+        <ion-button fill="outline" style="width: 100px;" href="https://app.securegive.com/tfhfreeport/main/donate/category">
           Give
         </ion-button>
 
       </ion-buttons>
     </ng-container>
 
-    <ng-container *ngIf="platformWidth < 725">
+    <ng-container *ngIf="platformWidth < 780">
       <ion-buttons slot="end" class="right-side">
         <ion-button>
           <ion-icon class="size" name="menu-outline"></ion-icon>
