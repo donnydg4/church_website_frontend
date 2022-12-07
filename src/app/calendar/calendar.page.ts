@@ -1,9 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {DatePipe} from "@angular/common";
-import {D} from "@angular/cdk/keycodes";
 import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {CalendarEvents} from "../models/calendar-events.model";
 import {CalendarModel} from "../models/calendar.model";
 
 @Component({

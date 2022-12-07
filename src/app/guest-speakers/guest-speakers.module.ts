@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { GuestSpeakersPageRoutingModule } from './guest-speakers-routing.module';
+import {GuestSpeakersPageRoutingModule} from './guest-speakers-routing.module';
 
-import { GuestSpeakersPage } from './guest-speakers.page';
+import {GuestSpeakersPage} from './guest-speakers.page';
 
 @NgModule({
   imports: [

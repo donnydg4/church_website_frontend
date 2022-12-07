@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { SermonsPage } from './sermons.page';
+import {SermonsPage} from './sermons.page';
 import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.component";
 
 const routes: Routes = [

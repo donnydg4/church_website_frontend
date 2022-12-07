@@ -13,8 +13,6 @@ import {MatMenuModule} from "@angular/material/menu";
 import {HomePageModule} from "./home/home.module";
 import {SharedComponentsModule} from "./shared-components/shared-components.module";
 import {CalendarPageModule} from "./calendar/calendar.module";
-import {MatNativeDateModule} from "@angular/material/core";
-import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [AppComponent],
