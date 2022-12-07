@@ -4,6 +4,8 @@ import {MainLayoutComponent} from "./shared-components/main-layout/main-layout.c
 import {CalendarPage} from "./calendar/calendar.page";
 import {SermonsPage} from "./sermons/sermons.page";
 import {DevotionalsPage} from "./devotionals/devotionals.page";
+import {SeriesPage} from "./series/series.page";
+import {GuestSpeakersPage} from "./guest-speakers/guest-speakers.page";
 
 const routes: Routes = [
   {
@@ -31,7 +33,23 @@ const routes: Routes = [
     children: [
       { path: '', component: DevotionalsPage}
     ]
+  },
+  {
+    path: 'series',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', component: SeriesPage}
+    ]
+  },
+  {
+    path: 'guest-speakers',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', component: GuestSpeakersPage}
+    ]
   }
+
+
 
 ];
 
