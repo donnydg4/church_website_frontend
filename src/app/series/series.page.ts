@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SeriesPage implements OnInit {
 
+  seriesTitle = 'Series';
+
   constructor() { }
 
   ngOnInit() {

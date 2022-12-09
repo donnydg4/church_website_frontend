@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SermonsPage implements OnInit {
 
+  sermonTitle = 'Sermons';
+
   constructor() { }
 
   ngOnInit() {
