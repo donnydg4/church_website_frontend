@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {WatchModel} from "../../models/watch.model";
 
 @Component({
   selector: 'app-all-watch',
@@ -8,7 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class AllWatchComponent implements OnInit {
 
   @Input() title = '';
-  @Input() objectArray
+  @Input() objectArray: WatchModel[];
 
   constructor() { }
 
