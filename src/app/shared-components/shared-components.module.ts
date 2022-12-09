@@ -6,6 +6,7 @@ import {HeaderComponent} from "./header/header.component";
 import {NgModule} from "@angular/core";
 import {IonicModule} from "@ionic/angular";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {AllWatchComponent} from "./all-watch/all-watch.component";
 
 @NgModule({
   imports: [
@@ -17,12 +18,14 @@ import {MatToolbarModule} from "@angular/material/toolbar";
   exports: [
     MainLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AllWatchComponent
   ],
   declarations: [
     MainLayoutComponent,
     FooterComponent,
     HeaderComponent,
+    AllWatchComponent
   ]
 })
 export class SharedComponentsModule {}

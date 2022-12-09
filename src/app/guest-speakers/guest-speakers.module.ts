@@ -7,14 +7,16 @@ import {IonicModule} from '@ionic/angular';
 import {GuestSpeakersPageRoutingModule} from './guest-speakers-routing.module';
 
 import {GuestSpeakersPage} from './guest-speakers.page';
+import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    GuestSpeakersPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        GuestSpeakersPageRoutingModule,
+        SharedComponentsModule
+    ],
   declarations: [GuestSpeakersPage]
 })
 export class GuestSpeakersPageModule {}

@@ -30,7 +30,6 @@ export class CalendarPage implements OnInit {
     this.maxDate = new Date(currentYear, currentMonth, currentDate + 21);
 
     console.log(this.calendarEvents);
-    console.log(this.calendarEvents);
 
   }
 
