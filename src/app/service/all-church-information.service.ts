@@ -39,25 +39,25 @@ export class AllChurchInformationService {
   watchModel: WatchModel[] = [
     {
       type: 'sermons', description: 'hello',
-      date: new Date(2022, 11, 5), title: 'glory', category: 'sermons',
+      date: new Date(2022, 11, 5), title: 'Let it Go', category: 'sermons',
       imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
       videoId: 'fjeif'
     },
     {
       type: 'sermons', description: 'hello',
-      date: new Date(2022, 11, 7), title: 'hero', category: 'sermons',
+      date: new Date(2022, 11, 7), title: 'Who are you?', category: 'sermons',
+      imageUrl: './assets/2021 devotionals.jpg',
+      videoId: 'fjeif'
+    },
+    {
+      type: 'sermons', description: 'hello',
+      date: new Date(2022, 11, 6), title: 'Faith Of You', category: 'sermons',
       imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
       videoId: 'fjeif'
     },
     {
       type: 'sermons', description: 'hello',
-      date: new Date(2022, 11, 6), title: 'faith', category: 'sermons',
-      imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
-      videoId: 'fjeif'
-    },
-    {
-      type: 'sermons', description: 'hello',
-      date: new Date(2022, 11, 8), title: 'amen', category: 'sermons',
+      date: new Date(2022, 11, 8), title: 'Lets Go', category: 'sermons',
       imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
       videoId: 'fjeif'
     }
