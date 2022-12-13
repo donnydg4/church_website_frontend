@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {WatchModel} from "../models/watch.model";
+import {AllChurchInformationService} from "../service/all-church-information.service";
 
 @Component({
   selector: 'app-devotionals',
@@ -7,9 +9,11 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DevotionalsPage implements OnInit {
 
+  devotionals: WatchModel[] = this.watchArray.getWatchModels();
+
   devotionalsTitle = 'Devotionals';
 
-  constructor() { }
+  constructor(private watchArray: AllChurchInformationService) { }
 
   ngOnInit() {
   }

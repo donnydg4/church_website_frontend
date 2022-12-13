@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {WatchModel} from "../models/watch.model";
+import {AllChurchInformationService} from "../service/all-church-information.service";
 
 @Component({
   selector: 'app-guest-speakers',
@@ -7,9 +9,11 @@ import {Component, OnInit} from '@angular/core';
 })
 export class GuestSpeakersPage implements OnInit {
 
+  guest_speakers: WatchModel[] = this.watchArray.getWatchModels();
+
   guestSpeakersTitle = 'Guest Speakers';
 
-  constructor() { }
+  constructor(private watchArray: AllChurchInformationService) { }
 
   ngOnInit() {
   }
