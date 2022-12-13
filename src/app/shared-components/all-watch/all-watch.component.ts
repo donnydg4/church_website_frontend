@@ -8,11 +8,26 @@ import {WatchModel} from "../../models/watch.model";
 })
 export class AllWatchComponent implements OnInit {
 
+  selectionBoolean: boolean = true;
+  selection: string = 'Newest';
   @Input() title = '';
   @Input() objectArray: WatchModel[];
 
   constructor() { }
 
   ngOnInit() {}
+
+  sort(): void {
+    this.selectionBoolean = !this.selectionBoolean;
+    console.log(this.selectionBoolean);
+
+    if (this.selectionBoolean) {
+      this.selection = 'Newest';
+    }
+
+    if (!this.selectionBoolean) {
+      this.selection = 'Oldest'
+    }
+  }
 
 }

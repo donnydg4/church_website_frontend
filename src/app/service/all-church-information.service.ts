@@ -40,25 +40,25 @@ export class AllChurchInformationService {
     {
       type: 'sermons', description: 'hello',
       date: new Date(2022, 11, 5), title: 'Let it Go', category: 'sermons',
-      imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
+      imageUrl: './assets/thing.jpg',
       videoId: 'fjeif'
     },
     {
       type: 'sermons', description: 'hello',
       date: new Date(2022, 11, 7), title: 'Who are you?', category: 'sermons',
-      imageUrl: './assets/2021 devotionals.jpg',
+      imageUrl: './assets/thing.jpg',
       videoId: 'fjeif'
     },
     {
       type: 'sermons', description: 'hello',
       date: new Date(2022, 11, 6), title: 'Faith Of You', category: 'sermons',
-      imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
+      imageUrl: './assets/thing.jpg',
       videoId: 'fjeif'
     },
     {
       type: 'sermons', description: 'hello',
       date: new Date(2022, 11, 8), title: 'Lets Go', category: 'sermons',
-      imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png',
+      imageUrl: './assets/thing.jpg',
       videoId: 'fjeif'
     }
   ];

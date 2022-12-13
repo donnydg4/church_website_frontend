@@ -21,19 +21,36 @@ ion-card-subtitle {
 
 img {
   border-radius: 5px;
-  height: 300px;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 div.img_good {
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 ion-card {
   box-shadow: none !important;
+  height: auto;
 }
 
 ion-row {
-  padding: 0px 40px 0px 40px;
+  padding: 0px 60px 0px 60px;
+}
+
+ion-button.order {
+  font-size: 16px;
+  border-bottom: 2px solid black;
+}
+
+ion-item {
+  --background-hover: white;
+}
+
+ion-searchbar {
+  --box-shadow: none !important;
+  --background: #eaeaea;
+  --border-radius: 8px;
 }
