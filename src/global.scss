@@ -29,3 +29,13 @@
 //ion-header.header-md::after {
 //  background-image: none;
 //}
+
+ion-searchbar {
+  /* overall styles here */
+  .searchbar-input-container {
+    /* inner input styles here */
+    input{
+      /* input element styles here */
+    }
+  }
+}
