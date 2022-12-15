@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {WatchModel} from "../models/watch.model";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 

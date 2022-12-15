@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {WatchModel} from "../models/watch.model";
 import {AllChurchInformationService} from "../service/all-church-information.service";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-devotionals',
@@ -9,11 +9,14 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 })
 export class DevotionalsPage implements OnInit {
 
-  devotionals: WatchModel[] = this.watchArray.getWatchModels();
+  devotionalCards$ = this.cardService.allWatchCards$
+    .pipe(
+      map(devotionalCards => devotionalCards.filter(allCards => allCards.category === 'devotional'))
+    );
 
   devotionalsTitle = 'Devotionals';
 
-  constructor(private watchArray: AllChurchInformationService) { }
+  constructor(private cardService: AllChurchInformationService) { }
 
   ngOnInit() {
   }
