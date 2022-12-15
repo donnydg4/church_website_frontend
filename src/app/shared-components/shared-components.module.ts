@@ -8,6 +8,7 @@ import {IonicModule} from "@ionic/angular";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {AllWatchComponent} from "./all-watch/all-watch.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
         IonicModule,
         MatToolbarModule,
         MatPaginatorModule,
+        NgxPaginationModule,
     ],
   exports: [
     MainLayoutComponent,

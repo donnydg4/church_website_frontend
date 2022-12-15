@@ -40,11 +40,6 @@ ion-row {
   padding: 0px 60px 0px 60px;
 }
 
-ion-button.order {
-  font-size: 16px;
-  border-bottom: 2px solid black;
-}
-
 ion-item {
   --background-hover: white;
   --inner-padding-end: 0px;
@@ -59,4 +54,17 @@ ion-searchbar {
 .mat-paginator {
   display: flex;
   justify-content: center;
+}
+
+ion-row.bottom_border {
+
+}
+
+.bottom_border:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 2px solid #b9b9b9;
 }

@@ -15,6 +15,7 @@ import {SermonsPageModule} from "./sermons/sermons.module";
 import {DevotionalsPageModule} from "./devotionals/devotionals.module";
 import {SeriesPageModule} from "./series/series.module";
 import {GuestSpeakersPageModule} from "./guest-speakers/guest-speakers.module";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +32,8 @@ import {GuestSpeakersPageModule} from "./guest-speakers/guest-speakers.module";
     DevotionalsPageModule,
     SermonsPageModule,
     SeriesPageModule,
-    GuestSpeakersPageModule],
+    GuestSpeakersPageModule,
+    NgxPaginationModule],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent]
 })

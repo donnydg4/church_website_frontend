@@ -6,7 +6,7 @@
       </ion-title>
     </ion-col>
   </ion-row>
-  <ion-row class="ion-align-items-center" style="padding-bottom: 20px">
+  <ion-row class="ion-align-items-center bottom_border">
 
     <ion-col size-xl="2" size-xs="12" size-sm="6" size-lg="6" offset-xl="3.5">
       <ion-item button detail="true" detail-icon="chevron-down-outline" (click)="sort()">
@@ -23,8 +23,8 @@
 
   </ion-row>
 
-  <ion-row>
-    <ion-col size-xl="4" size-sm="6" size-xs="12" *ngFor="let sermon of objectArray; let i = index;">
+  <ion-row style="padding-top: 10px">
+    <ion-col size-xl="4" size-sm="6" size-xs="12" *ngFor="let sermon of objectArray | paginate: {itemsPerPage: 15, currentPage: page}">
       <ion-card>
         <div class="img_good">
           <img alt="img-src" src="{{sermon.imageUrl}}"/>
@@ -39,12 +39,7 @@
   <ion-row class="ion-align-items-center">
     <ion-col size-xl="6" offset-xl="3">
       <div style="text-align: center">
-        <mat-paginator [length]="objectArray.length"
-                       pageSize="15"
-                       [hidePageSize]="true"
-                       [showFirstLastButtons]="true"
-                       [pageIndex]="pageIndex">
-        </mat-paginator>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
       </div>
     </ion-col>
   </ion-row>
