@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {WatchModel} from "../../models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-all-watch',
@@ -14,14 +15,15 @@ export class AllWatchComponent implements OnInit {
   selection: string = 'Newest';
 
   @Input() title = '';
-  @Input() objectArray: WatchModel[]
+  @Input() objectArray: Observable<WatchModel[]>
 
   //get how many in watchModel
   // total: number = this.dataService.getWatchModels().length;
 
   constructor(private dataService: AllChurchInformationService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   sort(): void {
     this.selectionBoolean = !this.selectionBoolean;
