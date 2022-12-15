@@ -36,4 +36,16 @@
       </ion-card>
     </ion-col>
   </ion-row>
+  <ion-row class="ion-align-items-center">
+    <ion-col size-xl="6" offset-xl="3">
+      <div style="text-align: center">
+        <mat-paginator [length]="objectArray.length"
+                       pageSize="15"
+                       [hidePageSize]="true"
+                       [showFirstLastButtons]="true"
+                       [pageIndex]="pageIndex">
+        </mat-paginator>
+      </div>
+    </ion-col>
+  </ion-row>
 </ion-grid>

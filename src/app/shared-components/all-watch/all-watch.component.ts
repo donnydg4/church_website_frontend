@@ -8,6 +8,7 @@ import {WatchModel} from "../../models/watch.model";
 })
 export class AllWatchComponent implements OnInit {
 
+  pageIndex: number = 0;
   selectionBoolean: boolean = true;
   selection: string = 'Newest';
   @Input() title = '';

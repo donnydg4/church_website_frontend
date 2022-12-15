@@ -7,14 +7,16 @@ import {NgModule} from "@angular/core";
 import {IonicModule} from "@ionic/angular";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {AllWatchComponent} from "./all-watch/all-watch.component";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild([]),
-    IonicModule,
-    MatToolbarModule,
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild([]),
+        IonicModule,
+        MatToolbarModule,
+        MatPaginatorModule,
+    ],
   exports: [
     MainLayoutComponent,
     HeaderComponent,
