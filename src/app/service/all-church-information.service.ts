@@ -4,6 +4,7 @@ import {WatchModel} from "../models/watch.model";
 import {HttpClient} from "@angular/common/http";
 import {catchError, shareReplay, tap} from "rxjs/operators";
 import {Observable, throwError} from "rxjs";
+import {SeriesCardModel} from "../models/series-card.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,20 @@ import {Observable, throwError} from "rxjs";
 export class AllChurchInformationService {
 
   private allWatchCardsUrl: string = 'http://localhost:8080/website/watchCards';
+  private allSeriesCardsUrl: string = 'http://localhost:8080/website/seriesCards';
 
   allWatchCards$ = this.http.get<WatchModel[]>(this.allWatchCardsUrl)
     .pipe(
       shareReplay(1),
       tap(data => console.log(data)),
       catchError(AllChurchInformationService.handleError)
-    )
+    );
+
+  allSeriesCards$ = this.http.get<SeriesCardModel[]>(this.allSeriesCardsUrl)
+    .pipe(
+      shareReplay(1),
+      catchError(AllChurchInformationService.handleError)
+    );
 
   calendarModel: CalendarModel[] = [{
     date: new Date(2022, 11, 5), events: [

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
+import {sortByDate, sortByDateSeries} from "../utils/utils";
 
 @Component({
   selector: 'app-series',
@@ -9,9 +10,10 @@ import {map} from "rxjs/operators";
 })
 export class SeriesPage implements OnInit {
 
-  seriesCards$ = this.cardService.allWatchCards$
+  seriesCards$ = this.cardService.allSeriesCards$
     .pipe(
-      map(seriesCards => seriesCards.filter(allCards => allCards.category === 'series'))
+      map(seriesCards => seriesCards.filter(allCards => (allCards.category === 'series' || allCards.category === 'devotional'))
+        .sort(sortByDateSeries))
     );
 
   seriesTitle = 'Series';
