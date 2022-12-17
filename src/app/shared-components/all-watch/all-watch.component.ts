@@ -3,6 +3,7 @@ import {WatchModel} from "../../models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";
 import {SeriesCardModel} from "../../models/series-card.model";
+import {PaginationInstance} from "ngx-pagination";
 
 @Component({
   selector: 'app-all-watch',
@@ -11,7 +12,12 @@ import {SeriesCardModel} from "../../models/series-card.model";
 })
 export class AllWatchComponent implements OnInit {
 
-  page: number;
+  page: number = 1;
+
+  public config: PaginationInstance = {
+    itemsPerPage: 15,
+    currentPage: this.page
+}
 
   @Input() title = '';
   @Input() objectArray: Observable<WatchModel[]>
@@ -20,6 +26,12 @@ export class AllWatchComponent implements OnInit {
   constructor(private dataService: AllChurchInformationService) { }
 
   ngOnInit() {
+  }
+
+  pageEvent(page: number) {
+    this.page = page;
+    this.config.currentPage = page;
+    window.scrollTo(0, 0);
   }
 
 }
