@@ -3,7 +3,7 @@ import {CalendarModel} from "../models/calendar.model";
 import {WatchModel} from "../models/watch.model";
 import {HttpClient} from "@angular/common/http";
 import {catchError, shareReplay, tap} from "rxjs/operators";
-import {Observable, throwError} from "rxjs";
+import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {SeriesCardModel} from "../models/series-card.model";
 
 @Injectable({
@@ -13,6 +13,7 @@ export class AllChurchInformationService {
 
   private allWatchCardsUrl: string = 'http://localhost:8080/website/watchCards';
   private allSeriesCardsUrl: string = 'http://localhost:8080/website/seriesCards';
+  private allCalendarEventsUrl: string = 'http://localhost:8080/website/calendar';
 
   allWatchCards$ = this.http.get<WatchModel[]>(this.allWatchCardsUrl)
     .pipe(
@@ -27,38 +28,12 @@ export class AllChurchInformationService {
       catchError(AllChurchInformationService.handleError)
     );
 
-  calendarModel: CalendarModel[] = [{
-    date: new Date(2022, 11, 5), events: [
-      {title: 'hello', description: '8:00pm @ hello'},
-      {title: 'something', description: '6:30pm @ something'}]
-  },
-    {
-      date: new Date(2022, 11, 6), events: [
-        {title: 'giving', description: '5:00pm @ giving'},
-        {title: 'teeth', description: '5:00pm @ teeth'},
-        {title: 'gaming', description: '5:00pm @ gaming'},
-      ]
-    },
-    {
-      date: new Date(2022, 11, 8), events: [
-        {title: 'Christmas Community Outreach', description: '5:00pm @ fasting'},
-        {title: 'July 4th Community Outreach', description: '5:00pm @ gui'},
-        {title: 'Thanksgiving Community Outreach', description: '5:00pm @ sleeping'},
-      ]
-    },
-    {
-      date: new Date(2022, 11, 17), events: [
-        {title: 'Guest Speaker: Ivan Tait', description: '5:00pm @ asdf'},
-        {title: 'Worship Night', description: '5:00pm @ reter'},
-        {title: 'Guest Speaker: Craig', description: '5:00pm @ qwerty'},
-        {title: 'Guest Speaker: Ivan Tait', description: '5:00pm @ vgrf'},
-      ]
-    }
-  ];
+  allCalendarEvents$ = this.http.get<CalendarModel[]>(this.allCalendarEventsUrl)
+    .pipe(
+      shareReplay(1),
+      catchError(AllChurchInformationService.handleError)
+    );
 
-  public getCalendar() {
-    return [...this.calendarModel];
-  }
 
   constructor(private http: HttpClient) {
   }
