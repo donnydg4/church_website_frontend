@@ -35,7 +35,7 @@ export class CalendarPage implements OnInit {
       map(([calendarEvents, firstDate, secondDate]) => calendarEvents.filter(
         event => {
           if (secondDate === null) {
-            return new Date(event.date).getTime() === firstDate.getTime();
+            return new Date(event.date).toDateString() === new Date(firstDate).toDateString();
           }
             return new Date(event.date).getTime() >= firstDate.getTime() && new Date(event.date).getTime() <= secondDate.getTime()
         }
