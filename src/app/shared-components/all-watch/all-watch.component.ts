@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {WatchModel} from "../../models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";
@@ -17,13 +17,20 @@ export class AllWatchComponent implements OnInit {
   public config: PaginationInstance = {
     itemsPerPage: 15,
     currentPage: this.page
-}
+  }
 
   @Input() title = '';
   @Input() objectArray: Observable<WatchModel[]>
   @Input() seriesArray: Observable<SeriesCardModel[]>
 
-  constructor(private dataService: AllChurchInformationService) { }
+  handleChange(event) {
+    this.dataService.searchQueryWord(event.target.value.toLowerCase());
+    console.log(event.target.value.toLowerCase());
+  }
+
+  constructor(private dataService: AllChurchInformationService) {
+  }
+
 
   ngOnInit() {
   }

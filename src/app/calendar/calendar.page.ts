@@ -15,8 +15,6 @@ export class CalendarPage implements OnInit {
   minDate: Date;
   maxDate: Date;
   twoWeeksDate: Date;
-  options = {weekday: 'long'} as const;
-  weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   date = new Date();
 
   //CalendarEvents subjects

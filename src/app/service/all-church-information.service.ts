@@ -3,7 +3,7 @@ import {CalendarModel} from "../models/calendar.model";
 import {WatchModel} from "../models/watch.model";
 import {HttpClient} from "@angular/common/http";
 import {catchError, shareReplay, tap} from "rxjs/operators";
-import {BehaviorSubject, Observable, throwError} from "rxjs";
+import {BehaviorSubject, Observable, Subject, throwError} from "rxjs";
 import {SeriesCardModel} from "../models/series-card.model";
 
 @Injectable({
@@ -14,6 +14,13 @@ export class AllChurchInformationService {
   private allWatchCardsUrl: string = 'http://localhost:8080/website/watchCards';
   private allSeriesCardsUrl: string = 'http://localhost:8080/website/seriesCards';
   private allCalendarEventsUrl: string = 'http://localhost:8080/website/calendar';
+
+  private searchQuery: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  searchQueryAction$ = this.searchQuery.asObservable();
+
+  searchQueryWord(search: string) {
+    this.searchQuery.next(search);
+  }
 
   allWatchCards$ = this.http.get<WatchModel[]>(this.allWatchCardsUrl)
     .pipe(
