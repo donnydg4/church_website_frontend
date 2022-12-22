@@ -31,7 +31,7 @@
           <ion-card>
             <ion-card-header>
 <!--              <ion-card-title>{{event.date.toLocaleDateString('en-us', options)}}</ion-card-title>-->
-              <ion-card-title>{{calendarEvent.date}}</ion-card-title>
+              <ion-card-title>{{calendarEvent.date | date: 'EEEE'}}</ion-card-title>
               <ion-card-subtitle>{{calendarEvent.date | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content *ngFor="let content of calendarEvent.events">
