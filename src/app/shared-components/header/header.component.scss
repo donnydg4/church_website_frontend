@@ -27,7 +27,6 @@ ion-icon {
 .dropbtn {
   font-weight: bold;
   font-family: Arial;
-  padding-right: 10px;
 }
 
 .dropdown {
@@ -38,6 +37,7 @@ ion-icon {
 .inner-center-div {
   display: flex;
   text-align: center;
+  margin-right: 15px;
 }
 
 .dropdown-content {
@@ -69,5 +69,6 @@ ion-icon {
 }
 
 .dropdown:hover .dropbtn {
+  width: inherit;
   border-bottom: 3px solid purple;
 }

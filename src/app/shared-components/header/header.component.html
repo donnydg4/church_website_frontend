@@ -10,7 +10,7 @@
 
     <span class="spacer"></span>
 
-    <ng-container *ngIf="platformWidth > 780">
+    <ng-container *ngIf="platformWidth > 1000">
       <ion-buttons slot="end" class="right-side">
 
         <div class="dropdown">
@@ -34,10 +34,10 @@
             </ion-button>
           </div>
           <div class="dropdown-content">
-              <a routerLink="/service">SERVICE TIMES</a>
-              <a routerLink="/prayer">PRAYER</a>
-              <a routerLink="/directions">DIRECTIONS</a>
-              <a routerLink="/contact">CONTACT US</a>
+            <a routerLink="/service">SERVICE TIMES</a>
+            <a routerLink="/prayer">PRAYER</a>
+            <a routerLink="/directions">DIRECTIONS</a>
+            <a routerLink="/contact">CONTACT US</a>
           </div>
         </div>
 
@@ -67,18 +67,24 @@
           </div>
         </div>
 
-        <ion-button style="min-width: 80px; padding-right: 10px">
-          Store
-        </ion-button>
+        <div class="inner-center-div">
+          <ion-button style="min-width: 80px; padding-right: 10px" disabled="true">
+            Store
+          </ion-button>
+        </div>
 
-        <ion-button fill="outline" style="width: 100px;" href="https://app.securegive.com/tfhfreeport/main/donate/category">
-          Give
-        </ion-button>
+        <div class="inner-center-div">
+          <ion-button fill="outline" style="width: 100px;"
+                      href="https://app.securegive.com/tfhfreeport/main/donate/category">
+            Give
+          </ion-button>
+        </div>
+
 
       </ion-buttons>
     </ng-container>
 
-    <ng-container *ngIf="platformWidth < 780">
+    <ng-container *ngIf="platformWidth <= 1000">
       <ion-buttons slot="end" class="right-side">
         <ion-button>
           <ion-icon class="size" name="menu-outline"></ion-icon>
