@@ -3,7 +3,7 @@ import {CalendarModel} from "../models/calendar.model";
 import {WatchModel} from "../models/watch.model";
 import {HttpClient} from "@angular/common/http";
 import {catchError, shareReplay, tap} from "rxjs/operators";
-import {BehaviorSubject, Observable, Subject, throwError} from "rxjs";
+import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {SeriesCardModel} from "../models/series-card.model";
 
 @Injectable({

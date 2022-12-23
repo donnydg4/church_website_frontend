@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {WatchModel} from "../../models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";

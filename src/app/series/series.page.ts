@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
-import {sortByDate, sortByDateSeries} from "../utils/utils";
+import {sortByDateSeries} from "../utils/utils";
 import {combineLatest} from "rxjs";
 
 @Component({

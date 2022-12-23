@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {CalendarModel} from "../models/calendar.model";
 import {BehaviorSubject, combineLatest} from "rxjs";
 import {map} from "rxjs/operators";
 
@@ -65,7 +64,6 @@ export class CalendarPage implements OnInit {
     console.log(endDate);
 
     this.selectDateRange(startDate, endDate);
-
   }
 
   selectDateRange(startDate?: Date, endDate?: Date) {
