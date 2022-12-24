@@ -8,4 +8,64 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <form [formGroup]="form" (ngSubmit)="onContactForm()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10" offset="1" class="margin_left">
+          <ion-item class="no_background_color" lines="none">
+            <ion-label position="stacked" class="input_color">Category <span class="required">*</span></ion-label>
+            <ion-select placeholder="Select One..." formControlName="category" multiple="true" interface="alert" [interfaceOptions]="customAlertOptions">
+              <ion-select-option>Prayer Request</ion-select-option>
+              <ion-select-option>Missions Trips</ion-select-option>
+              <ion-select-option>Community Event</ion-select-option>
+              <ion-select-option>Our Ministries</ion-select-option>
+              <ion-select-option>Ministries We Support</ion-select-option>
+              <ion-select-option>Guest Speakers</ion-select-option>
+              <ion-select-option>Other</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10" offset="1" class="margin_left">
+          <ion-item class="no_background_color" lines="none">
+            <ion-label position="stacked" class="input_color">First Name <span class="required">*</span></ion-label>
+            <ion-input formControlName="firstname" class="background_color" autocomplete="on" autocorrect="on" type="text" placeholder="First Name"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10" offset="1" class="margin_left">
+          <ion-item class="no_background_color" lines="none">
+            <ion-label position="stacked" class="input_color">Last Name <span class="required">*</span></ion-label>
+            <ion-input formControlName="lastname" class="background_color" autocomplete="on" autocorrect="on" type="text" placeholder="Last Name"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10" offset="1" class="margin_left">
+          <ion-item class="no_background_color" lines="none">
+            <ion-label position="stacked" class="input_color">Email <span class="required">*</span></ion-label>
+            <ion-input formControlName="email" class="background_color" autocomplete="on" autocorrect="on" type="email" placeholder="validformat@gmail.com"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10" offset="1" class="margin_left">
+          <ion-item class="no_background_color" lines="none">
+            <ion-label position="stacked" class="input_color">Phone</ion-label>
+            <ion-input formControlName="phone" class="background_color" autocomplete="on" autocorrect="on" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="11" offset=".5" class="margin_left">
+          <ion-item class="no_background_color" lines="none">
+            <ion-label position="stacked" class="input_color">Questions or Comments
+              <span class="required">*</span></ion-label>
+            <ion-textarea formControlName="description" rows="5" class="background_color" autocapitalize="on" spellcheck="true" type="text" placeholder="If you go over/under the limits (shown below), the Submit button will be disabled."></ion-textarea>
+            <span class="input_color"><small>(Min. 30 characters / Max. 500 characters)</small></span>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" style="margin-left: 16px;">
+          <ion-button (click)="presentAlert()" class="connect_button" type="submit" [disabled]="!form.valid">SUBMIT</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <br>
 </ion-content>
