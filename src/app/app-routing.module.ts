@@ -18,42 +18,42 @@ const routes: Routes = [
     path: 'calendar',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: CalendarPage},
+      {path: '', component: CalendarPage},
     ]
   },
   {
     path: 'sermons',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: SermonsPage}
+      {path: '', component: SermonsPage}
     ]
   },
   {
     path: 'devotionals',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: DevotionalsPage}
+      {path: '', component: DevotionalsPage}
     ]
   },
   {
     path: 'series',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: SeriesPage}
+      {path: '', component: SeriesPage}
     ]
   },
   {
     path: 'guest-speakers',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: GuestSpeakersPage}
+      {path: '', component: GuestSpeakersPage}
     ]
   },
   {
     path: 'contact',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: ContactPage}
+      {path: '', component: ContactPage}
     ]
   }
 
@@ -61,8 +61,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

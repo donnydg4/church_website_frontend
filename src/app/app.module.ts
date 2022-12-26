@@ -17,6 +17,9 @@ import {SeriesPageModule} from "./series/series.module";
 import {GuestSpeakersPageModule} from "./guest-speakers/guest-speakers.module";
 import {NgxPaginationModule} from "ngx-pagination";
 import {HttpClientModule} from "@angular/common/http";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,8 +38,10 @@ import {HttpClientModule} from "@angular/common/http";
     SeriesPageModule,
     GuestSpeakersPageModule,
     NgxPaginationModule,
-    HttpClientModule],
+    HttpClientModule
+  ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}

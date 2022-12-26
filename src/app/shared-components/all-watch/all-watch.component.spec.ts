@@ -9,7 +9,7 @@ describe('AllWatchComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AllWatchComponent ],
+      declarations: [AllWatchComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

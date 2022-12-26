@@ -19,4 +19,5 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
   ],
   declarations: [SeriesPage]
 })
-export class SeriesPageModule {}
+export class SeriesPageModule {
+}

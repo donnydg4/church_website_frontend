@@ -33,7 +33,8 @@ export class SeriesPage implements OnInit {
 
   seriesTitle = 'Series';
 
-  constructor(private dataService: AllChurchInformationService) { }
+  constructor(private dataService: AllChurchInformationService) {
+  }
 
   ngOnInit() {
   }

@@ -33,7 +33,8 @@ export class DevotionalsPage implements OnInit {
 
   devotionalsTitle = 'Devotionals';
 
-  constructor(private dataService: AllChurchInformationService) { }
+  constructor(private dataService: AllChurchInformationService) {
+  }
 
   ngOnInit() {
   }

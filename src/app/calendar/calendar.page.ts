@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {BehaviorSubject, combineLatest} from "rxjs";
 import {map} from "rxjs/operators";
+import {sortByDateCalendar} from "../utils/utils";
 
 @Component({
   selector: 'app-calendar',
@@ -34,9 +35,9 @@ export class CalendarPage implements OnInit {
           if (secondDate === null || new Date(firstDate).toDateString() === new Date(secondDate).toDateString()) {
             return new Date(event.date).toDateString() === new Date(firstDate).toDateString();
           }
-            return new Date(event.date).getTime() >= firstDate.getTime() && new Date(event.date).getTime() <= secondDate.getTime()
+          return new Date(event.date).getTime() >= firstDate.getTime() && new Date(event.date).getTime() <= secondDate.getTime()
         }
-    )));
+      ).sort(sortByDateCalendar)));
 
   constructor(private dataService: AllChurchInformationService) {
     const date = new Date();

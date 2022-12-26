@@ -10,13 +10,14 @@ import {GuestSpeakersPage} from './guest-speakers.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        GuestSpeakersPageRoutingModule,
-        SharedComponentsModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    GuestSpeakersPageRoutingModule,
+    SharedComponentsModule
+  ],
   declarations: [GuestSpeakersPage]
 })
-export class GuestSpeakersPageModule {}
+export class GuestSpeakersPageModule {
+}

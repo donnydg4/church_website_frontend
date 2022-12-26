@@ -25,4 +25,5 @@ import {MatInputModule} from "@angular/material/input";
   ],
   declarations: [CalendarPage]
 })
-export class CalendarPageModule {}
+export class CalendarPageModule {
+}

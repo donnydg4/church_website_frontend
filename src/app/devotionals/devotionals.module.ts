@@ -16,4 +16,5 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
   ],
   declarations: [DevotionalsPage]
 })
-export class DevotionalsPageModule {}
+export class DevotionalsPageModule {
+}

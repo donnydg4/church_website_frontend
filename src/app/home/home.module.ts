@@ -13,7 +13,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 // import {FooterComponent} from "../shared-components/footer/footer.component";
 
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -23,13 +22,14 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
-    SharedComponentsModule
+    SharedComponentsModule,
   ],
   exports: [
     // HeaderComponent,
     // FooterComponent
   ],
-    declarations: [HomePage]
+  declarations: [HomePage]
 //   , HeaderComponent, FooterComponent
 })
-export class HomePageModule {}
+export class HomePageModule {
+}

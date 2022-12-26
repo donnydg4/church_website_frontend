@@ -18,4 +18,5 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
   ],
   declarations: [SermonsPage]
 })
-export class SermonsPageModule {}
+export class SermonsPageModule {
+}

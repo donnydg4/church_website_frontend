@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'sermons',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: SermonsPage}
+      {path: '', component: SermonsPage}
     ]
   }
 ];
@@ -18,4 +18,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SermonsPageRoutingModule {}
+export class SermonsPageRoutingModule {
+}

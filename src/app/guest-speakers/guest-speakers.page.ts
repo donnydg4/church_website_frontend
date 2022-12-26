@@ -33,7 +33,8 @@ export class GuestSpeakersPage implements OnInit {
 
   guestSpeakersTitle = 'Guest Speakers';
 
-  constructor(private dataService: AllChurchInformationService) { }
+  constructor(private dataService: AllChurchInformationService) {
+  }
 
   ngOnInit() {
   }

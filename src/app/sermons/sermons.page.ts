@@ -33,7 +33,8 @@ export class SermonsPage implements OnInit {
         }
       )));
 
-  constructor(private dataService: AllChurchInformationService) { }
+  constructor(private dataService: AllChurchInformationService) {
+  }
 
   ngOnInit() {
   }
