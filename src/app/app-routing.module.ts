@@ -6,7 +6,7 @@ import {SermonsPage} from "./sermons/sermons.page";
 import {DevotionalsPage} from "./devotionals/devotionals.page";
 import {SeriesPage} from "./series/series.page";
 import {GuestSpeakersPage} from "./guest-speakers/guest-speakers.page";
-import {ContactPage} from "./contact/contact.page";
+import {ConnectPage} from "./connect/connect.page";
 
 const routes: Routes = [
   {
@@ -50,12 +50,13 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'contact',
+    path: 'connect',
     component: MainLayoutComponent,
     children: [
-      {path: '', component: ContactPage}
+      {path: '', component: ConnectPage}
     ]
   }
+
 
 ];
 

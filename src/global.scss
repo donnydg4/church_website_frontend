@@ -25,8 +25,76 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-//WORKS
-//ion-header.header-md::after {
-//  background-image: none;
-//}
 
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-datepicker-toggle-active {
+    color: purple;
+  }
+
+  .mat-calendar-body-selected {
+    background-color: purple;
+    color: white;
+    opacity: .75;
+  }
+
+  .mat-calendar-body-cell-content.mat-focus-indicator {
+    border-radius: 5px;
+  }
+}
+
+//mat-select stuff
+.mat-option {
+  color: black;
+}
+
+.mat-option-text {
+  font-size: 15px;
+  font-family: Roboto;
+}
+
+.mat-select-panel{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  min-width: calc(100% + 20px) !important;
+  border-radius: 5px !important;
+  //border: 2px solid purple;
+  border-top-style: none;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 1em;
+}
+
+mat-label {
+  color: black;
+}
+.mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
+  background: purple;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: purple;
+}
+
+mat-select-trigger {
+  font-size: 15px;
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: purple;
+}
+
+.mat-select-placeholder {
+  font-size: 14px;
+}
+//////////////////////

@@ -20,6 +20,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
+import {ConnectPageModule} from "./connect/connect.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,6 +38,7 @@ import {MatSelectModule} from "@angular/material/select";
     SermonsPageModule,
     SeriesPageModule,
     GuestSpeakersPageModule,
+    ConnectPageModule,
     NgxPaginationModule,
     HttpClientModule
   ],

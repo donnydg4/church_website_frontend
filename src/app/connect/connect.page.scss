@@ -1,0 +1,26 @@
+ion-title {
+  font-size: 66px;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+ion-grid.connect {
+  padding: 120px 150px 120px 150px;
+}
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-select-panel {
+    font-size: 20px;
+  }
+}
+
+span.required {
+  color: red;
+}
