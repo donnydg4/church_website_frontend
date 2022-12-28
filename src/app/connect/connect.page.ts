@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {FormControl, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-connect',
@@ -10,6 +10,10 @@ export class ConnectPage implements OnInit {
 
   category = new FormControl('');
   categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
+
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  firstName = new FormControl('', [Validators.required]);
+  lastName = new FormControl('', [Validators.required]);
 
   constructor() { }
 
