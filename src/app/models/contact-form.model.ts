@@ -1,8 +1,7 @@
 export interface ContactFormModel {
   category: string;
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone: string;
-  description: string;
+  comment: string;
 }

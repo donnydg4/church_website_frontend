@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {ContactFormModel} from "../models/contact-form.model";
 
 @Component({
   selector: 'app-connect',
@@ -8,16 +10,63 @@ import {FormControl, Validators} from "@angular/forms";
 })
 export class ConnectPage implements OnInit {
 
-  category = new FormControl('');
+  contactModel: ContactFormModel;
+
+  contactForm = new FormGroup({
+    category: new FormControl('', {
+      // updateOn: 'change',
+      validators: [Validators.required]
+    }),
+    name: new FormControl('', {
+      // updateOn: 'change',
+      validators: [Validators.required, Validators.maxLength(40), Validators.minLength(5)]
+    }),
+    email: new FormControl('', {
+      // updateOn: 'change',
+      validators: [Validators.email, Validators.required]
+    }),
+    phone: new FormControl('', {
+      updateOn: 'blur'
+    }),
+    comment: new FormControl('', {
+      // updateOn: 'change',
+      validators: [Validators.required, Validators.maxLength(500), Validators.minLength(30)]
+    })
+  });
+
+  // category = new FormControl('', [Validators.required]);
   categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
 
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  firstName = new FormControl('', [Validators.required]);
-  lastName = new FormControl('', [Validators.required]);
+  // emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  // // name = new FormControl('', [Validators.required]);
+  // phone = new FormControl('' );
+  // comment = new FormControl('', [Validators.required, Validators.maxLength(500), Validators.minLength(30)] );
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+  }
+
+  onContactForm() {
+    if (this.contactForm.valid) {
+      const headers = new HttpHeaders({'Content-Type': 'application/json'});
+      this.contactModel = {
+        category: this.contactForm.value.category,
+        name: this.contactForm.value.name,
+        email: this.contactForm.value.email,
+        phone: this.contactForm.value.phone,
+        comment: this.contactForm.value.comment
+      }
+      console.log(this.contactForm);
+      this.http.post('https://formspree.io/f/xleavqyl',
+        this.contactForm,
+        {'headers': headers}).subscribe(
+        response => {
+          console.log(response);
+        }
+      )
+      this.contactForm.reset();
+    }
   }
 
 }
