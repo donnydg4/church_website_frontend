@@ -25,3 +25,9 @@ ion-grid.connect {
 span.required {
   color: red;
 }
+
+ion-card {
+  --background: #ffffff;
+  box-shadow: none !important;
+  width: 50%;
+}
