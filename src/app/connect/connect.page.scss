@@ -6,7 +6,7 @@ ion-title {
 
 ion-grid.connect {
   padding: 120px 0px 0px 0px;
-  margin-bottom: 5%;
+  //margin-bottom: 5%;
 }
 ::ng-deep {
   .mat-form-field-appearance-outline .mat-form-field-outline {
@@ -24,10 +24,4 @@ ion-grid.connect {
 
 span.required {
   color: red;
-}
-
-ion-card {
-  --background: #ffffff;
-  box-shadow: none !important;
-  width: 50%;
 }
