@@ -1,34 +1,34 @@
 <ion-content>
-
   <ion-grid class="connect">
     <ion-row>
-      <ion-col style="margin-bottom: 50px">
-        <div style="text-align: center">
-          <ion-title style="text-align: center">
-            Contact Us
-          </ion-title>
-          <ion-text class="required_field">( <span class="required">*</span> )</ion-text>
-          <ion-text class="required_field"> indicates a required field</ion-text>
-        </div>
+      <ion-col size="12" class="contact_padding">
+        <ion-title style="text-align: center">
+          Contact Us
+        </ion-title>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-text class="required_field">( <span class="required">*</span> ) indicates a required field</ion-text>
       </ion-col>
     </ion-row>
   </ion-grid>
+  <br><br>
 
   <ion-grid>
     <ion-row>
 
-      <ion-col size="6">
+      <ion-col size-xl="7">
         <form [formGroup]="contactForm" (ngSubmit)="onContactForm()">
           <ion-grid>
             <ion-row class="ion-justify-content-end">
-              <ion-col size="8" offset="2">
-                <div style="text-align: center">
+              <ion-col size="8">
+                <div>
                   <ion-text style="font-size: 20px">Send us a message!</ion-text>
                 </div>
+                <br>
               </ion-col>
               <ion-col size="8">
                 <div style="font-size: 12px;">
-                  <mat-form-field appearance="outline" style="width: 30.5vw;" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 32.5vw;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Category <span class="required">*</span></mat-label>
                     <mat-select formControlName="category" multiple disableRipple disableOptionCentering
                                 placeholder="Select a Category">
@@ -50,7 +50,7 @@
               </ion-col>
               <ion-col size="8">
                 <div style="font-size: 12px;">
-                  <mat-form-field appearance="outline" style="width: 30.5vw;" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 32.5vw;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Your name <span class="required">*</span></mat-label>
                     <input matInput formControlName="name">
                     <mat-error *ngIf="contactForm.controls.name.hasError('required')">
@@ -67,7 +67,7 @@
               </ion-col>
               <ion-col size="8">
                 <div style="font-size: 12px">
-                  <mat-form-field appearance="outline" style="width: 30.5vw;" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 32.5vw;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Email <span class="required">*</span></mat-label>
                     <input matInput type="email" formControlName="email" placeholder="Ex. pat@example.com">
                     <mat-error
@@ -82,14 +82,14 @@
               </ion-col>
               <ion-col size="8">
                 <div style="font-size: 12px;">
-                  <mat-form-field appearance="outline" style="width: 30.5vw;" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 32.5vw;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Phone Number</mat-label>
                     <input matInput type="text" formControlName="phone" placeholder="888-111-2222">
                   </mat-form-field>
                 </div>
               </ion-col>
               <ion-col size="8">
-                <mat-form-field style="width: 30.5vw;" appearance="outline" hideRequiredMarker>
+                <mat-form-field style="width: 32.5vw;" appearance="outline" hideRequiredMarker>
                   <mat-label style="font-size: 14px">Questions or Comments <span class="required">*</span></mat-label>
                   <textarea #text matInput rows="5" formControlName="comment" style="resize: none"
                             placeholder="If you go over/under the limits (shown below), the Submit button will be disabled."></textarea>
@@ -109,6 +109,34 @@
             </ion-row>
           </ion-grid>
         </form>
+      </ion-col>
+      <ion-col size-xl="5">
+        <ion-grid>
+          <ion-row class="ion-justify-content-start">
+            <ion-col size="8">
+              <div>
+                <ion-text style="font-size: 20px">Contact Us!</ion-text>
+              </div>
+            </ion-col>
+          </ion-row>
+          <br>
+          <ion-row class="ion-justify-content-start">
+            <ion-col size="2">
+              <ion-text>Phone:</ion-text>
+            </ion-col>
+            <ion-col size="3" class="ion-text-center">
+              <ion-text>888-445-6613</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-start">
+            <ion-col size="2">
+              <ion-text>Office Hours:</ion-text>
+            </ion-col>
+            <ion-col size="6">
+              <ion-text>Monday - Thursday, 8:00am - 4:00pm</ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-col>
     </ion-row>
   </ion-grid>
