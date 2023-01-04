@@ -17,22 +17,18 @@ export class ConnectPage implements OnInit {
 
   contactForm = new FormGroup({
     category: new FormControl('', {
-      // updateOn: 'change',
       validators: [Validators.required]
     }),
     name: new FormControl('', {
-      // updateOn: 'change',
       validators: [Validators.required, Validators.maxLength(40), Validators.minLength(5)]
     }),
     email: new FormControl('', {
-      // updateOn: 'change',
       validators: [Validators.email, Validators.required]
     }),
     phone: new FormControl('', {
       updateOn: 'blur'
     }),
-    comment: new FormControl('', {
-      // updateOn: 'change',
+    description: new FormControl('', {
       validators: [Validators.required, Validators.maxLength(500), Validators.minLength(30)]
     })
   });
@@ -57,15 +53,12 @@ export class ConnectPage implements OnInit {
         name: this.contactForm.value.name,
         email: this.contactForm.value.email,
         phone: this.contactForm.value.phone,
-        comment: this.contactForm.value.comment
+        description: this.contactForm.value.description
       };
-      console.log(this.contactModel);
-      console.log(this.contactForm.value.category);
       this.http.post('https://formspree.io/f/xleavqyl',
         this.contactModel,
         {'headers': headers}).subscribe(
         response => {
-          console.log(response);
         }
       );
       this.contactForm.reset();

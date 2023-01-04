@@ -91,17 +91,17 @@
               <ion-col size="12">
                 <mat-form-field style="width: 100%" appearance="outline" hideRequiredMarker>
                   <mat-label style="font-size: 14px">Questions or Comments <span class="required">*</span></mat-label>
-                  <textarea #text matInput rows="5" formControlName="comment" style="resize: none"
+                  <textarea #text matInput rows="5" formControlName="description" style="resize: none"
                             placeholder="If you go over/under the limits (shown below), the Submit button will be disabled."></textarea>
                   <mat-hint align="start"><strong>(Min. 30 characters / Max. 500 characters)</strong></mat-hint>
                   <mat-hint align="end">{{text.value.length}} / 500</mat-hint>
-                  <mat-error *ngIf="contactForm.controls.comment.hasError('required')">
+                  <mat-error *ngIf="contactForm.controls.description.hasError('required')">
                     Question or Comment is <strong>required</strong>
                   </mat-error>
-                  <mat-error *ngIf="contactForm.controls.comment.hasError('minlength')">
+                  <mat-error *ngIf="contactForm.controls.description.hasError('minlength')">
                     Please give a bit more detail (over 30 characters): {{text.value.length}} / 500
                   </mat-error>
-                  <mat-error *ngIf="contactForm.controls.comment.hasError('maxlength')">
+                  <mat-error *ngIf="contactForm.controls.description.hasError('maxlength')">
                     Please keep questions or concerns under 500 characters: {{text.value.length}} / 500
                   </mat-error>
                 </mat-form-field>

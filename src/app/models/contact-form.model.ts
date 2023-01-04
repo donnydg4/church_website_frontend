@@ -3,5 +3,5 @@ export interface ContactFormModel {
   name: string;
   email: string;
   phone: string;
-  comment: string;
+  description: string;
 }
