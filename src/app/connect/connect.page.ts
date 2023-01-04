@@ -34,13 +34,7 @@ export class ConnectPage implements OnInit {
     })
   });
 
-  // category = new FormControl('', [Validators.required]);
   categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
-
-  // emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  // // name = new FormControl('', [Validators.required]);
-  // phone = new FormControl('' );
-  // comment = new FormControl('', [Validators.required, Validators.maxLength(500), Validators.minLength(30)] );
 
   constructor(private http: HttpClient) { }
 
