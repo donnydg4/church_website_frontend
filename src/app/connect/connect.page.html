@@ -107,6 +107,11 @@
                 </mat-form-field>
               </ion-col>
             </ion-row>
+            <ion-row class="ion-margin-top">
+              <ion-col size="auto">
+                <ion-button (click)="presentAlert()" type="submit" [disabled]="!contactForm.valid">Submit</ion-button>
+              </ion-col>
+            </ion-row>
           </ion-grid>
         </form>
       </ion-col>

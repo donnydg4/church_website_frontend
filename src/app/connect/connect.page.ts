@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ContactFormModel} from "../models/contact-form.model";
 
@@ -10,7 +10,10 @@ import {ContactFormModel} from "../models/contact-form.model";
 })
 export class ConnectPage implements OnInit {
 
+  submit: boolean = false;
+
   contactModel: ContactFormModel;
+  formDirective: FormGroupDirective;
 
   contactForm = new FormGroup({
     category: new FormControl('', {
@@ -34,11 +37,16 @@ export class ConnectPage implements OnInit {
     })
   });
 
-  categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
+  categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event(s)', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+
+  }
+
+  presentAlert(): void {
+    this.submit = true;
   }
 
   onContactForm() {
@@ -50,15 +58,16 @@ export class ConnectPage implements OnInit {
         email: this.contactForm.value.email,
         phone: this.contactForm.value.phone,
         comment: this.contactForm.value.comment
-      }
-      console.log(this.contactForm);
+      };
+      console.log(this.contactModel);
+      console.log(this.contactForm.value.category);
       this.http.post('https://formspree.io/f/xleavqyl',
-        this.contactForm,
+        this.contactModel,
         {'headers': headers}).subscribe(
         response => {
           console.log(response);
         }
-      )
+      );
       this.contactForm.reset();
     }
   }
