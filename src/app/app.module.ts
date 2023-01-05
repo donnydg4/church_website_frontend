@@ -21,6 +21,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {ConnectPageModule} from "./connect/connect.module";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [AppComponent],
@@ -40,7 +41,8 @@ import {ConnectPageModule} from "./connect/connect.module";
     GuestSpeakersPageModule,
     ConnectPageModule,
     NgxPaginationModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent]

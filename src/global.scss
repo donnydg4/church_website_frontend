@@ -62,8 +62,10 @@
 }
 
 .mat-select-panel{
-  position: absolute;
+  position: relative;
   top: 30px;
+  //this works for smaller things
+  //left: 11px;
   left: 30px;
   min-width: calc(100% + 20px) !important;
   border-radius: 5px !important;
@@ -106,3 +108,50 @@ input.mat-input-element {
   color: red;
 }
 //////////////////////
+// Alert for Contact Form
+.my-custom-class .alert-wrapper {
+
+  --min-width: 100px;
+  --max-width: 230px;
+  background: #fafafa;
+
+
+  .alert-title {
+    //color: purple;
+    font-size: 17px;
+    font-family: Arial, serif;
+    margin-top: 5%;
+    font-weight: bold;
+  }
+
+  .alert-message {
+    //color: purple;
+    font-size: 13px;
+    font-family: Arial, serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0;
+    margin-bottom: 5%;
+  }
+
+  .alert-button {
+    color: purple;
+    background: #f5f5f5;
+    width: 120px;
+    text-align: center;
+  }
+
+  .alert-head {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .alert-button-group {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .alert-button-inner {
+    justify-content: center;
+  }
+}
