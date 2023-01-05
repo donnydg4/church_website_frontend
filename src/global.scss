@@ -27,6 +27,10 @@
 
 
 
+:root {
+  --my-left: 11px;
+}
+
 ::ng-deep {
   .mat-form-field-appearance-outline .mat-form-field-outline {
     color: purple;
@@ -62,14 +66,11 @@
 }
 
 .mat-select-panel{
-  position: relative;
+  position: absolute;
   top: 30px;
-  //this works for smaller things
-  //left: 11px;
-  left: 30px;
+  left: 1.75vmax !important;
   min-width: calc(100% + 20px) !important;
   border-radius: 5px !important;
-  //border: 2px solid purple;
   border-top-style: none;
 }
 

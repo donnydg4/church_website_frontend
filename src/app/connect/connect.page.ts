@@ -83,6 +83,11 @@ export class ConnectPage implements OnInit {
     // }
 
     this.contactForm.reset();
+    Object.keys(this.contactForm.controls).forEach((key) => {
+      const control = this.contactForm.controls[key];
+      control.markAsPristine();
+      control.markAsUntouched();
+    });
   }
 
 }
