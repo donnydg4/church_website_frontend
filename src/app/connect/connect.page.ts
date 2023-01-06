@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ContactFormModel} from "../models/contact-form.model";
@@ -13,7 +13,7 @@ import {AlertController} from "@ionic/angular";
 })
 export class ConnectPage implements OnInit {
 
-
+  @ViewChild('form') form;
   contactModel: ContactFormModel;
   formDirective: FormGroupDirective;
   categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event(s)', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
@@ -64,30 +64,23 @@ export class ConnectPage implements OnInit {
   }
 
   onContactForm() {
-    // if (this.contactForm.valid) {
-    //   const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    //   this.contactModel = {
-    //     category: this.contactForm.value.category,
-    //     name: this.contactForm.value.name,
-    //     email: this.contactForm.value.email,
-    //     phone: this.contactForm.value.phone,
-    //     description: this.contactForm.value.description
-    //   };
-    //   this.http.post('https://formspree.io/f/xleavqyl',
-    //     this.contactModel,
-    //     {'headers': headers}).subscribe(
-    //     response => {
-    //     }
-    //   );
-    //   this.contactForm.reset();
-    // }
-
-    this.contactForm.reset();
-    Object.keys(this.contactForm.controls).forEach((key) => {
-      const control = this.contactForm.controls[key];
-      control.markAsPristine();
-      control.markAsUntouched();
-    });
+    if (this.contactForm.valid) {
+      const headers = new HttpHeaders({'Content-Type': 'application/json'});
+      this.contactModel = {
+        category: this.contactForm.value.category,
+        name: this.contactForm.value.name,
+        email: this.contactForm.value.email,
+        phone: this.contactForm.value.phone,
+        description: this.contactForm.value.description
+      };
+      this.http.post('https://formspree.io/f/xleavqyl',
+        this.contactModel,
+        {'headers': headers}).subscribe(
+        response => {
+        }
+      );
+      this.form.resetForm();
+    }
   }
 
 }
