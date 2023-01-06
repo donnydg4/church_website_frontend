@@ -3,7 +3,7 @@ import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/f
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ContactFormModel} from "../models/contact-form.model";
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {AlertController} from "@ionic/angular";
+import {AlertController, Platform} from "@ionic/angular";
 
 
 @Component({
@@ -13,6 +13,7 @@ import {AlertController} from "@ionic/angular";
 })
 export class ConnectPage implements OnInit {
 
+  isDesktop: boolean = true;
   @ViewChild('form') form;
   contactModel: ContactFormModel;
   formDirective: FormGroupDirective;
@@ -38,7 +39,17 @@ export class ConnectPage implements OnInit {
   });
 
 
-  constructor(private http: HttpClient, private _snackBar: MatSnackBar, private alertController: AlertController) { }
+  constructor(private http: HttpClient,
+              private _snackBar: MatSnackBar,
+              private alertController: AlertController,
+              private platform: Platform) {
+    platform.ready().then(() => {
+      if (this.platform.is('android') || this.platform.is('ios')) {
+        this.isDesktop = false;
+        console.log('not desktop');
+      }
+    })
+  }
 
   ngOnInit() {
 
