@@ -1,23 +1,25 @@
 
-ion-grid {
-  padding: 50px;
+ion-footer {
+  background: white;
 }
 
 ion-text {
   letter-spacing: 1px;
   line-height: 1.75;
   text-align: center;
+  font-size: 17px;
+  user-select: auto !important;
 }
 
 ion-button {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 1px;
   margin-top: 2%;
+  text-transform: capitalize;
 }
 
 ion-icon {
   font-size: 28px;
-  //margin-right: 5%;
 }
 
 .red {
@@ -36,9 +38,15 @@ ion-icon {
   color: #f54c0f;
 }
 
-ion-item {
-  width: 50%;
-  --background-hover-opacity: .15;
-  margin: 0 auto;
-  text-align: center;
+ion-title {
+  --color: black;
+  margin-bottom: 3%;
+}
+
+ion-label {
+  --color: black;
+}
+
+.ion-margin-bottom {
+  margin-bottom: 7%;
 }

@@ -225,6 +225,10 @@ $app-theme: mat.define-light-theme((
     --ion-toolbar-border-color: var(--ion-color-step-250);
   }
 
+  .ios {
+    --ion-background-color: #ffffff;
+  }
+
 
   /*
    * Material Design Dark Theme
