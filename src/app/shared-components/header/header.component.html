@@ -1,4 +1,4 @@
-<ng-container *ngIf="platformWidth > 1000">
+<ng-container *ngIf="platformWidth > 900">
   <ion-header style="height: 100%">
     <mat-toolbar style="height: 12vh; background: white">
 
@@ -87,7 +87,7 @@
   </ion-header>
 </ng-container>
 
-<ng-container *ngIf="platformWidth <= 1000">
+<ng-container *ngIf="platformWidth <= 900">
 
   <!--    <ion-buttons slot="end" class="right-side">-->
   <!--      <ion-button>-->
@@ -107,10 +107,19 @@
     <div class="ion-page" id="main-content">
       <ion-header style="height: 10vh">
         <ion-toolbar class="custom_toolbar">
-          <ion-buttons slot="start">
+
+          <ion-buttons slot="start" style="padding-top: 7px">
+            <a routerLink="/home">
+              <img src="assets/icon/church_home_logo.svg" style="height: 8vh;">
+            </a>
+          </ion-buttons>
+
+          <span class="spacer"></span>
+
+          <ion-buttons slot="end">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
-          <ion-title>Menu</ion-title>
+
         </ion-toolbar>
       </ion-header>
     </div>

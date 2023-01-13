@@ -77,6 +77,8 @@ ion-icon {
   --background: white;
   --color: black;
   --min-height: 10vh;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .custom_mat_toolbar {
@@ -84,4 +86,8 @@ ion-icon {
   height: 10vh;
   position: relative;
   z-index: 1;
+}
+
+ion-menu-button {
+  font-size: 40px;
 }
