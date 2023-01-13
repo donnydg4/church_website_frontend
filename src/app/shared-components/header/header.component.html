@@ -1,16 +1,15 @@
-<ion-header style="height: 100%">
+<ng-container *ngIf="platformWidth > 1000">
+  <ion-header style="height: 100%">
+    <mat-toolbar style="height: 12vh; background: white">
 
-  <mat-toolbar style="height: 12vh; background: white">
+      <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
+        <a routerLink="/home">
+          <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
+        </a>
+      </ion-buttons>
 
-    <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
-      <a routerLink="/home">
-        <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
-      </a>
-    </ion-buttons>
+      <span class="spacer"></span>
 
-    <span class="spacer"></span>
-
-    <ng-container *ngIf="platformWidth > 1000">
       <ion-buttons slot="end" class="right-side">
 
         <div class="dropdown">
@@ -82,17 +81,40 @@
 
 
       </ion-buttons>
-    </ng-container>
 
-    <ng-container *ngIf="platformWidth <= 1000">
 
-      <ion-buttons slot="end" class="right-side">
-        <ion-button>
-          <ion-icon class="size" name="menu-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+    </mat-toolbar>
+  </ion-header>
+</ng-container>
 
-    </ng-container>
+<ng-container *ngIf="platformWidth <= 1000">
 
+  <!--    <ion-buttons slot="end" class="right-side">-->
+  <!--      <ion-button>-->
+  <!--        <ion-icon class="size" name="menu-outline"></ion-icon>-->
+  <!--      </ion-button>-->
+  <!--    </ion-buttons>-->
+  <ion-menu contentId="main-content">
+    <ion-header style="height: 10vh">
+      <ion-toolbar class="custom_toolbar">
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+
+  <mat-toolbar class="custom_mat_toolbar mat-elevation-z2">
+    <div class="ion-page" id="main-content">
+      <ion-header style="height: 10vh">
+        <ion-toolbar class="custom_toolbar">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+    </div>
   </mat-toolbar>
-</ion-header>
+
+</ng-container>
+

@@ -72,3 +72,16 @@ ion-icon {
   width: inherit;
   border-bottom: 3px solid purple;
 }
+
+.custom_toolbar {
+  --background: white;
+  --color: black;
+  --min-height: 10vh;
+}
+
+.custom_mat_toolbar {
+  background: white;
+  height: 10vh;
+  position: relative;
+  z-index: 1;
+}
