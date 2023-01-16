@@ -89,18 +89,65 @@
 
 <ng-container *ngIf="platformWidth <= 900">
 
-  <!--    <ion-buttons slot="end" class="right-side">-->
-  <!--      <ion-button>-->
-  <!--        <ion-icon class="size" name="menu-outline"></ion-icon>-->
-  <!--      </ion-button>-->
-  <!--    </ion-buttons>-->
-  <ion-menu contentId="main-content">
+<!--  Ion menu for smaller devices-->
+  <ion-menu contentId="main-content" side="end">
     <ion-header style="height: 10vh">
       <ion-toolbar class="custom_toolbar">
-        <ion-title>Menu Content</ion-title>
+        <ion-title>The Father's House</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
+    <ion-content style="--background: white;">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-accordion-group>
+              <ion-accordion value="about">
+                <ion-item slot="header" color="white">
+                  <ion-icon name="people-circle-outline" slot="start" class="ion-icon-menu"></ion-icon>
+                  <ion-label>About</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  First Content
+                </div>
+              </ion-accordion>
+              <ion-accordion value="connect">
+                <ion-item slot="header" color="white">
+                  <ion-icon name="people-circle-outline" slot="start" class="ion-icon-menu"></ion-icon>
+                  <ion-label>Connect</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  Second Content
+                </div>
+              </ion-accordion>
+              <ion-accordion value="watch">
+                <ion-item slot="header" color="white">
+                  <ion-icon name="play-circle-outline" slot="start" class="ion-icon-menu"></ion-icon>
+                  <ion-label>Watch</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  Third Content
+                </div>
+              </ion-accordion>
+              <ion-accordion value="events">
+                <ion-item slot="header" color="white">
+                  <ion-icon name="calendar-number-outline" slot="start" class="ion-icon-menu"></ion-icon>
+                  <ion-label>Events</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content">
+                  Third Content
+                </div>
+              </ion-accordion>
+              <ion-accordion value="watch" disabled="true">
+                <ion-item slot="header" color="white">
+                  <ion-icon name="card-outline" slot="start" class="ion-icon-menu"></ion-icon>
+                  <ion-label>Watch</ion-label>
+                </ion-item>
+              </ion-accordion>
+            </ion-accordion-group>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
   </ion-menu>
 
 <!--  Toolbar for the Ion menu for mobile devices or small screen things-->
