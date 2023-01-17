@@ -95,7 +95,23 @@ ion-menu-button {
 .ion-icon-menu {
   font-size: 26px;
 }
+ion-accordion {
+  margin-top: 5%;
+}
 
-ion-accordion:disabled {
-  opacity: 1;
+.font-size {
+  font-size: 16px;
+}
+
+a.changes {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 1em;
+  font-family: "Segoe UI";
+  font-weight: bold
+}
+
+div.div-padding {
+  padding: 4px;
 }

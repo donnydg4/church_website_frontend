@@ -103,47 +103,67 @@
             <ion-accordion-group>
               <ion-accordion value="about">
                 <ion-item slot="header" color="white">
-                  <ion-icon name="people-circle-outline" slot="start" class="ion-icon-menu"></ion-icon>
-                  <ion-label>About</ion-label>
+                  <ion-icon name="newspaper-outline" slot="start" class="ion-icon-menu"></ion-icon>
+                  <ion-label style="font-size: 18px">About</ion-label>
                 </ion-item>
-                <div class="ion-padding" slot="content">
-                  First Content
+                <div class="div-padding" slot="content" style="background: white">
+                  <ion-item-group style="margin-left: 10%">
+                    <ion-item lines="none">
+                      <a class="changes" routerLink="/church">OUR CHURCH</a>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <a class="changes" routerLink="/ministries">OUR MINISTRIES</a>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <a class="changes" routerLink="/leadership">LEADERSHIP</a>
+                    </ion-item>
+                    <ion-item lines="none">
+                      <a class="changes" routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>
+                    </ion-item>
+                  </ion-item-group>
                 </div>
               </ion-accordion>
               <ion-accordion value="connect">
                 <ion-item slot="header" color="white">
                   <ion-icon name="people-circle-outline" slot="start" class="ion-icon-menu"></ion-icon>
-                  <ion-label>Connect</ion-label>
+                  <ion-label style="font-size: 18px">Connect</ion-label>
                 </ion-item>
-                <div class="ion-padding" slot="content">
-                  Second Content
+                <div class="div-padding" slot="content">
+                  <a routerLink="/service">SERVICE TIMES</a>
+                  <a routerLink="/prayer">PRAYER</a>
+                  <a routerLink="/directions">DIRECTIONS</a>
+                  <a routerLink="/connect">CONTACT US</a>
                 </div>
               </ion-accordion>
               <ion-accordion value="watch">
                 <ion-item slot="header" color="white">
                   <ion-icon name="play-circle-outline" slot="start" class="ion-icon-menu"></ion-icon>
-                  <ion-label>Watch</ion-label>
+                  <ion-label style="font-size: 18px">Watch</ion-label>
                 </ion-item>
-                <div class="ion-padding" slot="content">
-                  Third Content
+                <div class="div-padding" slot="content">
+                  <a href="/sermons">SERMONS</a>
+                  <a href="/series">SERIES</a>
+                  <a href="/devotionals">DEVOTIONALS</a>
+                  <a href="/guest-speakers">GUEST SPEAKERS</a>
                 </div>
               </ion-accordion>
               <ion-accordion value="events">
-                <ion-item slot="header" color="white">
+                <ion-item slot="header" color="white" lines="full">
                   <ion-icon name="calendar-number-outline" slot="start" class="ion-icon-menu"></ion-icon>
-                  <ion-label>Events</ion-label>
+                  <ion-label style="font-size: 18px">Events</ion-label>
                 </ion-item>
-                <div class="ion-padding" slot="content">
-                  Third Content
+                <div class="div-padding" slot="content">
+                  <a routerLink="/calendar">CALENDAR</a>
+                  <a routerLink="/events">ALL EVENTS</a>
                 </div>
               </ion-accordion>
-              <ion-accordion value="watch" disabled="true">
-                <ion-item slot="header" color="white">
-                  <ion-icon name="card-outline" slot="start" class="ion-icon-menu"></ion-icon>
-                  <ion-label>Watch</ion-label>
-                </ion-item>
-              </ion-accordion>
             </ion-accordion-group>
+            <div class="ion-margin-top">
+              <ion-button fill="outline" style="width: 100%; height: 50px" class="font-size"
+                          href="https://app.securegive.com/tfhfreeport/main/donate/category">
+                Give
+              </ion-button>
+            </div>
           </ion-col>
         </ion-row>
       </ion-grid>
