@@ -38,9 +38,9 @@ $app-theme: mat.define-light-theme((
 
 /** Ionic CSS Variables **/
 .ion-color-white {
-  --ion-color-base: var(--ion-color-primary-contrast);
-  --ion-color-base-rgb: var(--ion-color-primary);
-  --ion-color-contrast: var(--ion-color-primary);
+  --ion-color-base: var(--ion-color-primary);
+  --ion-color-base-rgb: var(--ion-color-primary-contrast);
+  --ion-color-contrast: var(--ion-color-primary-contrast);
   --ion-color-contrast-rgb: var(--ion-color-light-contrast-rgb);
   --ion-color-shade: var(--ion-color-medium);
   --ion-color-tint: var(--ion-color-light-tint);
@@ -113,7 +113,7 @@ $app-theme: mat.define-light-theme((
   --ion-color-medium-tint: #9d9fa6;
 
   /** light **/
-  --ion-color-light: #f4f5f8;
+  --ion-color-light: #ffffff;
   --ion-color-light-rgb: 244, 245, 248;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;

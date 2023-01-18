@@ -81,8 +81,16 @@ ion-icon {
   padding-right: 10px;
 }
 
+.custom_toolbar_menu {
+  --background: var(--ion-color-primary-tint);
+  --color: white;
+  --min-height: 10vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .custom_mat_toolbar {
-  background: white;
+  background: var(--ion-color-primary-tint);
   height: 10vh;
   position: relative;
   z-index: 1;
@@ -94,6 +102,7 @@ ion-menu-button {
 
 .ion-icon-menu {
   font-size: 26px;
+  color: white;
 }
 ion-accordion {
   margin-top: 5%;
@@ -107,11 +116,21 @@ a.changes {
   color: black;
   text-decoration: none;
   display: block;
-  font-size: 1em;
+  font-size: .95em;
   font-family: "Segoe UI";
-  font-weight: bold
 }
 
-div.div-padding {
-  padding: 4px;
+ion-content.custom_background {
+  --background: var(--ion-color-primary-tint);
+}
+
+ion-button.custom {
+  --border-color: var(--ion-color-primary-contrast);
+  --color: var(--ion-color-primary-contrast);
+}
+
+ion-item.custom_color {
+  --color: var(--ion-color-primary-contrast);
+  --background: var(--ion-color-primary-tint);
+  --border-color: var(--ion-color-primary-contrast);
 }
