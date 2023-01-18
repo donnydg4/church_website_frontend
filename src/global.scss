@@ -172,3 +172,6 @@ ion-accordion.accordion-animated > [slot=header] .ion-accordion-toggle-icon {
   transition: 300ms transform cubic-bezier(0.25, 0.8, 0.5, 1);
   color: white;
 }
+ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
+  border-bottom: 1px solid white;
+}
