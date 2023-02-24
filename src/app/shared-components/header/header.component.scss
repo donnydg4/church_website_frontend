@@ -84,14 +84,14 @@ ion-icon {
 .custom_toolbar_menu {
   --background: var(--ion-color-primary-tint);
   --color: white;
-  --min-height: 10vh;
+  --min-height: 12vh;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .custom_mat_toolbar {
-  background: var(--ion-color-primary-tint);
-  height: 10vh;
+  background: white;
+  height: 12vh;
   position: relative;
   z-index: 1;
 }

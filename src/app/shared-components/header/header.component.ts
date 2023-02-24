@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {Platform} from "@ionic/angular";
+import {MenuController, NavController, Platform} from "@ionic/angular";
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import {Platform} from "@ionic/angular";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private platform: Platform) {
+  constructor(private platform: Platform, private navCtrl: NavController, private menuCtrl: MenuController) {
     this.onResize();
   }
 
@@ -21,6 +21,11 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  navigateToPage(type: string) {
+    this.navCtrl.navigateForward(type);
+    this.menuCtrl.toggle();
   }
 
 }

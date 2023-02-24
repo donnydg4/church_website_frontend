@@ -3,7 +3,7 @@
     <mat-toolbar style="height: 12vh; background: white">
 
       <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
-        <a routerLink="/home">
+        <a href="home">
           <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
         </a>
       </ion-buttons>
@@ -91,7 +91,7 @@
 
 <!--  Ion menu for smaller devices-->
   <ion-menu contentId="main-content" side="end">
-    <ion-header style="height: 10vh">
+    <ion-header style="height: 12vh">
       <ion-toolbar class="custom_toolbar_menu">
         <ion-title>The Father's House</ion-title>
       </ion-toolbar>
@@ -108,17 +108,17 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/church">our church</a>
+                    <ion-item button lines="none" (click)="navigateToPage('church')">
+                      <a class="changes">our church</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/ministries">our ministries</a>
+                    <ion-item button lines="none" (click)="navigateToPage('ministries')">
+                      <a class="changes">our ministries</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/leadership">leadership</a>
+                    <ion-item button lines="none" (click)="navigateToPage('leadership')">
+                      <a class="changes">leadership</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/supported-ministries">ministries we support</a>
+                    <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
+                      <a class="changes" >ministries we support</a>
                     </ion-item>
                   </ion-item-group>
                 </div>
@@ -130,17 +130,17 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/service-times">service times</a>
+                    <ion-item button lines="none" (click)="navigateToPage('service')">
+                      <a class="changes">service times</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/prayer">prayer</a>
+                    <ion-item button lines="none" (click)="navigateToPage('prayer')">
+                      <a class="changes">prayer</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/directions">directions</a>
+                    <ion-item button lines="none" (click)="navigateToPage('direction')">
+                      <a class="changes">directions</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/contact">contact us</a>
+                    <ion-item button lines="none" (click)="navigateToPage('connect')">
+                      <a class="changes">contact us</a>
                     </ion-item>
                   </ion-item-group>
                 </div>
@@ -152,17 +152,17 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/sermons">sermons</a>
+                    <ion-item button lines="none" (click)="navigateToPage('sermons')">
+                      <a class="changes">sermons</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/series">series</a>
+                    <ion-item button lines="none" (click)="navigateToPage('series')">
+                      <a class="changes">series</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/devotionals">devotionals</a>
+                    <ion-item button lines="none" (click)="navigateToPage('devotionals')">
+                      <a class="changes">devotionals</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/guest-speakers">guest speakers</a>
+                    <ion-item button lines="none" (click)="navigateToPage('guest-speakers')">
+                      <a class="changes">guest speakers</a>
                     </ion-item>
                   </ion-item-group>
                 </div>
@@ -174,11 +174,11 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/calendar">calendar</a>
+                    <ion-item button lines="none" (click)="navigateToPage('calendar')">
+                      <a class="changes">calendar</a>
                     </ion-item>
-                    <ion-item lines="none">
-                      <a class="changes" routerLink="/events">all events</a>
+                    <ion-item button lines="none" (click)="navigateToPage('events')">
+                      <a class="changes">all events</a>
                     </ion-item>
                   </ion-item-group>
                 </div>
@@ -203,12 +203,12 @@
 <!--  Toolbar for the Ion menu for mobile devices or small screen things-->
   <mat-toolbar class="custom_mat_toolbar mat-elevation-z2">
     <div class="ion-page" id="main-content">
-      <ion-header style="height: 10vh">
+      <ion-header style="height: 12vh">
         <ion-toolbar class="custom_toolbar">
 
           <ion-buttons slot="start" style="padding-top: 7px">
-            <a routerLink="/home">
-              <img src="assets/icon/church_home_logo.svg" style="height: 8vh;">
+            <a href="home">
+              <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
             </a>
           </ion-buttons>
 
