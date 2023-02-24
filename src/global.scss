@@ -175,3 +175,7 @@ ion-accordion.accordion-animated > [slot=header] .ion-accordion-toggle-icon {
 ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
   border-bottom: 1px solid white;
 }
+
+.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+  padding: 0px;
+}
