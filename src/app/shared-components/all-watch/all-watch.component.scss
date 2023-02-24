@@ -1,5 +1,6 @@
 ion-grid {
-  padding: 90px 0px 30px 0px;
+  margin-top: 7%;
+  --ion-grid-width: 95%;
 }
 
 ion-title {
@@ -34,10 +35,6 @@ div.img_good {
 ion-card {
   box-shadow: none !important;
   height: auto;
-}
-
-ion-row {
-  padding: 0px 60px 0px 60px;
 }
 
 ion-item {
