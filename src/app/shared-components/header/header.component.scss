@@ -126,21 +126,20 @@ ion-content.custom_background {
   --background: rgb(0 0 0 / 90%);
 }
 
-ion-button.custom {
-  //--border-color: var(--ion-color-primary-contrast);
-  --color: var(--ion-color-primary-contrast);
-  text-transform: none;
-  font-weight: normal;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  span {
-    text-align: left;
-    width: 100%;
-  }
-}
+//ion-button.custom {
+//  //--border-color: var(--ion-color-primary-contrast);
+//  --color: var(--ion-color-primary-contrast);
+//  text-transform: none;
+//  font-weight: normal;
+//  font-family: Roboto, "Helvetica Neue", sans-serif;
+//  span {
+//    text-align: left;
+//    width: 100%;
+//  }
+//}
 
 ion-item.custom_color {
   --color: var(--ion-color-primary-contrast);
-  //--background: rgb(0 0 0 / 90%);
   --border-color: var(--ion-color-primary-contrast);
   --background: transparent;
 }
