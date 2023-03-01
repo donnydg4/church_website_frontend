@@ -82,7 +82,7 @@ ion-icon {
 }
 
 .custom_toolbar_menu {
-  --background: var(--ion-color-primary-tint);
+  --background: var(--ion-color-primary-shade);
   --color: white;
   --min-height: 12vh;
   padding-left: 10px;
@@ -110,7 +110,7 @@ ion-accordion {
 }
 
 .font-size {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 a.changes {
@@ -123,21 +123,39 @@ a.changes {
 }
 
 ion-content.custom_background {
-  --background: var(--ion-color-primary-tint);
+  --background: rgb(0 0 0 / 90%);
 }
 
 ion-button.custom {
-  --border-color: var(--ion-color-primary-contrast);
+  //--border-color: var(--ion-color-primary-contrast);
   --color: var(--ion-color-primary-contrast);
+  text-transform: none;
+  font-weight: normal;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  span {
+    text-align: left;
+    width: 100%;
+  }
 }
 
 ion-item.custom_color {
   --color: var(--ion-color-primary-contrast);
-  --background: var(--ion-color-primary-tint);
+  //--background: rgb(0 0 0 / 90%);
   --border-color: var(--ion-color-primary-contrast);
+  --background: transparent;
 }
 
 div.div-padding {
   padding: 16px;
   background-color: var(--ion-color-primary-contrast);
+}
+
+ion-menu {
+  --background: transparent;
+  --ion-background-color: transparent;
+  --ion-color-base: transparent !important;
+
+  ion-content {
+    --background: rgb(0 0 0 / 90%);
+  }
 }
