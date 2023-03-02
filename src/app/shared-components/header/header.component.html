@@ -93,14 +93,19 @@
   <ion-menu contentId="main-content" side="end">
     <ion-header style="height: 12vh">
       <ion-toolbar class="custom_toolbar_menu">
-        <ion-title>The Father's House</ion-title>
+        <h3>The Father's House</h3>
       </ion-toolbar>
     </ion-header>
     <ion-content class="custom_background">
       <ion-grid class="ion-no-padding">
         <ion-row>
           <ion-col class="ion-no-padding">
-            <ion-accordion-group>
+            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full"
+                      class="font-size custom_color" mode="md"
+                      href="home">
+              <ion-label>Home</ion-label>
+            </ion-item>
+            <ion-accordion-group mode="md">
               <ion-accordion value="about">
                 <ion-item slot="header" class="custom_color" style="--min-height: 70px">
                   <ion-label style="font-size: 18px; letter-spacing: 1px">About</ion-label>
@@ -180,12 +185,12 @@
                 </div>
               </ion-accordion>
             </ion-accordion-group>
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full"
+            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
                       class="font-size custom_color"
                       href="https://app.securegive.com/tfhfreeport/main/donate/category">
               <ion-label>Give</ion-label>
             </ion-item>
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full"
+            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
                       class="font-size custom_color" disabled="true"
                       href="https://app.securegive.com/tfhfreeport/main/donate/category">
               <ion-label>Store</ion-label>
