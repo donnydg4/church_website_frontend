@@ -1,0 +1,15 @@
+<ion-grid [fixed]="true">
+  <ion-row *ngIf="eventsArray | async as eventCards">
+    <ion-col *ngFor="let events of eventCards" size="12">
+      <ion-item mode="md">
+          <ion-thumbnail slot="start">
+            <img src="{{events.imageUrl}}">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{events.title}}</h2>
+            <ion-text>{{events.description}}</ion-text>
+          </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>

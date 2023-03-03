@@ -7,6 +7,7 @@ import {DevotionalsPage} from "./devotionals/devotionals.page";
 import {SeriesPage} from "./series/series.page";
 import {GuestSpeakersPage} from "./guest-speakers/guest-speakers.page";
 import {ConnectPage} from "./connect/connect.page";
+import {AllEventsPage} from "./all-events/all-events.page";
 
 const routes: Routes = [
   {
@@ -55,9 +56,14 @@ const routes: Routes = [
     children: [
       {path: '', component: ConnectPage}
     ]
+  },
+  {
+    path: 'events',
+    component: MainLayoutComponent,
+    children: [
+      {path: '', component: AllEventsPage},
+    ]
   }
-
-
 ];
 
 @NgModule({

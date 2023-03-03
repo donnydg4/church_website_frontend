@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import {catchError, shareReplay, tap} from "rxjs/operators";
 import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {SeriesCardModel} from "../models/series-card.model";
+import {MainEventModel} from "../models/main-event-model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class AllChurchInformationService {
   private allWatchCardsUrl: string = 'http://localhost:8080/website/watchCards';
   private allSeriesCardsUrl: string = 'http://localhost:8080/website/seriesCards';
   private allCalendarEventsUrl: string = 'http://localhost:8080/website/calendar';
+  private allEventsUrl: string = 'http://localhost:8080/website/events'
 
   private searchQuery: BehaviorSubject<string> = new BehaviorSubject<string>('');
   searchQueryAction$ = this.searchQuery.asObservable();
@@ -39,6 +41,13 @@ export class AllChurchInformationService {
     .pipe(
       shareReplay(1),
       catchError(AllChurchInformationService.handleError)
+    );
+
+  allEvents$ = this.http.get<MainEventModel[]>(this.allEventsUrl)
+    .pipe(
+      shareReplay(1),
+      catchError(AllChurchInformationService.handleError),
+      tap(data => console.log(data))
     );
 
 

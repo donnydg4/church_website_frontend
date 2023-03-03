@@ -22,6 +22,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {ConnectPageModule} from "./connect/connect.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {AllEventsPageModule} from "./all-events/all-events.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -40,6 +41,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     SeriesPageModule,
     GuestSpeakersPageModule,
     ConnectPageModule,
+    AllEventsPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule
