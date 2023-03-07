@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
+import {sortByDate, sortByDateEvents} from "../utils/utils";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-all-events',
@@ -13,7 +15,8 @@ export class AllEventsPage implements OnInit {
   ngOnInit() {
   }
 
-  getAllEvents$ = this.dataService.allEvents$;
-
-
+  getAllEvents$ = this.dataService.allEvents$
+    .pipe(
+      map(events => events.filter(event => event.type === 'event').sort(sortByDateEvents))
+    );
 }

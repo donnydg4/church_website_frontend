@@ -3,4 +3,5 @@ export interface MainEventModel {
   title: string;
   date: Date;
   description: string;
+  type: string;
 }
