@@ -105,9 +105,7 @@ ion-menu-button {
   color: white;
   margin-inline-end: 16px;
 }
-ion-accordion {
-  //margin-top: 5%;
-}
+
 
 .font-size {
   font-size: 18px;
@@ -142,7 +140,16 @@ ion-item.custom_color {
   --color: white;
   --border-color: white;
   --background: transparent;
-  --background: rgb(0 0 0 / 90%);
+}
+
+ion-accordion {
+  --background: transparent;
+}
+ion-accordion-group {
+  --background: transparent;
+}
+
+.ios ion-item.custom_color {
 }
 
 div.div-padding {
@@ -154,10 +161,7 @@ ion-menu {
   --background: transparent;
   --ion-background-color: transparent;
   --ion-color-base: transparent !important;
-
-  ion-content {
-    --background: rgb(0 0 0 / 90%);
-  }
+  --min-width: 80%;
 }
 
 h3 {
