@@ -16,10 +16,10 @@
                   {{events.date | date :'MMMM dd, yyyy'}}
                 </ion-card-subtitle>
               </ion-card-header>
-              <ng-container>
-                <!--              <ion-card-content>-->
-                <!--                {{events.description}}-->
-                <!--              </ion-card-content>-->
+              <ng-container *ngIf="platformWidth > 800">
+                <ion-card-content>
+                  {{events.description}}
+                </ion-card-content>
               </ng-container>
             </ion-col>
           </ion-row>
