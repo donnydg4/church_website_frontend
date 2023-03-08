@@ -6,8 +6,6 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  //max-height: 90%;
-  //max-width: 90%;
 }
 ion-grid {
   --ion-grid-width: 95%;
@@ -39,4 +37,20 @@ ion-card-content {
 
 .ios ion-card-subtitle {
   font-size:calc(11px + .5vw);
+}
+
+//custom max heights
+ion-row.custom {
+  max-height: 240px;
+}
+
+ion-col.custom {
+  max-height: 240px;
+}
+ion-grid.custom {
+  max-height: 240px;
+}
+ion-card.custom {
+  max-height: 100%;
+  margin: 0px;
 }
