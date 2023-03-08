@@ -24,4 +24,8 @@ export class EventComponent implements OnInit {
 
   ngOnInit() {}
 
+  clickMe(): void {
+    console.log('clicked!');
+  }
+
 }

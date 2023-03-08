@@ -2,13 +2,18 @@ ion-card {
   box-shadow: none !important;
   border-radius: 0px;
 }
+ion-card:hover {
+  background-color: #f3f3f3;
+}
+
 img {
-  width: 100%;
   height: 100%;
+  max-width: 100%;
   border-radius: 3px;
 }
 ion-grid {
-  --ion-grid-width: 95%;
+  --ion-grid-width: 85%;
+  --ion-grid-width-xs: 95%;
 }
 ion-card-content {
   padding-bottom: 0px;
@@ -19,16 +24,16 @@ ion-card-subtitle {
 }
 ion-card-header {
   padding-top: 5%;
-  padding-left: 5%;
   padding-bottom: 3%;
+  padding-left: 3%;
 }
 ion-card-title {
   font-size:calc(12px + .75vw);
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 ion-card-content {
-  padding-left: 5%;
-  font-size:calc(12px + .3vw);;
+  font-size:calc(12px + .3vw);
+  padding-left: 3%;
 }
 
 .ios ion-card-title {
@@ -41,14 +46,15 @@ ion-card-content {
 
 //custom max heights
 ion-row.custom {
-  max-height: 240px;
+  max-height: 280px;
 }
 
 ion-col.custom {
-  max-height: 240px;
+  max-height: 280px;
+  max-width: 500px;
 }
 ion-grid.custom {
-  max-height: 240px;
+  max-height: 280px;
 }
 ion-card.custom {
   max-height: 100%;
