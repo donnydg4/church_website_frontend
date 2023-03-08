@@ -47,7 +47,7 @@ export class CalendarPage implements OnInit {
 
     this.minDate = new Date(currentYear, currentMonth, currentDate);
     this.twoWeeksDate = new Date(currentYear, currentMonth, currentDate + 14);
-    this.maxDate = new Date(currentYear, currentMonth, currentDate + 21);
+    this.maxDate = new Date(currentYear, currentMonth, currentDate + 28);
   }
 
   ngOnInit() {
