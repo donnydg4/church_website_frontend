@@ -19,7 +19,7 @@
     <ion-row style="padding-top: 30px" *ngIf="objectArray | async as watchCards">
       <ion-col size-xl="4" size-sm="6" size-xs="12"
                *ngFor="let cards of watchCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: watchCards.length}">
-        <ion-card mode="md">
+        <ion-card mode="md" button>
           <div class="img_good">
             <img alt="img-src" src="{{cards.imageUrl}}"/>
           </div>
@@ -36,7 +36,7 @@
     <ion-row style="padding-top: 30px" *ngIf="seriesArray | async as seriesCards">
       <ion-col size-xl="4" size-sm="6" size-xs="12"
                *ngFor="let cards of seriesCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesCards.length}">
-        <ion-card mode="md">
+        <ion-card mode="md" button>
           <div class="img_good">
             <img alt="img-src" src="{{cards.imageUrl}}"/>
           </div>
