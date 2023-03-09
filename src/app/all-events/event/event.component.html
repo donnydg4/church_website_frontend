@@ -1,29 +1,13 @@
 <ion-grid [fixed]="true" style="margin-top: 3%">
-  <ion-row *ngIf="eventsArray | async as eventCards">
-    <ion-col *ngFor="let events of eventCards" size="12" class="ion-no-padding custom test" style="margin: 1%">
-      <ion-card mode="md" class="custom" (click)="clickMe()" button>
-        <ion-grid class="ion-no-padding custom">
-          <ion-row class="custom">
-            <ion-col size="2.5" size-xs="3.5" class="ion-no-padding custom">
-              <img src="{{events.imageUrl}}">
-            </ion-col>
-            <ion-col size="9.5" size-xs="8.5" class="custom">
-              <ion-card-header>
-                <ion-card-title>
-                  {{events.title}}
-                </ion-card-title>
-                <ion-card-subtitle>
-                  {{events.date | date :'MMMM dd, yyyy'}}
-                </ion-card-subtitle>
-              </ion-card-header>
-              <ng-container *ngIf="platformWidth > 800">
-                <ion-card-content>
-                  {{events.description}}
-                </ion-card-content>
-              </ng-container>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+  <ion-row *ngIf="eventsArray | async as eventCards" class="ion-text-left">
+    <ion-col *ngFor="let events of eventCards" size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
+      <ion-card button (click)="clickMe()" mode="md" style="max-width: 421px;">
+        <img alt="img-src" src="assets/devotional_1200x1200.png"/>
+        <ion-card-header>
+          <ion-card-title>{{events.title}}</ion-card-title>
+          <ion-card-subtitle>{{events.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{events.description}}</ion-card-content>
       </ion-card>
     </ion-col>
   </ion-row>

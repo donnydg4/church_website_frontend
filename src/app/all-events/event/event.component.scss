@@ -1,62 +1,48 @@
 ion-card {
   box-shadow: none !important;
   border-radius: 0px;
+  width: inherit;
 }
 ion-card:hover {
   background-color: #f3f3f3;
 }
 
-img {
-  height: 100%;
-  max-width: 100%;
-  border-radius: 3px;
-}
 ion-grid {
-  --ion-grid-width: 85%;
+  --ion-grid-width: 70%;
   --ion-grid-width-xs: 95%;
 }
-ion-card-content {
-  padding-bottom: 0px;
-}
+
 ion-card-subtitle {
-  margin-top: 1%;
-  font-size:calc(11px + .5vw);
+  font-size:1.6vh;
+  margin-top: 0;
 }
+
 ion-card-header {
-  padding-top: 5%;
-  padding-bottom: 3%;
-  padding-left: 3%;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
 }
+
 ion-card-title {
-  font-size:calc(12px + .75vw);
+  font-size:2vh;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 ion-card-content {
-  font-size:calc(12px + .3vw);
-  padding-left: 3%;
+  font-size:1.3vh;
+  padding-left: 0px;
+  padding-top: 5px;
 }
 
 .ios ion-card-title {
-  font-size:calc(12px + .75vw);
+  font-size:2vh;
 }
 
 .ios ion-card-subtitle {
-  font-size:calc(11px + .5vw);
+  font-size:1.6vh;
 }
 
-//custom max heights
-ion-row.custom {
-  max-height: 280px;
-}
-
-ion-col.custom {
-  max-height: 280px;
-  max-width: 500px;
-}
-ion-grid.custom {
-  max-height: 280px;
-}
-ion-card.custom {
-  max-height: 100%;
-  margin: 0px;
+img {
+  border-radius: 4px;
+  object-fit: fill;
 }
