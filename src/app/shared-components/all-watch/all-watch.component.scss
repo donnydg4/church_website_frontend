@@ -3,8 +3,8 @@ ion-grid {
   --ion-grid-width: 94%;
 }
 
-ion-col:hover {
-  background-color: #b7b7b7;
+ion-col.custom:hover {
+  background-color: #d3d3d3;
   border-radius: 3px;
 }
 
