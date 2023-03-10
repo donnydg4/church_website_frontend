@@ -55,6 +55,11 @@ export class ConnectPage implements OnInit {
 
   }
 
+  customAlertOptions: any = {
+    header: 'Category',
+    cssClass: 'another-custom-class'
+  }
+
   async presentSnackBar() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',

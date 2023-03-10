@@ -179,3 +179,46 @@ ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
 .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
   padding: 0px;
 }
+
+//mobile select
+.another-custom-class .alert-wrapper {
+  background: #fafafa;
+
+  .alert-checkbox-label {
+    color: black;
+    font-family: Arial, serif;
+    font-weight: bold;
+  }
+
+  .alert-checkbox-group {
+    max-height: 320px;
+  }
+
+  .alert-title {
+    color: black;
+    font-weight: bold;
+  }
+
+  .alert-message {
+    border-bottom: purple 3px solid;
+  }
+
+  .alert-button {
+    color: #fafafa;
+    background: purple;
+  }
+
+  .alert-checkbox-icon {
+    border-color: purple;
+    background-color: #fafafa;
+  }
+
+  [aria-checked=true].select-interface-option {
+    .alert-checkbox-icon {
+      background-color: purple;
+    }
+    .alert-checkbox-inner {
+      border-color: #fafafa;
+    }
+  }
+}
