@@ -10,9 +10,10 @@ import {Platform} from "@ionic/angular";
 })
 export class EventComponent implements OnInit {
 
-  @Input() eventsArray: Observable<MainEventModel[]>
+  @Input() eventsArray: Observable<MainEventModel[]>;
+  @Input() selectedCategory: string = 'ALL EVENTS';
 
-  public platformWidth = this.platform.width()
+  public platformWidth = this.platform.width();
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {

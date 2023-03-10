@@ -8,7 +8,7 @@ ion-card:hover {
 }
 
 ion-grid {
-  --ion-grid-width: 70%;
+  --ion-grid-width: 65%;
   --ion-grid-width-xs: 95%;
 }
 
@@ -45,4 +45,8 @@ ion-card-content {
 img {
   border-radius: 4px;
   object-fit: fill;
+}
+
+h1 {
+  font-size: 4vh
 }

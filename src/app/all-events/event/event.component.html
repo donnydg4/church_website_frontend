@@ -1,4 +1,9 @@
 <ion-grid [fixed]="true" style="margin-top: 3%">
+  <ion-row>
+    <ion-col>
+      <h1 style="margin-bottom: 2%; padding-left: 4px;">{{selectedCategory}}</h1>
+    </ion-col>
+  </ion-row>
   <ion-row *ngIf="eventsArray | async as eventCards" class="ion-text-left">
     <ion-col *ngFor="let events of eventCards" size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
       <ion-card button (click)="clickMe()" mode="md" style="max-width: 421px;">
