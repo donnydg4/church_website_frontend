@@ -6,6 +6,12 @@ import {HeaderComponent} from "./header/header.component";
 import {NgModule} from "@angular/core";
 import {IonicModule} from "@ionic/angular";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {AllWatchComponent} from "./all-watch/all-watch.component";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {NgxPaginationModule} from "ngx-pagination";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   imports: [
@@ -13,16 +19,21 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     RouterModule.forChild([]),
     IonicModule,
     MatToolbarModule,
+    MatPaginatorModule,
+    NgxPaginationModule,
   ],
   exports: [
     MainLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AllWatchComponent
   ],
   declarations: [
     MainLayoutComponent,
     FooterComponent,
     HeaderComponent,
+    AllWatchComponent
   ]
 })
-export class SharedComponentsModule {}
+export class SharedComponentsModule {
+}

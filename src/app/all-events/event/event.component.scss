@@ -1,0 +1,53 @@
+ion-card {
+  box-shadow: none !important;
+  border-radius: 2px;
+  background-color: #f3f3f3;
+}
+ion-card:hover {
+  background-color: #f3f3f3;
+}
+
+ion-grid {
+  --ion-grid-width: 65%;
+  --ion-grid-width-xs: 95%;
+}
+
+ion-card-subtitle {
+  font-size:1.6vh;
+  margin-top: 5%;
+}
+
+ion-card-header {
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+ion-card-title {
+  font-size:2vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ion-card-content {
+  font-size:1.4vh;
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+.ios ion-card-title {
+  font-size:2vh;
+}
+
+.ios ion-card-subtitle {
+  font-size:1.6vh;
+}
+
+img {
+  border-radius: 4px;
+  object-fit: fill;
+}
+
+h1 {
+  font-size: 4vh;
+  color: black;
+}

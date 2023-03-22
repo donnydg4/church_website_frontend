@@ -3,8 +3,8 @@ ion-icon.size {
 }
 
 mat-toolbar {
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 ion-button {
@@ -14,7 +14,6 @@ ion-button {
   display: inline-block;
   margin: 0px;
 }
-
 
 ion-icon {
   font-size: 15px;
@@ -38,6 +37,7 @@ ion-icon {
 .inner-center-div {
   display: flex;
   text-align: center;
+  margin-right: 15px;
 }
 
 .dropdown-content {
@@ -45,7 +45,7 @@ ion-icon {
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 15px;
 }
@@ -56,7 +56,7 @@ ion-icon {
   text-decoration: none;
   display: block;
   font-size: .70em;
-  font-family: "Segoe UI";
+  font-family: Arial;
   font-weight: bold
 }
 
@@ -69,5 +69,102 @@ ion-icon {
 }
 
 .dropdown:hover .dropbtn {
+  width: inherit;
   border-bottom: 3px solid purple;
+}
+
+.custom_toolbar {
+  --background: white;
+  --color: black;
+  --min-height: 10vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.custom_toolbar_menu {
+  --background: var(--ion-color-primary-shade);
+  --color: white;
+  --min-height: 12vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.custom_mat_toolbar {
+  background: white;
+  height: 12vh;
+  position: relative;
+  z-index: 1;
+}
+
+ion-menu-button {
+  font-size: 45px;
+}
+
+.ion-icon-menu {
+  font-size: 26px;
+  color: white;
+  margin-inline-end: 16px;
+}
+
+
+.font-size {
+  font-size: 18px;
+}
+
+a.changes {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: block;
+  font-size: 1em;
+  font-family: Arial;
+}
+
+ion-content.custom_background {
+  --background: rgb(0 0 0 / 90%);
+}
+
+//ion-button.custom {
+//  //--border-color: var(--ion-color-primary-contrast);
+//  --color: var(--ion-color-primary-contrast);
+//  text-transform: none;
+//  font-weight: normal;
+//  font-family: Roboto, "Helvetica Neue", sans-serif;
+//  span {
+//    text-align: left;
+//    width: 100%;
+//  }
+//}
+
+ion-item.custom_color {
+  --color: white;
+  --border-color: white;
+  --background: transparent;
+}
+
+ion-accordion {
+  --background: transparent;
+}
+ion-accordion-group {
+  --ion-background-color: transparent;
+}
+
+.ios ion-item.custom_color {
+}
+
+div.div-padding {
+  padding: 16px;
+  background-color: white;
+}
+
+ion-menu {
+  --background: transparent;
+  --ion-background-color: transparent;
+  --ion-color-base: transparent !important;
+  --min-width: 80%;
+}
+
+h3 {
+  font-size: 20px;
+  color: white;
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'calendar',
     component: MainLayoutComponent,
     children: [
-      { path: '', component: CalendarPage},
+      {path: '', component: CalendarPage},
     ]
   }
 ];
@@ -18,4 +18,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CalendarPageRoutingModule {}
+export class CalendarPageRoutingModule {
+}

@@ -9,7 +9,7 @@ describe('MainLayoutComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainLayoutComponent ],
+      declarations: [MainLayoutComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

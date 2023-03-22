@@ -25,7 +25,200 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-//WORKS
-//ion-header.header-md::after {
-//  background-image: none;
-//}
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+    color: purple;
+  }
+
+  .mat-datepicker-toggle-active {
+    color: purple;
+  }
+
+  .mat-calendar-body-selected {
+    background-color: purple;
+    color: white;
+    opacity: .75;
+  }
+
+  .mat-calendar-body-cell-content.mat-focus-indicator {
+    border-radius: 5px;
+  }
+}
+
+//mat-select stuff
+.mat-option {
+  color: black;
+}
+
+.mat-option-text {
+  font-size: 15px;
+  font-family: Roboto;
+}
+
+.cdk-overlay-pane {
+  position: absolute;
+  pointer-events: auto;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mat-select-panel{
+  position: absolute;
+  top: 30px;
+  left: 1.75vmax !important;
+  min-width: calc(100% + 21px) !important;
+  border-radius: 5px !important;
+  border-top-style: none;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 1em;
+}
+
+mat-label {
+  color: black;
+}
+.mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
+  background: purple;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: purple;
+}
+
+mat-select-trigger {
+  font-size: 15px;
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: purple;
+}
+
+.mat-select-placeholder {
+  font-size: 14px;
+}
+
+input.mat-input-element {
+  margin-top: -0.0625em;
+  font-size: 15px;
+}
+.mat-form-field-label {
+  color: red;
+}
+//////////////////////
+// Alert for Contact Form
+.my-custom-class .alert-wrapper {
+
+  --min-width: 100px;
+  --max-width: 230px;
+  background: #fafafa;
+
+
+  .alert-title {
+    //color: purple;
+    font-size: 17px;
+    font-family: Arial, serif;
+    margin-top: 5%;
+    font-weight: bold;
+  }
+
+  .alert-message {
+    //color: purple;
+    font-size: 14px;
+    font-family: Arial, serif;
+    border-top: 2px solid black;
+    padding: 10px 12px 10px 12px;
+  }
+
+  .alert-button {
+    color: black;
+    background: #f5f5f5;
+    width: 120px;
+    text-align: center;
+  }
+
+  .alert-head {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .alert-button-group {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .alert-button-inner {
+    justify-content: center;
+  }
+}
+
+ion-footer {
+  background: white;
+}
+
+ion-item {
+  --background: white
+}
+
+ion-accordion.accordion-animated > [slot=header] .ion-accordion-toggle-icon {
+  transition: 300ms transform cubic-bezier(0.25, 0.8, 0.5, 1);
+  color: white;
+}
+ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
+  border-bottom: 1px solid white;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+  padding: 0px;
+}
+
+//mobile select
+.another-custom-class .alert-wrapper {
+  background: #fafafa;
+
+  .alert-checkbox-label {
+    color: black;
+    font-family: Arial, serif;
+    font-weight: bold;
+  }
+
+  .alert-checkbox-group {
+    max-height: 320px;
+  }
+
+  .alert-title {
+    color: black;
+    font-weight: bold;
+  }
+
+  .alert-message {
+    border-bottom: purple 3px solid;
+  }
+
+  .alert-button {
+    color: #fafafa;
+    background: purple;
+  }
+
+  .alert-checkbox-icon {
+    border-color: purple;
+    background-color: #fafafa;
+  }
+
+  [aria-checked=true].select-interface-option {
+    .alert-checkbox-icon {
+      background-color: purple;
+    }
+    .alert-checkbox-inner {
+      border-color: #fafafa;
+    }
+  }
+}
