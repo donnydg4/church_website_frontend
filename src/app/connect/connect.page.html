@@ -25,47 +25,46 @@
                 </div>
               </ion-col>
               <!-- Using desktop -->
-              <ng-container *ngIf="isDesktop">
-                <ion-col size="12">
-                  <div>
-                    <mat-form-field appearance="outline" style="width: 100%; font-size: 13px" hideRequiredMarker>
-                      <mat-label style="font-size: 14px">Category <span class="required">*</span></mat-label>
-                      <mat-select formControlName="category" multiple disableRipple disableOptionCentering
-                                  placeholder="Select a Category">
-                        <mat-select-trigger>
-                          {{contactForm.controls.category.value?.[0] || ''}}
-                          <span *ngIf="(contactForm.controls.category.value?.length || 0) > 1"
-                                class="example-additional-selection">
-        (+{{(contactForm.controls.category.value?.length || 0) - 1}} {{contactForm.controls.category.value?.length === 2 ? 'other' : 'others'}})</span>
-                        </mat-select-trigger>
-                        <mat-option *ngFor="let category of categoryList" [value]="category">{{category}}</mat-option>
+              <ion-col size="12">
+                <div>
+                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px" hideRequiredMarker>
+                    <mat-label style="font-size: 14px">Category <span class="required">*</span></mat-label>
+                    <mat-select formControlName="category" multiple disableRipple disableOptionCentering
+                                placeholder="Select a Category">
+                      <mat-select-trigger>
+                        {{contactForm.controls.category.value?.[0] || ''}}
+                        <span *ngIf="(contactForm.controls.category.value?.length || 0) > 1"
+                              class="example-additional-selection">
+        (+{{(contactForm.controls.category.value?.length || 0) - 1}} {{contactForm.controls.category.value?.length === 2 ? 'other' : 'others'}}
+                          )</span>
+                      </mat-select-trigger>
+                      <mat-option *ngFor="let category of categoryList" [value]="category">{{category}}</mat-option>
 
-                      </mat-select>
-                      <mat-error *ngIf="contactForm.controls.category.hasError('required')">
-                        Please select one or more categories
-                      </mat-error>
-                    </mat-form-field>
-                  </div>
-                </ion-col>
-              </ng-container>
+                    </mat-select>
+                    <mat-error *ngIf="contactForm.controls.category.hasError('required')">
+                      Please select one or more categories
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </ion-col>
 
-              <ng-container *ngIf="!isDesktop">
-<!--                <ion-col size="12">-->
-<!--                  <ion-item class="no_background_color" lines="none" style="width: 100%">-->
-<!--                    <ion-label position="stacked" class="input_color">Category <span class="required">*</span></ion-label>-->
-<!--                    <ion-select placeholder="Select a category" formControlName="category" multiple="true" mode="ios" interface="alert" [interfaceOptions]="customAlertOptions" style="width: 100%">-->
-<!--                      <ion-select-option>Prayer Request</ion-select-option>-->
-<!--                      <ion-select-option>Missions Trips</ion-select-option>-->
-<!--                      <ion-select-option>Community Event</ion-select-option>-->
-<!--                      <ion-select-option>Our Ministries</ion-select-option>-->
-<!--                      <ion-select-option>Ministries We Support</ion-select-option>-->
-<!--                      <ion-select-option>Guest Speakers</ion-select-option>-->
-<!--                      <ion-select-option>Other</ion-select-option>-->
-<!--                      <span>Hello</span>-->
-<!--                    </ion-select>-->
-<!--                  </ion-item>-->
-<!--                </ion-col>-->
-              </ng-container>
+              <!--              <ng-container *ngIf="!isDesktop">-->
+              <!--                <ion-col size="12">-->
+              <!--                  <ion-item class="no_background_color" lines="none" style="width: 100%">-->
+              <!--                    <ion-label position="stacked" class="input_color">Category <span class="required">*</span></ion-label>-->
+              <!--                    <ion-select placeholder="Select a category" formControlName="category" multiple="true" mode="ios" interface="alert" [interfaceOptions]="customAlertOptions" style="width: 100%">-->
+              <!--                      <ion-select-option>Prayer Request</ion-select-option>-->
+              <!--                      <ion-select-option>Missions Trips</ion-select-option>-->
+              <!--                      <ion-select-option>Community Event</ion-select-option>-->
+              <!--                      <ion-select-option>Our Ministries</ion-select-option>-->
+              <!--                      <ion-select-option>Ministries We Support</ion-select-option>-->
+              <!--                      <ion-select-option>Guest Speakers</ion-select-option>-->
+              <!--                      <ion-select-option>Other</ion-select-option>-->
+              <!--                      <span>Hello</span>-->
+              <!--                    </ion-select>-->
+              <!--                  </ion-item>-->
+              <!--                </ion-col>-->
+              <!--              </ng-container>-->
 
               <ion-col size="12">
                 <div>
