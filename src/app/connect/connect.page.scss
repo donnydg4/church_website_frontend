@@ -58,9 +58,11 @@ ion-item.no_background_color {
 ion-select {
   --placeholder-opacity: 1;
   --placeholder-color: black;
+  color: black;
   font-size: 14px;
   border-radius: 4px;
   --padding-start: 9.75px;
   border: 1px solid purple;
   min-height: 50px;
 }
+

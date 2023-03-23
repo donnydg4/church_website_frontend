@@ -14,7 +14,8 @@ ion-grid {
 
 ion-card-subtitle {
   font-size:1.6vh;
-  margin-top: 5%;
+  margin-top: 3%;
+  color: #2a2a2a;
 }
 
 ion-card-header {
@@ -26,12 +27,14 @@ ion-card-header {
 ion-card-title {
   font-size:2vh;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: black;
 }
 
 ion-card-content {
   font-size:1.4vh;
   padding-left: 5%;
   padding-bottom: 5%;
+  color: black;
 }
 
 .ios ion-card-title {
