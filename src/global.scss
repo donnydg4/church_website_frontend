@@ -73,11 +73,12 @@
 .mat-select-panel{
   position: absolute;
   top: 30px;
-  left: 1.75vmax !important;
-  min-width: calc(100% + 21px) !important;
+  left: 1.55vmax !important;
+  min-width: calc(100% + 4%) !important;
   border-radius: 5px !important;
   border-top-style: none;
 }
+
 
 .example-additional-selection {
   opacity: 0.75;

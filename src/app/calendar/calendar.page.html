@@ -32,11 +32,13 @@
             <ion-card-subtitle>{{calendarEvent.date | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content *ngFor="let content of calendarEvent.events">
-            <h1 class="in-card">
-              <div class="ion-text-wrap">
-                {{content.title}}
-              </div>
-            </h1>
+<!--            <h1 style="color: blue">-->
+<!--              <div class="ion-text-wrap">-->
+<!--                {{content.title}}-->
+<!--              </div>-->
+<!--            </h1>-->
+            <a href="/standard-layout" style="font-size: 24px; color: purple">{{content.title}}</a>
+            <br>
             <ion-text>
               {{content.description}}
             </ion-text>
@@ -46,6 +48,5 @@
 
     </ion-row>
   </ion-grid>
-<!--  <br><br><br><br><br><br>-->
   <app-footer></app-footer>
 </ion-content>

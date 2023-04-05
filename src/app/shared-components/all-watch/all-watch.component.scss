@@ -4,7 +4,7 @@ ion-grid {
 }
 
 ion-col.custom:hover {
-  background-color: #b7b7b7;
+  background-color: #e5e5e5;
   border-radius: 3px;
 }
 
@@ -40,6 +40,12 @@ div.img_good {
 ion-card {
   box-shadow: none !important;
   height: auto;
+  --background: white;
+}
+
+ion-card-title {
+  color: black;
+  font-size: 16px;
 }
 
 ion-item {
@@ -75,3 +81,4 @@ ion-row.bottom_border {
 ::ng-deep .ngx-pagination {
   padding-left: 0px;
 }
+

@@ -9,9 +9,6 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {AllWatchComponent} from "./all-watch/all-watch.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {NgxPaginationModule} from "ngx-pagination";
-import {MatInputModule} from "@angular/material/input";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   imports: [

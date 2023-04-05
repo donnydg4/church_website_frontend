@@ -12,10 +12,15 @@ import {MainEventModel} from "../models/main-event-model";
 })
 export class AllChurchInformationService {
 
-  private allWatchCardsUrl: string = 'http://localhost:8080/website/watchCards';
-  private allSeriesCardsUrl: string = 'http://localhost:8080/website/seriesCards';
-  private allCalendarEventsUrl: string = 'http://localhost:8080/website/calendar';
-  private allEventsUrl: string = 'http://localhost:8080/website/events'
+  // private allWatchCardsUrl: string = 'http://localhost:8080/church/watchCards';
+  // private allSeriesCardsUrl: string = 'http://localhost:8080/church/seriesCards';
+  // private allCalendarEventsUrl: string = 'http://localhost:8080/church/website/calendar';
+  // private allEventsUrl: string = 'http://localhost:8080/church/website/events'
+
+  private allWatchCardsUrl: string = 'https://church-rest-service.herokuapp.com/church/watchCards';
+  private allSeriesCardsUrl: string = 'https://church-rest-service.herokuapp.com/church/seriesCards';
+  private allCalendarEventsUrl: string = 'https://church-rest-service.herokuapp.com/church/website/calendar';
+  private allEventsUrl: string = 'https://church-rest-service.herokuapp.com/church/website/events'
 
   private searchQuery: BehaviorSubject<string> = new BehaviorSubject<string>('');
   searchQueryAction$ = this.searchQuery.asObservable();

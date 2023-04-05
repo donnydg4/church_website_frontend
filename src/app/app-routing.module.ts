@@ -8,6 +8,7 @@ import {SeriesPage} from "./series/series.page";
 import {GuestSpeakersPage} from "./guest-speakers/guest-speakers.page";
 import {ConnectPage} from "./connect/connect.page";
 import {AllEventsPage} from "./all-events/all-events.page";
+import {StandardLayoutPage} from "./standard-layout/standard-layout.page";
 
 const routes: Routes = [
   {
@@ -63,7 +64,16 @@ const routes: Routes = [
     children: [
       {path: '', component: AllEventsPage},
     ]
+  },
+  {
+    path: 'standard-layout',
+    component: MainLayoutComponent,
+    children: [
+      {path: '', component: StandardLayoutPage},
+    ]
   }
+
+
 ];
 
 @NgModule({
