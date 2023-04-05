@@ -8,6 +8,7 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
+import {StandardLayoutPageModule} from "../standard-layout/standard-layout.module";
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {MatInputModule} from "@angular/material/input";
     MatFormFieldModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    StandardLayoutPageModule
   ],
   declarations: [ConnectPage]
 })
