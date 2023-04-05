@@ -4,6 +4,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {BehaviorSubject, combineLatest} from "rxjs";
 import {map} from "rxjs/operators";
 import {sortByDateCalendar} from "../utils/utils";
+import {NavController} from "@ionic/angular";
 
 @Component({
   selector: 'app-calendar',
@@ -39,7 +40,7 @@ export class CalendarPage implements OnInit {
         }
       ).sort(sortByDateCalendar)));
 
-  constructor(private dataService: AllChurchInformationService) {
+  constructor(private dataService: AllChurchInformationService, private navCtrl: NavController) {
     const date = new Date();
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth(); //getMonth starts at 0
@@ -70,6 +71,10 @@ export class CalendarPage implements OnInit {
   selectDateRange(startDate?: Date, endDate?: Date) {
     this.beginningDateSubject.next(startDate);
     this.endDateSubject.next(endDate);
+  }
+
+  navigateToStandardLayout(): void {
+    this.navCtrl.navigateForward('standard-layout');
   }
 
 }
