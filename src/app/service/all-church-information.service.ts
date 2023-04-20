@@ -6,6 +6,7 @@ import {catchError, shareReplay, tap} from "rxjs/operators";
 import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {SeriesCardModel} from "../models/series-card.model";
 import {MainEventModel} from "../models/main-event-model";
+import {DisplayCardModel} from "../models/display-card.model";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,8 @@ export class AllChurchInformationService {
   private allWatchCardsUrl: string = 'https://church-rest-service.herokuapp.com/church/watchCards';
   private allSeriesCardsUrl: string = 'https://church-rest-service.herokuapp.com/church/seriesCards';
   private allCalendarEventsUrl: string = 'https://church-rest-service.herokuapp.com/church/website/calendar';
-  private allEventsUrl: string = 'https://church-rest-service.herokuapp.com/church/website/events'
+  private allEventsUrl: string = 'https://church-rest-service.herokuapp.com/church/website/events';
+  private allDisplayCardsUrl: string = 'https://church-rest-service.herokuapp.com/church/displayCards';
 
   private searchQuery: BehaviorSubject<string> = new BehaviorSubject<string>('');
   searchQueryAction$ = this.searchQuery.asObservable();
@@ -49,6 +51,13 @@ export class AllChurchInformationService {
     );
 
   allEvents$ = this.http.get<MainEventModel[]>(this.allEventsUrl)
+    .pipe(
+      shareReplay(1),
+      catchError(AllChurchInformationService.handleError),
+      tap(data => console.log(data))
+    );
+
+  allDisplayCards$ = this.http.get<DisplayCardModel[]>(this.allDisplayCardsUrl)
     .pipe(
       shareReplay(1),
       catchError(AllChurchInformationService.handleError),

@@ -1,0 +1,26 @@
+<ion-grid [fixed]="true" style="margin-top: 3%">
+  <ion-row>
+    <ion-col>
+      <h1 style="margin-bottom: 2%; padding-left: 4px;">{{selectedCategory}}</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="displayCards | async as eventCards" class="ion-text-left">
+    <ion-col *ngFor="let events of eventCards" size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
+      <ion-card button (click)="clickMe()" mode="md" style="max-width: 421px;">
+        <!--        <img alt="img-src" src="{{events.imageUrl}}"/>-->
+        <swiper-container pager="true" style="height: 300px">
+          <swiper-slide *ngFor="let cardImage of events.imageUrl">
+            <div style="height: 100%; width: 100%">
+              <img src="{{cardImage}}" alt="" style="height: 100%; width: 100%">
+            </div>
+          </swiper-slide>
+        </swiper-container>
+        <ion-card-header>
+          <ion-card-title>{{events.title}}</ion-card-title>
+          <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{events.description}}</ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

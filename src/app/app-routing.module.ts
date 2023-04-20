@@ -9,6 +9,8 @@ import {GuestSpeakersPage} from "./guest-speakers/guest-speakers.page";
 import {ConnectPage} from "./connect/connect.page";
 import {AllEventsPage} from "./all-events/all-events.page";
 import {StandardLayoutPage} from "./standard-layout/standard-layout.page";
+import {MinistriesWeSupportPage} from "./ministries-we-support/ministries-we-support.page";
+import {OurMinistriesPage} from "./our-ministries/our-ministries.page";
 
 const routes: Routes = [
   {
@@ -71,9 +73,21 @@ const routes: Routes = [
     children: [
       {path: '', component: StandardLayoutPage},
     ]
+  },
+  {
+    path: 'supported-ministries',
+    component: MainLayoutComponent,
+    children: [
+      {path: '', component: MinistriesWeSupportPage},
+    ]
+  },
+  {
+    path: 'our-ministries',
+    component: MainLayoutComponent,
+    children: [
+      {path: '', component: OurMinistriesPage},
+    ]
   }
-
-
 ];
 
 @NgModule({
