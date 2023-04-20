@@ -18,6 +18,9 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         AllEventsPageRoutingModule,
         SharedComponentsModule
     ],
+    exports: [
+        EventComponent
+    ],
     declarations: [AllEventsPage, EventComponent]
 })
 export class AllEventsPageModule {}

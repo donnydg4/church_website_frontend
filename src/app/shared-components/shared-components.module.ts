@@ -9,6 +9,9 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {AllWatchComponent} from "./all-watch/all-watch.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {NgxPaginationModule} from "ngx-pagination";
+import {DisplayCardsComponent} from "./display-cards/display-cards.component";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
   imports: [
@@ -23,14 +26,17 @@ import {NgxPaginationModule} from "ngx-pagination";
     MainLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    AllWatchComponent
+    AllWatchComponent,
+    DisplayCardsComponent
   ],
   declarations: [
     MainLayoutComponent,
     FooterComponent,
     HeaderComponent,
-    AllWatchComponent
-  ]
+    AllWatchComponent,
+    DisplayCardsComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SharedComponentsModule {
 }

@@ -11,7 +11,7 @@ import {Platform} from "@ionic/angular";
 export class EventComponent implements OnInit {
 
   @Input() eventsArray: Observable<MainEventModel[]>;
-  @Input() selectedCategory: string = 'ALL EVENTS';
+  @Input() selectedCategory: string = '';
 
   public platformWidth = this.platform.width();
 

@@ -23,6 +23,9 @@ import {MatSelectModule} from "@angular/material/select";
 import {ConnectPageModule} from "./connect/connect.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AllEventsPageModule} from "./all-events/all-events.module";
+import {OurMinistriesPageModule} from "./our-ministries/our-ministries.module";
+import {MinistriesWeSupportPageModule} from "./ministries-we-support/ministries-we-support.module";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,12 +45,15 @@ import {AllEventsPageModule} from "./all-events/all-events.module";
     GuestSpeakersPageModule,
     ConnectPageModule,
     AllEventsPageModule,
+    OurMinistriesPageModule,
+    MinistriesWeSupportPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
 }

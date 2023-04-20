@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {sortByDate, sortByDateEvents} from "../utils/utils";
 import {map} from "rxjs/operators";
@@ -11,6 +11,8 @@ import {map} from "rxjs/operators";
 export class AllEventsPage implements OnInit {
 
   constructor(private dataService: AllChurchInformationService) { }
+
+  selectedCategory: string = 'ALL EVENTS';
 
   ngOnInit() {
   }
