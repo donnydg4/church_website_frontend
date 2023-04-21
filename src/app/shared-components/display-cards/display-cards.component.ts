@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
-import {MainEventModel} from "../../models/main-event-model";
 import {DisplayCardModel} from "../../models/display-card.model";
 
 @Component({
@@ -17,8 +16,5 @@ export class DisplayCardsComponent implements OnInit {
 
   ngOnInit() {}
 
-  clickMe(): void {
-    console.log('clicked!');
-  }
 
 }

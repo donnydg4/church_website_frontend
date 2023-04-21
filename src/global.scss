@@ -26,6 +26,8 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+@import "~swiper/swiper-bundle.css";
+
 ::ng-deep {
   .mat-form-field-appearance-outline .mat-form-field-outline {
     color: purple;
@@ -222,6 +224,13 @@ ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
       border-color: #fafafa;
     }
   }
+}
+
+swiper-container {
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-color: purple;
+  opacity: 1 !important;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
 swiper-slide {
