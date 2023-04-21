@@ -249,3 +249,27 @@ swiper-slide {
   text-align: center;
   box-sizing: border-box;
 }
+
+ion-button.learn {
+  --background: green;
+  --background-activated: #029e02;
+  color: white;
+  height: 1.8em;
+  --box-shadow: 0px;
+  font-size: 14px;
+  --padding-start: .5em;
+  --padding-end: .5em;
+  margin-bottom: 4%;
+  --border-radius: 5px;
+}
+ion-button.transparent {
+  --background: purple;
+  color: #eaeaea;
+  height: 1.8em;
+  --box-shadow: 0px;
+  font-size: 14px;
+  --padding-start: .5em;
+  --padding-end: .5em;
+  margin-bottom: 4%;
+  --border-radius: 5px;
+}
