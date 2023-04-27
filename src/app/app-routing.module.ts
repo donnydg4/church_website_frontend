@@ -11,6 +11,7 @@ import {AllEventsPage} from "./all-events/all-events.page";
 import {StandardLayoutPage} from "./standard-layout/standard-layout.page";
 import {MinistriesWeSupportPage} from "./ministries-we-support/ministries-we-support.page";
 import {OurMinistriesPage} from "./our-ministries/our-ministries.page";
+import {LeadershipPage} from "./leadership/leadership.page";
 
 const routes: Routes = [
   {
@@ -87,7 +88,15 @@ const routes: Routes = [
     children: [
       {path: '', component: OurMinistriesPage},
     ]
+  },
+  {
+    path: 'leadership',
+    component: MainLayoutComponent,
+    children: [
+      {path: '', component: LeadershipPage},
+    ]
   }
+
 ];
 
 @NgModule({

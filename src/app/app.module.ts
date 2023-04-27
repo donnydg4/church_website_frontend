@@ -26,6 +26,7 @@ import {AllEventsPageModule} from "./all-events/all-events.module";
 import {OurMinistriesPageModule} from "./our-ministries/our-ministries.module";
 import {MinistriesWeSupportPageModule} from "./ministries-we-support/ministries-we-support.module";
 import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {LeadershipPageModule} from "./leadership/leadership.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -47,6 +48,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
     AllEventsPageModule,
     OurMinistriesPageModule,
     MinistriesWeSupportPageModule,
+    LeadershipPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule

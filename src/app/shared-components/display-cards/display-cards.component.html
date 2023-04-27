@@ -10,19 +10,24 @@
         <swiper-container style="height: 300px" pagination="true">
           <swiper-slide *ngFor="let cardImage of card.imageUrl">
             <div style="height: 100%; width: 100%">
-              <img src="{{cardImage}}" alt="" style="height: 100%; width: 100%">
+              <img src="./assets/devotional_1200x1200.png" alt="" style="height: 100%; width: 100%">
             </div>
           </swiper-slide>
         </swiper-container>
         <ion-card-header>
-          <ion-card-subtitle *ngIf="card.startDate !== null">{{card.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
-          <ion-card-subtitle *ngIf="card.type !== null && card.startDate === null">{{card.type}}</ion-card-subtitle>
+          <ng-container *ngIf="card.type !== 'CHURCH LEADERSHIP'">
+            <ion-card-subtitle *ngIf="card.startDate !== null">{{card.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+            <ion-card-subtitle *ngIf="card.type !== null && card.startDate === null">{{card.type}}</ion-card-subtitle>
+          </ng-container>
+          <ng-container *ngIf="card.type === 'CHURCH LEADERSHIP'">
+            <ion-card-subtitle *ngIf="card.type !== null && card.startDate === null">{{card.description}}</ion-card-subtitle>
+          </ng-container>
           <ion-card-title>{{card.title}}</ion-card-title>
         </ion-card-header>
-        <ion-card-content [ngClass]="{'limitTextHeight': isSelected !== i}">{{card.description}}</ion-card-content>
+        <ion-card-content *ngIf="card.type !== 'CHURCH LEADERSHIP'" [ngClass]="{'limitTextHeight': isSelected !== i}">{{card.description}}</ion-card-content>
 
         <ion-grid class="custom_buttons" fixed="true">
-          <ion-row>
+          <ion-row *ngIf="card.type !== 'CHURCH LEADERSHIP'">
             <ion-col size="6" class="ion-no-padding">
               <ion-button class="transparent"
                           (click)="isSelected === i ? isSelected = null : isSelected = i"
