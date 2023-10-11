@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { MinistriesWeSupportPageRoutingModule } from './ministries-we-support-routing.module';
 
 import { MinistriesWeSupportPage } from './ministries-we-support.page';
-import {AllEventsPageModule} from "../all-events/all-events.module";
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 
@@ -17,7 +16,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
     FormsModule,
     IonicModule,
     MinistriesWeSupportPageRoutingModule,
-    AllEventsPageModule,
     SharedComponentsModule
   ],
   declarations: [MinistriesWeSupportPage],

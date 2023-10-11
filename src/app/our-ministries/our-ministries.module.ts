@@ -8,7 +8,6 @@ import { OurMinistriesPageRoutingModule } from './our-ministries-routing.module'
 
 import { OurMinistriesPage } from './our-ministries.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
-import {AllEventsPageModule} from "../all-events/all-events.module";
 
 @NgModule({
   imports: [
@@ -16,8 +15,7 @@ import {AllEventsPageModule} from "../all-events/all-events.module";
     FormsModule,
     IonicModule,
     OurMinistriesPageRoutingModule,
-    SharedComponentsModule,
-    AllEventsPageModule
+    SharedComponentsModule
   ],
   declarations: [OurMinistriesPage]
 })

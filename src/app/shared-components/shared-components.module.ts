@@ -11,6 +11,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {NgxPaginationModule} from "ngx-pagination";
 import {DisplayCardsComponent} from "./display-cards/display-cards.component";
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {VideoComponent} from "./video/video.component";
 
 
 @NgModule({
@@ -27,14 +28,16 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     HeaderComponent,
     FooterComponent,
     AllWatchComponent,
-    DisplayCardsComponent
+    DisplayCardsComponent,
+    VideoComponent
   ],
   declarations: [
     MainLayoutComponent,
     FooterComponent,
     HeaderComponent,
     AllWatchComponent,
-    DisplayCardsComponent
+    DisplayCardsComponent,
+    VideoComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

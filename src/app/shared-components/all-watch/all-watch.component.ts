@@ -4,6 +4,7 @@ import {AllChurchInformationService} from "../../service/all-church-information.
 import {Observable} from "rxjs";
 import {SeriesCardModel} from "../../models/series-card.model";
 import {PaginationInstance} from "ngx-pagination";
+import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-all-watch',
@@ -13,6 +14,9 @@ import {PaginationInstance} from "ngx-pagination";
 export class AllWatchComponent implements OnInit {
 
   page: number = 1;
+  defaultUrl: string = "https://www.youtube.com/embed/";
+  youtubeUrl: SafeResourceUrl;
+  // clicked: boolean = false;
 
   public config: PaginationInstance = {
     itemsPerPage: 15,
@@ -28,7 +32,9 @@ export class AllWatchComponent implements OnInit {
     console.log(event.target.value.toLowerCase());
   }
 
-  constructor(private dataService: AllChurchInformationService) {
+  constructor(private dataService: AllChurchInformationService,
+              public sanitizer: DomSanitizer) {
+    this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl);
   }
 
 

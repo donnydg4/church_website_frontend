@@ -10,7 +10,7 @@
         <swiper-container style="height: 300px" pagination="true">
           <swiper-slide *ngFor="let cardImage of card.imageUrl">
             <div style="height: 100%; width: 100%">
-              <img src="./assets/devotional_1200x1200.png" alt="" style="height: 100%; width: 100%">
+              <img src="{{cardImage}}" alt="" style="height: 100%; width: 100%">
             </div>
           </swiper-slide>
         </swiper-container>

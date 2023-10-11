@@ -17,12 +17,16 @@
 
   <ng-container *ngIf="title !== 'Series'">
     <ion-row style="padding-top: 30px" *ngIf="objectArray | async as watchCards">
-      <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
+      <ion-col size-xl="4" size-sm="4" size-xs="12" class="custom"
                *ngFor="let cards of watchCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: watchCards.length}">
-        <ion-card mode="md" button>
+        <ion-card mode="md">
           <div class="img_good">
             <img alt="img-src" src="{{cards.imageUrl}}"/>
+            <!--            <iframe [src]="youtubeUrl" allow="fullscreen">-->
+
+            <!--            </iframe>-->
           </div>
+
           <ion-card-header>
             <ion-card-title>{{cards.title}}</ion-card-title>
             <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
@@ -36,7 +40,7 @@
     <ion-row style="padding-top: 30px" *ngIf="seriesArray | async as seriesCards">
       <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
                *ngFor="let cards of seriesCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesCards.length}">
-        <ion-card mode="md" button>
+        <ion-card mode="md">
           <div class="img_good">
             <img alt="img-src" src="{{cards.imageUrl}}"/>
           </div>

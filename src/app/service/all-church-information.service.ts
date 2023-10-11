@@ -81,6 +81,6 @@ export class AllChurchInformationService {
       errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
     }
     console.error(err);
-    return throwError(errorMessage);
+    return throwError(() => errorMessage);
   }
 }
