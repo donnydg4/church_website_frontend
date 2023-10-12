@@ -7,10 +7,7 @@ import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.
 const routes: Routes = [
   {
     path: 'devotionals',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: DevotionalsPage}
-    ]
+    component: DevotionalsPage
   }
 ];
 

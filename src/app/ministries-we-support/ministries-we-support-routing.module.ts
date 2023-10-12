@@ -7,10 +7,7 @@ import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.
 const routes: Routes = [
   {
     path: 'supported-ministries',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: MinistriesWeSupportPage},
-    ]
+    component: MinistriesWeSupportPage
   }
 ];
 

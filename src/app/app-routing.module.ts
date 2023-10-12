@@ -21,80 +21,47 @@ const routes: Routes = [
   },
   {
     path: 'calendar',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: CalendarPage},
-    ]
+    component: CalendarPage,
   },
   {
     path: 'sermons',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: SermonsPage}
-    ]
+    component: SermonsPage
   },
   {
     path: 'devotionals',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: DevotionalsPage}
-    ]
+    component: DevotionalsPage
   },
   {
     path: 'series',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: SeriesPage}
-    ]
+    component: SeriesPage
   },
   {
     path: 'guest-speakers',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: GuestSpeakersPage}
-    ]
+    component: GuestSpeakersPage
   },
   {
     path: 'connect',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: ConnectPage}
-    ]
+    component: ConnectPage
   },
   {
     path: 'events',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: AllEventsPage},
-    ]
+    component: AllEventsPage
   },
   {
     path: 'standard-layout',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: StandardLayoutPage},
-    ]
+    component: StandardLayoutPage
   },
   {
     path: 'supported-ministries',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: MinistriesWeSupportPage},
-    ]
+    component: MinistriesWeSupportPage
   },
   {
     path: 'our-ministries',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: OurMinistriesPage},
-    ]
+    component: OurMinistriesPage
   },
   {
     path: 'leadership',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: LeadershipPage},
-    ]
+    component: LeadershipPage
   }
 
 ];

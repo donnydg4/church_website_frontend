@@ -6,10 +6,7 @@ import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.
 const routes: Routes = [
   {
     path: 'home',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: HomePage}
-    ]
+    component: HomePage
   },
 ];
 

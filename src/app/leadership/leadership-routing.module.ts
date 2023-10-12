@@ -8,10 +8,7 @@ import {MinistriesWeSupportPage} from "../ministries-we-support/ministries-we-su
 const routes: Routes = [
   {
     path: 'leadership',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: LeadershipPage},
-    ]
+    component: LeadershipPage
   }
 ];
 

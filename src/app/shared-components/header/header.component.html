@@ -1,15 +1,15 @@
-<ng-container *ngIf="platformWidth > 900">
-  <ion-header style="height: 100%">
-    <mat-toolbar style="height: 12vh; background: white">
+<ion-header style="height: 100%">
+  <mat-toolbar style="height: 100%; background: white">
 
-      <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
-        <a href="home">
-          <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
-        </a>
-      </ion-buttons>
+    <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
+      <a href="home">
+        <img src="assets/icon/church_home_logo.svg" style="height: 12vh; padding: 5px">
+      </a>
+    </ion-buttons>
 
-      <span class="spacer"></span>
+    <span class="spacer"></span>
 
+    <ng-container *ngIf="platformWidth > 900">
       <ion-buttons slot="end" class="right-side">
 
         <div class="dropdown">
@@ -81,148 +81,131 @@
 
 
       </ion-buttons>
+    </ng-container>
+
+    <ng-container *ngIf="platformWidth <= 900">
 
 
-    </mat-toolbar>
-  </ion-header>
-</ng-container>
-
-<ng-container *ngIf="platformWidth <= 900">
-
-  <!--  Ion menu for smaller devices-->
-  <ion-menu contentId="main-content" side="end">
-    <ion-header style="height: 12vh">
-      <ion-toolbar class="custom_toolbar_menu">
-        <h3>The Father's House</h3>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="custom_background">
-      <ion-grid class="ion-no-padding">
-        <ion-row>
-          <ion-col class="ion-no-padding">
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full"
-                      class="font-size custom_color" mode="md"
-                      href="home">
-              <ion-label>Home</ion-label>
-            </ion-item>
-            <ion-accordion-group mode="md">
-              <ion-accordion value="about" mode="md">
-                <ion-item slot="header" class="custom_color" style="--min-height: 70px" color="none">
-                  <ion-label style="font-size: 18px; letter-spacing: 1px">About</ion-label>
-                </ion-item>
-                <div class="div-padding" slot="content">
-                  <ion-item-group>
-                    <ion-item button lines="none" (click)="navigateToPage('church')">
-                      <a class="changes">our church</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('our-ministries')">
-                      <a class="changes">our ministries</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('leadership')">
-                      <a class="changes">leadership</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
-                      <a class="changes">ministries we support</a>
-                    </ion-item>
-                  </ion-item-group>
-                </div>
-              </ion-accordion>
-              <ion-accordion value="connect" mode="md">
-                <ion-item slot="header" class="custom_color" style="--min-height: 70px">
-                  <ion-label style="font-size: 18px;">Connect</ion-label>
-                </ion-item>
-                <div class="div-padding" slot="content">
-                  <ion-item-group>
-                    <ion-item button lines="none" (click)="navigateToPage('service')">
-                      <a class="changes">service times</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('prayer')">
-                      <a class="changes">prayer</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('direction')">
-                      <a class="changes">directions</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('connect')">
-                      <a class="changes">contact us</a>
-                    </ion-item>
-                  </ion-item-group>
-                </div>
-              </ion-accordion>
-              <ion-accordion value="watch" mode="md">
-                <ion-item slot="header" class="custom_color" style="--min-height: 70px">
-                  <ion-label style="font-size: 18px;">Watch</ion-label>
-                </ion-item>
-                <div class="div-padding" slot="content">
-                  <ion-item-group>
-                    <ion-item button lines="none" (click)="navigateToPage('sermons')">
-                      <a class="changes">sermons</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('series')">
-                      <a class="changes">series</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('devotionals')">
-                      <a class="changes">devotionals</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('guest-speakers')">
-                      <a class="changes">guest speakers</a>
-                    </ion-item>
-                  </ion-item-group>
-                </div>
-              </ion-accordion>
-              <ion-accordion value="events" mode="md">
-                <ion-item slot="header" class="custom_color" style="--min-height: 70px">
-                  <ion-label style="font-size: 18px;">Events</ion-label>
-                </ion-item>
-                <div class="div-padding" slot="content">
-                  <ion-item-group>
-                    <ion-item button lines="none" (click)="navigateToPage('calendar')">
-                      <a class="changes">calendar</a>
-                    </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('events')">
-                      <a class="changes">all events</a>
-                    </ion-item>
-                  </ion-item-group>
-                </div>
-              </ion-accordion>
-            </ion-accordion-group>
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
-                      class="font-size custom_color"
-                      href="https://app.securegive.com/tfhfreeport/main/donate/category">
-              <ion-label>Give</ion-label>
-            </ion-item>
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
-                      class="font-size custom_color" disabled="true"
-                      href="https://app.securegive.com/tfhfreeport/main/donate/category">
-              <ion-label>Store</ion-label>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-content>
-  </ion-menu>
-
-  <!--  Toolbar for the Ion menu for mobile devices or small screen things-->
-  <mat-toolbar class="custom_mat_toolbar mat-elevation-z2">
-    <div class="ion-page" id="main-content">
-      <ion-header style="height: 12vh">
-        <ion-toolbar class="custom_toolbar">
-
-          <ion-buttons slot="start" style="padding-top: 7px">
-            <a href="home">
-              <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
-            </a>
-          </ion-buttons>
-
-          <span class="spacer"></span>
-
-          <ion-buttons slot="end">
+      <ion-buttons slot="end" class="right-side">
+        <div id="main-content">
+          <ion-buttons slot="end" style="padding: 5px">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
+        </div>
+      </ion-buttons>
 
-        </ion-toolbar>
-      </ion-header>
-    </div>
+    </ng-container>
+
   </mat-toolbar>
-
-</ng-container>
+</ion-header>
+<ion-menu contentId="main-content" type="overlay">
+  <ion-header style="height: 12vh">
+    <ion-toolbar class="custom_toolbar_menu">
+      <h3>The Father's House</h3>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="custom_background">
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full"
+                    class="font-size custom_color" mode="md"
+                    href="home">
+            <ion-label>Home</ion-label>
+          </ion-item>
+          <ion-accordion-group mode="md">
+            <ion-accordion value="about" mode="md">
+              <ion-item slot="header" class="custom_color" style="--min-height: 70px" color="none">
+                <ion-label style="font-size: 18px; letter-spacing: 1px">About</ion-label>
+              </ion-item>
+              <div class="div-padding" slot="content">
+                <ion-item-group>
+                  <ion-item button lines="none" (click)="navigateToPage('church')">
+                    <a class="changes">our church</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('our-ministries')">
+                    <a class="changes">our ministries</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('leadership')">
+                    <a class="changes">leadership</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
+                    <a class="changes">ministries we support</a>
+                  </ion-item>
+                </ion-item-group>
+              </div>
+            </ion-accordion>
+            <ion-accordion value="connect" mode="md">
+              <ion-item slot="header" class="custom_color" style="--min-height: 70px">
+                <ion-label style="font-size: 18px;">Connect</ion-label>
+              </ion-item>
+              <div class="div-padding" slot="content">
+                <ion-item-group>
+                  <ion-item button lines="none" (click)="navigateToPage('service')">
+                    <a class="changes">service times</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('prayer')">
+                    <a class="changes">prayer</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('direction')">
+                    <a class="changes">directions</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('connect')">
+                    <a class="changes">contact us</a>
+                  </ion-item>
+                </ion-item-group>
+              </div>
+            </ion-accordion>
+            <ion-accordion value="watch" mode="md">
+              <ion-item slot="header" class="custom_color" style="--min-height: 70px">
+                <ion-label style="font-size: 18px;">Watch</ion-label>
+              </ion-item>
+              <div class="div-padding" slot="content">
+                <ion-item-group>
+                  <ion-item button lines="none" (click)="navigateToPage('sermons')">
+                    <a class="changes">sermons</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('series')">
+                    <a class="changes">series</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('devotionals')">
+                    <a class="changes">devotionals</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('guest-speakers')">
+                    <a class="changes">guest speakers</a>
+                  </ion-item>
+                </ion-item-group>
+              </div>
+            </ion-accordion>
+            <ion-accordion value="events" mode="md">
+              <ion-item slot="header" class="custom_color" style="--min-height: 70px">
+                <ion-label style="font-size: 18px;">Events</ion-label>
+              </ion-item>
+              <div class="div-padding" slot="content">
+                <ion-item-group>
+                  <ion-item button lines="none" (click)="navigateToPage('calendar')">
+                    <a class="changes">calendar</a>
+                  </ion-item>
+                  <ion-item button lines="none" (click)="navigateToPage('events')">
+                    <a class="changes">all events</a>
+                  </ion-item>
+                </ion-item-group>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+          <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
+                    class="font-size custom_color"
+                    href="https://app.securegive.com/tfhfreeport/main/donate/category">
+            <ion-label>Give</ion-label>
+          </ion-item>
+          <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
+                    class="font-size custom_color" disabled="true"
+                    href="https://app.securegive.com/tfhfreeport/main/donate/category">
+            <ion-label>Store</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-menu>
 
