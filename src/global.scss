@@ -25,34 +25,45 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-
 @import "~swiper/swiper-bundle.css";
 
-::ng-deep {
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: purple;
-  }
-
-  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
-    color: purple;
-  }
-
-  .mat-datepicker-toggle-active {
-    color: purple;
-  }
-
-  .mat-calendar-body-selected {
-    background-color: purple;
-    color: white;
-    opacity: .75;
-  }
-
-  .mat-calendar-body-cell-content.mat-focus-indicator {
-    border-radius: 5px;
-  }
+//mat-select
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-full, .mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-full {
+  background: purple;
+}
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  color: purple !important;
 }
 
-//mat-select stuff
+.mat-mdc-select-arrow {
+  color: purple !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline > *{
+  border-color: purple !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline > *{
+  border-color: purple !important;
+}
+
+//mat-calendar
+
+.mat-calendar-body-cell-content.mat-focus-indicator {
+  border-radius: 5px;
+}
+
+.mat-mdc-icon-button.mat-mdc-button-base {
+  color: purple !important;
+}
+
+.mat-calendar-body-selected{
+  background-color: purple !important;
+}
+
+
+/////////
+
 .mat-option {
   color: black;
 }
@@ -62,26 +73,6 @@
   font-family: Roboto;
 }
 
-.cdk-overlay-pane {
-  position: absolute;
-  pointer-events: auto;
-  box-sizing: border-box;
-  z-index: 1000;
-  display: flex;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.mat-select-panel{
-  position: absolute;
-  top: 30px;
-  left: 1.55vmax !important;
-  min-width: calc(100% + 4%) !important;
-  border-radius: 5px !important;
-  border-top-style: none;
-}
-
-
 .example-additional-selection {
   opacity: 0.75;
   font-size: 1em;
@@ -90,32 +81,18 @@
 mat-label {
   color: black;
 }
-.mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
-  background: purple;
-}
-.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-  color: purple;
-}
 
-mat-select-trigger {
-  font-size: 15px;
-}
-
-.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
-  color: purple;
-}
-
-.mat-select-placeholder {
-  font-size: 14px;
-}
 
 input.mat-input-element {
   margin-top: -0.0625em;
   font-size: 15px;
 }
+
 .mat-form-field-label {
   color: red;
 }
+
+
 //////////////////////
 // Alert for Contact Form
 .my-custom-class .alert-wrapper {
@@ -175,6 +152,7 @@ ion-accordion.accordion-animated > [slot=header] .ion-accordion-toggle-icon {
   transition: 300ms transform cubic-bezier(0.25, 0.8, 0.5, 1);
   color: white;
 }
+
 ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
   border-bottom: 1px solid white;
 }
@@ -220,6 +198,7 @@ ion-accordion-group > ion-accordion:last-of-type ion-item[slot=header] {
     .alert-checkbox-icon {
       background-color: purple;
     }
+
     .alert-checkbox-inner {
       border-color: #fafafa;
     }
@@ -262,6 +241,7 @@ ion-button.learn {
   margin-bottom: 4%;
   --border-radius: 5px;
 }
+
 ion-button.transparent {
   --background: purple;
   color: #eaeaea;

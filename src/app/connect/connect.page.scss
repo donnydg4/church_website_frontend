@@ -8,18 +8,9 @@ h3 {
 ion-grid.connect {
   margin-top: 6%;
 }
-::ng-deep {
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: purple;
-  }
 
-  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
-    color: purple;
-  }
-
-  .mat-select-panel {
-    font-size: 20px;
-  }
+.mat-form-field {
+  color: purple;
 }
 
 span.required {
@@ -42,27 +33,16 @@ ion-button {
 mat-hint {
   padding: 0px;
 }
-ion-label.input_color {
-  --color: black;
-  color: black;
-  font-family: Arial, serif;
-  margin-bottom: 7px;
-}
-ion-item.no_background_color {
-  --background: none;
-  --padding-start: 0px;
-  --inner-padding-end: 0px;
-  padding-bottom: 18px;
-}
-
-ion-select {
-  --placeholder-opacity: 1;
-  --placeholder-color: black;
-  color: black;
-  font-size: 14px;
-  border-radius: 4px;
-  --padding-start: 9.75px;
-  border: 1px solid purple;
-  min-height: 50px;
-}
+//ion-label.input_color {
+//  --color: black;
+//  color: black;
+//  font-family: Arial, serif;
+//  margin-bottom: 7px;
+//}
+//ion-item.no_background_color {
+//  --background: none;
+//  --padding-start: 0px;
+//  --inner-padding-end: 0px;
+//  padding-bottom: 18px;
+//}
 
