@@ -26,8 +26,8 @@
         </ion-card-header>
         <ion-card-content *ngIf="card.type !== 'CHURCH LEADERSHIP'" [ngClass]="{'limitTextHeight': isSelected !== i}">{{card.description}}</ion-card-content>
 
-        <ion-grid class="custom_buttons" fixed="true">
-          <ion-row *ngIf="card.type !== 'CHURCH LEADERSHIP'">
+        <ion-grid class="custom_buttons" fixed="true" *ngIf="card.type !== 'CHURCH LEADERSHIP'">
+          <ion-row >
             <ion-col size="6" class="ion-no-padding">
               <ion-button class="transparent"
                           (click)="isSelected === i ? isSelected = null : isSelected = i"
