@@ -1,16 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { StandardLayoutPage } from './standard-layout.page';
-import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.component";
+import {StandardLayoutPage} from './standard-layout.page';
 
 const routes: Routes = [
   {
     path: 'standard-layout',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: StandardLayoutPage}
-    ]
+    component: StandardLayoutPage
   }
 ];
 

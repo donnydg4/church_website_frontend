@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { ConnectPage } from './connect.page';
-import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.component";
+import {ConnectPage} from './connect.page';
 
 const routes: Routes = [
   {

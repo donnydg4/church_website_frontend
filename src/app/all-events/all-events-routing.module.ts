@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { AllEventsPage } from './all-events.page';
-import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.component";
+import {AllEventsPage} from './all-events.page';
 
 const routes: Routes = [
   {

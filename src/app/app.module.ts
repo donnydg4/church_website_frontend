@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouteReuseStrategy} from '@angular/router';
 import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
@@ -17,15 +17,11 @@ import {SeriesPageModule} from "./series/series.module";
 import {GuestSpeakersPageModule} from "./guest-speakers/guest-speakers.module";
 import {NgxPaginationModule} from "ngx-pagination";
 import {HttpClientModule} from "@angular/common/http";
-import {MatInputModule} from "@angular/material/input";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatSelectModule} from "@angular/material/select";
 import {ConnectPageModule} from "./connect/connect.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AllEventsPageModule} from "./all-events/all-events.module";
 import {OurMinistriesPageModule} from "./our-ministries/our-ministries.module";
 import {MinistriesWeSupportPageModule} from "./ministries-we-support/ministries-we-support.module";
-import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 import {LeadershipPageModule} from "./leadership/leadership.module";
 
 @NgModule({

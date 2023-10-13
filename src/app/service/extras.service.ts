@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {WatchModel} from "../models/watch.model";
 import {SeriesCardModel} from "../models/series-card.model";
 

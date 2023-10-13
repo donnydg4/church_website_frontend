@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {sortByDate, sortByDateEvents} from "../utils/utils";
+import {sortByDateEvents} from "../utils/utils";
 import {map} from "rxjs/operators";
 
 @Component({
