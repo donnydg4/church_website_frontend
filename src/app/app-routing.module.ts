@@ -61,7 +61,11 @@ const routes: Routes = [
   {
     path: 'leadership',
     component: LeadershipPage
+  },  {
+    path: 'video',
+    loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
   }
+
 
 ];
 
