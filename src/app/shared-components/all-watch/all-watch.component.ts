@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {WatchModel} from "../../models/watch.model";
+import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";
-import {SeriesCardModel} from "../../models/series-card.model";
+import {SeriesCardModel} from "../../models/sub-models/series-card.model";
 import {PaginationInstance} from "ngx-pagination";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
@@ -45,6 +45,10 @@ export class AllWatchComponent implements OnInit {
     this.page = page;
     this.config.currentPage = page;
     window.scrollTo(0, 0);
+  }
+
+  navigateToPage(){
+
   }
 
 }

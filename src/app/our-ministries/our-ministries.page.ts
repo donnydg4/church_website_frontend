@@ -17,9 +17,9 @@ export class OurMinistriesPage implements OnInit {
   ngOnInit() {
   }
 
-  displayOurMinistryCards$ = this.dataService.allDisplayCards$
+  displayOurMinistryCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(ourMinistriesCards => ourMinistriesCards.filter(ourMinistries => ourMinistries.type === 'OUR MINISTRY')
+      map(ourMinistriesCards => ourMinistriesCards.displayCards.filter(ourMinistries => ourMinistries.type === 'OUR MINISTRY')
         .sort(sortByCardCategory))
     );
 

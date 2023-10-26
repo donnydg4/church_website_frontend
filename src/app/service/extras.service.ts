@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {WatchModel} from "../models/watch.model";
-import {SeriesCardModel} from "../models/series-card.model";
+import {WatchModel} from "../models/sub-models/watch.model";
+import {SeriesCardModel} from "../models/sub-models/series-card.model";
 
 @Injectable({
   providedIn: 'root'

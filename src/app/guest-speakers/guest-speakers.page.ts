@@ -11,9 +11,9 @@ import {combineLatest} from "rxjs";
 })
 export class GuestSpeakersPage implements OnInit {
 
-  guestSpeakersCards$ = this.dataService.allWatchCards$
+  guestSpeakersCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(guestSpeakerCards => guestSpeakerCards.filter(allCards => allCards.category === 'guest')
+      map(guestSpeakerCards => guestSpeakerCards.allWatchCards.filter(allCards => allCards.category === 'guest')
         .sort(sortByDate))
     );
 

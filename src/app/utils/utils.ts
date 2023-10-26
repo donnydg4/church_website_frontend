@@ -1,9 +1,9 @@
-import {WatchModel} from "../models/watch.model";
-import {SeriesCardModel} from "../models/series-card.model";
-import {CalendarModel} from "../models/calendar.model";
-import {MainEventModel} from "../models/main-event-model";
-import {DisplayCardModel} from "../models/display-card.model";
-import {Category} from "../models/categories.model";
+import {WatchModel} from "../models/sub-models/watch.model";
+import {SeriesCardModel} from "../models/sub-models/series-card.model";
+import {CalendarModel} from "../models/sub-models/calendar.model";
+import {MainEventModel} from "../models/sub-models/main-event-model";
+import {DisplayCardModel} from "../models/sub-models/display-card.model";
+import {Category} from "../models/sub-models/categories.model";
 
 export function sortByDate(a: WatchModel, b: WatchModel) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();

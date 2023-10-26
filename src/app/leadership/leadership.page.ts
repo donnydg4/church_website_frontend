@@ -13,8 +13,8 @@ export class LeadershipPage {
 
   selectedCategory: string = 'LEADERSHIP'
 
-  leadershipCards$ = this.dataService.allDisplayCards$
+  leadershipCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(leadershipCards => leadershipCards.filter(leadershipCard => leadershipCard.type === 'CHURCH LEADERSHIP'))
+      map(leadershipCards => leadershipCards.displayCards.filter(leadershipCard => leadershipCard.type === 'CHURCH LEADERSHIP'))
     );
 }

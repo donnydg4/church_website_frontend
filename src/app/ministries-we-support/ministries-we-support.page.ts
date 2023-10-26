@@ -11,9 +11,9 @@ export class MinistriesWeSupportPage implements OnInit {
 
   selectedCategory: string = 'MINISTRIES WE SUPPORT';
 
-  displayMinistriesWeSupportCards$ = this.dataService.allDisplayCards$
+  displayMinistriesWeSupportCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(ministriesWeSupportCards => ministriesWeSupportCards.filter(supportedMinistries => supportedMinistries.type === 'SUPPORTED MINISTRY'))
+      map(ministriesWeSupportCards => ministriesWeSupportCards.displayCards.filter(supportedMinistries => supportedMinistries.type === 'SUPPORTED MINISTRY'))
     );
 
   constructor(private dataService: AllChurchInformationService) { }

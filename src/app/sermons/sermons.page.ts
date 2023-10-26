@@ -13,9 +13,14 @@ export class SermonsPage implements OnInit {
 
   sermonTitle = 'Sermons';
 
-  sermonCards$ = this.dataService.allWatchCards$
+  // sermonCards$ = this.dataService.allWatchCards$
+  //   .pipe(
+  //     map(sermonCards => sermonCards.filter(allCards => allCards.category === 'sermon')
+  //       .sort(sortByDate))
+  //   );
+  sermonCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(sermonCards => sermonCards.filter(allCards => allCards.category === 'sermon')
+      map(sermonCards => sermonCards.allWatchCards.filter(allCards => allCards.category === 'sermon')
         .sort(sortByDate))
     );
 

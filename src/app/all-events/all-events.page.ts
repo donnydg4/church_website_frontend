@@ -17,8 +17,8 @@ export class AllEventsPage implements OnInit {
   ngOnInit() {
   }
 
-  getAllEvents$ = this.dataService.allEvents$
+  getAllEvents$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(events => events.filter(event => event.type === 'event').sort(sortByDateEvents))
+      map(events => events.mainEvents.filter(event => event.type === 'event').sort(sortByDateEvents))
     );
 }
