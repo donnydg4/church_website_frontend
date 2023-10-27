@@ -39,3 +39,9 @@ export function checkIfVideoUrl(videoUrl: string): boolean {
   let booleanReturn: boolean = videoUrl.includes(".mp4");
   return booleanReturn;
 }
+
+export function convertSpaceToDash(title: string): string {
+  let re = /\ /gi;
+  let result = title.toLowerCase().replace(re, "-");
+  return result;
+}

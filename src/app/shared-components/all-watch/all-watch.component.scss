@@ -94,3 +94,8 @@ ion-row.bottom_border {
   padding-left: 0px;
 }
 
+::ng-deep .ngx-pagination .current {
+  background: purple !important;
+  border-radius: 5px;
+}
+

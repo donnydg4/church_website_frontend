@@ -37,6 +37,7 @@ export class AllChurchInformationService {
 
   allWebsiteInformation$ = this.http.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
     .pipe(
+      shareReplay(1),
       tap(data => console.log(data))
     )
 

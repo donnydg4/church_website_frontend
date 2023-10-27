@@ -5,40 +5,38 @@ import {Observable} from "rxjs";
 import {SeriesCardModel} from "../../models/sub-models/series-card.model";
 import {PaginationInstance} from "ngx-pagination";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
+import { Router } from '@angular/router';
+import {convertSpaceToDash} from "../../utils/utils";
+
 
 @Component({
   selector: 'app-all-watch',
   templateUrl: './all-watch.component.html',
   styleUrls: ['./all-watch.component.scss'],
 })
-export class AllWatchComponent implements OnInit {
+export class AllWatchComponent {
 
   page: number = 1;
   defaultUrl: string = "https://www.youtube.com/embed/";
   youtubeUrl: SafeResourceUrl;
   // clicked: boolean = false;
 
+  @Input() title = '';
+  @Input() objectArray: Observable<WatchModel[]>
+  @Input() seriesArray: Observable<SeriesCardModel[]>
+
   public config: PaginationInstance = {
     itemsPerPage: 15,
     currentPage: this.page
   }
-
-  @Input() title = '';
-  @Input() objectArray: Observable<WatchModel[]>
-  @Input() seriesArray: Observable<SeriesCardModel[]>
 
   handleChange(event) {
     this.dataService.searchQueryWord(event.target.value.toLowerCase());
     console.log(event.target.value.toLowerCase());
   }
 
-  constructor(private dataService: AllChurchInformationService,
-              public sanitizer: DomSanitizer) {
+  constructor(private dataService: AllChurchInformationService, public sanitizer: DomSanitizer, public router: Router) {
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl);
-  }
-
-
-  ngOnInit() {
   }
 
   pageEvent(page: number) {
@@ -47,8 +45,8 @@ export class AllWatchComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
-  navigateToPage(){
-
+  navigateToPage(title: string){
+    this.router.navigate(['/sermons', convertSpaceToDash(title)]);
   }
 
 }
