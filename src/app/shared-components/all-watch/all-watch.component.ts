@@ -45,8 +45,8 @@ export class AllWatchComponent {
     window.scrollTo(0, 0);
   }
 
-  navigateToPage(title: string){
-    this.router.navigate(['/sermons', convertSpaceToDash(title)]);
+  navigateToPage(card: WatchModel){
+    this.router.navigate(['/sermons', convertSpaceToDash(card.title)]);
   }
 
 }
