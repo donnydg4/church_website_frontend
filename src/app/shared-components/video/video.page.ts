@@ -1,9 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
 import {ExtrasService} from "../../service/extras.service";
 import {WatchModel} from "../../models/sub-models/watch.model";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-video',
@@ -16,15 +17,12 @@ export class VideoPage {
   defaultUrl: string = "https://www.youtube.com/embed/";
   opened: boolean = false;
   anyCard: WatchModel;
-
   youtubeUrl: SafeResourceUrl;
 
-  constructor(public clipboard: Clipboard, public toastController: ToastController, public platform: Platform,
-              public navExtrasService: ExtrasService, public sanitizer: DomSanitizer)
-  {
-    this.anyCard = navExtrasService.getExtras();
-    console.log(this.anyCard);
-    this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl);
+  constructor(public clipboard: Clipboard, public toastController: ToastController, public platform: Platform, public sanitizer: DomSanitizer, private location: Location) {
+    console.log(localStorage.getItem('card'));
+    this.anyCard = JSON.parse(localStorage.getItem('card'));
+    this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
   }
 
   openTextArea() {
@@ -64,4 +62,7 @@ export class VideoPage {
     await toast.present();
   }
 
+  back() {
+    this.location.back();
+  }
 }

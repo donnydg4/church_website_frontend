@@ -1,6 +1,23 @@
+ion-grid {
+  --ion-grid-width: 94%;
+  --ion-grid-width-md: 85%;
+  --ion-grid-width-xl: 95%;
+}
 
 .margin_top {
   margin-top: 8%
+}
+
+.text{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.icon {
+  display: inline-block;
+  font-size: 26px;
+  vertical-align: middle;
 }
 
 ion-card {
@@ -10,10 +27,6 @@ ion-card {
 
 ion-card-content {
   padding: 0;
-}
-
-ion-text.content {
-  color: black;
 }
 
 ion-col.col-subtitle-margin {
@@ -39,13 +52,6 @@ ion-text.white {
   color: black;
 }
 
-ion-textarea.background_color {
-  background-color: #ffffff;
-  border-radius: 6px;
-  --padding-start: 5px;
-  border: 2px solid purple;
-  //color: purple;
-}
 
 ion-col.small-margin {
   margin-top: 1.5%;

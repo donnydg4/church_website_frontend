@@ -10,18 +10,20 @@ import { VideoPage } from './video.page';
 import {SharedComponentsModule} from "../shared-components.module";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        VideoPageRoutingModule,
-        SharedComponentsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    VideoPageRoutingModule,
+    SharedComponentsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule
+  ],
   declarations: [VideoPage]
 })
 export class VideoPageModule {}

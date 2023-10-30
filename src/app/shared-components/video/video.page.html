@@ -1,9 +1,15 @@
 <app-header></app-header>
 
 <ion-content>
-  <ion-grid class="ion-no-padding" style="margin-bottom: 5%">
+  <ion-grid class="ion-no-padding margin_top" style="margin-bottom: 5%" [fixed]="true">
     <ion-row>
-      <ion-col size="11" offset="0.5" style="height: 100%" class="ion-text-center margin_top">
+      <ion-col size="12" class="ion-margin-bottom">
+        <div (click)="back()" style="vertical-align: center; cursor: pointer">
+          <ion-icon name="arrow-back-outline" style="color: black" class="icon"></ion-icon>
+          <span class="text">Back</span>
+        </div>
+      </ion-col>
+      <ion-col size="12" style="height: 100%" class="ion-text-center">
         <ion-card style="margin: 0; border-radius: 0; height: 100%">
           <ion-grid class="ion-no-padding">
             <ion-row>
@@ -52,14 +58,14 @@
               </ion-col>
               <ion-col size="12" style="text-align: left" class="small-margin">
                 <ng-container *ngIf="opened">
-                    <mat-form-field style="width: 100%" appearance="outline" hideRequiredMarker>
-                      <mat-label style="font-size: 14px">Notes</mat-label>
-                      <textarea #text matInput rows="8" style="resize: none" [(ngModel)]="textArea"
-                                placeholder="Please type your notes"
-                                maxlength="1000"></textarea>
-                      <mat-hint align="start"><strong>(Max 1000 characters)</strong></mat-hint>
-                      <mat-hint align="end">{{text.value.length}} / 1000</mat-hint>
-                    </mat-form-field>
+                  <mat-form-field style="width: 100%" appearance="outline" hideRequiredMarker>
+                    <mat-label style="font-size: 14px">Notes</mat-label>
+                    <textarea #text matInput rows="8" style="resize: none" [(ngModel)]="textArea"
+                              placeholder="Please type your notes"
+                              maxlength="1000"></textarea>
+                    <mat-hint align="start"><strong>(Max 1000 characters)</strong></mat-hint>
+                    <mat-hint align="end">{{text.value.length}} / 1000</mat-hint>
+                  </mat-form-field>
                   <ion-button class="copy" mode="md" (click)="copyText()">Copy Notes</ion-button>
                 </ng-container>
               </ion-col>

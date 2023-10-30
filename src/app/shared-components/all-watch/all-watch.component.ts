@@ -45,10 +45,12 @@ export class AllWatchComponent {
   navigateToPage(card: WatchModel){
     if (card.type.toLowerCase() === 'sermon') {
       this.extrasService.setExtras(card);
+      localStorage.setItem('card', JSON.stringify(this.extrasService.getExtras()));
       this.router.navigate(['/sermons', convertSpaceToDash(card.title)]);
     }
     if (card.type.toLowerCase() === 'devotional') {
       this.extrasService.setExtras(card);
+      localStorage.setItem('card', JSON.stringify(this.extrasService.getExtras()));
       this.router.navigate(['/devotionals', convertSpaceToDash(card.title)]);
     }
   }
