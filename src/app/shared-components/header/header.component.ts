@@ -9,7 +9,7 @@ import {MenuController, NavController, Platform} from "@ionic/angular";
 export class HeaderComponent {
 
   constructor(private platform: Platform, private navCtrl: NavController, private menuCtrl: MenuController) {
-    this.onResize();
+    // this.onResize();
   }
 
   public platformWidth = this.platform.width()

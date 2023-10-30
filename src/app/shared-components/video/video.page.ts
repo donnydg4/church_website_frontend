@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
-import {alert} from "ionicons/icons";
 import {ExtrasService} from "../../service/extras.service";
 import {WatchModel} from "../../models/sub-models/watch.model";
 
@@ -13,7 +12,7 @@ import {WatchModel} from "../../models/sub-models/watch.model";
 })
 export class VideoPage {
 
-  text: string = "";
+  textArea: string = "";
   defaultUrl: string = "https://www.youtube.com/embed/";
   opened: boolean = false;
   anyCard: WatchModel;
@@ -21,10 +20,11 @@ export class VideoPage {
   youtubeUrl: SafeResourceUrl;
 
   constructor(public clipboard: Clipboard, public toastController: ToastController, public platform: Platform,
-    private navExtrasService: ExtrasService, public sanitizer: DomSanitizer) {
+              public navExtrasService: ExtrasService, public sanitizer: DomSanitizer)
+  {
     this.anyCard = navExtrasService.getExtras();
     console.log(this.anyCard);
-    // this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
+    this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl);
   }
 
   openTextArea() {
@@ -32,27 +32,13 @@ export class VideoPage {
   }
 
   copyText() {
-    // this.clipboard.copy(this.text).then(() => {
-    //   if (this.platform.is('cordova')) {
-    //     this.presentToast();
-    //   } else {
-    //     alert('Your Notes have been copied to your clipboard!');
-    //   }
-    // });
-    // console.log(this.text);
-    this.clipboard.copy(this.text);
+    this.clipboard.copy(this.textArea);
     this.presentToast();
+    console.log(this.textArea);
   }
 
   copyUrlToClipboard(id: string) {
     const shareUrl: string = 'https://www.youtube.com/watch?v=' + id;
-    // this.clipboard.copy(shareUrl).then(() => {
-    //   if (this.platform.is('cordova')) {
-    //     this.presentToastForShare();
-    //   } else {
-    //     alert('The Youtube URL has been copied to your clipboard!');
-    //   }
-    // });
     this.clipboard.copy(shareUrl);
     this.presentToastForShare();
     console.log(shareUrl);

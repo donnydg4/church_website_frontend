@@ -1,4 +1,74 @@
 <app-header></app-header>
 
 <ion-content>
+  <ion-grid class="ion-no-padding" style="margin-bottom: 5%">
+    <ion-row>
+      <ion-col size="11" offset="0.5" style="height: 100%" class="ion-text-center margin_top">
+        <ion-card style="margin: 0; border-radius: 0; height: 100%">
+          <ion-grid class="ion-no-padding">
+            <ion-row>
+              <ion-col size="12" style="height: 700px;">
+                <iframe
+                  [src]="youtubeUrl"
+                  style="height: 100%; width: 100%; border-radius: 10px" allow="fullscreen">
+                </iframe>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12" class="col-subtitle-margin">
+                <ion-card-subtitle style="text-align: left">
+                  <ion-text style="font-size: 16px;">
+                    {{anyCard.date | date :'MMMM dd, yyyy'}}
+                  </ion-text>
+                </ion-card-subtitle>
+              </ion-col>
+              <ion-col size="12" class="col-subtitle-margin">
+                <ion-card-title style="text-align: left">
+                  <ion-text>{{anyCard.title}}</ion-text>
+                </ion-card-title>
+              </ion-col>
+              <ion-col size="12" style="text-align: left; margin-top: 1%; margin-bottom: 1%;">
+                <ion-card-content>
+                  <ion-text class="content">
+                    {{anyCard.description}}
+                  </ion-text>
+                </ion-card-content>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button shape="circle" (click)="openTextArea()">
+                  <ion-icon name="create"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button shape="circle" (click)="copyUrlToClipboard(anyCard.videoId)">
+                  <ion-icon name="share-social-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-text class="white">Take notes</ion-text>
+              </ion-col>
+              <ion-col size="6">
+                <ion-text class="white">Share</ion-text>
+              </ion-col>
+              <ion-col size="12" style="text-align: left" class="small-margin">
+                <ng-container *ngIf="opened">
+                    <mat-form-field style="width: 100%" appearance="outline" hideRequiredMarker>
+                      <mat-label style="font-size: 14px">Notes</mat-label>
+                      <textarea #text matInput rows="8" style="resize: none" [(ngModel)]="textArea"
+                                placeholder="Please type your notes"
+                                maxlength="1000"></textarea>
+                      <mat-hint align="start"><strong>(Max 1000 characters)</strong></mat-hint>
+                      <mat-hint align="end">{{text.value.length}} / 1000</mat-hint>
+                    </mat-form-field>
+                  <ion-button class="copy" mode="md" (click)="copyText()">Copy Notes</ion-button>
+                </ng-container>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-footer></app-footer>
 </ion-content>
+

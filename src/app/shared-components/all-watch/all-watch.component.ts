@@ -7,6 +7,7 @@ import {PaginationInstance} from "ngx-pagination";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import { Router } from '@angular/router';
 import {convertSpaceToDash} from "../../utils/utils";
+import {ExtrasService} from "../../service/extras.service";
 
 
 @Component({
@@ -17,9 +18,6 @@ import {convertSpaceToDash} from "../../utils/utils";
 export class AllWatchComponent {
 
   page: number = 1;
-  defaultUrl: string = "https://www.youtube.com/embed/";
-  youtubeUrl: SafeResourceUrl;
-  // clicked: boolean = false;
 
   @Input() title = '';
   @Input() objectArray: Observable<WatchModel[]>
@@ -35,8 +33,7 @@ export class AllWatchComponent {
     console.log(event.target.value.toLowerCase());
   }
 
-  constructor(private dataService: AllChurchInformationService, public sanitizer: DomSanitizer, public router: Router) {
-    this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl);
+  constructor(private dataService: AllChurchInformationService, public router: Router, private extrasService: ExtrasService) {
   }
 
   pageEvent(page: number) {
@@ -46,7 +43,14 @@ export class AllWatchComponent {
   }
 
   navigateToPage(card: WatchModel){
-    this.router.navigate(['/sermons', convertSpaceToDash(card.title)]);
+    if (card.type.toLowerCase() === 'sermon') {
+      this.extrasService.setExtras(card);
+      this.router.navigate(['/sermons', convertSpaceToDash(card.title)]);
+    }
+    if (card.type.toLowerCase() === 'devotional') {
+      this.extrasService.setExtras(card);
+      this.router.navigate(['/devotionals', convertSpaceToDash(card.title)]);
+    }
   }
 
 }
