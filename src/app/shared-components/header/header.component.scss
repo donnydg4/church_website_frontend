@@ -5,6 +5,7 @@ ion-icon.size {
 mat-toolbar {
   padding-right: 20px;
   padding-left: 20px;
+  position: relative;
 }
 
 ion-button {
@@ -162,7 +163,7 @@ ion-menu {
   --background: transparent;
   --ion-background-color: transparent;
   --ion-color-base: transparent !important;
-  --min-width: 80%;
+  --min-width: 85%;
 }
 
 h3 {
