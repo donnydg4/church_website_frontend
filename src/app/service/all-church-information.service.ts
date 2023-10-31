@@ -41,40 +41,6 @@ export class AllChurchInformationService {
       tap(data => console.log(data))
     )
 
-  // allWatchCards$ = this.http.get<WatchModel[]>(this.allWatchCardsUrl)
-  //   .pipe(
-  //     shareReplay(1),
-  //     tap(data => console.log(data)),
-  //     catchError(AllChurchInformationService.handleError)
-  //   );
-  //
-  // allSeriesCards$ = this.http.get<SeriesCardModel[]>(this.allSeriesCardsUrl)
-  //   .pipe(
-  //     shareReplay(1),
-  //     catchError(AllChurchInformationService.handleError)
-  //   );
-  //
-  // allCalendarEvents$ = this.http.get<CalendarModel[]>(this.allCalendarEventsUrl)
-  //   .pipe(
-  //     shareReplay(1),
-  //     catchError(AllChurchInformationService.handleError)
-  //   );
-  //
-  // allEvents$ = this.http.get<MainEventModel[]>(this.allEventsUrl)
-  //   .pipe(
-  //     shareReplay(1),
-  //     catchError(AllChurchInformationService.handleError),
-  //     tap(data => console.log(data))
-  //   );
-  //
-  // allDisplayCards$ = this.http.get<DisplayCardModel[]>(this.allDisplayCardsUrl)
-  //   .pipe(
-  //     shareReplay(1),
-  //     catchError(AllChurchInformationService.handleError),
-  //     tap(data => console.log(data))
-  //   );
-
-
   constructor(private http: HttpClient) {
   }
 
