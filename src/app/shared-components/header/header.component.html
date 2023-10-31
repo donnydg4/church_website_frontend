@@ -202,6 +202,18 @@
                   </ion-item-group>
                 </div>
               </ion-accordion>
+              <ion-accordion value="resources" mode="md">
+                <ion-item slot="header" class="custom_color" style="--min-height: 70px">
+                  <ion-label style="font-size: 18px;">Resources</ion-label>
+                </ion-item>
+                <div class="div-padding" slot="content">
+                  <ion-item-group>
+                    <ion-item button lines="none" (click)="navigateToPage('businesses')" disabled="true">
+                      <a class="changes">Businesses We Support</a>
+                    </ion-item>
+                  </ion-item-group>
+                </div>
+              </ion-accordion>
             </ion-accordion-group>
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
                       class="font-size custom_color"
