@@ -1,0 +1,108 @@
+ion-grid {
+  --ion-grid-width: 94%;
+  --ion-grid-width-md: 85%;
+  --ion-grid-width-xl: 95%;
+}
+
+.margin_top {
+  margin-top: 6%
+}
+
+.trial {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.trialTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.icon {
+  display: inline-block;
+  font-size: 26px;
+  vertical-align: middle;
+}
+
+ion-card {
+  --background: #ffffff;
+  box-shadow: none;
+}
+
+ion-card-content {
+  padding: 0;
+}
+
+ion-col.col-subtitle-margin {
+  margin-top: 1%;
+}
+
+ion-button[shape=circle] {
+  --background: purple;
+  --background-activated: #811be7;
+  --border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  --padding-start: 0px;
+  --padding-end: 0px;
+}
+
+ion-icon {
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
+ion-text.white {
+  color: black;
+}
+
+
+ion-col.small-margin {
+  margin-top: 1.5%;
+}
+
+ion-button.copy {
+  --background: purple;
+  --background-activated: #343436;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.ion-valid.sc-ion-textarea-md-h {
+  --highlight-color: none !important;
+}
+
+//ios stuff
+ion-text.title.ios {
+  font-size: 20px;
+  color: black;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+ion-text.date.ios {
+  font-size: 16px;
+  color: #1f1f1f;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+ion-text.description.ios {
+  font-size: 16px;
+  color: black;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+

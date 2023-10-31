@@ -11,9 +11,9 @@ import {combineLatest} from "rxjs";
 })
 export class DevotionalsPage implements OnInit {
 
-  devotionalCards$ = this.dataService.allWatchCards$
+  devotionalCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(devotionalCards => devotionalCards.filter(allCards => allCards.category === 'devotional')
+      map(devotionalCards => devotionalCards.allWatchCards.filter(allCards => allCards.category === 'devotional')
         .sort(sortByDate))
     );
 

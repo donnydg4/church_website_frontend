@@ -1,16 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { MinistriesWeSupportPage } from './ministries-we-support.page';
-import {MainLayoutComponent} from "../shared-components/main-layout/main-layout.component";
+import {MinistriesWeSupportPage} from './ministries-we-support.page';
 
 const routes: Routes = [
   {
     path: 'supported-ministries',
-    component: MainLayoutComponent,
-    children: [
-      {path: '', component: MinistriesWeSupportPage},
-    ]
+    component: MinistriesWeSupportPage
   }
 ];
 

@@ -1,6 +1,6 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
-import {MainEventModel} from "../../models/main-event-model";
+import {MainEventModel} from "../../models/sub-models/main-event-model";
 import {Platform} from "@ionic/angular";
 
 @Component({

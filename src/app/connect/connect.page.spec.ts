@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { ConnectPage } from './connect.page';
+import {ConnectPage} from './connect.page';
 
 describe('ConnectPage', () => {
   let component: ConnectPage;

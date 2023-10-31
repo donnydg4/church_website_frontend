@@ -6,10 +6,10 @@ import {MenuController, NavController, Platform} from "@ionic/angular";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   constructor(private platform: Platform, private navCtrl: NavController, private menuCtrl: MenuController) {
-    this.onResize();
+    // this.onResize();
   }
 
   public platformWidth = this.platform.width()
@@ -18,9 +18,7 @@ export class HeaderComponent implements OnInit {
   onResize(event?) {
     this.platformWidth = this.platform.width();
     console.log(this.platformWidth);
-  }
-
-  ngOnInit() {
+    console.log('why');
   }
 
   navigateToPage(type: string) {

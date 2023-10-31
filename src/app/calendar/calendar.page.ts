@@ -26,12 +26,12 @@ export class CalendarPage implements OnInit {
   endDateAction$ = this.endDateSubject.asObservable();
 
   calendarEvents$ = combineLatest([
-    this.dataService.allCalendarEvents$,
+    this.dataService.allWebsiteInformation$,
     this.beginningDateAction$,
     this.endDateAction$
   ])
     .pipe(
-      map(([calendarEvents, firstDate, secondDate]) => calendarEvents.filter(
+      map(([calendarEvents, firstDate, secondDate]) => calendarEvents.allCalendarInformation.filter(
         event => {
           if (secondDate === null || new Date(firstDate).toDateString() === new Date(secondDate).toDateString()) {
             return new Date(event.date).toDateString() === new Date(firstDate).toDateString();

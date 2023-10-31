@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
-import {sortByCardCategory, sortByDateDisplay} from "../utils/utils";
+import {sortByCardCategory} from "../utils/utils";
 
 @Component({
   selector: 'app-our-ministries',
@@ -17,9 +17,9 @@ export class OurMinistriesPage implements OnInit {
   ngOnInit() {
   }
 
-  displayOurMinistryCards$ = this.dataService.allDisplayCards$
+  displayOurMinistryCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(ourMinistriesCards => ourMinistriesCards.filter(ourMinistries => ourMinistries.type === 'OUR MINISTRY')
+      map(ourMinistriesCards => ourMinistriesCards.displayCards.filter(ourMinistries => ourMinistries.type === 'OUR MINISTRY')
         .sort(sortByCardCategory))
     );
 

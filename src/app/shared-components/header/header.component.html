@@ -1,15 +1,15 @@
-<ng-container *ngIf="platformWidth > 900">
-  <ion-header style="height: 100%">
-    <mat-toolbar style="height: 12vh; background: white">
+<ion-header style="height: 100%">
+  <mat-toolbar style="height: 100%; background: white">
 
-      <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
-        <a href="home">
-          <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
-        </a>
-      </ion-buttons>
+    <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
+      <a href="home">
+        <img src="assets/icon/church_home_logo.svg" style="height: 12vh; padding: 5px">
+      </a>
+    </ion-buttons>
 
-      <span class="spacer"></span>
+    <span class="spacer"></span>
 
+    <ng-container *ngIf="platformWidth > 935">
       <ion-buttons slot="end" class="right-side">
 
         <div class="dropdown">
@@ -66,6 +66,17 @@
           </div>
         </div>
 
+        <div class="dropdown">
+          <div class="inner-center-div">
+            <ion-button class="dropbtn">Resources
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </ion-button>
+          </div>
+          <div class="dropdown-content">
+            <a routerLink="/business">Businesses We Support</a>
+          </div>
+        </div>
+
         <div class="inner-center-div">
           <ion-button style="min-width: 80px; padding-right: 10px" disabled="true">
             Store
@@ -81,16 +92,23 @@
 
 
       </ion-buttons>
+    </ng-container>
 
+    <ng-container *ngIf="platformWidth <= 935">
+      <ion-buttons slot="end" class="right-side">
+        <div id="main-content">
+          <ion-buttons slot="end" style="padding: 5px">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </div>
+      </ion-buttons>
+    </ng-container>
 
-    </mat-toolbar>
-  </ion-header>
-</ng-container>
+  </mat-toolbar>
+</ion-header>
 
-<ng-container *ngIf="platformWidth <= 900">
-
-  <!--  Ion menu for smaller devices-->
-  <ion-menu contentId="main-content" side="end">
+<ng-container *ngIf="platformWidth <= 935">
+  <ion-menu contentId="main-content" type="overlay" side="start">
     <ion-header style="height: 12vh">
       <ion-toolbar class="custom_toolbar_menu">
         <h3>The Father's House</h3>
@@ -200,29 +218,5 @@
       </ion-grid>
     </ion-content>
   </ion-menu>
-
-  <!--  Toolbar for the Ion menu for mobile devices or small screen things-->
-  <mat-toolbar class="custom_mat_toolbar mat-elevation-z2">
-    <div class="ion-page" id="main-content">
-      <ion-header style="height: 12vh">
-        <ion-toolbar class="custom_toolbar">
-
-          <ion-buttons slot="start" style="padding-top: 7px">
-            <a href="home">
-              <img src="assets/icon/church_home_logo.svg" style="height: 10vh;">
-            </a>
-          </ion-buttons>
-
-          <span class="spacer"></span>
-
-          <ion-buttons slot="end">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-
-        </ion-toolbar>
-      </ion-header>
-    </div>
-  </mat-toolbar>
-
 </ng-container>
 

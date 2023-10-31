@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {sortByDate, sortByDateEvents} from "../utils/utils";
+import {sortByDateEvents} from "../utils/utils";
 import {map} from "rxjs/operators";
 
 @Component({
@@ -17,8 +17,8 @@ export class AllEventsPage implements OnInit {
   ngOnInit() {
   }
 
-  getAllEvents$ = this.dataService.allEvents$
+  getAllEvents$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(events => events.filter(event => event.type === 'event').sort(sortByDateEvents))
+      map(events => events.mainEvents.filter(event => event.type === 'event').sort(sortByDateEvents))
     );
 }

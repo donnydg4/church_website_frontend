@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
-import {DisplayCardModel} from "../../models/display-card.model";
+import {DisplayCardModel} from "../../models/sub-models/display-card.model";
 import {NavController} from "@ionic/angular";
 
 @Component({

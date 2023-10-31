@@ -1,19 +1,19 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {IonicModule} from '@ionic/angular';
 
-import {MainLayoutComponent} from './main-layout.component';
+import {LeadershipPage} from './leadership.page';
 
-describe('MainLayoutComponent', () => {
-  let component: MainLayoutComponent;
-  let fixture: ComponentFixture<MainLayoutComponent>;
+describe('LeadershipPage', () => {
+  let component: LeadershipPage;
+  let fixture: ComponentFixture<LeadershipPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [MainLayoutComponent],
+      declarations: [ LeadershipPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MainLayoutComponent);
+    fixture = TestBed.createComponent(LeadershipPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

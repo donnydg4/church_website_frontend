@@ -1,3 +1,4 @@
+<app-header></app-header>
 <ion-content style="--background: white; --color: black">
   <ion-grid class="connect">
     <ion-row>
@@ -27,9 +28,9 @@
               <!-- Using desktop -->
               <ion-col size="12">
                 <div>
-                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Category <span class="required">*</span></mat-label>
-                    <mat-select formControlName="category" multiple disableRipple disableOptionCentering
+                    <mat-select formControlName="category" multiple disableRipple
                                 placeholder="Select a Category">
                       <mat-select-trigger>
                         {{contactForm.controls.category.value?.[0] || ''}}
