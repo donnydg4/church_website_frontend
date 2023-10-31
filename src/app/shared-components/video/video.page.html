@@ -66,7 +66,9 @@
                     <mat-hint align="start"><strong>(Max 1000 characters)</strong></mat-hint>
                     <mat-hint align="end">{{text.value.length}} / 1000</mat-hint>
                   </mat-form-field>
-                  <ion-button class="copy" mode="md" (click)="copyText()">Copy Notes</ion-button>
+                  <div style="margin-top: 1%">
+                    <ion-button class="copy" mode="md" (click)="copyText()">Copy Notes</ion-button>
+                  </div>
                 </ng-container>
               </ion-col>
             </ion-row>
