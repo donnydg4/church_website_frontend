@@ -9,13 +9,18 @@ ion-grid {
 }
 
 .trial {
-  height: calc(100vh - 500px);
-  width: calc(100vw - 100px);
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 }
 
 .trialTwo {
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
 }
 
 .text{
@@ -76,5 +81,28 @@ ion-button.copy {
 }
 .ion-valid.sc-ion-textarea-md-h {
   --highlight-color: none !important;
+}
+
+//ios stuff
+ion-text.title.ios {
+  font-size: 20px;
+  color: black;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+ion-text.date.ios {
+  font-size: 16px;
+  color: #1f1f1f;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+ion-text.description.ios {
+  font-size: 16px;
+  color: black;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
 }
 

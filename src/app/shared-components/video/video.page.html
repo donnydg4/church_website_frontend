@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<ion-content>
+<ion-content style="--background: white; --color: black">
   <ion-grid class="ion-no-padding margin_top" style="margin-bottom: 5%" [fixed]="true">
     <ion-row>
       <ion-col size="12" style="height: 100%" class="ion-text-center">
@@ -11,29 +11,31 @@
         <ion-card style="margin: 0; border-radius: 0; height: 100%">
           <ion-grid class="ion-no-padding">
             <ion-row>
-              <ion-col size="12" class="trial">
-                <iframe class="trialTwo"
-                        [src]="youtubeUrl"
-                        style="border-radius: 10px" allow="fullscreen">
-                </iframe>
+              <ion-col size="12">
+                <div class="trial">
+                  <iframe class="trialTwo"
+                          [src]="youtubeUrl"
+                          style="border-radius: 10px" allow="fullscreen">
+                  </iframe>
+                </div>
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="12" class="col-subtitle-margin">
                 <ion-card-subtitle style="text-align: left">
-                  <ion-text style="font-size: 16px;">
+                  <ion-text class="date">
                     {{anyCard.date | date :'MMMM dd, yyyy'}}
                   </ion-text>
                 </ion-card-subtitle>
               </ion-col>
               <ion-col size="12" class="col-subtitle-margin">
                 <ion-card-title style="text-align: left">
-                  <ion-text>{{anyCard.title}}</ion-text>
+                  <ion-text class="title">{{anyCard.title}}</ion-text>
                 </ion-card-title>
               </ion-col>
               <ion-col size="12" style="text-align: left; margin-top: 1%; margin-bottom: 1%;">
                 <ion-card-content>
-                  <ion-text class="content">
+                  <ion-text class="description">
                     {{anyCard.description}}
                   </ion-text>
                 </ion-card-content>
