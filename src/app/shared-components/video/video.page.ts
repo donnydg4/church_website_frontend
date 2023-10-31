@@ -1,8 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
-import {ExtrasService} from "../../service/extras.service";
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {Location} from "@angular/common";
 
@@ -20,7 +19,6 @@ export class VideoPage {
   youtubeUrl: SafeResourceUrl;
 
   constructor(public clipboard: Clipboard, public toastController: ToastController, public platform: Platform, public sanitizer: DomSanitizer, private location: Location) {
-    console.log(localStorage.getItem('card'));
     this.anyCard = JSON.parse(localStorage.getItem('card'));
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
   }
@@ -32,14 +30,12 @@ export class VideoPage {
   copyText() {
     this.clipboard.copy(this.textArea);
     this.presentToast();
-    console.log(this.textArea);
   }
 
   copyUrlToClipboard(id: string) {
     const shareUrl: string = 'https://www.youtube.com/watch?v=' + id;
     this.clipboard.copy(shareUrl);
     this.presentToastForShare();
-    console.log(shareUrl);
   }
 
   async presentToast() {

@@ -1,12 +1,7 @@
 import {Injectable} from '@angular/core';
-import {CalendarModel} from "../models/sub-models/calendar.model";
-import {WatchModel} from "../models/sub-models/watch.model";
 import {HttpClient} from "@angular/common/http";
-import {catchError, shareReplay, tap} from "rxjs/operators";
+import {shareReplay} from "rxjs/operators";
 import {BehaviorSubject, Observable, throwError} from "rxjs";
-import {SeriesCardModel} from "../models/sub-models/series-card.model";
-import {MainEventModel} from "../models/sub-models/main-event-model";
-import {DisplayCardModel} from "../models/sub-models/display-card.model";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
 
 @Injectable({
@@ -37,8 +32,7 @@ export class AllChurchInformationService {
 
   allWebsiteInformation$ = this.http.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
     .pipe(
-      shareReplay(1),
-      tap(data => console.log(data))
+      shareReplay(1)
     )
 
   constructor(private http: HttpClient) {

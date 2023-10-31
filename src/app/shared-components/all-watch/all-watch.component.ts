@@ -1,11 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";
 import {SeriesCardModel} from "../../models/sub-models/series-card.model";
 import {PaginationInstance} from "ngx-pagination";
-import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import { Router } from '@angular/router';
+import {Router} from '@angular/router';
 import {convertSpaceToDash} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 
@@ -30,7 +29,6 @@ export class AllWatchComponent {
 
   handleChange(event) {
     this.dataService.searchQueryWord(event.target.value.toLowerCase());
-    console.log(event.target.value.toLowerCase());
   }
 
   constructor(private dataService: AllChurchInformationService, public router: Router, private extrasService: ExtrasService) {
