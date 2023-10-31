@@ -5,7 +5,17 @@ ion-grid {
 }
 
 .margin_top {
-  margin-top: 8%
+  margin-top: 6%
+}
+
+.trial {
+  height: calc(100vh - 500px);
+  width: calc(100vw - 100px);
+}
+
+.trialTwo {
+  height: 100%;
+  width: 100%;
 }
 
 .text{
