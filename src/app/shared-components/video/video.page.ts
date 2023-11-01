@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import {Platform, ToastController} from "@ionic/angular";
+import {MenuController, NavController, Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {Location} from "@angular/common";
@@ -18,7 +18,10 @@ export class VideoPage {
   anyCard: WatchModel;
   youtubeUrl: SafeResourceUrl;
 
-  constructor(public clipboard: Clipboard, public toastController: ToastController, public platform: Platform, public sanitizer: DomSanitizer, private location: Location) {
+  constructor(public clipboard: Clipboard, public toastController: ToastController,
+              public platform: Platform, public sanitizer: DomSanitizer,
+              private location: Location, private navCtrl: NavController,
+              private menuCtrl: MenuController) {
     this.anyCard = JSON.parse(localStorage.getItem('card'));
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
   }
@@ -59,6 +62,7 @@ export class VideoPage {
   }
 
   back() {
-    this.location.back();
+    this.navCtrl.back();
+    this.menuCtrl.enable(true, 'menu-one');
   }
 }
