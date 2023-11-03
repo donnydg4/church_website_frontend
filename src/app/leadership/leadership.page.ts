@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map} from "rxjs/operators";
+import {map, tap} from "rxjs/operators";
+import {Observable} from "rxjs";
+import {LeadershipModel} from "../models/sub-models/leadership.model";
 
 @Component({
   selector: 'app-leadership',
@@ -11,10 +13,14 @@ export class LeadershipPage {
 
   constructor(private dataService: AllChurchInformationService) { }
 
-  selectedCategory: string = 'LEADERSHIP'
+  selectedCategory: string = 'LEADERSHIP';
+  leadershipInfo = signal<LeadershipModel>({});
 
   leadershipCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(leadershipCards => leadershipCards.displayCards.filter(leadershipCard => leadershipCard.type === 'CHURCH LEADERSHIP'))
+      tap(data => this.leadershipInfo.set(data.leadershipPage)),
+      map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards.filter(leadershipCard => leadershipCard.type === 'CHURCH LEADERSHIP'))
     );
+
+
 }

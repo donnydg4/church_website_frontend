@@ -9,7 +9,7 @@
 
     <span class="spacer"></span>
 
-    <ng-container *ngIf="platformWidth > 935">
+    <ng-container *ngIf="platformWidth > 975">
       <ion-buttons slot="end" class="right-side">
 
         <div class="dropdown">
@@ -94,7 +94,7 @@
       </ion-buttons>
     </ng-container>
 
-    <ng-container *ngIf="platformWidth <= 935">
+    <ng-container *ngIf="platformWidth <= 975">
       <ion-buttons slot="end" class="right-side">
         <div id="main-content">
           <ion-buttons slot="end" style="padding: 5px">
@@ -107,7 +107,7 @@
   </mat-toolbar>
 </ion-header>
 
-<ng-container *ngIf="platformWidth <= 935">
+<ng-container *ngIf="platformWidth <= 975">
   <ion-menu contentId="main-content" type="overlay" side="start" menuId="menu-one">
     <ion-header style="height: 12vh">
       <ion-toolbar class="custom_toolbar_menu">

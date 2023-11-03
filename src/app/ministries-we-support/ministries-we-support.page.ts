@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map} from "rxjs/operators";
+import {map, tap} from "rxjs/operators";
+import {LeadershipModel} from "../models/sub-models/leadership.model";
+import {MinistriesWeSupportModel} from "../models/sub-models/ministries-we-support.model";
 
 @Component({
   selector: 'app-ministries-we-support',
@@ -10,13 +12,20 @@ import {map} from "rxjs/operators";
 export class MinistriesWeSupportPage implements OnInit {
 
   selectedCategory: string = 'MINISTRIES WE SUPPORT';
+  ministriesWeSupportInfo = signal<MinistriesWeSupportModel>({});
+
 
   displayMinistriesWeSupportCards$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(ministriesWeSupportCards => ministriesWeSupportCards.displayCards.filter(supportedMinistries => supportedMinistries.type === 'SUPPORTED MINISTRY'))
+      tap(data => this.ministriesWeSupportInfo.set(data.ministriesWeSupportPage)),
+      map(ministriesWeSupportInfo => ministriesWeSupportInfo.ministriesWeSupportPage.displayCards.filter(supportedMinistries => supportedMinistries.type === 'SUPPORTED MINISTRY')
+      )
     );
 
-  constructor(private dataService: AllChurchInformationService) { }
+
+
+  constructor(private dataService: AllChurchInformationService) {
+  }
 
   ngOnInit() {
   }

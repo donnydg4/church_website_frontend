@@ -30,8 +30,7 @@ import {DisplayCardsComponent} from "./display-cards/display-cards.component";
     FooterComponent,
     HeaderComponent,
     AllWatchComponent,
-    DisplayCardsComponent,
-
+    DisplayCardsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

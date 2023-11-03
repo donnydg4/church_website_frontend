@@ -1,5 +1,17 @@
 <app-header></app-header>
 <ion-content style="--background: white; --color: black">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <div class="outside">
+          <img src="{{ourMinistries().coverPhoto}}">
+          <div class="inside">
+            <h1>{{ourMinistries().title}}</h1>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <app-display-cards [displayCards]="displayOurMinistryCards$" [selectedCategory]="selectedCategory"></app-display-cards>
   <app-footer></app-footer>
 </ion-content>
