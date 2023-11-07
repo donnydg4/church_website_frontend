@@ -8,17 +8,13 @@ import {NavController} from "@ionic/angular";
   templateUrl: './display-cards.component.html',
   styleUrls: ['./display-cards.component.scss'],
 })
-export class DisplayCardsComponent implements OnInit {
+export class DisplayCardsComponent {
 
   isSelected: number;
 
   @Input() displayCards: Observable<DisplayCardModel[]>;
-  @Input() selectedCategory: string = '';
 
   constructor(private navCtrl: NavController) { }
-
-  ngOnInit() {}
-
   navigateToPage() {
     this.navCtrl.navigateForward([`connect`]);
   }

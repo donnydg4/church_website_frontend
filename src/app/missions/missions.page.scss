@@ -1,0 +1,42 @@
+img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+div.outside {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  vertical-align: middle;
+  justify-content: center;
+
+}
+
+div.inside {
+  width: 100%; /* Can be in percentage also. */
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(45px, 7vw, 105px);
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  //-webkit-text-stroke: 1px darkslategrey;
+}

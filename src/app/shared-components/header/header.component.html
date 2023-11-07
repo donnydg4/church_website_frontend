@@ -20,8 +20,9 @@
           </div>
           <div class="dropdown-content">
             <a routerLink="/church">OUR CHURCH</a>
-            <a routerLink="/our-ministries">OUR MINISTRIES</a>
             <a routerLink="/leadership">LEADERSHIP</a>
+            <a routerLink="/missions">MISSIONS</a>
+            <a routerLink="/our-ministries">OUR MINISTRIES</a>
             <a routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>
           </div>
         </div>
@@ -73,7 +74,7 @@
             </ion-button>
           </div>
           <div class="dropdown-content">
-            <a routerLink="/business">Businesses We Support</a>
+            <a routerLink="/businesses-we-support">Businesses We Support</a>
           </div>
         </div>
 
@@ -98,7 +99,7 @@
       <ion-buttons slot="end" class="right-side">
         <div id="main-content">
           <ion-buttons slot="end" style="padding: 5px">
-            <ion-menu-button ></ion-menu-button>
+            <ion-menu-button></ion-menu-button>
           </ion-buttons>
         </div>
       </ion-buttons>
@@ -133,15 +134,19 @@
                     <ion-item button lines="none" (click)="navigateToPage('church')">
                       <a class="changes">our church</a>
                     </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('our-ministries')">
-                      <a class="changes">our ministries</a>
-                    </ion-item>
                     <ion-item button lines="none" (click)="navigateToPage('leadership')">
                       <a class="changes">leadership</a>
+                    </ion-item>
+                    <ion-item button lines="none" (click)="navigateToPage('missions')">
+                      <a class="changes">missions</a>
+                    </ion-item>
+                    <ion-item button lines="none" (click)="navigateToPage('our-ministries')">
+                      <a class="changes">our ministries</a>
                     </ion-item>
                     <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
                       <a class="changes">ministries we support</a>
                     </ion-item>
+
                   </ion-item-group>
                 </div>
               </ion-accordion>
@@ -208,7 +213,7 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item button lines="none" (click)="navigateToPage('businesses')" disabled="true">
+                    <ion-item button lines="none" (click)="navigateToPage('businesses-we-support')" disabled="true">
                       <a class="changes">Businesses We Support</a>
                     </ion-item>
                   </ion-item-group>

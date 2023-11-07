@@ -7,14 +7,17 @@ import {DisplayCardModel} from "./sub-models/display-card.model";
 import {MinistriesWeSupportModel} from "./sub-models/ministries-we-support.model";
 import {OurMinistriesModel} from "./sub-models/our-ministries.model";
 import {LeadershipModel} from "./sub-models/leadership.model";
+import {BusinessesWeSupportModel} from "./sub-models/businesses-we-support.model";
+import {MissionsModel} from "./sub-models/missions.model";
 
 export interface AllWebsiteInformationModel {
   id: string;
   allWebsiteInformation: SomeChurchWebsiteInformation;
-  // displayCards: DisplayCardModel[];
   leadershipPage: LeadershipModel;
   ourMinistriesPage: OurMinistriesModel;
   ministriesWeSupportPage: MinistriesWeSupportModel;
+  businessesWeSupportPage: BusinessesWeSupportModel;
+  missionsPage: MissionsModel;
   allCalendarInformation: CalendarModel[];
   mainEvents: MainEventModel[];
   allWatchCards: WatchModel[];

@@ -13,7 +13,6 @@ export class LeadershipPage {
 
   constructor(private dataService: AllChurchInformationService) { }
 
-  selectedCategory: string = 'LEADERSHIP';
   leadershipInfo = signal<LeadershipModel>({});
 
   leadershipCards$ = this.dataService.allWebsiteInformation$
@@ -21,6 +20,4 @@ export class LeadershipPage {
       tap(data => this.leadershipInfo.set(data.leadershipPage)),
       map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards.filter(leadershipCard => leadershipCard.type === 'CHURCH LEADERSHIP'))
     );
-
-
 }

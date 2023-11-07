@@ -9,11 +9,9 @@ import {MinistriesWeSupportModel} from "../models/sub-models/ministries-we-suppo
   templateUrl: './ministries-we-support.page.html',
   styleUrls: ['./ministries-we-support.page.scss'],
 })
-export class MinistriesWeSupportPage implements OnInit {
+export class MinistriesWeSupportPage {
 
-  selectedCategory: string = 'MINISTRIES WE SUPPORT';
   ministriesWeSupportInfo = signal<MinistriesWeSupportModel>({});
-
 
   displayMinistriesWeSupportCards$ = this.dataService.allWebsiteInformation$
     .pipe(
@@ -22,12 +20,8 @@ export class MinistriesWeSupportPage implements OnInit {
       )
     );
 
-
-
   constructor(private dataService: AllChurchInformationService) {
   }
 
-  ngOnInit() {
-  }
 
 }
