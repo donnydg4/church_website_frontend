@@ -1,0 +1,21 @@
+.icon {
+  display: inline-block;
+  font-size: 23px;
+  vertical-align: middle;
+}
+
+.text{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 19px;
+  margin-left: .5%;
+}
+ion-grid {
+  --ion-grid-width: 94%;
+  --ion-grid-width-md: 85%;
+  --ion-grid-width-xl: 90%;
+}
+
+.margin_top {
+  margin-top: 6%
+}

@@ -1,7 +1,7 @@
-import {CalendarEvents} from "./calendar-events.model";
+import {CalendarEvent} from "./calendar-events.model";
 
 
 export interface CalendarModel {
   date: Date;
-  events: CalendarEvents[];
+  events: CalendarEvent[];
 }

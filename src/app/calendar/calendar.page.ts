@@ -2,9 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {BehaviorSubject, combineLatest} from "rxjs";
-import {map} from "rxjs/operators";
+import {map, tap} from "rxjs/operators";
 import {sortByDateCalendar} from "../utils/utils";
 import {NavController} from "@ionic/angular";
+import {CalendarEvent} from "../models/sub-models/calendar-events.model";
+import {ExtrasService} from "../service/extras.service";
 
 @Component({
   selector: 'app-calendar',
@@ -38,9 +40,10 @@ export class CalendarPage implements OnInit {
           }
           return new Date(event.date).getTime() >= firstDate.getTime() && new Date(event.date).getTime() <= secondDate.getTime()
         }
-      ).sort(sortByDateCalendar)));
+      ).sort(sortByDateCalendar))
+    );
 
-  constructor(private dataService: AllChurchInformationService, private navCtrl: NavController) {
+  constructor(private dataService: AllChurchInformationService, private navCtrl: NavController, private navExtras: ExtrasService) {
     const date = new Date();
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth(); //getMonth starts at 0
@@ -62,9 +65,6 @@ export class CalendarPage implements OnInit {
     const startDate: Date = this.dateRange.get('start').value;
     const endDate: Date = this.dateRange.get('end').value;
 
-    console.log(startDate);
-    console.log(endDate);
-
     this.selectDateRange(startDate, endDate);
   }
 
@@ -73,7 +73,9 @@ export class CalendarPage implements OnInit {
     this.endDateSubject.next(endDate);
   }
 
-  navigateToStandardLayout(): void {
+  navigateToStandardLayout(calendarEvent: CalendarEvent): void {
+    this.navExtras.setCalendarEvent(calendarEvent);
+    localStorage.setItem('calendar', JSON.stringify(this.navExtras.getCalendarEvents()));
     this.navCtrl.navigateForward('standard-layout');
   }
 

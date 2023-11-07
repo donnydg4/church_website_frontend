@@ -1,15 +1,24 @@
 import {Component, OnInit} from '@angular/core';
+import {MenuController, NavController} from "@ionic/angular";
+import {CalendarEvent} from "../models/sub-models/calendar-events.model";
+import {ExtrasService} from "../service/extras.service";
 
 @Component({
   selector: 'app-standard-layout',
   templateUrl: './standard-layout.page.html',
   styleUrls: ['./standard-layout.page.scss'],
 })
-export class StandardLayoutPage implements OnInit {
+export class StandardLayoutPage {
 
-  constructor() { }
+  calendarEvent: CalendarEvent;
 
-  ngOnInit() {
+  constructor(private navCtrl: NavController, private menuCtrl: MenuController) {
+    this.calendarEvent = JSON.parse(localStorage.getItem('calendar'));
+    console.log(this.calendarEvent);
   }
 
+  back() {
+    this.navCtrl.back();
+    this.menuCtrl.enable(true, 'menu-one');
+  }
 }
