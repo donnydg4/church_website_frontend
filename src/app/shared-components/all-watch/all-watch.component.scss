@@ -16,9 +16,9 @@ ion-col.custom:hover {
 
 h3 {
   font-weight: bold;
-  font-size: 3em;
-  letter-spacing: .08em;
-  font-family: Roboto;
+  font-size: clamp(42px, 5vw, 70px);
+  letter-spacing: .02em;
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 ion-card-header {
