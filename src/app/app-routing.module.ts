@@ -65,7 +65,16 @@ const routes: Routes = [
   {
     path: 'sermons/:title',
     loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
-  },  {
+  },
+  {
+    path: 'devotionals/:title',
+    loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
+  },
+  {
+    path:'guest-speakers/:title',
+    loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
+  },
+  {
     path: 'missions',
     loadChildren: () => import('./missions/missions.module').then( m => m.MissionsPageModule)
   },

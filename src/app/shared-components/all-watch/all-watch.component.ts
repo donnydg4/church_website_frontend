@@ -46,7 +46,7 @@ export class AllWatchComponent {
       localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
       this.router.navigate(['/sermons', convertSpaceToDash(card.title)]);
     }
-    if (card.type.toLowerCase() === 'devotionals') {
+    if (card.category.toLowerCase() === 'devotional') {
       this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
       localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
       this.router.navigate(['/devotionals', convertSpaceToDash(card.title)]);
@@ -54,7 +54,7 @@ export class AllWatchComponent {
     if (card.category.toLowerCase() === 'guest') {
       this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
       localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
-      this.router.navigate(['/guest-speaker', convertSpaceToDash(card.title)]);
+      this.router.navigate(['/guest-speakers', convertSpaceToDash(card.title)]);
     }
   }
 
