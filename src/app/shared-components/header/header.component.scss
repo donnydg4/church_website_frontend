@@ -86,7 +86,7 @@ ion-icon {
 .custom_toolbar_menu {
   --background: var(--ion-color-primary-shade);
   --color: white;
-  --min-height: 12vh;
+  --min-height: 14Svh;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -120,6 +120,7 @@ a.changes {
   display: block;
   font-size: 1em;
   font-family: Arial;
+  width: 100%;
 }
 
 ion-content.custom_background {

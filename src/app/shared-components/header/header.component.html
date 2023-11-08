@@ -110,7 +110,7 @@
 
 <ng-container *ngIf="platformWidth <= 975">
   <ion-menu contentId="main-content" type="overlay" side="start" menuId="menu-one">
-    <ion-header style="height: 12vh">
+    <ion-header style="height: 14vh">
       <ion-toolbar class="custom_toolbar_menu">
         <h3>The Father's House</h3>
       </ion-toolbar>
@@ -177,17 +177,17 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item button lines="none" (click)="navigateToPage('sermons')">
-                      <a class="changes">sermons</a>
+                    <ion-item button lines="none">
+                      <a href="/sermons" class="changes">sermons</a>
                     </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('series')">
-                      <a class="changes">series</a>
+                    <ion-item button lines="none">
+                      <a href="/series" class="changes">series</a>
                     </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('devotionals')">
-                      <a class="changes">devotionals</a>
+                    <ion-item button lines="none">
+                      <a href="/devotionals" class="changes">devotionals</a>
                     </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('guest-speakers')">
-                      <a class="changes">guest speakers</a>
+                    <ion-item button lines="none">
+                      <a href="/guest-speakers" class="changes">guest speakers</a>
                     </ion-item>
                   </ion-item-group>
                 </div>

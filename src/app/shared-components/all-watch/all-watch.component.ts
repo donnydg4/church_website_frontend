@@ -40,17 +40,29 @@ export class AllWatchComponent {
     window.scrollTo(0, 0);
   }
 
-  navigateToPage(card: WatchModel){
+  navigateToSermonOrDevotionalOrGuestSpeaker(card: WatchModel){
     if (card.type.toLowerCase() === 'sermon') {
-      this.extrasService.setWatchCard(card);
-      localStorage.setItem('card', JSON.stringify(this.extrasService.getExtras()));
+      this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
+      localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
       this.router.navigate(['/sermons', convertSpaceToDash(card.title)]);
     }
-    if (card.type.toLowerCase() === 'devotional') {
-      this.extrasService.setWatchCard(card);
-      localStorage.setItem('card', JSON.stringify(this.extrasService.getExtras()));
+    if (card.type.toLowerCase() === 'devotionals') {
+      this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
+      localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
       this.router.navigate(['/devotionals', convertSpaceToDash(card.title)]);
     }
+    if (card.category.toLowerCase() === 'guest') {
+      this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
+      localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
+      this.router.navigate(['/guest-speaker', convertSpaceToDash(card.title)]);
+    }
   }
+
+  navigateToSeriesPage(seriesCard: SeriesCardModel) {
+      this.extrasService.setSeriesCard(seriesCard);
+      localStorage.setItem('card', JSON.stringify(this.extrasService.getSeriesCard()));
+      this.router.navigate(['/series', convertSpaceToDash(seriesCard.title)]);
+  }
+
 
 }

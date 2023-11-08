@@ -8,8 +8,7 @@ import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 })
 export class ExtrasService {
 
-  anyCard: WatchModel;
-  anyCardArray: WatchModel[];
+  sermonOrDevotionalOrGuestSpeakerCard: WatchModel;
   seriesCard: SeriesCardModel;
   calendarEvents: CalendarEvent;
 
@@ -17,12 +16,12 @@ export class ExtrasService {
 
   constructor() { }
 
-  public setWatchCard(data: WatchModel) {
-    this.anyCard = data;
+  public setSermonOrDevotionalOrGuestSpeakerCard(data: WatchModel) {
+    this.sermonOrDevotionalOrGuestSpeakerCard = data;
   }
 
-  public getExtras() {
-    return this.anyCard;
+  public getSermonOrDevotionalOrGuestSpeakerCard() {
+    return this.sermonOrDevotionalOrGuestSpeakerCard;
   }
 
   public setCalendarEvent(data: CalendarEvent) {
@@ -33,28 +32,12 @@ export class ExtrasService {
     return this.calendarEvents;
   }
 
-  public setExtrasSeries(data: SeriesCardModel){
+  public setSeriesCard(data: SeriesCardModel){
     this.seriesCard = data;
   }
 
-  public setExtrasArray(data: WatchModel[]){
-    this.anyCardArray = data;
-  }
-
-  public setSeries(series: boolean) {
-    this.series = series;
-  }
-
-  public getExtrasArray() {
-    return [...this.anyCardArray];
-  }
-
-  public getExtrasSeries() {
+  public getSeriesCard() {
     return this.seriesCard;
   }
 
-
-  public getSeries() {
-    return this.series;
-  }
 }
