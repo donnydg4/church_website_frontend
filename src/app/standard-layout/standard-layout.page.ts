@@ -18,7 +18,7 @@ export class StandardLayoutPage {
   }
 
   back() {
-    this.navCtrl.back();
-    this.menuCtrl.enable(true, 'menu-one');
+    location.href = '/calendar';
   }
+
 }

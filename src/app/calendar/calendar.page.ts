@@ -3,10 +3,11 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {BehaviorSubject, combineLatest} from "rxjs";
 import {map, tap} from "rxjs/operators";
-import {sortByDateCalendar} from "../utils/utils";
+import {convertSpaceToDash, sortByDateCalendar} from "../utils/utils";
 import {NavController} from "@ionic/angular";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {ExtrasService} from "../service/extras.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-calendar',
@@ -43,7 +44,7 @@ export class CalendarPage implements OnInit {
       ).sort(sortByDateCalendar))
     );
 
-  constructor(private dataService: AllChurchInformationService, private navCtrl: NavController, private navExtras: ExtrasService) {
+  constructor(private dataService: AllChurchInformationService, private router: Router, private navExtras: ExtrasService) {
     const date = new Date();
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth(); //getMonth starts at 0
@@ -76,7 +77,7 @@ export class CalendarPage implements OnInit {
   navigateToStandardLayout(calendarEvent: CalendarEvent): void {
     this.navExtras.setCalendarEvent(calendarEvent);
     localStorage.setItem('calendar', JSON.stringify(this.navExtras.getCalendarEvents()));
-    this.navCtrl.navigateForward('standard-layout');
+    this.router.navigate(['/calendar', convertSpaceToDash(calendarEvent.title)]);
   }
 
 }

@@ -75,6 +75,10 @@ const routes: Routes = [
     loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
   },
   {
+    path: 'calendar/:title',
+    component: StandardLayoutPage
+  },
+  {
     path: 'missions',
     loadChildren: () => import('./missions/missions.module').then( m => m.MissionsPageModule)
   },
