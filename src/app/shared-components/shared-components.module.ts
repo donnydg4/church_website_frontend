@@ -9,6 +9,7 @@ import {AllWatchComponent} from "./all-watch/all-watch.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {NgxPaginationModule} from "ngx-pagination";
 import {DisplayCardsComponent} from "./display-cards/display-cards.component";
+import {DefaultLayoutComponent} from "./default-layout/default-layout.component";
 
 
 @NgModule({
@@ -25,12 +26,14 @@ import {DisplayCardsComponent} from "./display-cards/display-cards.component";
     FooterComponent,
     AllWatchComponent,
     DisplayCardsComponent,
+    DefaultLayoutComponent
   ],
   declarations: [
     FooterComponent,
     HeaderComponent,
     AllWatchComponent,
-    DisplayCardsComponent
+    DisplayCardsComponent,
+    DefaultLayoutComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

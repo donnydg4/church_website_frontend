@@ -18,7 +18,7 @@ export class StandardLayoutPage {
   }
 
   back() {
-    location.href = '/calendar';
+    this.navCtrl.back();
   }
 
 }

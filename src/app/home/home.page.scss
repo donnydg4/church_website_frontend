@@ -66,3 +66,20 @@ ion-text.new_here {
   font-family: Arial;
   line-height: 1.5em;
 }
+
+h5{
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(36px, 4vw, 40px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+p.times {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}

@@ -19,8 +19,8 @@ export class HeaderComponent {
   }
 
   navigateToPage(type: string) {
+    this.menuCtrl.toggle();
     this.navCtrl.navigateForward(type);
-    // this.menuCtrl.enable(true);
   }
 
 
