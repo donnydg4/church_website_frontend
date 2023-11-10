@@ -7,15 +7,37 @@
 .text{
   display: inline-block;
   vertical-align: middle;
-  font-size: 19px;
+  font-size: clamp(15px, 2vw, 19px);
   margin-left: .5%;
 }
 ion-grid {
   --ion-grid-width: 94%;
-  --ion-grid-width-md: 85%;
+  --ion-grid-width-md: 88%;
   --ion-grid-width-xl: 90%;
+  --ion-grid-width-sm: 95%;
 }
 
 .margin_top {
   margin-top: 6%
+}
+
+h2 {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(30px, 4vw, 55px);
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+ion-text {
+  font-size: clamp(16px, 2vw, 18px);
+}
+div.custom-cols{
+  margin-bottom: 5%;
+  padding: 5px 0 5px 5px
+}
+ion-text.custom-text {
+  font-size: clamp(14px, 2vw, 16px);
 }
