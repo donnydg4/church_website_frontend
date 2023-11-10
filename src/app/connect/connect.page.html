@@ -27,7 +27,7 @@
               <!-- Using desktop -->
               <ion-col size="12">
                 <div>
-                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px;" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 100%; font-size: 15px;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Category <span class="required">*</span></mat-label>
                     <mat-select formControlName="category" multiple disableRipple
                                 placeholder="Select a Category">
@@ -50,7 +50,7 @@
 
               <ion-col size="12">
                 <div>
-                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 100%; font-size: 15px" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Your name <span class="required">*</span></mat-label>
                     <input matInput formControlName="name">
                     <mat-error *ngIf="contactForm.controls.name.hasError('required')">
@@ -67,7 +67,7 @@
               </ion-col>
               <ion-col size="12">
                 <div>
-                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 100%; font-size: 15px" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Email <span class="required">*</span></mat-label>
                     <input matInput type="email" formControlName="email" placeholder="Ex. pat@example.com">
                     <mat-error
@@ -82,7 +82,7 @@
               </ion-col>
               <ion-col size="12">
                 <div>
-                  <mat-form-field appearance="outline" style="width: 100%; font-size: 13px" hideRequiredMarker>
+                  <mat-form-field appearance="outline" style="width: 100%; font-size: 15px" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Phone Number</mat-label>
                     <input matInput type="text" formControlName="phone" placeholder="888-111-2222">
                   </mat-form-field>
@@ -110,7 +110,7 @@
             </ion-row>
             <ion-row class="ion-margin-top">
               <ion-col size="auto">
-                <ion-button (click)="presentSnackBar()" type="submit" [disabled]="!contactForm.valid">Submit
+                <ion-button (click)="openSnackBar()" type="submit" [disabled]="!contactForm.valid">Submit
                 </ion-button>
               </ion-col>
             </ion-row>

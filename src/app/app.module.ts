@@ -23,6 +23,8 @@ import {AllEventsPageModule} from "./all-events/all-events.module";
 import {OurMinistriesPageModule} from "./our-ministries/our-ministries.module";
 import {MinistriesWeSupportPageModule} from "./ministries-we-support/ministries-we-support.module";
 import {LeadershipPageModule} from "./leadership/leadership.module";
+import {SeriesListPageModule} from "./series/series-list/series-list.module";
+import {VideoPageModule} from "./shared-components/video/video.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,6 +47,8 @@ import {LeadershipPageModule} from "./leadership/leadership.module";
     OurMinistriesPageModule,
     MinistriesWeSupportPageModule,
     LeadershipPageModule,
+    SeriesListPageModule,
+    VideoPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule

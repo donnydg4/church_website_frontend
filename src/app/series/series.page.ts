@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 import {sortByDateSeries} from "../utils/utils";
@@ -9,7 +9,7 @@ import {combineLatest} from "rxjs";
   templateUrl: './series.page.html',
   styleUrls: ['./series.page.scss'],
 })
-export class SeriesPage implements OnInit {
+export class SeriesPage {
 
   seriesCards$ = this.dataService.allWebsiteInformation$
     .pipe(
@@ -34,9 +34,6 @@ export class SeriesPage implements OnInit {
   seriesTitle = 'Series';
 
   constructor(private dataService: AllChurchInformationService) {
-  }
-
-  ngOnInit() {
   }
 
 }

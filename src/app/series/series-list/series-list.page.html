@@ -1,0 +1,31 @@
+<ion-content style="--background: white; --color: black">
+  <ion-grid [fixed]="true" style="margin-bottom: 5%">
+    <div style="text-align: center; margin-top: 5%; margin-bottom: 3%">
+      <h3 class="series-list">{{seriesCardFromStorage.title}}</h3>
+    </div>
+    <ion-row>
+      <ion-col size="12" class="custom" *ngFor="let cards of seriesCardFromStorage.sermons.sort(sortByDate)">
+        <ion-card mode="md" (click)="navigateToVideoPage(cards)">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="4">
+                <div class="img_good">
+                  <img alt="img-src" src="{{cards.imageUrl}}">
+                </div>
+              </ion-col>
+              <ion-col size="8">
+                <div style="display: table; width: 100%; height: 100%">
+                  <ion-card-header style="width: 100%; height: 100%; display: table-cell; vertical-align: middle">
+                    <ion-card-title>{{cards.title}}</ion-card-title>
+                    <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                  </ion-card-header>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-footer></app-footer>
+</ion-content>

@@ -1,5 +1,4 @@
-import {Component, OnInit, signal} from '@angular/core';
-import {OurMinistriesModel} from "../models/sub-models/our-ministries.model";
+import {Component, signal} from '@angular/core';
 import {BusinessesWeSupportModel} from "../models/sub-models/businesses-we-support.model";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";

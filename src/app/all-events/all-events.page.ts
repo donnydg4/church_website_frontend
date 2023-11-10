@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {sortByDateEvents} from "../utils/utils";
 import {map} from "rxjs/operators";
@@ -8,14 +8,11 @@ import {map} from "rxjs/operators";
   templateUrl: './all-events.page.html',
   styleUrls: ['./all-events.page.scss'],
 })
-export class AllEventsPage implements OnInit {
+export class AllEventsPage {
 
   constructor(private dataService: AllChurchInformationService) { }
 
   selectedCategory: string = 'ALL EVENTS';
-
-  ngOnInit() {
-  }
 
   getAllEvents$ = this.dataService.allWebsiteInformation$
     .pipe(

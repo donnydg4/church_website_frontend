@@ -3,7 +3,6 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {MenuController, NavController, Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
 import {WatchModel} from "../../models/sub-models/watch.model";
-import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-video',
@@ -19,10 +18,10 @@ export class VideoPage {
   youtubeUrl: SafeResourceUrl;
 
   constructor(public clipboard: Clipboard, public toastController: ToastController,
-              public platform: Platform, public sanitizer: DomSanitizer,
-              private location: Location, private navCtrl: NavController,
+              public platform: Platform, public sanitizer: DomSanitizer, private navCtrl: NavController,
               private menuCtrl: MenuController) {
     this.anyCard = JSON.parse(localStorage.getItem('card'));
+    console.log(this.anyCard);
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
   }
 

@@ -13,15 +13,22 @@ import {OurMinistriesPage} from "./our-ministries/our-ministries.page";
 import {LeadershipPage} from "./leadership/leadership.page";
 import {DefaultLayoutComponent} from "./shared-components/default-layout/default-layout.component";
 import {HomePage} from "./home/home.page";
+import {SeriesListPage} from "./series/series-list/series-list.page";
+import {VideoPage} from "./shared-components/video/video.page";
 
 const routes: Routes = [
   {
     path: '',
     component: DefaultLayoutComponent,
-    children: [{
-      path: 'home',
-      component: HomePage
-    },
+    children: [
+      {
+        path: '',
+        component: HomePage
+      },
+      {
+        path: 'home',
+        component: HomePage
+      },
       {
         path: 'calendar',
         component: CalendarPage,
@@ -68,15 +75,15 @@ const routes: Routes = [
       },
       {
         path: 'sermons/:title',
-        loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
+        loadChildren: () => import('./shared-components/video/video.module').then(m => m.VideoPageModule)
       },
       {
         path: 'devotionals/:title',
-        loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
+        loadChildren: () => import('./shared-components/video/video.module').then(m => m.VideoPageModule)
       },
       {
-        path:'guest-speakers/:title',
-        loadChildren: () => import('./shared-components/video/video.module').then( m => m.VideoPageModule)
+        path: 'guest-speakers/:title',
+        loadChildren: () => import('./shared-components/video/video.module').then(m => m.VideoPageModule)
       },
       {
         path: 'calendar/:title',
@@ -84,11 +91,23 @@ const routes: Routes = [
       },
       {
         path: 'missions',
-        loadChildren: () => import('./missions/missions.module').then( m => m.MissionsPageModule)
+        loadChildren: () => import('./missions/missions.module').then(m => m.MissionsPageModule)
       },
       {
         path: 'businesses-we-support',
-        loadChildren: () => import('./businesses-we-support/businesses-we-support.module').then( m => m.BusinessesWeSupportPageModule)
+        loadChildren: () => import('./businesses-we-support/businesses-we-support.module').then(m => m.BusinessesWeSupportPageModule)
+      },
+      {
+        path: 'series/:title',
+        component: SeriesListPage
+      },
+      {
+        path: 'series/:title/:title',
+        component: VideoPage
+      },
+      {
+        path: '**',
+        component: HomePage
       }
     ]
   },
@@ -97,8 +116,6 @@ const routes: Routes = [
   //   redirectTo: 'home',
   //   pathMatch: 'full'
   // },
-
-
 
 
 ];

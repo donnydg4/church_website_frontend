@@ -2,7 +2,6 @@ import {Component, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";
-import {LeadershipModel} from "../models/sub-models/leadership.model";
 import {OurMinistriesModel} from "../models/sub-models/our-ministries.model";
 
 @Component({

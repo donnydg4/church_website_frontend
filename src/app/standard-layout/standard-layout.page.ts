@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {MenuController, NavController} from "@ionic/angular";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
-import {ExtrasService} from "../service/extras.service";
 
 @Component({
   selector: 'app-standard-layout',

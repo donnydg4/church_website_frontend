@@ -60,7 +60,7 @@ export class AllWatchComponent {
 
   navigateToSeriesPage(seriesCard: SeriesCardModel) {
       this.extrasService.setSeriesCard(seriesCard);
-      localStorage.setItem('card', JSON.stringify(this.extrasService.getSeriesCard()));
+      localStorage.setItem('series', JSON.stringify(this.extrasService.getSeriesCard()));
       this.router.navigate(['/series', convertSpaceToDash(seriesCard.title)]);
   }
 

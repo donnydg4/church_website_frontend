@@ -6,7 +6,7 @@
   </ion-row>
   <ion-row *ngIf="eventsArray | async as eventCards" class="ion-text-left">
     <ion-col *ngFor="let events of eventCards" size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
-      <ion-card button (click)="clickMe()" mode="md" style="max-width: 421px;">
+      <ion-card button mode="md" style="max-width: 421px;">
         <img alt="img-src" src="assets/devotional_1200x1200.png"/>
         <ion-card-header>
           <ion-card-title>{{events.title}}</ion-card-title>

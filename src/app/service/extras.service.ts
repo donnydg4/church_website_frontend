@@ -11,6 +11,7 @@ export class ExtrasService {
   sermonOrDevotionalOrGuestSpeakerCard: WatchModel;
   seriesCard: SeriesCardModel;
   calendarEvents: CalendarEvent;
+  arrayOfWatchCards: WatchModel[];
 
   series: boolean;
 
@@ -38,6 +39,14 @@ export class ExtrasService {
 
   public getSeriesCard() {
     return this.seriesCard;
+  }
+
+  public getArrayOfWatchCards() {
+    return [...this.arrayOfWatchCards];
+  }
+
+  public setArrayOfWatchCards(cards: WatchModel[]) {
+    this.arrayOfWatchCards = cards;
   }
 
 }

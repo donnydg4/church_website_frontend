@@ -1,9 +1,8 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ContactFormModel} from "../models/contact-form.model";
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {AlertController, Platform} from "@ionic/angular";
 
 
 @Component({
@@ -11,9 +10,8 @@ import {AlertController, Platform} from "@ionic/angular";
   templateUrl: './connect.page.html',
   styleUrls: ['./connect.page.scss'],
 })
-export class ConnectPage implements OnInit {
+export class ConnectPage {
 
-  isDesktop: boolean = true;
   @ViewChild('form') form;
   contactModel: ContactFormModel;
   formDirective: FormGroupDirective;
@@ -38,45 +36,11 @@ export class ConnectPage implements OnInit {
     })
   });
 
-
-  constructor(private http: HttpClient,
-              private _snackBar: MatSnackBar,
-              private alertController: AlertController,
-              private platform: Platform) {
-    platform.ready().then(() => {
-      if (this.platform.is('android') || this.platform.is('ios')) {
-        this.isDesktop = false;
-        console.log('not desktop');
-      }
-    })
+  constructor(private http: HttpClient, private _snackbar: MatSnackBar) {
   }
 
-  ngOnInit() {
-
-  }
-
-  customAlertOptions: any = {
-    header: 'Category',
-    cssClass: 'another-custom-class'
-  }
-
-  async presentSnackBar() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: "The Father's House",
-      message: 'Thank you for your submission! We will get back to you when we can!',
-      mode: 'ios',
-      buttons: [
-        {
-          text: 'OKAY',
-          handler: () => {
-            console.log('Confirm Okay');
-          }
-        }
-      ]
-    });
-    await alert.present();
-
+  openSnackBar() {
+    this._snackbar.open("Thank You For Your Submission!", "Close");
   }
 
   onContactForm() {

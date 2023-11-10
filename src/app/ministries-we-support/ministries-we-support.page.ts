@@ -1,7 +1,6 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
-import {LeadershipModel} from "../models/sub-models/leadership.model";
 import {MinistriesWeSupportModel} from "../models/sub-models/ministries-we-support.model";
 
 @Component({

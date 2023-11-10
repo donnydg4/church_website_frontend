@@ -1,7 +1,6 @@
 import {Component, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
-import {Observable} from "rxjs";
 import {LeadershipModel} from "../models/sub-models/leadership.model";
 
 @Component({
