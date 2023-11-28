@@ -1,4 +1,4 @@
-export interface ServiceInfo {
+export interface ServiceInfoModel {
   imageUrl: string;
   services: string[];
   welcomeDescription: string;

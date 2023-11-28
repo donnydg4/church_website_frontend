@@ -1,0 +1,43 @@
+<ion-content style="--background: white; --color: black">
+  <ion-grid [fixed]="true" class="background-grid">
+    <ion-row style="justify-content: center">
+      <ion-col size-lg="10" style="height:  100%; text-align: center" size-xs="12">
+        <ng-container *ngIf="faithStuff$ | async as faithStatementModel">
+          <ion-card>
+            <ion-grid class="ion-no-padding">
+              <ion-row style=" border-bottom: solid 2px #497588">
+                <ion-col size="12">
+                  <div class="outside">
+                    <img src="{{faithStatementModel.imageUrl}}">
+                    <div class="inside">
+                      <h1>The Father's House Statement Of Faith</h1>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size-lg="12">
+                  <section class="dl-blurbs">
+                    <dl>
+                      <ng-container *ngFor="let allInfo of faithStatementModel.statementInformation">
+                        <dt>{{allInfo.title}}</dt>
+                        <dd>
+                          {{allInfo.description}}
+                        </dd>
+                        <dd *ngFor="let scripture of allInfo.scriptures">
+                          {{scripture}}
+                        </dd>
+                      </ng-container>
+                    </dl>
+                  </section>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ng-container>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <app-footer></app-footer>
+</ion-content>

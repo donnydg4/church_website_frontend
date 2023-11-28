@@ -15,6 +15,7 @@ import {DefaultLayoutComponent} from "./shared-components/default-layout/default
 import {HomePage} from "./home/home.page";
 import {SeriesListPage} from "./series/series-list/series-list.page";
 import {VideoPage} from "./shared-components/video/video.page";
+import {FaithStatementPage} from "./faith-statement/faith-statement.page";
 
 const routes: Routes = [
   {
@@ -106,18 +107,15 @@ const routes: Routes = [
         component: VideoPage
       },
       {
+        path: 'faith-statement',
+        component: FaithStatementPage
+      },
+      {
         path: '**',
         component: HomePage
       }
     ]
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full'
-  // },
-
-
 ];
 
 @NgModule({

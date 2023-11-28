@@ -25,6 +25,7 @@ import {MinistriesWeSupportPageModule} from "./ministries-we-support/ministries-
 import {LeadershipPageModule} from "./leadership/leadership.module";
 import {SeriesListPageModule} from "./series/series-list/series-list.module";
 import {VideoPageModule} from "./shared-components/video/video.module";
+import {FaithStatementPageModule} from "./faith-statement/faith-statement.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -49,6 +50,7 @@ import {VideoPageModule} from "./shared-components/video/video.module";
     LeadershipPageModule,
     SeriesListPageModule,
     VideoPageModule,
+    FaithStatementPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule

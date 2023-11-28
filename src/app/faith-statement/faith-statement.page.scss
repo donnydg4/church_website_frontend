@@ -1,0 +1,129 @@
+
+//- Google Fonts
+$font-google-primary: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
+$font-google-secondary: 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+//- @type List
+$abril-fatface: 'Abril Fatface', cursive;
+$montserrat: 'Montserrat', sans-serif;
+
+//- Typography
+$base-font-family: $montserrat;
+$heading-font-family: $abril-fatface;
+
+$font-size-small: 0.875em;
+
+/*- Screen Sizes*/
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+/* COLOR HEX */
+$cadet: #608c9f;
+$maximum-blue: #5ea5b8ff;
+$columbia-blue: #c0d6dfff;
+$platinum: #eaeaeaff;
+$cultured: #f3f3f3ff;
+$nero: #444444;
+
+/* COLOR Gradient */
+$dl-gradient-right: linear-gradient(90deg, rgba(0,0,0,0.04) 20%, rgba(255,255,255,0) 0%);
+
+$body-background-color: $platinum;
+$body-text-color: $nero;
+
+ion-grid {
+  --ion-grid-width: 80%;
+  --ion-grid-width-sm: 95%;
+  --ion-grid-width-md: 80%;
+  --ion-grid-width-xl: 65%;
+  --ion-grid-width-xs: 98%;
+}
+
+
+//- Global Functions
+/*import fonts*/
+@if variable-exists(font-google-primary) {
+  @import url($font-google-primary);
+}
+@if variable-exists(font-google-secondary) {
+  @import url($font-google-secondary);
+}
+
+//- Global Mixins
+.dl-blurbs {
+  display: grid;
+}
+/* LIST */
+dl {
+  counter-reset: count;
+  background: $dl-gradient-right;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  margin: 0;
+}
+dl + dl {
+  counter-reset: counter 4;
+}
+
+dt {
+  counter-increment: count;
+  color: #497588FF;
+  font-family: $base-font-family;
+  font-size: clamp(22px, 2vw, 50px);;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 2%;
+}
+dt::before {
+  content: counter(count, decimal-leading-zero)".";
+  font-family: $heading-font-family;
+  color: #497588FF;
+  padding-right: 12px;
+}
+
+dd {
+  margin-bottom: 1vh;
+  margin-inline-start: 0px;
+}
+
+div.outside {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  vertical-align: middle;
+  justify-content: center;
+
+}
+
+div.inside {
+  width: 100%; /* Can be in percentage also. */
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+h1 {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(30px, 6vw, 60px);
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+  //-webkit-text-stroke: 1px darkslategrey;
+}

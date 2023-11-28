@@ -25,16 +25,18 @@
         <div class="about">
           <div style="width: 90%">
             <ion-text class="about">
-              We are a ministry focused on Jesus with a purpose to encourage, equip and explore.
-              The lost, prodigals, and disconnected are who we want to reach.
-              Our heart is to share the love of Jesus with everyone we encounter.
-              We welcome you to The Father's House!
+              We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and explore.
+              The lost, prodigals, and disconnected are who we to reach.
+              Our heart is to share the love of Jesus with everyone we encounter. We welcome you to The Father's House!
             </ion-text>
           </div>
         </div>
-        <div style="margin-top: 5%">
-          <ion-button fill="outline" class="about">
+        <div style="margin-top: 4%">
+          <ion-button fill="outline" class="about" style="margin-right: 5%">
             Learn More
+          </ion-button>
+          <ion-button fill="outline" class="about" (click)="navigateToPage('service-times')">
+            statement of faith
           </ion-button>
         </div>
       </ion-col>
@@ -65,12 +67,9 @@
               We welcome you to The Father's House!
             </ion-text>
         </div>
-        <div style="margin-top: 5%">
-          <ion-button fill="outline" class="new_here" style="margin-right: 5%" (click)="navigateToPage('connect')">
+        <div style="margin-top: 4%">
+          <ion-button fill="outline" class="new_here" (click)="navigateToPage('connect')">
             CONNECT
-          </ion-button>
-          <ion-button fill="outline" class="new_here" (click)="navigateToPage('service-times')">
-            JOIN US
           </ion-button>
         </div>
       </ion-col>

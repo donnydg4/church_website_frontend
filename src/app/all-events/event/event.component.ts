@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Observable} from "rxjs";
-import {MainEventModel} from "../../models/sub-models/main-event-model";
+import {MainEventModel} from "../../models/sub-models/main-event.model";
 
 @Component({
   selector: 'app-event',

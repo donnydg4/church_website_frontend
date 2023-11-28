@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {shareReplay} from "rxjs/operators";
 import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
+import {StatementOfFaithModel} from "../models/sub-models/statement-of-faith.model";
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +34,7 @@ export class AllChurchInformationService {
   allWebsiteInformation$ = this.http.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
     .pipe(
       shareReplay(1)
-    )
+    );
 
   constructor(private http: HttpClient) {
   }

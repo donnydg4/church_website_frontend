@@ -30,6 +30,7 @@ ion-button.about {
   height: 3.85em;
   font-family: Roboto;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 ion-icon.app {
@@ -58,6 +59,8 @@ ion-button.new_here {
   font-family: Roboto;
   color: white;
   --border-color: white;
+  text-transform: uppercase;
+
 }
 
 ion-text.new_here {

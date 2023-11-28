@@ -1,4 +1,4 @@
-export interface PrayerInfo {
+export interface PrayerInfoModel {
   imageUrl: string;
   title: string;
   description: string;
