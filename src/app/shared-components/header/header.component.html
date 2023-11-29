@@ -49,10 +49,10 @@
             </ion-button>
           </div>
           <div class="dropdown-content">
-            <a href="/sermons">SERMONS</a>
-            <a href="/series">SERIES</a>
-            <a href="/devotionals">DEVOTIONALS</a>
-            <a href="/guest-speakers">GUEST SPEAKERS</a>
+            <a routerLink="/sermons">SERMONS</a>
+            <a routerLink="/series">SERIES</a>
+            <a routerLink="/devotionals">DEVOTIONALS</a>
+            <a routerLink="/guest-speakers">GUEST SPEAKERS</a>
           </div>
         </div>
 
@@ -181,17 +181,17 @@
                 </ion-item>
                 <div class="div-padding" slot="content">
                   <ion-item-group>
-                    <ion-item button lines="none">
-                      <a href="/sermons" class="changes">sermons</a>
+                    <ion-item button lines="none" (click)="navigateToPage('sermons')">
+                      <a class="changes">sermons</a>
                     </ion-item>
-                    <ion-item button lines="none">
-                      <a href="/series" class="changes">series</a>
+                    <ion-item button lines="none" (click)="navigateToPage('series')">
+                      <a class="changes">series</a>
                     </ion-item>
-                    <ion-item button lines="none">
-                      <a href="/devotionals" class="changes">devotionals</a>
+                    <ion-item button lines="none" (click)="navigateToPage('devotionals')">
+                      <a class="changes">devotionals</a>
                     </ion-item>
-                    <ion-item button lines="none">
-                      <a href="/guest-speakers" class="changes">guest speakers</a>
+                    <ion-item button lines="none" (click)="navigateToPage('guest-speakers')">
+                      <a class="changes">guest speakers</a>
                     </ion-item>
                   </ion-item-group>
                 </div>
@@ -231,7 +231,7 @@
             </ion-item>
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
                       class="font-size custom_color" disabled="true"
-                      href="https://app.securegive.com/tfhfreeport/main/donate/category">
+                      href="">
               <ion-label>Store</ion-label>
             </ion-item>
           </ion-col>
