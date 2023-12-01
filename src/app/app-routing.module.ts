@@ -59,6 +59,10 @@ const routes: Routes = [
         component: AllEventsPage
       },
       {
+        path: 'events/:title',
+        component: StandardLayoutPage
+      },
+      {
         path: 'standard-layout',
         component: StandardLayoutPage
       },
@@ -111,11 +115,15 @@ const routes: Routes = [
         component: FaithStatementPage
       },
       {
+        path: 'our-church',
+        loadChildren: () => import('./our-church/our-church.module').then( m => m.OurChurchPageModule)
+      },
+      {
         path: '**',
         component: HomePage
       }
     ]
-  },
+  }
 ];
 
 @NgModule({

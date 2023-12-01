@@ -8,12 +8,12 @@ ion-card:hover {
 }
 
 ion-grid {
-  --ion-grid-width: 65%;
+  --ion-grid-width-sm: 90%;
   --ion-grid-width-xs: 95%;
 }
 
 ion-card-subtitle {
-  font-size:1.6vh;
+  font-size: clamp(14px, 1vw, 16px);
   margin-top: 3%;
   color: #2a2a2a;
 }
@@ -25,32 +25,33 @@ ion-card-header {
 }
 
 ion-card-title {
-  font-size:2vh;
+  font-size: clamp(16px, 2vw, 19px);
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: black;
 }
 
 ion-card-content {
-  font-size:1.4vh;
+  font-size: clamp(12px, 1vw, 12px);
   padding-left: 5%;
   padding-bottom: 5%;
   color: black;
 }
 
 .ios ion-card-title {
-  font-size:2vh;
+  font-size: clamp(16px, 2vw, 19px);
 }
 
 .ios ion-card-subtitle {
-  font-size:1.6vh;
+  font-size: clamp(14px, 1vw, 16px);
 }
 
 img {
   border-radius: 4px;
-  object-fit: fill;
+  width: 100%;
+  aspect-ratio: 11/10;
 }
 
 h1 {
-  font-size: 4vh;
+  font-size: clamp(42px, 5vw, 70px);
   color: black;
 }

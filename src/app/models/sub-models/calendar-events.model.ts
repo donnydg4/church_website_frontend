@@ -5,4 +5,5 @@ export interface CalendarEvent {
   location?: string;
   time?: string;
   description: string;
+  type?: string;
 }

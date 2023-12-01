@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {WatchModel} from "../models/sub-models/watch.model";
 import {SeriesCardModel} from "../models/sub-models/series-card.model";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
+import {MainEventModel} from "../models/sub-models/main-event.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,6 @@ export class ExtrasService {
   sermonOrDevotionalOrGuestSpeakerCard: WatchModel;
   seriesCard: SeriesCardModel;
   calendarEvents: CalendarEvent;
-  arrayOfWatchCards: WatchModel[];
-
   series: boolean;
 
   constructor() { }
@@ -39,14 +38,6 @@ export class ExtrasService {
 
   public getSeriesCard() {
     return this.seriesCard;
-  }
-
-  public getArrayOfWatchCards() {
-    return [...this.arrayOfWatchCards];
-  }
-
-  public setArrayOfWatchCards(cards: WatchModel[]) {
-    this.arrayOfWatchCards = cards;
   }
 
 }
