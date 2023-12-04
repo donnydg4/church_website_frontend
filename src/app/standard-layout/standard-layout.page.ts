@@ -13,7 +13,6 @@ export class StandardLayoutPage {
 
   constructor(private navCtrl: NavController) {
     this.calendarEvent = JSON.parse(localStorage.getItem('calendar'));
-    console.log(this.calendarEvent);
   }
 
   back() {

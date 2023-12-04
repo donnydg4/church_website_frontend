@@ -1,6 +1,6 @@
 import {Component,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map, tap} from "rxjs/operators";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-faith-statement',
@@ -14,8 +14,7 @@ export class FaithStatementPage {
 
   faithStuff$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(data => data.statementOfFaith),
-      tap(data => console.log(data))
+      map(data => data.statementOfFaith)
     );
 
 }
