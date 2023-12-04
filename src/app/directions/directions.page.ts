@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AllChurchInformationService} from "../service/all-church-information.service";
+import {map, tap} from "rxjs/operators";
 
 @Component({
   selector: 'app-directions',
@@ -7,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectionsPage {
 
-  constructor() { }
+  constructor(private dataService: AllChurchInformationService) { }
 
+  locations$ = this.dataService.allWebsiteInformation$.pipe(
+    map(directions => directions.allWebsiteInformation.directions),
+    tap(data => console.log(data.length))
+  );
 }

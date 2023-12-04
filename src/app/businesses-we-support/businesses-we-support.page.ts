@@ -18,7 +18,5 @@ export class BusinessesWeSupportPage {
   displayBusinessCards$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => this.businessesWeSupport.set(data.businessesWeSupportPage)),
-      map(businessInfo => businessInfo.businessesWeSupportPage.displayCards.filter(businessCards => businessCards.type === "BUSINESS").sort(sortByCardCategory))
-    );
-
+      map(businessInfo => businessInfo.businessesWeSupportPage.displayCards.sort(sortByCardCategory)));
 }

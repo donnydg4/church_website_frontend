@@ -17,6 +17,5 @@ export class LeadershipPage {
   leadershipCards$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => this.leadershipInfo.set(data.leadershipPage)),
-      map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards.filter(leadershipCard => leadershipCard.type === 'CHURCH LEADERSHIP'))
-    );
+      map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards));
 }

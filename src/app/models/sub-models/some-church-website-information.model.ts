@@ -9,5 +9,5 @@ export interface SomeChurchWebsiteInformationModel {
   ourChurch: OurChurchModel;
   serviceInfo: ServiceInfoModel;
   prayerInfo: PrayerInfoModel;
-  directions: DirectionsModel;
+  directions: DirectionsModel[];
 }

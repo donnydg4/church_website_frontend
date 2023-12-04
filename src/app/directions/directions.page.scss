@@ -1,8 +1,7 @@
 ion-grid {
-  --ion-grid-width: 80%;
   --ion-grid-width-sm: 95%;
-  --ion-grid-width-md: 80%;
-  --ion-grid-width-xl: 65%;
+  --ion-grid-width-md: 100%;
+  --ion-grid-width-xl: 95%;
   --ion-grid-width-xs: 98%;
   padding: 0px;
 }
@@ -10,12 +9,14 @@ ion-grid {
 img {
   aspect-ratio: 16/9;
   border-radius: 15px;
+  width: 100%;
 }
+
 
 ion-button.about {
   font-size: 15px;
   height: 3.85em;
-  font-family: Roboto;
+  font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }

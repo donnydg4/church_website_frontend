@@ -15,9 +15,7 @@ export class MinistriesWeSupportPage {
   displayMinistriesWeSupportCards$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => this.ministriesWeSupportInfo.set(data.ministriesWeSupportPage)),
-      map(ministriesWeSupportInfo => ministriesWeSupportInfo.ministriesWeSupportPage.displayCards.filter(supportedMinistries => supportedMinistries.type === 'SUPPORTED MINISTRY')
-      )
-    );
+      map(ministriesWeSupportInfo => ministriesWeSupportInfo.ministriesWeSupportPage.displayCards));
 
   constructor(private dataService: AllChurchInformationService) {
   }

@@ -19,7 +19,7 @@ export class OurMinistriesPage {
   displayOurMinistryCards$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => this.ourMinistries.set(data.ourMinistriesPage)),
-      map(ourMinistryPageInfo => ourMinistryPageInfo.ourMinistriesPage.displayCards.filter(ourMinistries => ourMinistries.type === "OUR MINISTRY").sort(sortByCardCategory))
+      map(ourMinistryPageInfo => ourMinistryPageInfo.ourMinistriesPage.displayCards.sort(sortByCardCategory))
     );
 }
 

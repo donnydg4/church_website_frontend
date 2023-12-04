@@ -18,7 +18,7 @@ export class MissionsPage {
   missionCards$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => this.missions.set(data.missionsPage)),
-      map(missionsInfo => missionsInfo.missionsPage.displayCards.filter(missionCards => missionCards.type === "MISSIONS TRIP").sort(sortByDateDisplay).sort(sortByCardCategory))
+      map(missionsInfo => missionsInfo.missionsPage.displayCards.sort(sortByDateDisplay).sort(sortByCardCategory))
     );
 
 }
