@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MenuController, NavController} from "@ionic/angular";
+import {NavController} from "@ionic/angular";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 
 @Component({

@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import {shareReplay} from "rxjs/operators";
 import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
-import {StatementOfFaithModel} from "../models/sub-models/statement-of-faith.model";
 
 @Injectable({
   providedIn: 'root'

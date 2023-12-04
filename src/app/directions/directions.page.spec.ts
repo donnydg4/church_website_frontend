@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { DirectionsPage } from './directions.page';
+import {DirectionsPage} from './directions.page';
 
 describe('DirectionsPage', () => {
   let component: DirectionsPage;

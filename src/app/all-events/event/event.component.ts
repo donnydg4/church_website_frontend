@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {Observable} from "rxjs";
-import {MainEventModel} from "../../models/sub-models/main-event.model";
 import {convertSpaceToDash} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";

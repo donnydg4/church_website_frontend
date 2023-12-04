@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { DirectionsPageRoutingModule } from './directions-routing.module';
+import {DirectionsPageRoutingModule} from './directions-routing.module';
 
-import { DirectionsPage } from './directions.page';
+import {DirectionsPage} from './directions.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({

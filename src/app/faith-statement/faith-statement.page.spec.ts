@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { FaithStatementPage } from './faith-statement.page';
+import {FaithStatementPage} from './faith-statement.page';
 
 describe('FaithStatementPage', () => {
   let component: FaithStatementPage;

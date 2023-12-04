@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {WatchModel} from "../models/sub-models/watch.model";
 import {SeriesCardModel} from "../models/sub-models/series-card.model";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
-import {MainEventModel} from "../models/sub-models/main-event.model";
 
 @Injectable({
   providedIn: 'root'

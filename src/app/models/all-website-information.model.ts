@@ -1,5 +1,4 @@
 import {CalendarModel} from "./sub-models/calendar.model";
-import {MainEventModel} from "./sub-models/main-event.model";
 import {WatchModel} from "./sub-models/watch.model";
 import {SeriesCardModel} from "./sub-models/series-card.model";
 import {SomeChurchWebsiteInformationModel} from "./sub-models/some-church-website-information.model";
