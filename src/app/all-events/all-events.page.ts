@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {sortByDateEvents} from "../utils/utils";
-import {map} from "rxjs/operators";
+import {map, tap} from "rxjs/operators";
+import {MainEventModel} from "../models/sub-models/main-event.model";
 
 @Component({
   selector: 'app-all-events',
@@ -10,12 +11,13 @@ import {map} from "rxjs/operators";
 })
 export class AllEventsPage {
 
-  constructor(private dataService: AllChurchInformationService) { }
+  eventsInfo = signal<MainEventModel>({events: []});
 
-  selectedCategory: string = 'ALL EVENTS';
+  constructor(private dataService: AllChurchInformationService) { }
 
   getAllEvents$ = this.dataService.allWebsiteInformation$
     .pipe(
-      map(events => events.mainEvents.filter(event => event.type === 'event').sort(sortByDateEvents))
+      tap(data => this.eventsInfo.set(data.mainEvents)),
+      map(events => events.mainEvents.events.filter(event => event.type === 'event').sort(sortByDateEvents))
     );
 }

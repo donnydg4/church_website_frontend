@@ -13,7 +13,6 @@ import {CalendarEvent} from "../../models/sub-models/calendar-events.model";
 export class EventComponent {
 
   @Input() eventsArray: Observable<CalendarEvent[]>;
-  @Input() selectedCategory: string = '';
 
   constructor(private navExtras: ExtrasService, private router: Router) { }
 

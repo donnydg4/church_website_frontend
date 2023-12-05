@@ -1,4 +1,18 @@
 <ion-content style="--background: white; --color: black">
-  <app-event [eventsArray]="getAllEvents$" [selectedCategory]="selectedCategory"></app-event>
+  <ng-container *ngIf="getAllEvents$ | async as events">
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col size="12">
+          <div class="outside">
+            <img src="{{eventsInfo().coverPhoto}}">
+            <div class="inside">
+              <h1>{{eventsInfo().title}}</h1>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+  <app-event [eventsArray]="getAllEvents$"></app-event>
   <app-footer></app-footer>
 </ion-content>

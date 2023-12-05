@@ -8,7 +8,7 @@ import {LeadershipModel} from "./sub-models/leadership.model";
 import {BusinessesWeSupportModel} from "./sub-models/businesses-we-support.model";
 import {MissionsModel} from "./sub-models/missions.model";
 import {StatementOfFaithModel} from "./sub-models/statement-of-faith.model";
-import {CalendarEvent} from "./sub-models/calendar-events.model";
+import {MainEventModel} from "./sub-models/main-event.model";
 
 export interface AllWebsiteInformationModel {
   id: string;
@@ -19,7 +19,7 @@ export interface AllWebsiteInformationModel {
   businessesWeSupportPage: BusinessesWeSupportModel;
   missionsPage: MissionsModel;
   allCalendarInformation: CalendarModel[];
-  mainEvents: CalendarEvent[];
+  mainEvents: MainEventModel;
   allWatchCards: WatchModel[];
   allSeriesCards: SeriesCardModel[];
   statementOfFaith: StatementOfFaithModel;

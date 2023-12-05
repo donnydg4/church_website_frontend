@@ -1,9 +1,9 @@
 import {WatchModel} from "../models/sub-models/watch.model";
 import {SeriesCardModel} from "../models/sub-models/series-card.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
-import {MainEventModel} from "../models/sub-models/main-event.model";
 import {DisplayCardModel} from "../models/sub-models/display-card.model";
 import {Category} from "../models/sub-models/categories.model";
+import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 
 export function sortByDate(a: WatchModel, b: WatchModel) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -17,7 +17,7 @@ export function sortByDateCalendar(a: CalendarModel, b: CalendarModel) {
   return new Date(a.date).getTime() - new Date(b.date).getTime();
 }
 
-export function sortByDateEvents(a: MainEventModel, b: MainEventModel) {
+export function sortByDateEvents(a: CalendarEvent, b: CalendarEvent) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 

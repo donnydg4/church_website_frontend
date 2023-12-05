@@ -1,7 +1,7 @@
+import {CalendarEvent} from "./calendar-events.model";
+
 export interface MainEventModel {
-  imageUrl: string;
-  title: string;
-  date: Date;
-  description: string;
-  type: string;
+  coverPhoto?: string;
+  title?: string;
+  events: CalendarEvent[];
 }
