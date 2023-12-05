@@ -17,7 +17,7 @@
       </ion-col>
     </ion-row>
     <!--    WHO WE ARE-->
-    <ion-row style="height: auto; background: white" >
+    <ion-row style="height: auto; background: white">
       <ion-col style="padding: 40px; height: 100%" size-lg="6" size-xs="12">
         <h1 class="about">
           WHO WE ARE
@@ -25,14 +25,15 @@
         <div class="about">
           <div style="width: 90%">
             <ion-text class="about">
-              We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and explore.
+              We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and
+              explore.
               The lost, prodigals, and disconnected are who we want to reach.
-              Our heart is to share the love of Jesus with everyone we encounter. We welcome you to The Father's House!
+              Our heart is to share the love of Jesus with everyone we encounter.
             </ion-text>
           </div>
         </div>
         <div style="margin-top: 4%">
-          <ion-button fill="outline" class="about" style="margin-right: 5%">
+          <ion-button fill="outline" class="about" style="margin-right: 5%" (click)="navigateToPage('our-church')">
             Learn More
           </ion-button>
           <ion-button fill="outline" class="about" (click)="navigateToPage('faith-statement')">
@@ -60,14 +61,16 @@
           NEW HERE
         </h1>
         <div class="new_here">
-            <ion-text class="new_here">
-              We are a ministry focused on Jesus with a purpose to encourage, equip and explore.
-              The lost, prodigals, and disconnected are who we want to reach.
-              Our heart is to share the love of Jesus with everyone we encounter.
-              We welcome you to The Father's House!
-            </ion-text>
+          <ion-text class="new_here">
+            Welcome to The Father's House, we would love to have you join us in person! If you would like to connect
+            with us, click below. If you would like to learn more about who we are as a church, you can click the 'Learn
+            More' button. We believe God has put you here for such a time as this!
+          </ion-text>
         </div>
         <div style="margin-top: 4%">
+          <ion-button fill="outline" class="new_here" style="margin-right: 5%" (click)="navigateToPage('our-church')">
+            Learn More
+          </ion-button>
           <ion-button fill="outline" class="new_here" (click)="navigateToPage('connect')">
             CONNECT
           </ion-button>
@@ -76,8 +79,8 @@
     </ion-row>
 
     <!--    GET THE TFH APP-->
-    <ion-row style="height: 450px; padding: 40px 50px 40px 50px; align-items: center; background: #ffffff">
-      <ion-col style="text-align: center" size-lg="6" size-xs="12">
+    <ion-row style="height: 450px; align-items: center; background: #ffffff">
+      <ion-col style="text-align: center; padding: 40px 50px 40px 50px;" size-lg="6" size-xs="12" size-md="12">
         <h1 style="font-size: 40px; font-family: Georgia; font-weight: normal; color: black">
           <div class="ion-text-wrap">
             Get The TFH App
@@ -96,10 +99,16 @@
             <ion-icon slot="icon-only" name="logo-apple" class="app"></ion-icon>
           </ion-button>
         </div>
-
       </ion-col>
-      <ion-col size-lg="6">
-
+      <ion-col size-lg="6" style="height: 100%; padding: 20px 30px 20px 30px" class="ion-hide-lg-down">
+        <div style="text-align: center; height: 100%; display: flex; justify-content: center">
+          <div style="height: 100%; ">
+            <img src="assets/img/app2.jpg" style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+          </div>
+          <div style="height: 100%">
+            <img src="assets/img/app1.jpg" style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+          </div>
+        </div>
       </ion-col>
     </ion-row>
 

@@ -1,4 +1,5 @@
 export interface HomePageModel {
+  videoUrl: string;
   serviceTimesTitle: string;
   serviceTimes: string;
   whoWeAreTitle: string;
