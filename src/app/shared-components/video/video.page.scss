@@ -1,26 +1,11 @@
 ion-grid {
   --ion-grid-width: 94%;
   --ion-grid-width-md: 85%;
-  --ion-grid-width-xl: 95%;
+  --ion-grid-width-xl: 75%;
 }
 
 .margin_top {
   margin-top: 6%
-}
-
-.trial {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-
-.trialTwo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .text{
@@ -105,5 +90,9 @@ ion-text.description.ios {
   color: black;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: normal;
+}
+
+ion-text.description {
+  color: black;
 }
 
