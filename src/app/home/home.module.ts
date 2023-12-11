@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
@@ -9,8 +9,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
-
-// import {FooterComponent} from "../shared-components/footer/footer.component";
+import {AllEventsPageModule} from "../all-events/all-events.module";
 
 
 @NgModule({
@@ -23,13 +22,11 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
     MatButtonModule,
     MatMenuModule,
     SharedComponentsModule,
+    AllEventsPageModule,
   ],
-  exports: [
-    // HeaderComponent,
-    // FooterComponent
-  ],
-  declarations: [HomePage]
-//   , HeaderComponent, FooterComponent
+  exports: [],
+  declarations: [HomePage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {
 }

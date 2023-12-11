@@ -1,120 +1,124 @@
 <ion-content style="color: white">
-  <ion-grid class="ion-no-padding">
-    <ion-row style="height: 72vh; background: white">
-      <ion-col style="height: 100%" size="12">
-        <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
-          <source
-            src="https://link.us1.storjshare.io/s/juwku3bd7kmjdfhgsscc7yqxg42a/church-images/eventstabcard/missions-trips-pictures/Kenya%20School%20Uniform.mp4?view">
-        </video>
-      </ion-col>
-    </ion-row>
-    <ion-row style="background: white">
-      <ion-col size="12">
-        <div style="text-align: center; border-bottom: 2px solid black">
-          <h5>SERVICE TIMES</h5>
-          <p class="times">Sunday: 10:00am | Wednesday: 6:30pm</p>
-        </div>
-      </ion-col>
-    </ion-row>
-    <!--    WHO WE ARE-->
-    <ion-row style="height: auto; background: white">
-      <ion-col style="padding: 40px; height: 100%" size-lg="6" size-xs="12">
-        <h1 class="about">
-          WHO WE ARE
-        </h1>
-        <div class="about">
-          <div style="width: 90%">
-            <ion-text class="about">
-              We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and
-              explore.
-              The lost, prodigals, and disconnected are who we want to reach.
-              Our heart is to share the love of Jesus with everyone we encounter.
+  <ng-container *ngIf="homeInformation$ | async as homeInfo">
+    <ion-grid class="ion-no-padding">
+      <ion-row style="height: 72vh; background: black">
+        <ion-col style="height: 100%" size="12">
+          <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
+            <source
+              src="{{homeInfo.videoUrl}}">
+          </video>
+        </ion-col>
+      </ion-row>
+      <ion-row style="background: white">
+        <ion-col size="12">
+          <div style="text-align: center; border-bottom: 2px solid black">
+            <h5>{{homeInfo.serviceTimesTitle}}</h5>
+            <p class="times">{{homeInfo.serviceTimes}}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <!--    WHO WE ARE-->
+      <ion-row style="height: auto; background: white">
+        <ion-col style="padding: 40px; height: 100%" size-lg="6" size-xs="12">
+          <h1 class="about">
+            {{homeInfo.whoWeAreTitle}}
+          </h1>
+          <div class="about">
+            <div style="width: 90%">
+              <ion-text class="about">
+                {{homeInfo.whoWeAreDescription}}
+              </ion-text>
+            </div>
+          </div>
+          <div style="margin-top: 4%">
+            <ion-button fill="outline" class="about" style="margin-right: 5%" (click)="navigateToPage('our-church')">
+              Learn More
+            </ion-button>
+            <ion-button fill="outline" class="about" (click)="navigateToPage('faith-statement')">
+              statement of faith
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col size-lg="6">
+          <div style="text-align: center; height: 100%">
+            <img src="{{homeInfo.whoWeAreImageUrl}}">
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <!--    NEW HERE ROW-->
+      <ion-row style="height: auto; background: #363636;">
+
+        <ion-col size-lg="6">
+          <div style="text-align: center; height: 100%">
+            <img src="{{homeInfo.newHereImageUrl}}" style="">
+          </div>
+        </ion-col>
+        <ion-col size-lg="6" size-xs="12" style="height: 100%; padding: 40px">
+          <h1 class="new_here">
+            {{homeInfo.newHereTitle}}
+          </h1>
+          <div class="new_here">
+            <ion-text class="new_here">
+              {{homeInfo.newHereDescription}}
             </ion-text>
           </div>
-        </div>
-        <div style="margin-top: 4%">
-          <ion-button fill="outline" class="about" style="margin-right: 5%" (click)="navigateToPage('our-church')">
-            Learn More
-          </ion-button>
-          <ion-button fill="outline" class="about" (click)="navigateToPage('faith-statement')">
-            statement of faith
-          </ion-button>
-        </div>
-      </ion-col>
-      <ion-col size-lg="6">
-        <div style="text-align: center; height: 100%">
-          <img src="assets/icon/favicon.png">
-        </div>
-      </ion-col>
-    </ion-row>
+          <div style="margin-top: 4%">
+            <ion-button fill="outline" class="new_here" style="margin-right: 5%" (click)="navigateToPage('our-church')">
+              Learn More
+            </ion-button>
+            <ion-button fill="outline" class="new_here" (click)="navigateToPage('connect')">
+              CONNECT
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
 
-    <!--    NEW HERE ROW-->
-    <ion-row style="height: auto; background: #363636;">
+      <!--  WAYS TO ENGAGE -->
+      <ion-row style="height: auto; background: #ffffff; padding: 20px">
+        <ion-col size="12">
+          <div style="text-align: center">
+            <h5>WAYS TO ENGAGE</h5>
+          </div>
+        </ion-col>
+      </ion-row>
 
-      <ion-col size-lg="6">
-        <div style="text-align: center; height: 100%">
-          <img src="assets/icon/favicon.png" style="">
-        </div>
-      </ion-col>
-      <ion-col size-lg="6" size-xs="12" style="height: 100%; padding: 40px">
-        <h1 class="new_here">
-          NEW HERE
-        </h1>
-        <div class="new_here">
-          <ion-text class="new_here">
-            Welcome to The Father's House, we would love to have you join us in person! If you would like to connect
-            with us, click below. If you would like to learn more about who we are as a church, you can click the 'Learn
-            More' button. We believe God has put you here for such a time as this!
+      <!--    GET THE TFH APP-->
+      <ion-row style="height: 450px; align-items: center; background: #ffffff">
+        <ion-col style="text-align: center; padding: 40px 50px 40px 50px;" size-lg="6" size-xs="12" size-md="12">
+          <h1 style="font-size: 40px; font-family: Georgia; font-weight: normal; color: black">
+            <div class="ion-text-wrap">
+              {{homeInfo.appTitle}}
+            </div>
+          </h1>
+          <ion-text style="font-size: 20px; color: #363636">
+            <div style="padding-top: 10px">
+              {{homeInfo.appDescription}}
+            </div>
           </ion-text>
-        </div>
-        <div style="margin-top: 4%">
-          <ion-button fill="outline" class="new_here" style="margin-right: 5%" (click)="navigateToPage('our-church')">
-            Learn More
-          </ion-button>
-          <ion-button fill="outline" class="new_here" (click)="navigateToPage('connect')">
-            CONNECT
-          </ion-button>
-        </div>
-      </ion-col>
-    </ion-row>
-
-    <!--    GET THE TFH APP-->
-    <ion-row style="height: 450px; align-items: center; background: #ffffff">
-      <ion-col style="text-align: center; padding: 40px 50px 40px 50px;" size-lg="6" size-xs="12" size-md="12">
-        <h1 style="font-size: 40px; font-family: Georgia; font-weight: normal; color: black">
-          <div class="ion-text-wrap">
-            Get The TFH App
-          </div>
-        </h1>
-        <ion-text style="font-size: 20px; color: #363636">
           <div style="padding-top: 10px">
-            Download our app to stay connected on the go!
+            <ion-button fill="clear" href="https://play.google.com/store/apps/details?id=com.churchmobile.app">
+              <ion-icon slot="icon-only" name="logo-google-playstore" class="app"></ion-icon>
+            </ion-button>
+            <ion-button fill="clear" href="#">
+              <ion-icon slot="icon-only" name="logo-apple" class="app"></ion-icon>
+            </ion-button>
           </div>
-        </ion-text>
-        <div style="padding-top: 10px">
-          <ion-button fill="clear" href="https://play.google.com/store/apps/details?id=com.churchmobile.app">
-            <ion-icon slot="icon-only" name="logo-google-playstore" class="app"></ion-icon>
-          </ion-button>
-          <ion-button fill="clear" href="#">
-            <ion-icon slot="icon-only" name="logo-apple" class="app"></ion-icon>
-          </ion-button>
-        </div>
-      </ion-col>
-      <ion-col size-lg="6" style="height: 100%; padding: 20px 30px 20px 30px" class="ion-hide-lg-down">
-        <div style="text-align: center; height: 100%; display: flex; justify-content: center">
-          <div style="height: 100%; ">
-            <img src="assets/img/app2.jpg" style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+        </ion-col>
+        <ion-col size-lg="6" style="height: 100%; padding: 20px 30px 20px 30px" class="ion-hide-lg-down">
+          <div style="text-align: center; height: 100%; display: flex; justify-content: center">
+            <div style="height: 100%;" *ngFor="let appImgs of homeInfo.appImages; let i = index">
+              <img src="{{appImgs}}"
+                   style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
+            </div>
           </div>
-          <div style="height: 100%">
-            <img src="assets/img/app1.jpg" style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;">
-          </div>
-        </div>
-      </ion-col>
-    </ion-row>
+        </ion-col>
+      </ion-row>
 
-    <!--  Website footer-->
-    <app-footer></app-footer>
-  </ion-grid>
+      <!--  Website footer-->
+      <app-footer></app-footer>
+    </ion-grid>
+  </ng-container>
 
 </ion-content>
 

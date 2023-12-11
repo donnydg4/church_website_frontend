@@ -21,7 +21,6 @@ export class VideoPage {
               public platform: Platform, public sanitizer: DomSanitizer, private navCtrl: NavController,
               private menuCtrl: MenuController) {
     this.anyCard = JSON.parse(localStorage.getItem('card'));
-    console.log(this.anyCard);
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
   }
 

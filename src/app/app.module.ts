@@ -29,7 +29,8 @@ import {FaithStatementPageModule} from "./faith-statement/faith-statement.module
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,

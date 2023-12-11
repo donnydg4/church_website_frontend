@@ -19,7 +19,8 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         SharedComponentsModule
     ],
     exports: [
-        EventComponent
+        EventComponent,
+        AllEventsPage
     ],
     declarations: [AllEventsPage, EventComponent]
 })

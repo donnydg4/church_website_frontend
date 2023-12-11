@@ -6,7 +6,7 @@ import {DirectionsModel} from "./directions.model";
 
 export interface SomeChurchWebsiteInformationModel {
   homePage: HomePageModel;
-  ourChurch: OurChurchModel;
+  ourChurch?: OurChurchModel;
   serviceInfo: ServiceInfoModel;
   prayerInfo: PrayerInfoModel;
   directions: DirectionsModel[];
