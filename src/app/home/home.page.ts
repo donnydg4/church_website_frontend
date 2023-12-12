@@ -31,7 +31,7 @@ export class HomePage {
           {type: '/sermons', imageUrl: `${data.ourMinistriesPage.coverPhoto}`, description: 'MESSAGES'},
           {type: '/events', imageUrl: `${data.mainEvents.coverPhoto}`, description: 'ALL EVENTS'},
           {type: '/connect', imageUrl: `${data.mainEvents.coverPhoto}`, description: 'CONTACT US'},
-          {type: '/our-church', imageUrl: `${data.leadershipPage.coverPhoto}`, description: 'OUR CHURCH'},
+          {type: '/our-church', imageUrl: `${data.allWebsiteInformation.directions.map(photo => photo.imageUrl)}`, description: 'OUR CHURCH'},
         ])
       }),
       map(data => data.allWebsiteInformation.homePage)
