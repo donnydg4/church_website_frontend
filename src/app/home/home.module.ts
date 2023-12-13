@@ -1,5 +1,5 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
 import {HomePage} from './home.page';
@@ -13,17 +13,18 @@ import {AllEventsPageModule} from "../all-events/all-events.module";
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule,
-    SharedComponentsModule,
-    AllEventsPageModule,
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule,
+        SharedComponentsModule,
+        AllEventsPageModule,
+        NgOptimizedImage,
+    ],
   exports: [],
   declarations: [HomePage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

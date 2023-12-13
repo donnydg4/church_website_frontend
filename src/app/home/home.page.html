@@ -82,11 +82,14 @@
           </div>
         </ion-col>
         <ion-col size="12">
-          <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
-                            slides-per-view="3" navigation="true" loop="true">
+          <swiper-container class="mySwiper" pagination="true" centered-slides="true" pagination-clickable="true"
+                            space-between="10" loop="true" slides-per-view="3" navigation="true"
+                            effect="coverflow" coverflow-effect-rotate="0"
+                            coverflow-effect-stretch="0" coverflow-effect-depth="100"
+                            coverflow-effect-modifier="2.5">
             <swiper-slide *ngFor="let object of waysToEngage()" (click)="navigateToPage(object.type)">
               <h3>{{object.description}}</h3>
-              <img src="{{object.imageUrl}}" class="mat-elevation-z5 custom">
+              <img src="{{object.imageUrl}}" class="custom" loading="eager">
             </swiper-slide>
           </swiper-container>
         </ion-col>
