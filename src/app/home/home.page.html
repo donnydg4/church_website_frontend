@@ -12,8 +12,8 @@
       <ion-row style="background: white">
         <ion-col size="12">
           <div style="text-align: center; border-bottom: 2px solid black">
-            <h5>{{homeInfo.serviceTimesTitle}}</h5>
-            <p class="times">{{homeInfo.serviceTimes}}</p>
+            <h5>{{ homeInfo.serviceTimesTitle }}</h5>
+            <p class="times">{{ homeInfo.serviceTimes }}</p>
           </div>
         </ion-col>
       </ion-row>
@@ -21,12 +21,12 @@
       <ion-row style="height: auto; background: white">
         <ion-col style="padding: 40px; height: 100%" size-lg="6" size-xs="12">
           <h1 class="about">
-            {{homeInfo.whoWeAreTitle}}
+            {{ homeInfo.whoWeAreTitle }}
           </h1>
           <div class="about">
             <div style="width: 90%">
               <ion-text class="about">
-                {{homeInfo.whoWeAreDescription}}
+                {{ homeInfo.whoWeAreDescription }}
               </ion-text>
             </div>
           </div>
@@ -56,11 +56,11 @@
         </ion-col>
         <ion-col size-lg="6" size-xs="12" style="height: 100%; padding: 40px">
           <h1 class="new_here">
-            {{homeInfo.newHereTitle}}
+            {{ homeInfo.newHereTitle }}
           </h1>
           <div class="new_here">
             <ion-text class="new_here">
-              {{homeInfo.newHereDescription}}
+              {{ homeInfo.newHereDescription }}
             </ion-text>
           </div>
           <div style="margin-top: 4%">
@@ -84,9 +84,7 @@
         <ion-col size="12">
           <swiper-container swipey [config]="config" init="false">
             <swiper-slide *ngFor="let object of waysToEngage()" (click)="navigateToPage(object.type)">
-              <div>
-                <h3>{{object.description}}</h3>
-              </div>
+              <h3>{{ object.description }}</h3>
               <img src="{{object.imageUrl}}" class="custom" loading="eager">
             </swiper-slide>
           </swiper-container>
@@ -98,12 +96,12 @@
         <ion-col style="text-align: center; padding: 40px 50px 40px 50px;" size-lg="6" size-xs="12" size-md="12">
           <h1 style="font-size: 40px; font-family: Georgia; font-weight: normal; color: black">
             <div class="ion-text-wrap">
-              {{homeInfo.appTitle}}
+              {{ homeInfo.appTitle }}
             </div>
           </h1>
           <ion-text style="font-size: 20px; color: #363636">
             <div style="padding-top: 10px">
-              {{homeInfo.appDescription}}
+              {{ homeInfo.appDescription }}
             </div>
           </ion-text>
           <div style="padding-top: 10px">

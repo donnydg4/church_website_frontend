@@ -112,13 +112,17 @@ swiper-slide img {
   aspect-ratio: 15/10;
   border-radius: 8px;
   cursor: pointer;
+  opacity: .8;
+}
+
+img.custom:hover {
+  opacity: 1;
 }
 
 img.custom {
   max-height: 380px;
   //max-width: 515px;
 }
-
 
 h5.custom {
   margin: 1% 0 2% 0;
@@ -128,7 +132,7 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-51%, -49%);
   margin: 0;
   color: white;
   z-index: 10;
@@ -138,5 +142,5 @@ h3 {
   user-select: none;
   opacity: 1.5;
   cursor: pointer;
-  width: 100%;
+  width: 95%;
 }
