@@ -10,21 +10,23 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 import {AllEventsPageModule} from "../all-events/all-events.module";
+import {AppModule} from "../app.module";
+import {SwiperDirective} from "../swiper.directive";
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        HomePageRoutingModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatMenuModule,
-        SharedComponentsModule,
-        AllEventsPageModule,
-        NgOptimizedImage,
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
+    SharedComponentsModule,
+    AllEventsPageModule,
+    SwiperDirective,
+  ],
   exports: [],
   declarations: [HomePage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

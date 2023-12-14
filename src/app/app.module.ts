@@ -58,6 +58,7 @@ import {FaithStatementPageModule} from "./faith-statement/faith-statement.module
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
+  exports: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
