@@ -4,7 +4,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {map, tap} from "rxjs/operators";
 import {WaysToEngageModel} from "../models/sub-models/ways-to-engage.model";
 import {SwiperOptions} from "swiper/types";
-import {A11y, Mousewheel, Navigation, Pagination} from "swiper";
+import { Navigation, Pagination} from "swiper";
 
 @Component({
   selector: 'app-home',
@@ -31,8 +31,7 @@ export class HomePage {
   }
 
   public config: SwiperOptions = {
-    modules: [Navigation, Pagination, A11y, Mousewheel],
-    // autoHeight: true,
+    modules: [Navigation, Pagination],
     spaceBetween: 10,
     navigation: true,
     pagination: {clickable: true},
@@ -40,6 +39,11 @@ export class HomePage {
     centeredSlides: true,
     loop: true,
     effect: "coverflow",
+    autoplay: {
+      delay: 2000,
+      reverseDirection: true,
+      disableOnInteraction: true
+    },
     coverflowEffect: {
       rotate: 0,
       stretch: 0,

@@ -112,10 +112,6 @@ swiper-slide img {
   aspect-ratio: 15/10;
   border-radius: 8px;
   cursor: pointer;
-  opacity: .8;
-}
-
-img.custom:hover {
   opacity: 1;
 }
 
@@ -143,4 +139,12 @@ h3 {
   opacity: 1.5;
   cursor: pointer;
   width: 95%;
+}
+
+.app_images {
+  opacity: .8;
+}
+
+.app_images:hover {
+  opacity: 1;
 }
