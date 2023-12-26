@@ -8,7 +8,9 @@
               <ion-row style=" border-bottom: solid 2px #497588">
                 <ion-col size="12">
                   <div class="outside">
-                    <img src="{{faithStatementModel.imageUrl}}" loading="eager">
+                    <picture type="image/webp">
+                      <img src="{{faithStatementModel.imageUrl}}" decoding="async" fetchpriority="high">
+                    </picture>
                     <div class="inside">
                       <h1>The Father's House Statement Of Faith</h1>
                     </div>

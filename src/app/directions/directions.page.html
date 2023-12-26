@@ -23,7 +23,9 @@
                   </div>
                   <br>
                   <div>
-                    <img src="{{location.imageUrl}}">
+                    <picture type="image/webp">
+                      <img src="{{location.imageUrl}}" loading="lazy" decoding="async" fetchpriority="high">
+                    </picture>
                   </div>
                   <br>
                   <div style="text-align: center">

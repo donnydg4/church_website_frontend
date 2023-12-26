@@ -3,7 +3,9 @@
     <ion-row>
       <ion-col size="12">
         <div class="outside">
-          <img src="{{ministriesWeSupportInfo().coverPhoto}}" loading="eager">
+          <picture type="image/webp">
+            <img src="{{ministriesWeSupportInfo().coverPhoto}}" decoding="async" fetchpriority="high">
+          </picture>
           <div class="inside">
             <h1>{{ministriesWeSupportInfo().title}}</h1>
           </div>

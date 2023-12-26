@@ -22,7 +22,9 @@
                *ngFor="let cards of watchCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: watchCards.length}">
         <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
           <div class="img_good">
-            <img alt="img-src" src="{{cards.imageUrl}}"/>
+            <picture type="image/webp">
+              <img alt="img-src" src="{{cards.imageUrl}}" decoding="async" fetchpriority="high"/>
+            </picture>
           </div>
 
           <ion-card-header>
@@ -40,7 +42,9 @@
                *ngFor="let cards of seriesCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesCards.length}">
         <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
           <div class="img_good">
-            <img alt="img-src" src="{{cards.imageUrl}}"/>
+            <picture type="image/webp">
+              <img alt="img-src" src="{{cards.imageUrl}}" decoding="async" fetchpriority="high"/>
+            </picture>
           </div>
           <ion-card-header>
             <ion-card-title>{{cards.title}}</ion-card-title>

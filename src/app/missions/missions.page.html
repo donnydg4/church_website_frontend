@@ -3,7 +3,9 @@
     <ion-row>
       <ion-col size="12">
         <div class="outside">
-          <img src="{{missions().coverPhoto}}" loading="eager">
+          <picture type="image/webp">
+            <img src="{{missions().coverPhoto}}" fetchpriority="high" decoding="async">
+          </picture>
           <div class="inside">
             <h1>{{missions().title}}</h1>
           </div>

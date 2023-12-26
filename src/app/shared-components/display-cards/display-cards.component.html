@@ -5,7 +5,9 @@
         <swiper-container style="height: 300px" pagination="true">
           <swiper-slide *ngFor="let cardImage of card.imageUrl">
             <div style="height: 100%; width: 100%">
-              <img src="{{cardImage}}" alt="" style="min-height: 300px; max-height: 300px; width: 100%;">
+              <picture type="image/webp">
+                <img src="{{cardImage}}" alt="" style="min-height: 300px; max-height: 300px; width: 100%;" decoding="async" fetchpriority="high">
+              </picture>
             </div>
           </swiper-slide>
         </swiper-container>
