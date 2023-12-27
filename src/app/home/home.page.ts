@@ -1,10 +1,11 @@
-import {Component, ElementRef, signal} from '@angular/core';
+import {Component, ElementRef, signal, ViewChild} from '@angular/core';
 import {NavController} from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {WaysToEngageModel} from "../models/sub-models/ways-to-engage.model";
 import {SwiperOptions} from "swiper/types";
-import { Navigation, Pagination} from "swiper";
+import Swiper, { Navigation, Pagination} from "swiper";
+
 
 @Component({
   selector: 'app-home',
@@ -33,8 +34,11 @@ export class HomePage {
   public config: SwiperOptions = {
     modules: [Navigation, Pagination],
     spaceBetween: 10,
-    navigation: true,
     pagination: {clickable: true},
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
@@ -59,7 +63,11 @@ export class HomePage {
         slidesPerView: 3,
         centeredSlides: true
       },
+      2050: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        setWrapperSize: true
+      }
     }
   }
-
 }
