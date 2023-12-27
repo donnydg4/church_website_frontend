@@ -19,7 +19,7 @@
       </ion-row>
       <!--    WHO WE ARE-->
       <ion-row style="height: auto; background: white">
-        <ion-col style="padding: 40px; height: 100%" size-lg="6" size-xs="12">
+        <ion-col style="padding: 40px; height: 100%" size-lg="7" size-xs="12">
           <h1 class="about">
             {{ homeInfo.whoWeAreTitle }}
           </h1>
@@ -39,7 +39,7 @@
             </ion-button>
           </div>
         </ion-col>
-        <ion-col size-lg="6">
+        <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
             <picture type="image/webp">
               <img src="{{homeInfo.whoWeAreImageUrl}}" loading="lazy" decoding="async" fetchpriority="high">
@@ -50,16 +50,19 @@
       </ion-row>
 
       <!--    NEW HERE ROW-->
-      <ion-row style="height: auto; background: #363636;">
+      <ion-row style="height: 400px; background: #363636;">
 
-        <ion-col size-lg="6">
+        <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
             <picture type="image/webp">
-              <img src="{{homeInfo.newHereImageUrl}}" loading="lazy" decoding="async" fetchpriority="high">
+              <span>
+              <img src="{{homeInfo.newHereImageUrl}}" loading="lazy" decoding="async" fetchpriority="high"
+                   class="home_images">
+                </span>
             </picture>
           </div>
         </ion-col>
-        <ion-col size-lg="6" size-xs="12" style="height: 100%; padding: 40px">
+        <ion-col size-lg="7" size-xs="12" style="height: 100%; padding: 40px">
           <h1 class="new_here">
             {{ homeInfo.newHereTitle }}
           </h1>

@@ -152,3 +152,14 @@ h3 {
   color: purple;
   --swiper-navigation-size: 54px;
 }
+
+.home_images {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 17/10;
+  max-height: 400px;
+  box-shadow: 0 0 25px 25px #363636 inset !important;
+}
+
