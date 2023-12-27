@@ -4,7 +4,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {map, tap} from "rxjs/operators";
 import {WaysToEngageModel} from "../models/sub-models/ways-to-engage.model";
 import {SwiperOptions} from "swiper/types";
-import Swiper, { Navigation, Pagination} from "swiper";
+import { Navigation, Pagination} from "swiper";
 
 
 @Component({
