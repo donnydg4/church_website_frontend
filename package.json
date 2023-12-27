@@ -7,7 +7,6 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
-    "postbuild": "for i in $(find dist/church_website_frontend/ -type f -print); do brotli $i; done",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
