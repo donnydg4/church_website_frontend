@@ -1,4 +1,4 @@
-import { SwiperDirective } from './swiper.directive';
+import {SwiperDirective} from './swiper.directive';
 
 describe('SwiperDirective', () => {
   it('should create an instance', () => {
