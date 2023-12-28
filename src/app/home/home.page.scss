@@ -150,7 +150,7 @@ h3 {
 
 .purple_div {
   color: purple;
-  --swiper-navigation-size: 54px;
+  --swiper-navigation-size: clamp(38px, 3vw, 54px);
 }
 
 .home_images {

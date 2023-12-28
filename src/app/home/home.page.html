@@ -50,7 +50,7 @@
       </ion-row>
 
       <!--    NEW HERE ROW-->
-      <ion-row style="height: 400px; background: #363636;">
+      <ion-row style="height: auto; background: #363636;">
 
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
@@ -89,10 +89,10 @@
             <h5 class="custom">WAYS TO ENGAGE</h5>
           </div>
         </ion-col>
-        <ion-col size=".5">
+        <ion-col size-md=".5" size-xs="1.5">
           <div class="swiper-button-prev purple_div"></div>
         </ion-col>
-        <ion-col size="11">
+        <ion-col size-md="11" size-xs="9">
           <swiper-container swipey [config]="config" init="false">
             <swiper-slide *ngFor="let object of waysToEngage()" (click)="navigateToPage(object.type)">
               <h3>{{ object.description }}</h3>
@@ -102,7 +102,7 @@
             </swiper-slide>
           </swiper-container>
         </ion-col>
-        <ion-col size=".5">
+        <ion-col size-md=".5" size-xs="1.5" class="ion-align-items-center">
           <div class="swiper-button-next purple_div"></div>
         </ion-col>
       </ion-row>
