@@ -1,10 +1,10 @@
-import {Component, ElementRef, signal, ViewChild} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {NavController} from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {WaysToEngageModel} from "../models/sub-models/ways-to-engage.model";
 import {SwiperOptions} from "swiper/types";
-import { Navigation, Pagination} from "swiper";
+import {Navigation, Pagination} from "swiper";
 
 
 @Component({
