@@ -67,7 +67,7 @@
     "typescript": "~5.2.2"
   },
   "engines": {
-    "node": "18.13.0",
+    "node": ">=18.13.0",
     "npm": "9.5.1"
   },
   "description": "The Father's House Website"
