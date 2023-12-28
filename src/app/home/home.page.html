@@ -87,12 +87,12 @@
             <h5 class="custom">WAYS TO ENGAGE</h5>
           </div>
         </ion-col>
-        <ion-col size-md=".5" size-xs="1">
+        <ion-col size-md=".5" size-xs="1.25">
           <div>
             <div class="swiper-button-prev purple_div"></div>
           </div>
         </ion-col>
-        <ion-col size-md="11" size-xs="10">
+        <ion-col size-md="11" size-xs="9.5">
           <swiper-container swipey [config]="config" init="false">
             <swiper-slide *ngFor="let object of waysToEngage()" (click)="navigateToPage(object.type)">
               <h3>{{ object.description }}</h3>
@@ -102,7 +102,7 @@
             </swiper-slide>
           </swiper-container>
         </ion-col>
-        <ion-col size-md=".5" size-xs="1" class="ion-align-items-center">
+        <ion-col size-md=".5" size-xs="1.25" class="ion-align-items-center">
           <div class="swiper-button-next purple_div"></div>
         </ion-col>
       </ion-row>
