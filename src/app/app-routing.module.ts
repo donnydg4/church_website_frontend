@@ -1,21 +1,10 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {CalendarPage} from "./calendar/calendar.page";
-import {SermonsPage} from "./sermons/sermons.page";
-import {DevotionalsPage} from "./devotionals/devotionals.page";
-import {SeriesPage} from "./series/series.page";
-import {GuestSpeakersPage} from "./guest-speakers/guest-speakers.page";
-import {ConnectPage} from "./connect/connect.page";
-import {AllEventsPage} from "./all-events/all-events.page";
 import {StandardLayoutPage} from "./standard-layout/standard-layout.page";
-import {MinistriesWeSupportPage} from "./ministries-we-support/ministries-we-support.page";
-import {OurMinistriesPage} from "./our-ministries/our-ministries.page";
-import {LeadershipPage} from "./leadership/leadership.page";
 import {DefaultLayoutComponent} from "./shared-components/default-layout/default-layout.component";
 import {HomePage} from "./home/home.page";
 import {SeriesListPage} from "./series/series-list/series-list.page";
 import {VideoPage} from "./shared-components/video/video.page";
-import {FaithStatementPage} from "./faith-statement/faith-statement.page";
 
 const routes: Routes = [
   {
@@ -32,31 +21,31 @@ const routes: Routes = [
       },
       {
         path: 'calendar',
-        component: CalendarPage,
+        loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
       },
       {
         path: 'sermons',
-        component: SermonsPage
+        loadChildren: () => import('./sermons/sermons.module').then( m => m.SermonsPageModule)
       },
       {
         path: 'devotionals',
-        component: DevotionalsPage
+        loadChildren: () => import('./devotionals/devotionals.module').then( m => m.DevotionalsPageModule)
       },
       {
         path: 'series',
-        component: SeriesPage
+        loadChildren: () => import('./series/series.module').then( m => m.SeriesPageModule)
       },
       {
         path: 'guest-speakers',
-        component: GuestSpeakersPage
+        loadChildren: () => import('./guest-speakers/guest-speakers.module').then( m => m.GuestSpeakersPageModule)
       },
       {
         path: 'connect',
-        component: ConnectPage
+        loadChildren: () => import('./connect/connect.module').then( m => m.ConnectPageModule)
       },
       {
         path: 'events',
-        component: AllEventsPage
+        loadChildren: () => import('./all-events/all-events.module').then( m => m.AllEventsPageModule)
       },
       {
         path: 'events/:title',
@@ -68,15 +57,15 @@ const routes: Routes = [
       },
       {
         path: 'supported-ministries',
-        component: MinistriesWeSupportPage
+        loadChildren: () => import('./ministries-we-support/ministries-we-support.module').then( m => m.MinistriesWeSupportPageModule)
       },
       {
         path: 'our-ministries',
-        component: OurMinistriesPage
+        loadChildren: () => import('./our-ministries/our-ministries.module').then( m => m.OurMinistriesPageModule)
       },
       {
         path: 'leadership',
-        component: LeadershipPage
+        loadChildren: () => import('./leadership/leadership.module').then( m => m.LeadershipPageModule)
       },
       {
         path: 'sermons/:title',
@@ -112,7 +101,7 @@ const routes: Routes = [
       },
       {
         path: 'faith-statement',
-        component: FaithStatementPage
+        loadChildren: () => import('./faith-statement/faith-statement.module').then( m => m.FaithStatementPageModule)
       },
       {
         path: 'our-church',
