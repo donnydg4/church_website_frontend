@@ -5,7 +5,7 @@ import {MinistriesWeSupportPage} from './ministries-we-support.page';
 
 const routes: Routes = [
   {
-    path: 'supported-ministries',
+    path: '',
     component: MinistriesWeSupportPage
   }
 ];

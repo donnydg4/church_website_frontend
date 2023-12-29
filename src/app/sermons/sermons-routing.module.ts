@@ -5,7 +5,7 @@ import {SermonsPage} from './sermons.page';
 
 const routes: Routes = [
   {
-    path: 'sermons',
+    path: '',
     component: SermonsPage
   }
 ];

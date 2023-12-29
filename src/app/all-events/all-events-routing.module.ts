@@ -5,7 +5,7 @@ import {AllEventsPage} from './all-events.page';
 
 const routes: Routes = [
   {
-    path: 'events',
+    path: '',
     component: AllEventsPage
   }
 ];
