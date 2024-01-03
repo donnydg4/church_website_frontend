@@ -1,8 +1,8 @@
 h3 {
   font-size: 4.5vmax;
-  font-family: Arial;
+  font-family: Arial, serif;
   font-weight: normal;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 ion-grid.connect {
@@ -18,7 +18,7 @@ span.required {
 }
 
 ion-col.contact_padding {
-  padding: 12px 12px 0px 12px;
+  padding: 12px 12px 0 12px;
 }
 
 ion-button {
@@ -31,5 +31,5 @@ ion-button {
 }
 
 mat-hint {
-  padding: 0px;
+  padding: 0;
 }

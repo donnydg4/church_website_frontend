@@ -84,7 +84,7 @@ dt::before {
 
 dd {
   margin-bottom: 1vh;
-  margin-inline-start: 0px;
+  margin-inline-start: 0;
   color: #4b4b4b;
   font-size: clamp(14px, 2vw, 18px);
 }
@@ -126,7 +126,7 @@ h1 {
   letter-spacing: 0.04em;
   color: white;
   text-align: center;
-  margin: 0px;
+  margin: 0;
   padding: 15px;
   //-webkit-text-stroke: 1px darkslategrey;
 }

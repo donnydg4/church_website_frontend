@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {shareReplay, tap} from "rxjs/operators";
+import {shareReplay} from "rxjs/operators";
 import {BehaviorSubject, Observable, throwError} from "rxjs";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
 
