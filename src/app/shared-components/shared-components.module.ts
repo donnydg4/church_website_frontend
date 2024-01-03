@@ -1,4 +1,4 @@
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
@@ -13,14 +13,15 @@ import {DefaultLayoutComponent} from "./default-layout/default-layout.component"
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild([]),
-    IonicModule,
-    MatToolbarModule,
-    MatPaginatorModule,
-    NgxPaginationModule,
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild([]),
+        IonicModule,
+        MatToolbarModule,
+        MatPaginatorModule,
+        NgxPaginationModule,
+        NgOptimizedImage,
+    ],
   exports: [
     HeaderComponent,
     FooterComponent,

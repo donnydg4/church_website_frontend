@@ -112,10 +112,6 @@ const routes: Routes = [
         loadChildren: () => import('./directions/directions.module').then( m => m.DirectionsPageModule)
       },
       {
-        path: 'prayer',
-        loadChildren: () => import('./prayer/prayer.module').then( m => m.PrayerPageModule)
-      },
-      {
         path: '**',
         component: HomePage
       }

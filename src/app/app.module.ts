@@ -26,6 +26,7 @@ import {LeadershipPageModule} from "./leadership/leadership.module";
 import {SeriesListPageModule} from "./series/series-list/series-list.module";
 import {VideoPageModule} from "./shared-components/video/video.module";
 import {FaithStatementPageModule} from "./faith-statement/faith-statement.module";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [AppComponent],
@@ -54,7 +55,8 @@ import {FaithStatementPageModule} from "./faith-statement/faith-statement.module
     FaithStatementPageModule,
     NgxPaginationModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgOptimizedImage
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],

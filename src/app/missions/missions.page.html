@@ -4,7 +4,7 @@
       <ion-col size="12">
         <div class="outside">
           <picture type="image/webp">
-            <img src="{{missions().coverPhoto}}" fetchpriority="high" decoding="async">
+            <img [ngSrc]="missions().coverPhoto" decoding="async" width="" height="">
           </picture>
           <div class="inside">
             <h1>{{missions().title}}</h1>
