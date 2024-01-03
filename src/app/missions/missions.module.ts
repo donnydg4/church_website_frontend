@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
 import {IonicModule} from '@ionic/angular';
@@ -10,13 +10,14 @@ import {MissionsPage} from './missions.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    MissionsPageRoutingModule,
-    SharedComponentsModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        MissionsPageRoutingModule,
+        SharedComponentsModule,
+        NgOptimizedImage
+    ],
   declarations: [MissionsPage]
 })
 export class MissionsPageModule {}

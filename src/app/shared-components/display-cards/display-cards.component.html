@@ -6,7 +6,7 @@
           <swiper-slide *ngFor="let cardImage of card.imageUrl">
             <div style="height: 100%; width: 100%">
               <picture type="image/webp">
-                <img src="{{cardImage}}" alt="" style="min-height: 300px; max-height: 300px; width: 100%;" decoding="async" fetchpriority="high">
+                <img [ngSrc]="cardImage" alt="" style="min-height: 300px; max-height: 300px; width: 100%;" decoding="async" priority width="" height="">
               </picture>
             </div>
           </swiper-slide>

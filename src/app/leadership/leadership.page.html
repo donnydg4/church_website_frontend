@@ -4,7 +4,7 @@
       <ion-col size="12">
         <div class="outside">
           <picture type="image/webp">
-            <img src="{{leadershipInfo().coverPhoto}}" decoding="async" fetchpriority="high">
+            <img [ngSrc]="leadershipInfo().coverPhoto" decoding="async" priority width="" height="">
           </picture>
           <div class="inside">
             <h1>{{leadershipInfo().title}}</h1>

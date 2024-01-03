@@ -9,7 +9,7 @@
                 <ion-col size="12">
                   <div class="outside">
                     <picture type="image/webp">
-                      <img src="{{faithStatementModel.imageUrl}}" decoding="async" fetchpriority="high">
+                      <img [ngSrc]="faithStatementModel.imageUrl" decoding="async" priority width="" height="">
                     </picture>
                     <div class="inside">
                       <h1>The Father's House Statement Of Faith</h1>

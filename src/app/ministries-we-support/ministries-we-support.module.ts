@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
 import {IonicModule} from '@ionic/angular';
@@ -11,13 +11,14 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    MinistriesWeSupportPageRoutingModule,
-    SharedComponentsModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        MinistriesWeSupportPageRoutingModule,
+        SharedComponentsModule,
+        NgOptimizedImage
+    ],
   declarations: [MinistriesWeSupportPage],
 })
 export class MinistriesWeSupportPageModule {}

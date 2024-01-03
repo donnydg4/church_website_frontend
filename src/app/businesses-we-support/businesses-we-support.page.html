@@ -4,7 +4,7 @@
       <ion-col size="12">
         <div class="outside">
           <picture type="image/webp">
-            <img src="{{businessesWeSupport().coverPhoto}}" loading="lazy" decoding="async">
+            <img [ngSrc]="businessesWeSupport().coverPhoto" decoding="async" width="" height="">
           </picture>
           <div class="inside">
             <h1>{{businessesWeSupport().title}}</h1>
