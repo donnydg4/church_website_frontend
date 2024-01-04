@@ -18,6 +18,7 @@ export function sortByDateCalendar(a: CalendarModel, b: CalendarModel) {
 }
 
 export function sortByDateEvents(a: CalendarEvent, b: CalendarEvent) {
+  console.log(new Date(b.date).getTime() - new Date(a.date).getTime());
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 
@@ -29,6 +30,7 @@ export function sortByCardCategory(a: DisplayCardModel, b: DisplayCardModel) {
   if (a.category === b.category) return 0;
   return CategorySortOrder[a.category] > CategorySortOrder[b.category] ? 1 : -1;
 }
+
 
 export const CategorySortOrder: Record<Category, number> = {
   'ONGOING': 0,

@@ -19,4 +19,6 @@ export class BusinessesWeSupportPage {
     .pipe(
       tap(data => this.businessesWeSupport.set(data.businessesWeSupportPage)),
       map(businessInfo => businessInfo.businessesWeSupportPage.displayCards.sort(sortByCardCategory)));
+
+
 }

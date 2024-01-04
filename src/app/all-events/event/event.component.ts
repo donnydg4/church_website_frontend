@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Observable} from "rxjs";
-import {convertSpaceToDash} from "../../utils/utils";
+import {convertSpaceToDash,} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
 import {CalendarEvent} from "../../models/sub-models/calendar-events.model";
@@ -21,6 +21,5 @@ export class EventComponent {
     localStorage.setItem('calendar', JSON.stringify(this.navExtras.getCalendarEvents()));
     this.router.navigate(['/events', convertSpaceToDash(event.title)]);
   }
-
 
 }

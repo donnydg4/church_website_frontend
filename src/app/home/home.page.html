@@ -41,7 +41,8 @@
         </ion-col>
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
-            <picture type="image/webp">
+            <picture>
+              <source type="image/webp">
               <img [ngSrc]="homeInfo.whoWeAreImageUrl" decoding="async" priority width="64px" height="64px" alt="">
             </picture>
 
@@ -54,8 +55,9 @@
 
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
-            <picture type="image/webp" class="new_here_img">
-              <img [ngSrc]="homeInfo.newHereImageUrl" decoding="async" priority fill class="home_images">
+            <picture class="new_here_img">
+              <source type="image/webp">
+              <img [ngSrc]="homeInfo.newHereImageUrl" decoding="async" priority fill class="home_images" >
             </picture>
           </div>
         </ion-col>
@@ -95,7 +97,8 @@
           <swiper-container swipey [config]="config" init="false">
             <swiper-slide *ngFor="let object of waysToEngage()" (click)="navigateToPage(object.type)">
               <h3>{{ object.description }}</h3>
-              <picture type="image/webp">
+              <picture>
+                <source type="image/webp">
                 <img [ngSrc]="object.imageUrl" class="custom" priority width="100%" height="100%">
               </picture>
             </swiper-slide>
@@ -131,7 +134,8 @@
         <ion-col size-lg="6" style="height: 100%; padding: 20px 30px 20px 30px" class="ion-hide-lg-down">
           <div style="text-align: center; height: 100%; display: flex; justify-content: center">
             <div style="height: 100%;" *ngFor="let appImgs of homeInfo.appImages; let i = index">
-              <picture type="image/webp">
+              <picture>
+                <source type="image/webp">
                 <img [ngSrc]="appImgs" class="app_images" style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"
                      decoding="sync" height="" width="">
               </picture>
