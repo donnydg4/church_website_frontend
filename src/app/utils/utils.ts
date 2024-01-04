@@ -18,6 +18,7 @@ export function sortByDateCalendar(a: CalendarModel, b: CalendarModel) {
 }
 
 export function sortByDateEvents(a: CalendarEvent, b: CalendarEvent) {
+  console.log(new Date(b.date).getTime() - new Date(a.date).getTime());
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 
