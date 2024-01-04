@@ -64,5 +64,4 @@ export class AllWatchComponent {
       this.router.navigate(['/series', convertSpaceToDash(seriesCard.title)]);
   }
 
-
 }

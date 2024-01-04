@@ -20,5 +20,4 @@ export class MissionsPage {
       tap(data => this.missions.set(data.missionsPage)),
       map(missionsInfo => missionsInfo.missionsPage.displayCards.sort(sortByDateDisplay).sort(sortByCardCategory))
     );
-
 }

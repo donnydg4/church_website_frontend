@@ -30,6 +30,7 @@ export function sortByCardCategory(a: DisplayCardModel, b: DisplayCardModel) {
   return CategorySortOrder[a.category] > CategorySortOrder[b.category] ? 1 : -1;
 }
 
+
 export const CategorySortOrder: Record<Category, number> = {
   'ONGOING': 0,
   'UPCOMING': 1,

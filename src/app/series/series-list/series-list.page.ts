@@ -25,4 +25,5 @@ export class SeriesListPage {
     localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
     this.router.navigate(['/series', convertSpaceToDash(this.seriesCardFromStorage.title), convertSpaceToDash(sermon.title)]);
   }
+
 }

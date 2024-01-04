@@ -20,5 +20,4 @@ export class MinistriesWeSupportPage {
   constructor(private dataService: AllChurchInformationService) {
   }
 
-
 }
