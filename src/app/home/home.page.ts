@@ -19,6 +19,8 @@ export class HomePage {
 
   waysToEngage = signal<WaysToEngageModel[]>([]);
 
+  srcSet = '640w, 750w, 828w, 1080w, 1200w, 1920w, 2048w, 3840w';
+
   homeInformation$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => {

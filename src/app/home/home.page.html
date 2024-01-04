@@ -42,7 +42,7 @@
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
             <picture type="image/webp">
-              <img [ngSrc]="homeInfo.whoWeAreImageUrl" decoding="async" priority width="64px" height="64px" alt="">
+              <img [ngSrc]="homeInfo.whoWeAreImageUrl" decoding="async" priority width="64px" height="64px" alt="" [srcset]="srcSet">
             </picture>
 
           </div>
@@ -55,7 +55,7 @@
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
             <picture type="image/webp" class="new_here_img">
-              <img [ngSrc]="homeInfo.newHereImageUrl" decoding="async" priority fill class="home_images">
+              <img [ngSrc]="homeInfo.newHereImageUrl" decoding="async" priority fill class="home_images" [srcset]="srcSet">
             </picture>
           </div>
         </ion-col>
@@ -96,7 +96,7 @@
             <swiper-slide *ngFor="let object of waysToEngage()" (click)="navigateToPage(object.type)">
               <h3>{{ object.description }}</h3>
               <picture type="image/webp">
-                <img [ngSrc]="object.imageUrl" class="custom" priority width="100%" height="100%">
+                <img [ngSrc]="object.imageUrl" class="custom" priority width="100%" height="100%" [srcset]="srcSet">
               </picture>
             </swiper-slide>
           </swiper-container>
