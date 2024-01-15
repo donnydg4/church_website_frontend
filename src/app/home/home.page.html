@@ -3,10 +3,31 @@
     <ion-grid class="ion-no-padding">
       <ion-row style="height: 72vh; background: black">
         <ion-col style="height: 100%" size="12">
-          <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
-            <source
-              src="{{homeInfo.videoUrl}}">
-          </video>
+          <div class="outside_home">
+            <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
+              <source
+                src="{{homeInfo.videoUrl}}">
+            </video>
+            <div class="inside">
+              <ion-grid>
+                <ion-row class="ion-text-center">
+                  <ion-col>
+                    <h1 class="video_text">This is just placeholder Text</h1>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="ion-text-center">
+                  <ion-col class="ion-justify-content-between">
+                    <ion-button fill="outline" class="new_here"(click)="navigateToPage('connect')" style="margin-right: 3%">
+                      Connect
+                    </ion-button>
+                    <ion-button fill="outline" class="new_here" (click)="navigateToPage('directions')">
+                      Join in Person
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
         </ion-col>
       </ion-row>
       <ion-row style="background: white">
@@ -57,7 +78,7 @@
           <div style="text-align: center; height: 100%">
             <picture class="new_here_img">
               <source type="image/webp">
-              <img [ngSrc]="homeInfo.newHereImageUrl" decoding="async" priority fill class="home_images" >
+              <img [ngSrc]="homeInfo.newHereImageUrl" decoding="async" priority fill class="home_images">
             </picture>
           </div>
         </ion-col>
@@ -136,7 +157,8 @@
             <div style="height: 100%;" *ngFor="let appImgs of homeInfo.appImages; let i = index">
               <picture>
                 <source type="image/webp">
-                <img [ngSrc]="appImgs" class="app_images" style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"
+                <img [ngSrc]="appImgs" class="app_images"
+                     style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"
                      decoding="sync" height="" width="">
               </picture>
             </div>

@@ -187,6 +187,16 @@ div.outside {
   justify-content: center;
 }
 
+div.outside_home {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 72vh;
+  vertical-align: middle;
+  justify-content: center;
+}
+
 div.inside {
   width: 100%; /* Can be in percentage also. */
   height: auto;
