@@ -1,4 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
+import {AllChurchInformationService} from "../service/all-church-information.service";
+import {OurChurchModel} from "../models/sub-models/our-church.model";
+import {map, tap} from "rxjs/operators";
 
 @Component({
   selector: 'app-our-church',
@@ -7,6 +10,21 @@ import {Component} from '@angular/core';
 })
 export class OurChurchPage {
 
-  constructor() { }
+  ourChurchInfo = signal<OurChurchModel>({
+    coverPhoto: '',
+    ourMission: [],
+    ourTarget: [],
+    ourVision: [],
+    coreValues: [],
+    title: ''
+  });
 
+  constructor(private dataService: AllChurchInformationService) {
+  }
+
+  ourChurch$ = this.dataService.allWebsiteInformation$
+    .pipe(
+      tap(data => data.allWebsiteInformation.ourChurch),
+      map(data => data.allWebsiteInformation.ourChurch)
+    );
 }
