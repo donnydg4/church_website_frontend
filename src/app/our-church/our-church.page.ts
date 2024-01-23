@@ -26,4 +26,11 @@ export class OurChurchPage {
       tap(data => data.allWebsiteInformation.ourChurch),
       map(data => data.allWebsiteInformation.ourChurch)
     );
+
+  onClick(fragment: string) {
+    let x = document.querySelector('#' + fragment)
+    if(x) {
+      x.scrollIntoView({behavior: 'smooth'});
+    }
+  }
 }
