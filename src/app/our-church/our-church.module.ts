@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
 import {IonicModule} from '@ionic/angular';
@@ -8,15 +8,28 @@ import {OurChurchPageRoutingModule} from './our-church-routing.module';
 
 import {OurChurchPage} from './our-church.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        OurChurchPageRoutingModule,
-        SharedComponentsModule
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    OurChurchPageRoutingModule,
+    SharedComponentsModule,
+    NgOptimizedImage,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatTabsModule,
+    MatButtonToggleModule,
+  ],
   declarations: [OurChurchPage]
 })
 export class OurChurchPageModule {}

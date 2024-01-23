@@ -1,3 +1,8 @@
 export interface OurChurchModel {
-  hello: string;
+  coverPhoto: string;
+  title: string;
+  ourMission: string[];
+  ourVision: string[];
+  ourTarget: string[];
+  coreValues: string[];
 }
