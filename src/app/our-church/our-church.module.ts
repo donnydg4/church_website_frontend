@@ -12,6 +12,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   imports: [
@@ -25,6 +27,8 @@ import {MatMenuModule} from "@angular/material/menu";
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatTabsModule,
+    MatButtonToggleModule,
   ],
   declarations: [OurChurchPage]
 })

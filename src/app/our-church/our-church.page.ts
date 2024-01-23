@@ -1,8 +1,8 @@
 import {Component, HostListener, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {OurChurchModel} from "../models/sub-models/our-church.model";
 import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-our-church',
@@ -13,9 +13,15 @@ export class OurChurchPage {
 
   public platformWidth = this.platform.width()
 
+  selectedSegment: string = 'history';
+
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
     this.platformWidth = this.platform.width();
+  }
+
+  segmentChanged(event: any) {
+    this.selectedSegment = event.target.value;
   }
 
   constructor(private dataService: AllChurchInformationService, private platform: Platform) {
@@ -26,11 +32,4 @@ export class OurChurchPage {
       tap(data => data.allWebsiteInformation.ourChurch),
       map(data => data.allWebsiteInformation.ourChurch)
     );
-
-  onClick(fragment: string) {
-    let x = document.querySelector('#' + fragment)
-    if(x) {
-      x.scrollIntoView({behavior: 'smooth'});
-    }
-  }
 }
