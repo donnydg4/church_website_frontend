@@ -77,12 +77,13 @@
           </div>
           <div class="dropdown-content">
             <a routerLink="/businesses-we-support">Businesses We Support</a>
+            <a href="https://pvlifeinstitute.org">PV Life Institute</a>
           </div>
         </div>
 
         <div class="inner-center-div">
           <ion-button style="min-width: 80px; padding-right: 10px" disabled="true">
-            Store
+            Worship
           </ion-button>
         </div>
 
@@ -218,19 +219,21 @@
                     <ion-item button lines="none" (click)="navigateToPage('businesses-we-support')">
                       <a class="changes">Businesses We Support</a>
                     </ion-item>
+                    <ion-item button lines="none">
+                      <a class="changes" href="https://pvlifeinstitute.org">PV Life Institute</a>
+                    </ion-item>
                   </ion-item-group>
                 </div>
               </ion-accordion>
             </ion-accordion-group>
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
+                      class="font-size custom_color" disabled>
+              <ion-label>Worship</ion-label>
+            </ion-item>
+            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
                       class="font-size custom_color"
                       href="https://app.securegive.com/tfhfreeport/main/donate/category">
               <ion-label>Give</ion-label>
-            </ion-item>
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
-                      class="font-size custom_color" disabled="true"
-                      href="">
-              <ion-label>Store</ion-label>
             </ion-item>
           </ion-col>
         </ion-row>

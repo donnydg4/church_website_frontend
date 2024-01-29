@@ -14,22 +14,24 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {LeadershipPageModule} from "../leadership/leadership.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    OurChurchPageRoutingModule,
-    SharedComponentsModule,
-    NgOptimizedImage,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatTabsModule,
-    MatButtonToggleModule,
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        OurChurchPageRoutingModule,
+        SharedComponentsModule,
+        NgOptimizedImage,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        MatTabsModule,
+        MatButtonToggleModule,
+        LeadershipPageModule,
+    ],
   declarations: [OurChurchPage]
 })
 export class OurChurchPageModule {}

@@ -200,3 +200,13 @@ picture.new_here_img:after {
   top: 0;
   width: 100%;
 }
+
+picture.who_we_are:after {
+  box-shadow: 0 0 10px 10px white inset !important;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

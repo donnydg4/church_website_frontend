@@ -18,28 +18,15 @@
         <ion-col size="12">
           <mat-toolbar style="justify-content: center">
             <ng-container *ngIf="platformWidth >= 780">
-<!--              <ion-buttons style="height: 100%">-->
-<!--                <ion-button class="button_padding" (click)="onClick('history')">History</ion-button>-->
-<!--                <ion-button class="button_padding" (click)="onClick('vision')">Vision</ion-button>-->
-<!--                <ion-button class="button_padding" (click)="onClick('core')">Core Values</ion-button>-->
-<!--                <ion-button class="button_padding" (click)="onClick('beliefs')">Beliefs</ion-button>-->
-<!--                <ion-button class="button_padding" (click)="onClick('team')">Meet the Team</ion-button>-->
-<!--              </ion-buttons>-->
-              <ion-segment (ionChange)="segmentChanged($event)" value="history" style="height: 100%; width: 70%">
+              <ion-segment (ionChange)="segmentChanged($event)" value="history" style="height: 100%; width: 60%">
                 <ion-segment-button value="history">
                   <ion-label>History</ion-label>
                 </ion-segment-button>
-                <ion-segment-button value="vision">
-                  <ion-label>Vision</ion-label>
-                </ion-segment-button>
-                <ion-segment-button value="core">
-                  <ion-label>Core Values</ion-label>
+                <ion-segment-button value="about">
+                  <ion-label>About</ion-label>
                 </ion-segment-button>
                 <ion-segment-button value="beliefs">
                   <ion-label>Beliefs</ion-label>
-                </ion-segment-button>
-                <ion-segment-button value="team">
-                  <ion-label>Meet The Team</ion-label>
                 </ion-segment-button>
               </ion-segment>
             </ng-container>
@@ -51,103 +38,77 @@
               <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
                 <mat-icon>menu</mat-icon>
               </button>
-              <mat-menu #menu="matMenu" style="width: 100%">
-                <button mat-menu-item>
+              <mat-menu #menu="matMenu" style="width: 100%" yPosition="below">
+                <button mat-menu-item value="history" (click)="segmentChanged($event)">
                   <span>History</span>
                 </button>
-                <button mat-menu-item>
-                  <span>Vision</span>
+                <button mat-menu-item value="about" (click)="segmentChanged($event)">
+                  <span>About</span>
                 </button>
-                <button mat-menu-item>
-                  <span>Core Values</span>
-                </button>
-                <button mat-menu-item>
+                <button mat-menu-item value="beliefs" (click)="segmentChanged($event)">
                   <span>Beliefs</span>
-                </button>
-                <button mat-menu-item>
-                  <span>Meet the Team</span>
                 </button>
               </mat-menu>
             </ng-container>
           </mat-toolbar>
         </ion-col>
       </ion-row>
-      <ion-row style="height: 500px" *ngIf="selectedSegment === 'history'">
-        <section id="history">
+      <ion-row style="height: auto; padding: 15px" *ngIf="selectedSegment === 'history'">
+        <ion-col size="6">
           <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
-            <p>
-              "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-            </p>
+            <h2>CRAZY FOR JESUS</h2>
           </div>
-        </section>
+        </ion-col>
+        <ion-col size="6">
+          <div>
+            <ion-text> We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and explore. The lost prodigals, and disconnected are who we to reach. Our heart is to share the love of Jesus with everyone we encounter. We welcome you to The Father's House!</ion-text>
+          </div>
+        </ion-col>
       </ion-row>
-      <ion-row style="height: 500px" *ngIf="selectedSegment === 'vision'">
-        <section id="vision">
-          <div>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </p>
-            <p>
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </p>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
+      <ion-row style="height: auto; text-align: center; padding: 15px;" *ngIf="selectedSegment === 'about'">
+        <ion-col size="6">
+          <h1 class="about">
+            WHO WE ARE
+          </h1>
+          <div class="about">
+            <div style="width: 90%">
+              <ion-text class="about">
+                We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and explore. The lost, prodigals, and disconnected are who we want to reach. Our heart is to share the love of Jesus with everyone we encounter.
+              </ion-text>
+            </div>
           </div>
-        </section>
+        </ion-col>
+        <ion-col size="6">
+
+        </ion-col>
       </ion-row>
-      <ion-row style="height: 500px" *ngIf="selectedSegment === 'core'">
-        <section id="core">
-          <div>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </p>
-            <p>
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </p>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </div>
-        </section>
-      </ion-row>
-      <ion-row style="height: 500px" *ngIf="selectedSegment === 'beliefs'">
-        <section id="beliefs">
-          <div>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </p>
-            <p>
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </p>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </div>
-        </section>
-      </ion-row>
-      <ion-row style="height: 500px" *ngIf="selectedSegment === 'team'">
-        <section id="team">
-          <div>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </p>
-            <p>
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </p>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </div>
-        </section>
+      <ion-row style="height: auto" *ngIf="selectedSegment === 'beliefs'">
+        <ion-col>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
+            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
+            during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+            section 1.10.32.
+          </p>
+          <p>
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+            original form, accompanied by English versions from the 1914 translation by H. Rackham.
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."
+          </p>
+        </ion-col>
       </ion-row>
     </ion-grid>
   </ng-container>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </ion-content>

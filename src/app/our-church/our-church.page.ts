@@ -21,7 +21,8 @@ export class OurChurchPage {
   }
 
   segmentChanged(event: any) {
-    this.selectedSegment = event.target.value;
+    this.selectedSegment = event.currentTarget.value;
+    console.log(this.selectedSegment);
   }
 
   constructor(private dataService: AllChurchInformationService, private platform: Platform) {
