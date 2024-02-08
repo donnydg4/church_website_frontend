@@ -54,25 +54,14 @@
         </ion-col>
       </ion-row>
       <ion-row style="height: auto; padding: 15px" *ngIf="selectedSegment === 'history'">
-        <ion-col size="6">
-          <div>
-            <h2>CRAZY FOR JESUS</h2>
-          </div>
-        </ion-col>
-        <ion-col size="6">
-          <div>
-            <ion-text> We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage,
-              equip and explore. The lost prodigals, and disconnected are who we to reach. Our heart is to share the
-              love of Jesus with everyone we encounter. We welcome you to The Father's House!
-            </ion-text>
-          </div>
-        </ion-col>
+        <app-timeline></app-timeline>
       </ion-row>
       <ion-row style="height: auto" *ngIf="selectedSegment === 'about'">
         <ion-col size-md="6" size-xs="12">
           <picture>
             <source type="image/webp">
-            <img [ngSrc]="churchInfo.coverPhoto" decoding="async" priority height="" width="" alt="" style="padding: 5%">
+            <img [ngSrc]="churchInfo.coverPhoto" decoding="async" priority height="" width="" alt=""
+                 style="padding: 5%">
           </picture>
         </ion-col>
         <ion-col size-md="6" size-xs="12" style="padding: 8% 8% 8% 4%" class="ion-text-start">
@@ -87,7 +76,7 @@
             </ion-text>
           </div>
         </ion-col>
-<!--        <ion-col size="12" *ngFor="churchInfo.about.ourMission"></ion-col>-->
+        <!--        <ion-col size="12" *ngFor="churchInfo.about.ourMission"></ion-col>-->
       </ion-row>
       <ion-row style="height: auto" *ngIf="selectedSegment === 'beliefs'">
         <ion-col>

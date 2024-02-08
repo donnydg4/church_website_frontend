@@ -10,6 +10,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {NgxPaginationModule} from "ngx-pagination";
 import {DisplayCardsComponent} from "./display-cards/display-cards.component";
 import {DefaultLayoutComponent} from "./default-layout/default-layout.component";
+import {TimelineComponent} from "./timeline/timeline.component";
 
 
 @NgModule({
@@ -27,14 +28,16 @@ import {DefaultLayoutComponent} from "./default-layout/default-layout.component"
     FooterComponent,
     AllWatchComponent,
     DisplayCardsComponent,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    TimelineComponent
   ],
   declarations: [
     FooterComponent,
     HeaderComponent,
     AllWatchComponent,
     DisplayCardsComponent,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    TimelineComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
