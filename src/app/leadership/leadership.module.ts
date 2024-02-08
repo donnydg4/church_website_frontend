@@ -18,6 +18,9 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         SharedComponentsModule,
         NgOptimizedImage
     ],
-  declarations: [LeadershipPage]
+    exports: [
+        LeadershipPage
+    ],
+    declarations: [LeadershipPage]
 })
 export class LeadershipPageModule {}

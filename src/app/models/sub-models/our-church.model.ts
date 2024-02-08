@@ -1,8 +1,11 @@
+import {About} from "./about.model";
+import {History} from "./history.model";
+import {Belief} from "./belief.model";
+
 export interface OurChurchModel {
   coverPhoto: string;
   title: string;
-  ourMission: string[];
-  ourVision: string[];
-  ourTarget: string[];
-  coreValues: string[];
+  history: History;
+  about: About;
+  beliefs: Belief;
 }
