@@ -1,7 +1,7 @@
 <ion-content style="color: white">
   <ng-container *ngIf="homeInformation$ | async as homeInfo">
     <ion-grid class="ion-no-padding">
-      <ion-row style="height: 72vh; background: black">
+      <ion-row style="height: 87vh; background: black">
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
             <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
@@ -39,8 +39,8 @@
         </ion-col>
       </ion-row>
       <!--    WHO WE ARE-->
-      <ion-row style="height: auto; background: white">
-        <ion-col style="padding: 40px; height: 100%" size-lg="7" size-xs="12">
+      <ion-row style="height: auto; min-height: 375px; background: white">
+        <ion-col style="padding: 40px; height: auto" size-lg="7" size-xs="12">
           <h1 class="about">
             {{ homeInfo.whoWeAreTitle }}
           </h1>
@@ -66,13 +66,12 @@
               <source type="image/webp">
               <img [ngSrc]="homeInfo.whoWeAreImageUrl" decoding="async" priority fill alt="" class="home_images">
             </picture>
-
           </div>
         </ion-col>
       </ion-row>
 
       <!--    NEW HERE ROW-->
-      <ion-row style="height: auto; background: #363636;">
+      <ion-row style="height: auto; min-height: 375px; background: #363636;">
 
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">

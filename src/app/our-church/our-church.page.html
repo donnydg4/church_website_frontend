@@ -61,26 +61,33 @@
         </ion-col>
         <ion-col size="6">
           <div>
-            <ion-text> We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and explore. The lost prodigals, and disconnected are who we to reach. Our heart is to share the love of Jesus with everyone we encounter. We welcome you to The Father's House!</ion-text>
+            <ion-text> We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage,
+              equip and explore. The lost prodigals, and disconnected are who we to reach. Our heart is to share the
+              love of Jesus with everyone we encounter. We welcome you to The Father's House!
+            </ion-text>
           </div>
         </ion-col>
       </ion-row>
-      <ion-row style="height: auto; text-align: center; padding: 15px;" *ngIf="selectedSegment === 'about'">
-        <ion-col size="6">
-          <h1 class="about">
-            WHO WE ARE
-          </h1>
+      <ion-row style="height: auto" *ngIf="selectedSegment === 'about'">
+        <ion-col size-md="6" size-xs="12">
+          <picture>
+            <source type="image/webp">
+            <img [ngSrc]="churchInfo.coverPhoto" decoding="async" priority height="" width="" alt="" style="padding: 5%">
+          </picture>
+        </ion-col>
+        <ion-col size-md="6" size-xs="12" style="padding: 8% 8% 8% 4%" class="ion-text-start">
           <div class="about">
-            <div style="width: 90%">
-              <ion-text class="about">
-                We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and explore. The lost, prodigals, and disconnected are who we want to reach. Our heart is to share the love of Jesus with everyone we encounter.
-              </ion-text>
-            </div>
+            <h1 class="fake_h1">
+              CRAZY FOR JESUS
+            </h1>
+            <ion-text class="about">
+              We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and
+              explore. The lost, prodigals, and disconnected are who we want to reach. Our heart is to share the love
+              of Jesus with everyone we encounter.
+            </ion-text>
           </div>
         </ion-col>
-        <ion-col size="6">
-
-        </ion-col>
+<!--        <ion-col size="12" *ngFor="churchInfo.about.ourMission"></ion-col>-->
       </ion-row>
       <ion-row style="height: auto" *ngIf="selectedSegment === 'beliefs'">
         <ion-col>
