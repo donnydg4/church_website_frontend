@@ -1,4 +1,4 @@
-img {
+img.cover {
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -37,7 +37,7 @@ h1.about {
 }
 
 ion-text.about {
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(16px, 2vw, 22px);
   font-weight: normal;
   font-family: Arial, serif;
   line-height: 1.5em;
@@ -52,4 +52,8 @@ h1.fake_h1 {
   color: black;
   text-align: start;
   margin-bottom: 1%;
+}
+img.test {
+  aspect-ratio: 13/12;
+  max-height: 825px;
 }
