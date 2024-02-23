@@ -4,11 +4,10 @@
       <ion-row style="height: 87vh; background: black">
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
-            <video autoplay [muted]="true" loop id="video" height="100%" playsinline preload="auto" >
+            <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
               <source src="{{homeInfo.videoUrl}}" type="video/mp4">
               <source src="{{homeInfo.videoUrl}}" type="video/webm">
               <source src="{{homeInfo.videoUrl}}" type="video/mov">
-              <source src="{{homeInfo.videoUrl}}" type="video/mkv">
             </video>
             <div class="inside">
               <ion-grid>
@@ -41,8 +40,8 @@
         </ion-col>
       </ion-row>
       <!--    WHO WE ARE-->
-      <ion-row style="height: auto; min-height: 375px; background: white">
-        <ion-col style="padding: 40px; height: auto" size-lg="7" size-xs="12">
+      <ion-row style="height: auto; min-height: 400px; background: white">
+        <ion-col style="padding: 4%; height: auto" size-lg="7" size-xs="12">
           <h1 class="about">
             {{ homeInfo.whoWeAreTitle }}
           </h1>
@@ -64,7 +63,7 @@
         </ion-col>
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
-            <picture class="who_we_are">
+            <picture class="who_we_are" style="height: 100%">
               <source type="image/webp">
               <img [ngSrc]="homeInfo.whoWeAreImageUrl" decoding="async" priority fill alt="" class="home_images">
             </picture>
@@ -73,7 +72,7 @@
       </ion-row>
 
       <!--    NEW HERE ROW-->
-      <ion-row style="height: auto; min-height: 375px; background: #363636;">
+      <ion-row style="height: auto; min-height: 400px; background: #363636;">
 
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
