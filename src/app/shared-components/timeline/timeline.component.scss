@@ -179,3 +179,19 @@ li {
   background: rgba(222, 221, 221, 0.35);
 
 }
+
+ion-card-subtitle {
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  line-height: 1.5em;
+  color: black;
+}
+
+ion-card-title {
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  //line-height: 1.5em;
+  color: black;
+}
