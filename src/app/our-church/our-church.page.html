@@ -6,7 +6,7 @@
           <div class="outside">
             <picture>
               <source type="image/webp">
-              <img [ngSrc]="churchInfo.coverPhoto" decoding="async" width="" height="" alt="hello">
+              <img [ngSrc]="churchInfo.coverPhoto" decoding="async" width="" height="" alt="hello" class="cover">
             </picture>
             <div class="inside">
               <h1>{{ churchInfo.title }}</h1>
@@ -56,15 +56,15 @@
       <ion-row style="height: auto; padding: 5%" *ngIf="selectedSegment === 'history'">
         <app-timeline></app-timeline>
       </ion-row>
-      <ion-row style="height: auto" *ngIf="selectedSegment === 'about'">
+      <ion-row style="height: auto" *ngIf="selectedSegment === 'about'" class="ion-justify-content-center ion-align-items-center">
         <ion-col size-md="6" size-xs="12">
           <picture>
             <source type="image/webp">
-            <img [ngSrc]="churchInfo.coverPhoto" decoding="async" priority height="" width="" alt=""
-                 style="padding: 5%">
+            <img [ngSrc]="churchInfo.about.crazyForJesusImage" decoding="async" priority height="" width="" alt=""
+                 style="padding: 5%" class="test">
           </picture>
         </ion-col>
-        <ion-col size-md="6" size-xs="12" style="padding: 8% 8% 8% 4%" class="ion-text-start">
+        <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%" class="ion-text-start ion-justify-content-center">
           <div class="about">
             <h1 class="fake_h1">
               CRAZY FOR JESUS
