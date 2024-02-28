@@ -54,7 +54,9 @@
         </ion-col>
       </ion-row>
       <ion-row style="height: auto; padding: 5%" *ngIf="selectedSegment === 'history'">
-        <app-timeline></app-timeline>
+        <ion-col size-md="12">
+          <app-timeline></app-timeline>
+        </ion-col>
       </ion-row>
       <ion-row style="height: auto" *ngIf="selectedSegment === 'about'" class="ion-justify-content-center ion-align-items-center">
         <ion-col size-md="6" size-xs="12">
