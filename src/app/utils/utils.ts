@@ -3,7 +3,6 @@ import {SeriesCardModel} from "../models/sub-models/series-card.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
 import {DisplayCardModel} from "../models/sub-models/display-card.model";
 import {Category} from "../models/sub-models/categories.model";
-import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 
 export function sortByDate(a: WatchModel, b: WatchModel) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();

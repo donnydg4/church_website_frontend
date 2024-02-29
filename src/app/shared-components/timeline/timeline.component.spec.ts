@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { TimelineComponent } from './timeline.component';
+import {TimelineComponent} from './timeline.component';
 
 describe('TimelineComponent', () => {
   let component: TimelineComponent;

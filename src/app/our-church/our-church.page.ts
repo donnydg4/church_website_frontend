@@ -2,8 +2,6 @@ import {Component, HostListener, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
-import {LeadershipModel} from "../models/sub-models/leadership.model";
-import {IndividualHistoryModel} from "../models/sub-models/individual-history.model";
 import {History} from "../models/sub-models/history.model";
 
 @Component({

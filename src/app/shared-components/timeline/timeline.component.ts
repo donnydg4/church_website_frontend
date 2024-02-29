@@ -1,6 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
-import {IndividualHistoryModel} from "../../models/sub-models/individual-history.model";
+import {Component, Input} from '@angular/core';
 import {History} from "../../models/sub-models/history.model";
 
 @Component({
