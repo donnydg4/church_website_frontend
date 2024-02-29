@@ -2,7 +2,9 @@ import {Component, HostListener, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
-import {FormControl} from "@angular/forms";
+import {LeadershipModel} from "../models/sub-models/leadership.model";
+import {IndividualHistoryModel} from "../models/sub-models/individual-history.model";
+import {History} from "../models/sub-models/history.model";
 
 @Component({
   selector: 'app-our-church',
@@ -14,6 +16,11 @@ export class OurChurchPage {
   public platformWidth = this.platform.width()
 
   selectedSegment: string = 'history';
+  historyItems = signal<History>({
+    title: '',
+    subTitle: '',
+    individualHistoryObject: []
+  });
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
@@ -30,7 +37,10 @@ export class OurChurchPage {
 
   ourChurch$ = this.dataService.allWebsiteInformation$
     .pipe(
-      tap(data => data.allWebsiteInformation.ourChurch),
+      tap(data => {
+        this.historyItems.set(data.allWebsiteInformation.ourChurch.history);
+        console.log(data.allWebsiteInformation.ourChurch.history);
+      }),
       map(data => data.allWebsiteInformation.ourChurch)
     );
 }

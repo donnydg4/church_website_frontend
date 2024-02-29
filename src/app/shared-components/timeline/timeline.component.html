@@ -1,35 +1,77 @@
 <ion-card style="box-shadow: none !important;" mode="md">
-  <ion-card-header style="padding-left: 4%; margin-left: 5%">
-    <ion-card-subtitle>HISTORY</ion-card-subtitle>
-    <ion-card-title>The Father's House History</ion-card-title>
+  <ion-card-header>
+    <ion-card-subtitle>{{ items.subTitle }}</ion-card-subtitle>
+    <ion-card-title>{{ items.title }}</ion-card-title>
   </ion-card-header>
-  <ion-card-content>
-    <ul>
-      <li style="--accent-color:purple">
-        <div class="date">2002</div>
-        <div class="title">Title 1</div>
-        <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+  <ion-card-content style="padding: 0px">
+    <!--    <ul>-->
+    <!--      <li style="&#45;&#45;accent-color:purple">-->
+    <!--        <div class="date">2002</div>-->
+    <!--        <div class="title">Title 1</div>-->
+    <!--        <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>-->
+    <!--      </li>-->
+    <!--      <li style="&#45;&#45;accent-color:purple">-->
+    <!--        <div class="date">2007</div>-->
+    <!--        <div class="title">Title 2</div>-->
+    <!--        <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>-->
+    <!--      </li>-->
+    <!--      <li style="&#45;&#45;accent-color:purple">-->
+    <!--        <div class="date">2012</div>-->
+    <!--        <div class="title">Title 3</div>-->
+    <!--        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>-->
+    <!--      </li>-->
+    <!--      <li style="&#45;&#45;accent-color:purple">-->
+    <!--        <div class="date">2017</div>-->
+    <!--        <div class="title">Title 4</div>-->
+    <!--        <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>-->
+    <!--      </li>-->
+    <!--      <li style="&#45;&#45;accent-color:purple">-->
+    <!--        <div class="date">2022</div>-->
+    <!--        <div class="title">Title 5</div>-->
+    <!--        <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>-->
+    <!--      </li>-->
+    <!--    </ul>-->
+    <ul class="timeline">
+      <!-- Item 1 -->
+      <li *ngFor="let item of items.individualHistoryObject; let i = index">
+<!--        <div class="direction-l">-->
+        <div [ngClass]="i % 2 === 0 ? 'direction-l' : 'direction-r'">
+          <div class="flag-wrapper">
+            <span class="hexa"></span>
+            <span class="flag">{{ item.title }}</span>
+            <span class="time-wrapper"><span class="time">{{ item.date | date: 'MMM yyyy' }}</span></span>
+          </div>
+          <div class="desc">{{item.description}}</div>
+        </div>
       </li>
-      <li style="--accent-color:purple">
-        <div class="date">2007</div>
-        <div class="title">Title 2</div>
-        <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
-      </li>
-      <li style="--accent-color:purple">
-        <div class="date">2012</div>
-        <div class="title">Title 3</div>
-        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
-      </li>
-      <li style="--accent-color:purple">
-        <div class="date">2017</div>
-        <div class="title">Title 4</div>
-        <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
-      </li>
-      <li style="--accent-color:purple">
-        <div class="date">2022</div>
-        <div class="title">Title 5</div>
-        <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
-      </li>
+
+      <!-- Item 2 -->
+<!--      <li>-->
+<!--        <div class="direction-r">-->
+<!--          <div class="flag-wrapper">-->
+<!--            <span class="hexa"></span>-->
+<!--            <span class="flag">Lorem ipsum Anim.</span>-->
+<!--            <span class="time-wrapper"><span class="time">Dec 2014</span></span>-->
+<!--          </div>-->
+<!--          <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim-->
+<!--            cupidatat laborum dolore.-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </li>-->
+
+<!--      &lt;!&ndash; Item 3 &ndash;&gt;-->
+<!--      <li>-->
+<!--        <div class="direction-l">-->
+<!--          <div class="flag-wrapper">-->
+<!--            <span class="hexa"></span>-->
+<!--            <span class="flag">Lorem Occaecat.</span>-->
+<!--            <span class="time-wrapper"><span class="time">July 2014</span></span>-->
+<!--          </div>-->
+<!--          <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum-->
+<!--            cupidatat reprehenderit sit id dolor consectetur ut.-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </li>-->
     </ul>
   </ion-card-content>
 </ion-card>
