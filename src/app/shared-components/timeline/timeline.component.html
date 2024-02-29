@@ -1,7 +1,7 @@
 <ion-card style="box-shadow: none !important;" mode="md">
   <ion-card-header>
-    <ion-card-subtitle>HISTORY</ion-card-subtitle>
-    <ion-card-title>The Father's House History</ion-card-title>
+    <ion-card-subtitle>{{ items.subTitle }}</ion-card-subtitle>
+    <ion-card-title>{{ items.title }}</ion-card-title>
   </ion-card-header>
   <ion-card-content style="padding: 0px">
     <!--    <ul>-->
@@ -33,46 +33,45 @@
     <!--    </ul>-->
     <ul class="timeline">
       <!-- Item 1 -->
-      <li>
-        <div class="direction-l">
+      <li *ngFor="let item of items.individualHistoryObject; let i = index">
+<!--        <div class="direction-l">-->
+        <div [ngClass]="i % 2 === 0 ? 'direction-l' : 'direction-r'">
           <div class="flag-wrapper">
             <span class="hexa"></span>
-            <span class="flag">Lorem ipsum.</span>
-            <span class="time-wrapper"><span class="time">Feb 2015</span></span>
+            <span class="flag">{{ item.title }}</span>
+            <span class="time-wrapper"><span class="time">{{ item.date | date: 'MMM yyyy' }}</span></span>
           </div>
-          <div class="desc">Lorem ipsum Nisi labore aute do aute culpa magna nulla voluptate exercitation deserunt
-            proident.
-          </div>
+          <div class="desc">{{item.description}}</div>
         </div>
       </li>
 
       <!-- Item 2 -->
-      <li>
-        <div class="direction-r">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Lorem ipsum Anim.</span>
-            <span class="time-wrapper"><span class="time">Dec 2014</span></span>
-          </div>
-          <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim
-            cupidatat laborum dolore.
-          </div>
-        </div>
-      </li>
+<!--      <li>-->
+<!--        <div class="direction-r">-->
+<!--          <div class="flag-wrapper">-->
+<!--            <span class="hexa"></span>-->
+<!--            <span class="flag">Lorem ipsum Anim.</span>-->
+<!--            <span class="time-wrapper"><span class="time">Dec 2014</span></span>-->
+<!--          </div>-->
+<!--          <div class="desc">Lorem ipsum In ut sit in dolor nisi ex magna eu anim anim tempor dolore aliquip enim-->
+<!--            cupidatat laborum dolore.-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </li>-->
 
-      <!-- Item 3 -->
-      <li>
-        <div class="direction-l">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Lorem Occaecat.</span>
-            <span class="time-wrapper"><span class="time">July 2014</span></span>
-          </div>
-          <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum
-            cupidatat reprehenderit sit id dolor consectetur ut.
-          </div>
-        </div>
-      </li>
+<!--      &lt;!&ndash; Item 3 &ndash;&gt;-->
+<!--      <li>-->
+<!--        <div class="direction-l">-->
+<!--          <div class="flag-wrapper">-->
+<!--            <span class="hexa"></span>-->
+<!--            <span class="flag">Lorem Occaecat.</span>-->
+<!--            <span class="time-wrapper"><span class="time">July 2014</span></span>-->
+<!--          </div>-->
+<!--          <div class="desc">Lorem ipsum Minim labore Ut cupidatat quis qui deserunt proident fugiat pariatur cillum-->
+<!--            cupidatat reprehenderit sit id dolor consectetur ut.-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </li>-->
     </ul>
   </ion-card-content>
 </ion-card>

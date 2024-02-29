@@ -392,6 +392,7 @@ header p{
   -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
   box-shadow: 0 0 1px rgba(0,0,0,0.20);
   z-index: 15;
+  text-align: left;
 }
 
 .direction-l .desc,
@@ -404,7 +405,7 @@ header p{
 
 @media(min-width: 768px){
   .timeline {
-    width: 100%;
+    width: 660px;
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -430,14 +431,14 @@ header p{
 
   .direction-l {
     position: relative;
-    width: 47.6%;
+    width: 310px;
     float: left;
     text-align: right;
   }
 
   .direction-r {
     position: relative;
-    width: 47.7%;
+    width: 310px;
     float: right;
     text-align: left;
   }
