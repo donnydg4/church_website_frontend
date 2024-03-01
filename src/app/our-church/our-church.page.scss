@@ -21,6 +21,13 @@ mat-toolbar {
 ion-segment-button {
   --indicator-color: #3E2F28;
 }
+
+.ios ion-segment-button {
+  --indicator-color: #3E2F28;
+  font-size: .938rem;
+  --color-checked: white;
+}
+
 .mat-mdc-icon-button.mat-mdc-button-base {
   color: #3E2F28 !important;
 }

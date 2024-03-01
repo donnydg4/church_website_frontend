@@ -145,6 +145,7 @@ header p{
   padding: 6px 10px;
   text-align: left;
   border-radius: 5px;
+  border: 1px solid black;
 }
 
 .direction-l .flag:after,
@@ -170,8 +171,8 @@ header p{
 
 .direction-r .flag {
   -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
 }
 
 .time-wrapper {
@@ -220,7 +221,7 @@ header p{
 
 @media(min-width: 768px){
   .timeline {
-    width: 660px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -246,14 +247,14 @@ header p{
 
   .direction-l {
     position: relative;
-    width: 310px;
+    width: calc(49.5% - 16px);
     float: left;
     text-align: right;
   }
 
   .direction-r {
     position: relative;
-    width: 310px;
+    width: calc(49.5% - 16px);
     float: right;
     text-align: left;
   }
@@ -308,8 +309,7 @@ header p{
   }
 }
 
-
-@media(min-width: 992px){
+@media(min-width: 1200px){
   .timeline {
     width: 100%;
     margin: 0 auto;
@@ -318,38 +318,15 @@ header p{
 
   .direction-l {
     position: relative;
-    width: 47.8%;
+    width: calc(49.7% - 16px);
     float: left;
     text-align: right;
   }
 
   .direction-r {
     position: relative;
-    width: 47.75%;
+    width: calc(49.7% - 16px);
     float: right;
     text-align: left;
   }
 }
-
-@media(min-width: 1360px){
-  .timeline {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  .direction-l {
-    position: relative;
-    width: 48.6%;
-    float: left;
-    text-align: right;
-  }
-
-  .direction-r {
-    position: relative;
-    width: 48.65%;
-    float: right;
-    text-align: left;
-  }
-}
-

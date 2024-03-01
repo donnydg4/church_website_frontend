@@ -3,6 +3,7 @@ import {SeriesCardModel} from "../models/sub-models/series-card.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
 import {DisplayCardModel} from "../models/sub-models/display-card.model";
 import {Category} from "../models/sub-models/categories.model";
+import {IndividualHistoryModel} from "../models/sub-models/individual-history.model";
 
 export function sortByDate(a: WatchModel, b: WatchModel) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -20,11 +21,14 @@ export function sortByDateDisplay(a: DisplayCardModel, b: DisplayCardModel) {
   return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
 }
 
+export function sortByDateHistory(a: IndividualHistoryModel, b: IndividualHistoryModel) {
+  return new Date(a.date).getTime() - new Date(b.date).getTime();
+}
+
 export function sortByCardCategory(a: DisplayCardModel, b: DisplayCardModel) {
   if (a.category === b.category) return 0;
   return CategorySortOrder[a.category] > CategorySortOrder[b.category] ? 1 : -1;
 }
-
 
 export const CategorySortOrder: Record<Category, number> = {
   'ONGOING': 0,
