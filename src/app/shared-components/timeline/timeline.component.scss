@@ -145,6 +145,7 @@ header p{
   padding: 6px 10px;
   text-align: left;
   border-radius: 5px;
+  border: 1px solid black;
 }
 
 .direction-l .flag:after,
@@ -170,8 +171,8 @@ header p{
 
 .direction-r .flag {
   -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
 }
 
 .time-wrapper {

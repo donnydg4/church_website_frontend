@@ -3,6 +3,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
 import {History} from "../models/sub-models/history.model";
+import {sortByDateHistory} from "../utils/utils";
 
 @Component({
   selector: 'app-our-church',
@@ -36,6 +37,7 @@ export class OurChurchPage {
   ourChurch$ = this.dataService.allWebsiteInformation$
     .pipe(
       tap(data => {
+        data.allWebsiteInformation.ourChurch.history.individualHistoryObject.sort(sortByDateHistory);
         this.historyItems.set(data.allWebsiteInformation.ourChurch.history);
         console.log(data.allWebsiteInformation.ourChurch.history);
       }),
