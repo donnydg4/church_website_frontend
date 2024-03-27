@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {NavController} from "@ionic/angular";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 
@@ -9,9 +9,11 @@ import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 })
 export class StandardLayoutPage {
 
+  private navCtrl = inject(NavController);
+
   calendarEvent: CalendarEvent;
 
-  constructor(private navCtrl: NavController) {
+  constructor() {
     this.calendarEvent = JSON.parse(localStorage.getItem('calendar'));
   }
 

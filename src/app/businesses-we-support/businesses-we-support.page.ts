@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {BusinessesWeSupportModel} from "../models/sub-models/businesses-we-support.model";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";
@@ -11,9 +11,9 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 })
 export class BusinessesWeSupportPage {
 
-  businessesWeSupport = signal<BusinessesWeSupportModel>({});
+  private dataService = inject(AllChurchInformationService);
 
-  constructor(private dataService: AllChurchInformationService) { }
+  businessesWeSupport = signal<BusinessesWeSupportModel>({});
 
   displayBusinessCards$ = this.dataService.allWebsiteInformation$
     .pipe(

@@ -1,4 +1,4 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, inject} from '@angular/core';
 import {MenuController, NavController, Platform} from "@ionic/angular";
 
 @Component({
@@ -8,8 +8,9 @@ import {MenuController, NavController, Platform} from "@ionic/angular";
 })
 export class HeaderComponent {
 
-  constructor(private platform: Platform, private navCtrl: NavController, private menuCtrl: MenuController) {
-  }
+  private platform = inject(Platform);
+  private navCtrl = inject(NavController);
+  private menuCtrl = inject(MenuController);
 
   public platformWidth = this.platform.width()
 

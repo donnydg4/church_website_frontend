@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 import {sortByDate} from "../utils/utils";
@@ -9,8 +9,9 @@ import {combineLatest} from "rxjs";
   templateUrl: './sermons.page.html',
   styleUrls: ['./sermons.page.scss'],
 })
-export class SermonsPage implements OnInit {
+export class SermonsPage {
 
+  private dataService = inject(AllChurchInformationService);
   sermonTitle = 'Sermons';
 
   sermonCards$ = this.dataService.allWebsiteInformation$
@@ -32,11 +33,4 @@ export class SermonsPage implements OnInit {
           return cards.title.toLowerCase().indexOf(query) > -1;
         }
       )));
-
-  constructor(private dataService: AllChurchInformationService) {
-  }
-
-  ngOnInit() {
-  }
-
 }

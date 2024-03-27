@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {LeadershipModel} from "../models/sub-models/leadership.model";
@@ -10,7 +10,7 @@ import {LeadershipModel} from "../models/sub-models/leadership.model";
 })
 export class LeadershipPage {
 
-  constructor(private dataService: AllChurchInformationService) { }
+  private dataService = inject(AllChurchInformationService);
 
   leadershipInfo = signal<LeadershipModel>({});
 

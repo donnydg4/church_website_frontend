@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 
@@ -9,7 +9,7 @@ import {map} from "rxjs/operators";
 })
 export class DirectionsPage {
 
-  constructor(private dataService: AllChurchInformationService) { }
+  private dataService = inject(AllChurchInformationService);
 
   locations$ = this.dataService.allWebsiteInformation$.pipe(
     map(directions => directions.allWebsiteInformation.directions)

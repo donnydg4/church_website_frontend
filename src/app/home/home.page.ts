@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {NavController} from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
@@ -14,8 +14,8 @@ import {Navigation, Pagination} from "swiper";
 })
 export class HomePage {
 
-  constructor(private navCtrl: NavController, private dataService: AllChurchInformationService) {
-  }
+  private dataService = inject(AllChurchInformationService);
+  private navCtrl = inject(NavController);
 
   waysToEngage = signal<WaysToEngageModel[]>([]);
 

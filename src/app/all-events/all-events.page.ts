@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {MainEventModel} from "../models/sub-models/main-event.model";
@@ -10,10 +10,9 @@ import {MainEventModel} from "../models/sub-models/main-event.model";
 })
 export class AllEventsPage {
 
-  eventsInfo = signal<MainEventModel>({events: []});
+  private dataService = inject(AllChurchInformationService);
 
-  constructor(private dataService: AllChurchInformationService) {
-  }
+  eventsInfo = signal<MainEventModel>({events: []});
 
   getAllEvents$ = this.dataService.allWebsiteInformation$
     .pipe(

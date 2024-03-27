@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory, sortByDateDisplay} from "../utils/utils";
@@ -11,9 +11,9 @@ import {MissionsModel} from "../models/sub-models/missions.model";
 })
 export class MissionsPage {
 
-  missions = signal<MissionsModel>({});
+  private dataService = inject(AllChurchInformationService);
 
-  constructor(private dataService: AllChurchInformationService) { }
+  missions = signal<MissionsModel>({});
 
   missionCards$ = this.dataService.allWebsiteInformation$
     .pipe(

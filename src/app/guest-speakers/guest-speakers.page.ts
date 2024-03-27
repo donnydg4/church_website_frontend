@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 import {sortByDate} from "../utils/utils";
@@ -10,6 +10,9 @@ import {combineLatest} from "rxjs";
   styleUrls: ['./guest-speakers.page.scss'],
 })
 export class GuestSpeakersPage {
+
+  private dataService = inject(AllChurchInformationService);
+  guestSpeakersTitle = 'Guest Speakers';
 
   guestSpeakersCards$ = this.dataService.allWebsiteInformation$
     .pipe(
@@ -30,11 +33,5 @@ export class GuestSpeakersPage {
           return cards.title.toLowerCase().indexOf(query) > -1;
         }
       )));
-
-  guestSpeakersTitle = 'Guest Speakers';
-
-  constructor(private dataService: AllChurchInformationService) {
-  }
-
 
 }

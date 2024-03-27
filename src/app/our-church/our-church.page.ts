@@ -1,4 +1,4 @@
-import {Component, HostListener, signal} from '@angular/core';
+import {Component, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
@@ -11,6 +11,9 @@ import {sortByDateHistory} from "../utils/utils";
   styleUrls: ['./our-church.page.scss'],
 })
 export class OurChurchPage {
+
+  private dataService = inject(AllChurchInformationService);
+  private platform = inject(Platform);
 
   public platformWidth = this.platform.width()
 
@@ -29,9 +32,6 @@ export class OurChurchPage {
   segmentChanged(event: any) {
     this.selectedSegment = event.currentTarget.value;
     console.log(this.selectedSegment);
-  }
-
-  constructor(private dataService: AllChurchInformationService, private platform: Platform) {
   }
 
   ourChurch$ = this.dataService.allWebsiteInformation$
