@@ -1,13 +1,13 @@
 <ion-content style="--background: white; --color: black">
-  <ng-container *ngIf="locations$ | async as locations">
+  <ng-container *ngIf="locations()">
     <ion-grid [fixed]="true">
       <ion-row>
         <ion-col size="12" style="padding: 15px;">
           <ion-grid>
             <ion-row>
-              <ng-container *ngIf="locations.length <= 1">
+              <ng-container *ngIf="locations().length <= 1">
                 <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="12" size-lg="10" offset-lg="1"
-                         *ngFor="let location of locations">
+                         *ngFor="let location of locations()">
                   <div style="text-align: center">
                     <h5>
                       {{ location.title }}
@@ -38,8 +38,8 @@
                   </div>
                 </ion-col>
               </ng-container>
-              <ng-container *ngIf="locations.length > 1">
-                <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="6" *ngFor="let location of locations">
+              <ng-container *ngIf="locations().length > 1">
+                <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="6" *ngFor="let location of locations()">
                   <div style="text-align: center">
                     <h5>
                       {{ location.title }}

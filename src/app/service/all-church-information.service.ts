@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {shareReplay} from "rxjs/operators";
 import {BehaviorSubject} from "rxjs";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
+import {toSignal} from "@angular/core/rxjs-interop";
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +32,18 @@ export class AllChurchInformationService {
     this.searchQuery.next(search);
   }
 
-  allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
+  //http call
+  private allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
     .pipe(
       shareReplay(1)
     );
+
+   allWebsiteInformationForCalendar$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
+    .pipe(
+      shareReplay(1)
+    );
+
+  //convert http call to signal
+  allChurchInformation = toSignal(this.allWebsiteInformation$);
 
 }

@@ -13,7 +13,7 @@ export class DevotionalsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  devotionalCards$ = this.dataService.allWebsiteInformation$
+  devotionalCards$ = this.dataService.allWebsiteInformationForCalendar$
     .pipe(
       map(devotionalCards => devotionalCards.allWatchCards.filter(allCards => allCards.category === 'devotional')
         .sort(sortByDate))

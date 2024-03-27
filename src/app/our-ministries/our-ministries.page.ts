@@ -3,6 +3,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";
 import {OurMinistriesModel} from "../models/sub-models/our-ministries.model";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-our-ministries',
@@ -15,12 +16,15 @@ export class OurMinistriesPage {
 
   ourMinistries = signal<OurMinistriesModel>({});
 
-
-  displayOurMinistryCards$ = this.dataService.allWebsiteInformation$
+ //rxjs to modify
+  displayOurMinistryCards$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       tap(data => this.ourMinistries.set(data.ourMinistriesPage)),
       map(ourMinistryPageInfo => ourMinistryPageInfo.ourMinistriesPage.displayCards.sort(sortByCardCategory))
     );
+
+  //rjxs to signal
+  displayOurMinistryCards = toSignal(this.displayOurMinistryCards$);
 }
 
 

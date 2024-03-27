@@ -2,6 +2,7 @@ import {Component, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {LeadershipModel} from "../models/sub-models/leadership.model";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-leadership',
@@ -14,8 +15,13 @@ export class LeadershipPage {
 
   leadershipInfo = signal<LeadershipModel>({});
 
-  leadershipCards$ = this.dataService.allWebsiteInformation$
+  //rxjs to modify call
+  leadershipCards$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       tap(data => this.leadershipInfo.set(data.leadershipPage)),
-      map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards));
+      map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards)
+    );
+
+  //signal
+  leadershipCards = toSignal(this.leadershipCards$);
 }

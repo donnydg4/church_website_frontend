@@ -3,6 +3,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory, sortByDateDisplay} from "../utils/utils";
 import {MissionsModel} from "../models/sub-models/missions.model";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-missions',
@@ -15,9 +16,13 @@ export class MissionsPage {
 
   missions = signal<MissionsModel>({});
 
-  missionCards$ = this.dataService.allWebsiteInformation$
+  //rxjs to modify
+  missionCards$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       tap(data => this.missions.set(data.missionsPage)),
       map(missionsInfo => missionsInfo.missionsPage.displayCards.sort(sortByDateDisplay).sort(sortByCardCategory))
     );
+
+  //rxjs to signal
+  missionCards = toSignal(this.missionCards$);
 }

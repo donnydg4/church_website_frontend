@@ -1,6 +1,7 @@
-import {Component, inject,} from '@angular/core';
+import {Component, inject, signal,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-faith-statement',
@@ -11,9 +12,13 @@ export class FaithStatementPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  faithStuff$ = this.dataService.allWebsiteInformation$
+  //rxjs modify
+  faithStuff$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       map(data => data.statementOfFaith)
     );
+
+  //convert rxjs to signal
+  faithStuff = toSignal(this.faithStuff$);
 
 }

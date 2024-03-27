@@ -1,6 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-directions',
@@ -11,7 +12,12 @@ export class DirectionsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  locations$ = this.dataService.allWebsiteInformation$.pipe(
+  //rxjs to modify
+  locations$ = toObservable(this.dataService.allChurchInformation)
+    .pipe(
     map(directions => directions.allWebsiteInformation.directions)
   );
+
+  //convert rxjs to signal
+  locations = toSignal(this.locations$);
 }

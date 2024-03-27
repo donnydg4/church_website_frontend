@@ -25,6 +25,8 @@ export class CalendarPage implements OnInit {
   twoWeeksDate: Date;
   date = new Date();
 
+  //TODO: Figure out how to incorporate signals here maybe?
+
   //CalendarEvents subjects
   private beginningDateSubject: BehaviorSubject<Date> = new BehaviorSubject<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate()));
   beginningDateAction$ = this.beginningDateSubject.asObservable();
@@ -33,7 +35,7 @@ export class CalendarPage implements OnInit {
   endDateAction$ = this.endDateSubject.asObservable();
 
   calendarEvents$ = combineLatest([
-    this.dataService.allWebsiteInformation$,
+    this.dataService.allWebsiteInformationForCalendar$,
     this.beginningDateAction$,
     this.endDateAction$
   ])

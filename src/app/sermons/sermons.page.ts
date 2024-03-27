@@ -14,7 +14,7 @@ export class SermonsPage {
   private dataService = inject(AllChurchInformationService);
   sermonTitle = 'Sermons';
 
-  sermonCards$ = this.dataService.allWebsiteInformation$
+  sermonCards$ = this.dataService.allWebsiteInformationForCalendar$
     .pipe(
       map(sermonCards => sermonCards.allWatchCards.filter(allCards => allCards.category === 'sermon')
         .sort(sortByDate))

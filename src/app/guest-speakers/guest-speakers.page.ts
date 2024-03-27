@@ -14,7 +14,7 @@ export class GuestSpeakersPage {
   private dataService = inject(AllChurchInformationService);
   guestSpeakersTitle = 'Guest Speakers';
 
-  guestSpeakersCards$ = this.dataService.allWebsiteInformation$
+  guestSpeakersCards$ = this.dataService.allWebsiteInformationForCalendar$
     .pipe(
       map(guestSpeakerCards => guestSpeakerCards.allWatchCards.filter(allCards => allCards.category === 'guest')
         .sort(sortByDate))

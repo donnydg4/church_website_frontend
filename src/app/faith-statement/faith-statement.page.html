@@ -2,15 +2,15 @@
   <ion-grid [fixed]="true" class="background-grid">
     <ion-row style="justify-content: center">
       <ion-col size-lg="10" style="height:  100%; text-align: center" size-xs="12">
-        <ng-container *ngIf="faithStuff$ | async as faithStatementModel">
+        <ng-container *ngIf="faithStuff()">
           <ion-card>
             <ion-grid class="ion-no-padding">
               <ion-row style=" border-bottom: solid 2px #497588">
                 <ion-col size="12">
                   <div class="outside">
                     <picture>
-                      <source type="image/webp"   >
-                      <img [ngSrc]="faithStatementModel.imageUrl" decoding="async" width="" height="" alt="">
+                      <source type="image/webp">
+                      <img [ngSrc]="faithStuff().imageUrl" decoding="async" width="" height="" alt="">
                     </picture>
                     <div class="inside">
                       <h1>The Father's House Statement Of Faith</h1>
@@ -22,7 +22,7 @@
                 <ion-col size-lg="12">
                   <section class="dl-blurbs">
                     <dl>
-                      <ng-container *ngFor="let allInfo of faithStatementModel.statementInformation">
+                      <ng-container *ngFor="let allInfo of faithStuff().statementInformation">
                         <dt>{{allInfo.title}}</dt>
                         <dd>
                           {{allInfo.description}}

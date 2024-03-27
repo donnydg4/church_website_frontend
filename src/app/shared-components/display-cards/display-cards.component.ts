@@ -14,7 +14,7 @@ export class DisplayCardsComponent {
 
   isSelected: number;
 
-  @Input() displayCards: Observable<DisplayCardModel[]>;
+  @Input() displayCards: DisplayCardModel[];
 
   navigateToPage() {
     this.navCtrl.navigateForward([`connect`]);

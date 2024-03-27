@@ -1,7 +1,7 @@
-<ng-container *ngIf="eventsArray | async as eventCards">
+<ng-container *ngIf="eventsArray">
   <ion-grid [fixed]="true" style="margin-top: 3%">
     <ion-row class="ion-text-left">
-      <ion-col *ngFor="let events of eventCards" size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
+      <ion-col *ngFor="let events of eventsArray" size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
         <ion-card button mode="md" (click)="takeToStandardLayout(events)">
           <picture>
             <source type="image/webp"  >

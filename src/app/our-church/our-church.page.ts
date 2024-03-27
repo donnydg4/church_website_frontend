@@ -4,6 +4,7 @@ import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
 import {History} from "../models/sub-models/history.model";
 import {sortByDateHistory} from "../utils/utils";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-our-church',
@@ -34,7 +35,8 @@ export class OurChurchPage {
     console.log(this.selectedSegment);
   }
 
-  ourChurch$ = this.dataService.allWebsiteInformation$
+  //rxjs to modify
+  ourChurch$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       tap(data => {
         data.allWebsiteInformation.ourChurch.history.individualHistoryObject.sort(sortByDateHistory);
@@ -43,4 +45,7 @@ export class OurChurchPage {
       }),
       map(data => data.allWebsiteInformation.ourChurch)
     );
+
+  //rxjs to signal
+  ourChurch = toSignal(this.ourChurch$);
 }
