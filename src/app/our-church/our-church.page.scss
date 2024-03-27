@@ -64,3 +64,8 @@ img.test {
   aspect-ratio: 13/12;
   max-height: 825px;
 }
+
+ion-row.general {
+  align-items: center !important;
+  justify-content: center !important;
+}
