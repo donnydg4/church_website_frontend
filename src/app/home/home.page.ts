@@ -5,7 +5,6 @@ import {map, tap} from "rxjs/operators";
 import {WaysToEngageModel} from "../models/sub-models/ways-to-engage.model";
 import {SwiperOptions} from "swiper/types";
 import {Navigation, Pagination} from "swiper";
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 
 @Component({
