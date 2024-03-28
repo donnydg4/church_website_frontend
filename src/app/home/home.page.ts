@@ -20,7 +20,6 @@ export class HomePage {
 
   waysToEngage = signal<WaysToEngageModel[]>([]);
 
-
   //TODO: understand why this fails when converted to a signal?
   homeInformation$ = this.dataService.allWebsiteInformationForCalendar$.pipe(
     tap(data => {

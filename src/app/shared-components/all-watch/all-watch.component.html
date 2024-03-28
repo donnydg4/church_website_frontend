@@ -10,7 +10,7 @@
   </ion-row>
   <ion-row class="ion-align-items-center bottom_border">
     <ion-col size-xs="12" size-md="6" offset-md="3">
-      <ion-searchbar debounce="500" (ionChange)="handleChange($event)">
+      <ion-searchbar debounce="500" (ionInput)="handleChange($event)">
       </ion-searchbar>
 
     </ion-col>
