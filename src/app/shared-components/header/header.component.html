@@ -11,9 +11,8 @@
 
     <span class="spacer"></span>
 
-    <ng-container *ngIf="platformWidth > 975">
+    @if (platformWidth > 975) {
       <ion-buttons slot="end" class="right-side">
-
         <div class="dropdown">
           <div class="inner-center-div">
             <ion-button class="dropbtn">About
@@ -29,7 +28,6 @@
             <a routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>
           </div>
         </div>
-
         <div class="dropdown">
           <div class="inner-center-div">
             <ion-button class="dropbtn">Connect
@@ -42,7 +40,6 @@
             <a routerLink="/connect">CONTACT US</a>
           </div>
         </div>
-
         <div class="dropdown">
           <div class="inner-center-div">
             <ion-button class="dropbtn">Watch
@@ -56,7 +53,6 @@
             <a routerLink="/guest-speakers">GUEST SPEAKERS</a>
           </div>
         </div>
-
         <div class="dropdown">
           <div class="inner-center-div">
             <ion-button class="dropbtn">Events
@@ -68,7 +64,6 @@
             <a routerLink="/events">ALL EVENTS</a>
           </div>
         </div>
-
         <div class="dropdown">
           <div class="inner-center-div">
             <ion-button class="dropbtn">Resources
@@ -80,25 +75,21 @@
             <a href="https://pvlifeinstitute.org">PV Life Institute</a>
           </div>
         </div>
-
         <div class="inner-center-div">
           <ion-button style="min-width: 80px; padding-right: 10px" disabled="true">
             Worship
           </ion-button>
         </div>
-
         <div class="inner-center-div">
           <ion-button fill="outline" style="width: 100px;"
-                      href="https://app.securegive.com/tfhfreeport/main/donate/category">
+            href="https://app.securegive.com/tfhfreeport/main/donate/category">
             Give
           </ion-button>
         </div>
-
-
       </ion-buttons>
-    </ng-container>
+    }
 
-    <ng-container *ngIf="platformWidth <= 975">
+    @if (platformWidth <= 975) {
       <ion-buttons slot="end" class="right-side">
         <div id="main-content">
           <ion-buttons slot="end" style="padding: 5px">
@@ -106,12 +97,12 @@
           </ion-buttons>
         </div>
       </ion-buttons>
-    </ng-container>
+    }
 
   </mat-toolbar>
 </ion-header>
 
-<ng-container *ngIf="platformWidth <= 975">
+@if (platformWidth <= 975) {
   <ion-menu contentId="main-content" type="overlay" side="start" menuId="menu-one">
     <ion-header style="height: 14vh">
       <ion-toolbar class="custom_toolbar_menu">
@@ -123,8 +114,8 @@
         <ion-row>
           <ion-col class="ion-no-padding">
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full"
-                      class="font-size custom_color" mode="md"
-                      href="home">
+              class="font-size custom_color" mode="md"
+              href="home">
               <ion-label>Home</ion-label>
             </ion-item>
             <ion-accordion-group mode="md">
@@ -152,7 +143,6 @@
                     <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
                       <a class="changes">ministries we support</a>
                     </ion-item>
-
                   </ion-item-group>
                 </div>
               </ion-accordion>
@@ -227,12 +217,12 @@
               </ion-accordion>
             </ion-accordion-group>
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
-                      class="font-size custom_color" disabled>
+              class="font-size custom_color" disabled>
               <ion-label>Worship</ion-label>
             </ion-item>
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
-                      class="font-size custom_color"
-                      href="https://app.securegive.com/tfhfreeport/main/donate/category">
+              class="font-size custom_color"
+              href="https://app.securegive.com/tfhfreeport/main/donate/category">
               <ion-label>Give</ion-label>
             </ion-item>
           </ion-col>
@@ -240,5 +230,5 @@
       </ion-grid>
     </ion-content>
   </ion-menu>
-</ng-container>
+}
 

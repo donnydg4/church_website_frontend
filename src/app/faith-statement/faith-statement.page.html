@@ -2,7 +2,7 @@
   <ion-grid [fixed]="true" class="background-grid">
     <ion-row style="justify-content: center">
       <ion-col size-lg="10" style="height:  100%; text-align: center" size-xs="12">
-        <ng-container *ngIf="faithStuff()">
+        @if (faithStuff()) {
           <ion-card>
             <ion-grid class="ion-no-padding">
               <ion-row style=" border-bottom: solid 2px #497588">
@@ -22,25 +22,27 @@
                 <ion-col size-lg="12">
                   <section class="dl-blurbs">
                     <dl>
-                      <ng-container *ngFor="let allInfo of faithStuff().statementInformation">
+                      @for (allInfo of faithStuff().statementInformation; track allInfo) {
                         <dt>{{allInfo.title}}</dt>
                         <dd>
                           {{allInfo.description}}
                         </dd>
-                        <dd *ngFor="let scripture of allInfo.scriptures">
-                          {{scripture}}
-                        </dd>
-                      </ng-container>
+                        @for (scripture of allInfo.scriptures; track scripture) {
+                          <dd>
+                            {{scripture}}
+                          </dd>
+                        }
+                      }
                     </dl>
                   </section>
                 </ion-col>
               </ion-row>
             </ion-grid>
           </ion-card>
-        </ng-container>
+        }
 
       </ion-col>
     </ion-row>
   </ion-grid>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </ion-content>

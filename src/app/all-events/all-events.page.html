@@ -1,5 +1,5 @@
 <ion-content style="--background: white; --color: black">
-  <ng-container *ngIf="getAllEvents()">
+  @if (getAllEvents()) {
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col size="12">
@@ -15,7 +15,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ng-container>
+  }
   <app-event [eventsArray]="getAllEvents()"></app-event>
   <app-footer></app-footer>
 </ion-content>

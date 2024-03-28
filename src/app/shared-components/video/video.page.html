@@ -13,8 +13,8 @@
               <ion-col size="12">
                 <div class="trial">
                   <iframe class="trialTwo"
-                          [src]="youtubeUrl"
-                          style="border-radius: 10px; width: 100%; aspect-ratio: 18/10" allow="fullscreen">
+                    [src]="youtubeUrl"
+                    style="border-radius: 10px; width: 100%; aspect-ratio: 18/10" allow="fullscreen">
                   </iframe>
                 </div>
               </ion-col>
@@ -56,19 +56,19 @@
                 <ion-text class="white">Share</ion-text>
               </ion-col>
               <ion-col size="12" style="text-align: left" class="small-margin">
-                <ng-container *ngIf="opened">
+                @if (opened) {
                   <mat-form-field style="width: 100%" appearance="outline" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Notes</mat-label>
                     <textarea #text matInput rows="8" style="resize: none" [(ngModel)]="textArea"
-                              placeholder="Please type your notes"
-                              maxlength="1000"></textarea>
+                      placeholder="Please type your notes"
+                    maxlength="1000"></textarea>
                     <mat-hint align="start"><strong>(Max 1000 characters)</strong></mat-hint>
                     <mat-hint align="end">{{text.value.length}} / 1000</mat-hint>
                   </mat-form-field>
                   <div style="margin-top: 1%">
                     <ion-button class="copy" mode="md" (click)="copyText()">Copy Notes</ion-button>
                   </div>
-                </ng-container>
+                }
               </ion-col>
             </ion-row>
           </ion-grid>

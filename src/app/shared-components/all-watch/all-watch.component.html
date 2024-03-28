@@ -16,46 +16,53 @@
     </ion-col>
   </ion-row>
 
-  <ng-container *ngIf="title !== 'Series'">
-    <ion-row style="padding-top: 30px" *ngIf="objectArray | async as watchCards">
-      <ion-col size-xl="4" size-sm="4" size-xs="12" class="custom"
-               *ngFor="let cards of watchCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: watchCards.length}">
-        <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
-          <div class="img_good">
-            <picture>
-              <source type="image/webp"  >
-              <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
-            </picture>
-          </div>
+  @if (title !== 'Series') {
+    @if (objectArray | async; as watchCards) {
+      <ion-row style="padding-top: 30px">
+        @for (cards of watchCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: watchCards.length}; track cards) {
+          <ion-col size-xl="4" size-sm="4" size-xs="12" class="custom"
+            >
+            <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
+              <div class="img_good">
+                <picture>
+                  <source type="image/webp"  >
+                  <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
+                </picture>
+              </div>
+              <ion-card-header>
+                <ion-card-title>{{cards.title}}</ion-card-title>
+                <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+    }
+  }
 
-          <ion-card-header>
-            <ion-card-title>{{cards.title}}</ion-card-title>
-            <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ng-container>
-
-  <ng-container *ngIf="title === 'Series'">
-    <ion-row style="padding-top: 30px" *ngIf="seriesArray | async as seriesCards">
-      <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
-               *ngFor="let cards of seriesCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesCards.length}">
-        <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
-          <div class="img_good">
-            <picture>
-              <source type="image/webp"  >
-              <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
-            </picture>
-          </div>
-          <ion-card-header>
-            <ion-card-title>{{cards.title}}</ion-card-title>
-            <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ng-container>
+  @if (title === 'Series') {
+    @if (seriesArray | async; as seriesCards) {
+      <ion-row style="padding-top: 30px">
+        @for (cards of seriesCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesCards.length}; track cards) {
+          <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
+            >
+            <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
+              <div class="img_good">
+                <picture>
+                  <source type="image/webp"  >
+                  <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
+                </picture>
+              </div>
+              <ion-card-header>
+                <ion-card-title>{{cards.title}}</ion-card-title>
+                <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+    }
+  }
 
   <ion-row>
     <ion-col>
