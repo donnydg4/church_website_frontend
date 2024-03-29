@@ -5,6 +5,7 @@ import {map, tap} from "rxjs/operators";
 import {WaysToEngageModel} from "../models/sub-models/ways-to-engage.model";
 import {SwiperOptions} from "swiper/types";
 import {Navigation, Pagination} from "swiper";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 
 @Component({
@@ -20,12 +21,15 @@ export class HomePage {
   waysToEngage = signal<WaysToEngageModel[]>([]);
 
   //TODO: understand why this fails when converted to a signal?
-  homeInformation$ = this.dataService.allWebsiteInformationForCalendar$.pipe(
+  homeInformation$ = toObservable(this.dataService.allChurchInformation)
+    .pipe(
     tap(data => {
       this.waysToEngage.set(data.allWebsiteInformation.homePage.waysToEngage);
     }),
     map(data => data.allWebsiteInformation.homePage)
   );
+
+  homeInfo = toSignal(this.homeInformation$);
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);

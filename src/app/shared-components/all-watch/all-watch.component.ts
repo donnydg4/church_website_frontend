@@ -23,8 +23,8 @@ export class AllWatchComponent {
   page: number = 1;
 
   @Input() title = '';
-  @Input() objectArray: Observable<WatchModel[]>
-  @Input() seriesArray: Observable<SeriesCardModel[]>
+  @Input() objectArray: WatchModel[];
+  @Input() seriesArray: SeriesCardModel[];
 
   public config: PaginationInstance = {
     itemsPerPage: 15,

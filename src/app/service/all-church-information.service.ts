@@ -1,6 +1,6 @@
-import {inject, Injectable} from '@angular/core';
+import {inject, Injectable, signal} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {shareReplay} from "rxjs/operators";
+import {shareReplay, tap} from "rxjs/operators";
 import {BehaviorSubject} from "rxjs";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
 import {toSignal} from "@angular/core/rxjs-interop";
@@ -25,12 +25,12 @@ export class AllChurchInformationService {
   // private allDisplayCardsUrl: string = 'https://church-rest-service.herokuapp.com/church/displayCards';
   private allWebsiteInformationUrl: string = 'https://church-rest-service.herokuapp.com/church/website/allWebsiteInformation';
 
-  private searchQuery: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  searchQueryAction$ = this.searchQuery.asObservable();
-
   searchQueryWord(search: string) {
-    this.searchQuery.next(search);
+    this.searchQuerySignal.set(search);
   }
+
+  //signal
+  searchQuerySignal = signal('');
 
   //http call
   private allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
@@ -38,12 +38,7 @@ export class AllChurchInformationService {
       shareReplay(1)
     );
 
-   allWebsiteInformationForCalendar$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
-    .pipe(
-      shareReplay(1)
-    );
-
   //convert http call to signal
-  allChurchInformation = toSignal(this.allWebsiteInformation$);
+  allChurchInformation = toSignal(this.allWebsiteInformation$.pipe(tap(data => console.log(data))));
 
 }

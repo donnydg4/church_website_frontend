@@ -18,7 +18,10 @@ export class LeadershipPage {
   //rxjs to modify call
   leadershipCards$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
-      tap(data => this.leadershipInfo.set(data.leadershipPage)),
+      tap(data => {
+        this.leadershipInfo.set(data.leadershipPage);
+        console.log(data)
+      }),
       map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards)
     );
 

@@ -1,8 +1,9 @@
-import {Component, inject} from '@angular/core';
+import {Component, computed, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 import {sortByDate} from "../utils/utils";
 import {combineLatest} from "rxjs";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-devotionals',
@@ -11,28 +12,39 @@ import {combineLatest} from "rxjs";
 })
 export class DevotionalsPage {
 
+  devotionalsTitle = 'Devotionals';
+
   private dataService = inject(AllChurchInformationService);
 
-  devotionalCards$ = this.dataService.allWebsiteInformationForCalendar$
+  devotionalCards$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       map(devotionalCards => devotionalCards.allWatchCards.filter(allCards => allCards.category === 'devotional')
         .sort(sortByDate))
     );
 
-  devotionalCardsSearchable$ = combineLatest([
-    this.devotionalCards$,
-    this.dataService.searchQueryAction$
-  ])
-    .pipe(
-      map(([cards, query]) => cards.filter(
-        cards => {
-          if (!query) {
-            return cards
-          }
-          return cards.title.toLowerCase().indexOf(query) > -1;
-        }
-      )));
+  devotionalCards = toSignal(this.devotionalCards$);
 
-  devotionalsTitle = 'Devotionals';
+  devotionalCardsSearchable = computed(() => this.devotionalCards().filter(
+    cards => {
+      if (!this.dataService.searchQuerySignal()) {
+        return cards
+      }
+      return cards.title.toLowerCase().indexOf(this.dataService.searchQuerySignal()) > -1;
+    }
+  ));
 
+  // devotionalCardsSearchable$ = combineLatest([
+  //   this.devotionalCards$,
+  //   this.dataService.searchQueryAction$
+  // ])
+  //   .pipe(
+  //     map(([cards, query]) => cards.filter(
+  //       cards => {
+  //         if (!query) {
+  //           return cards
+  //         }
+  //         return cards.title.toLowerCase().indexOf(query) > -1;
+  //       }
+  //     ))
+  //   );
 }
