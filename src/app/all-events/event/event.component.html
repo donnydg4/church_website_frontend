@@ -1,20 +1,22 @@
-<ng-container *ngIf="eventsArray | async as eventCards">
+@if (eventsArray) {
   <ion-grid [fixed]="true" style="margin-top: 3%">
     <ion-row class="ion-text-left">
-      <ion-col *ngFor="let events of eventCards" size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
-        <ion-card button mode="md" (click)="takeToStandardLayout(events)">
-          <picture>
-            <source type="image/webp"  >
-            <img alt="img-src" [ngSrc]="events.imageUrl" decoding="async" height="" width="">
-          </picture>
-          <ion-card-header>
-            <ion-card-title>{{events.title}}</ion-card-title>
-            <ion-card-subtitle>{{events.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
-          </ion-card-header>
-          <ion-card-content>{{events.description}}</ion-card-content>
-        </ion-card>
-      </ion-col>
+      @for (events of eventsArray; track events) {
+        <ion-col size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
+          <ion-card button mode="md" (click)="takeToStandardLayout(events)">
+            <picture>
+              <source type="image/webp"  >
+              <img alt="img-src" [ngSrc]="events.imageUrl" decoding="async" height="" width="">
+            </picture>
+            <ion-card-header>
+              <ion-card-title>{{events.title}}</ion-card-title>
+              <ion-card-subtitle>{{events.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>{{events.description}}</ion-card-content>
+          </ion-card>
+        </ion-col>
+      }
     </ion-row>
   </ion-grid>
-</ng-container>
+}
 

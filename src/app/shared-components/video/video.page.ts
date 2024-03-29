@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {MenuController, NavController, Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
@@ -11,15 +11,20 @@ import {WatchModel} from "../../models/sub-models/watch.model";
 })
 export class VideoPage {
 
+  private clipboard = inject(Clipboard);
+  private toastController = inject(ToastController);
+  private platform = inject(Platform);
+  private sanitizer = inject(DomSanitizer);
+  private navCtrl = inject(NavController);
+  private menuCtrl = inject(MenuController);
+
   textArea: string = "";
   defaultUrl: string = "https://www.youtube.com/embed/";
   opened: boolean = false;
   anyCard: WatchModel;
   youtubeUrl: SafeResourceUrl;
 
-  constructor(public clipboard: Clipboard, public toastController: ToastController,
-              public platform: Platform, public sanitizer: DomSanitizer, private navCtrl: NavController,
-              private menuCtrl: MenuController) {
+  constructor() {
     this.anyCard = JSON.parse(localStorage.getItem('card'));
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
   }

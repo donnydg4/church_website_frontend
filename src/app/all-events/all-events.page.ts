@@ -1,7 +1,8 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {MainEventModel} from "../models/sub-models/main-event.model";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-all-events',
@@ -10,19 +11,19 @@ import {MainEventModel} from "../models/sub-models/main-event.model";
 })
 export class AllEventsPage {
 
+  private dataService = inject(AllChurchInformationService);
+
   eventsInfo = signal<MainEventModel>({events: []});
 
-  constructor(private dataService: AllChurchInformationService) {
-  }
+  private getAllEvents$ = toObservable(this.dataService.allChurchInformation).pipe(
+    tap(data => this.eventsInfo.set(data.mainEvents)),
+    map(events => events.mainEvents.events
+      .filter(event => event.type === 'event')
+      .filter(event => {
+        return new Date(event.date).getTime() >= new Date().setHours(0,0,0,0);
+      })
+    ));
 
-  getAllEvents$ = this.dataService.allWebsiteInformation$
-    .pipe(
-      tap(data => this.eventsInfo.set(data.mainEvents)),
-      map(events => events.mainEvents.events
-        .filter(event => event.type === 'event')
-        .filter(event => {
-          return new Date(event.date).getTime() >= new Date().setHours(0,0,0,0);
-        })
-      )
-    );
+  //signal created from observables
+  getAllEvents = toSignal(this.getAllEvents$);
 }

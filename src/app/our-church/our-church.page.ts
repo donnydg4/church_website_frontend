@@ -1,9 +1,10 @@
-import {Component, HostListener, signal} from '@angular/core';
+import {Component, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
 import {History} from "../models/sub-models/history.model";
 import {sortByDateHistory} from "../utils/utils";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-our-church',
@@ -11,6 +12,9 @@ import {sortByDateHistory} from "../utils/utils";
   styleUrls: ['./our-church.page.scss'],
 })
 export class OurChurchPage {
+
+  private dataService = inject(AllChurchInformationService);
+  private platform = inject(Platform);
 
   public platformWidth = this.platform.width()
 
@@ -31,10 +35,8 @@ export class OurChurchPage {
     console.log(this.selectedSegment);
   }
 
-  constructor(private dataService: AllChurchInformationService, private platform: Platform) {
-  }
-
-  ourChurch$ = this.dataService.allWebsiteInformation$
+  //rxjs to modify
+  ourChurch$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       tap(data => {
         data.allWebsiteInformation.ourChurch.history.individualHistoryObject.sort(sortByDateHistory);
@@ -43,4 +45,7 @@ export class OurChurchPage {
       }),
       map(data => data.allWebsiteInformation.ourChurch)
     );
+
+  //rxjs to signal
+  ourChurch = toSignal(this.ourChurch$);
 }

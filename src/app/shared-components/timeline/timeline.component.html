@@ -5,16 +5,18 @@
   </ion-card-header>
   <ion-card-content style="padding: 0px">
     <ul class="timeline">
-      <li *ngFor="let item of items.individualHistoryObject; let i = index">
-        <div [ngClass]="i % 2 === 0 ? 'direction-l' : 'direction-r'">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">{{ item.title }}</span>
-            <span class="time-wrapper"><span class="time">{{ item.date | date: 'MMM yyyy' }}</span></span>
+      @for (item of items.individualHistoryObject; track item; let i = $index) {
+        <li>
+          <div [ngClass]="i % 2 === 0 ? 'direction-l' : 'direction-r'">
+            <div class="flag-wrapper">
+              <span class="hexa"></span>
+              <span class="flag">{{ item.title }}</span>
+              <span class="time-wrapper"><span class="time">{{ item.date | date: 'MMM yyyy' }}</span></span>
+            </div>
+            <div class="desc">{{item.description}}</div>
           </div>
-          <div class="desc">{{item.description}}</div>
-        </div>
-      </li>
+        </li>
+      }
     </ul>
   </ion-card-content>
 </ion-card>

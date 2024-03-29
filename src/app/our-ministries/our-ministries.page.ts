@@ -1,8 +1,9 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";
 import {OurMinistriesModel} from "../models/sub-models/our-ministries.model";
+import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-our-ministries',
@@ -11,16 +12,19 @@ import {OurMinistriesModel} from "../models/sub-models/our-ministries.model";
 })
 export class OurMinistriesPage {
 
+  private dataService = inject(AllChurchInformationService);
+
   ourMinistries = signal<OurMinistriesModel>({});
 
-  constructor(private dataService: AllChurchInformationService) {
-  }
-
-  displayOurMinistryCards$ = this.dataService.allWebsiteInformation$
+ //rxjs to modify
+  displayOurMinistryCards$ = toObservable(this.dataService.allChurchInformation)
     .pipe(
       tap(data => this.ourMinistries.set(data.ourMinistriesPage)),
       map(ourMinistryPageInfo => ourMinistryPageInfo.ourMinistriesPage.displayCards.sort(sortByCardCategory))
     );
+
+  //rjxs to signal
+  displayOurMinistryCards = toSignal(this.displayOurMinistryCards$);
 }
 
 

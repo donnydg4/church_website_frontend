@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {BehaviorSubject, combineLatest} from "rxjs";
@@ -14,11 +14,18 @@ import {Router} from "@angular/router";
   styleUrls: ['./calendar.page.scss'],
 })
 export class CalendarPage implements OnInit {
+
+  private dataService = inject(AllChurchInformationService);
+  private router = inject(Router);
+  private navExtras = inject(ExtrasService);
+
   dateRange: FormGroup;
   minDate: Date;
   maxDate: Date;
   twoWeeksDate: Date;
   date = new Date();
+
+  //TODO: Figure out how to incorporate signals here maybe?
 
   //CalendarEvents subjects
   private beginningDateSubject: BehaviorSubject<Date> = new BehaviorSubject<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate()));
@@ -28,7 +35,7 @@ export class CalendarPage implements OnInit {
   endDateAction$ = this.endDateSubject.asObservable();
 
   calendarEvents$ = combineLatest([
-    this.dataService.allWebsiteInformation$,
+    this.dataService.allWebsiteInformationForCalendar$,
     this.beginningDateAction$,
     this.endDateAction$
   ])
@@ -43,7 +50,7 @@ export class CalendarPage implements OnInit {
       ).sort(sortByDateCalendar))
     );
 
-  constructor(private dataService: AllChurchInformationService, private router: Router, private navExtras: ExtrasService) {
+  constructor() {
     const date = new Date();
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth(); //getMonth starts at 0

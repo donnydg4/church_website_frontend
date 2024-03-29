@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {SeriesCardModel} from "../../models/sub-models/series-card.model";
 import {convertSpaceToDash, sortByDate} from "../../utils/utils";
@@ -12,9 +12,12 @@ import {Router} from "@angular/router";
 })
 export class SeriesListPage {
 
+  private extrasService = inject(ExtrasService);
+  private router = inject(Router);
+
   seriesCardFromStorage: SeriesCardModel;
 
-  constructor(private extrasService: ExtrasService, private router: Router) {
+  constructor() {
     this.seriesCardFromStorage = JSON.parse(localStorage.getItem('series'));
   }
 

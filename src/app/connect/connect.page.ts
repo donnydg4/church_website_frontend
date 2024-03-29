@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, inject, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ContactFormModel} from "../models/contact-form.model";
@@ -11,6 +11,9 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./connect.page.scss'],
 })
 export class ConnectPage {
+
+  private http = inject(HttpClient);
+  private _snackbar = inject(MatSnackBar);
 
   @ViewChild('form') form;
   contactModel: ContactFormModel;
@@ -35,9 +38,6 @@ export class ConnectPage {
       validators: [Validators.required, Validators.maxLength(500), Validators.minLength(30)]
     })
   });
-
-  constructor(private http: HttpClient, private _snackbar: MatSnackBar) {
-  }
 
   openSnackBar() {
     this._snackbar.open("Thank You For Your Submission!", "Close");

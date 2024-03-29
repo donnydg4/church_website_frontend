@@ -30,20 +30,26 @@
                   <mat-form-field appearance="outline" style="width: 100%; font-size: 15px;" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Category <span class="required">*</span></mat-label>
                     <mat-select formControlName="category" multiple disableRipple
-                                placeholder="Select a Category">
+                      placeholder="Select a Category">
                       <mat-select-trigger>
                         {{contactForm.controls.category.value?.[0] || ''}}
-                        <span *ngIf="(contactForm.controls.category.value?.length || 0) > 1"
-                              class="example-additional-selection">
-        (+{{(contactForm.controls.category.value?.length || 0) - 1}} {{contactForm.controls.category.value?.length === 2 ? 'other' : 'others'}}
+                        @if ((contactForm.controls.category.value?.length || 0) > 1) {
+                          <span
+                            class="example-additional-selection">
+                            (+{{(contactForm.controls.category.value?.length || 0) - 1}} {{contactForm.controls.category.value?.length === 2 ? 'other' : 'others'}}
                           )</span>
+                        }
                       </mat-select-trigger>
-                      <mat-option *ngFor="let category of categoryList" [value]="category">{{category}}</mat-option>
+                      @for (category of categoryList; track category) {
+                        <mat-option [value]="category">{{category}}</mat-option>
+                      }
 
                     </mat-select>
-                    <mat-error *ngIf="contactForm.controls.category.hasError('required')">
-                      Please select one or more categories
-                    </mat-error>
+                    @if (contactForm.controls.category.hasError('required')) {
+                      <mat-error>
+                        Please select one or more categories
+                      </mat-error>
+                    }
                   </mat-form-field>
                 </div>
               </ion-col>
@@ -53,15 +59,21 @@
                   <mat-form-field appearance="outline" style="width: 100%; font-size: 15px" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Your name <span class="required">*</span></mat-label>
                     <input matInput formControlName="name">
-                    <mat-error *ngIf="contactForm.controls.name.hasError('required')">
-                      Please enter a valid name
-                    </mat-error>
-                    <mat-error *ngIf="contactForm.controls.name.hasError('minlength')">
-                      Please enter more than 5 characters
-                    </mat-error>
-                    <mat-error *ngIf="contactForm.controls.name.hasError('maxlength')">
-                      Please enter less than 40 characters: {{contactForm.controls.name.value.length}} / 40
-                    </mat-error>
+                    @if (contactForm.controls.name.hasError('required')) {
+                      <mat-error>
+                        Please enter a valid name
+                      </mat-error>
+                    }
+                    @if (contactForm.controls.name.hasError('minlength')) {
+                      <mat-error>
+                        Please enter more than 5 characters
+                      </mat-error>
+                    }
+                    @if (contactForm.controls.name.hasError('maxlength')) {
+                      <mat-error>
+                        Please enter less than 40 characters: {{contactForm.controls.name.value.length}} / 40
+                      </mat-error>
+                    }
                   </mat-form-field>
                 </div>
               </ion-col>
@@ -70,13 +82,17 @@
                   <mat-form-field appearance="outline" style="width: 100%; font-size: 15px" hideRequiredMarker>
                     <mat-label style="font-size: 14px">Email <span class="required">*</span></mat-label>
                     <input matInput type="email" formControlName="email" placeholder="Ex. pat@example.com">
-                    <mat-error
-                      *ngIf="contactForm.controls.email.hasError('email') && !contactForm.controls.email.hasError('required')">
-                      Please enter a valid email address
-                    </mat-error>
-                    <mat-error *ngIf="contactForm.controls.email.hasError('required')">
-                      Email is <strong>required</strong>
-                    </mat-error>
+                    @if (contactForm.controls.email.hasError('email') && !contactForm.controls.email.hasError('required')) {
+                      <mat-error
+                        >
+                        Please enter a valid email address
+                      </mat-error>
+                    }
+                    @if (contactForm.controls.email.hasError('required')) {
+                      <mat-error>
+                        Email is <strong>required</strong>
+                      </mat-error>
+                    }
                   </mat-form-field>
                 </div>
               </ion-col>
@@ -92,19 +108,25 @@
                 <mat-form-field style="width: 100%" appearance="outline" hideRequiredMarker>
                   <mat-label style="font-size: 14px">Questions or Comments <span class="required">*</span></mat-label>
                   <textarea #text matInput rows="5" formControlName="description" style="resize: none"
-                            placeholder="If you go over/under the limits (shown below), the Submit button will be disabled."
-                            maxlength="500"></textarea>
+                    placeholder="If you go over/under the limits (shown below), the Submit button will be disabled."
+                  maxlength="500"></textarea>
                   <mat-hint align="start"><strong>(Min. 30 characters / Max. 500 characters)</strong></mat-hint>
                   <mat-hint align="end">{{text.value.length}} / 500</mat-hint>
-                  <mat-error *ngIf="contactForm.controls.description.hasError('required')">
-                    Question or Comment is <strong>required</strong>
-                  </mat-error>
-                  <mat-error *ngIf="contactForm.controls.description.hasError('minlength')">
-                    Please give a bit more detail (over 30 characters): {{text.value.length}} / 500
-                  </mat-error>
-                  <mat-error *ngIf="contactForm.controls.description.hasError('maxlength')">
-                    Please keep questions or concerns under 500 characters: {{text.value.length}} / 500
-                  </mat-error>
+                  @if (contactForm.controls.description.hasError('required')) {
+                    <mat-error>
+                      Question or Comment is <strong>required</strong>
+                    </mat-error>
+                  }
+                  @if (contactForm.controls.description.hasError('minlength')) {
+                    <mat-error>
+                      Please give a bit more detail (over 30 characters): {{text.value.length}} / 500
+                    </mat-error>
+                  }
+                  @if (contactForm.controls.description.hasError('maxlength')) {
+                    <mat-error>
+                      Please keep questions or concerns under 500 characters: {{text.value.length}} / 500
+                    </mat-error>
+                  }
                 </mat-form-field>
               </ion-col>
             </ion-row>
@@ -128,43 +150,43 @@
             </ion-col>
           </ion-row>
           <br>
-          <ion-row>
-            <ion-col size="3.5">
-              <ion-text>Phone:</ion-text>
-            </ion-col>
-            <ion-col size="4" class="ion-margin-start">
-              <ion-text>815-297-2290</ion-text>
-            </ion-col>
-          </ion-row>
-          <br>
-          <ion-row>
-            <ion-col size="3.5">
-              <ion-text>Office Hours:</ion-text>
-            </ion-col>
-            <ion-col size="7.5" class="ion-margin-start">
-              <ion-text>Monday - Thursday, 8:00am - 4:00pm</ion-text>
-            </ion-col>
-          </ion-row>
-          <br>
-          <ion-row>
-            <ion-col size="3.5">
-              <ion-text>Office Location:</ion-text>
-            </ion-col>
-            <ion-col size="6" class="ion-margin-start">
-              <ion-text style="user-select: auto">
-                The Father's House
-                <br>
-                302 W. Stephenson St.
-                <br>
-                Freeport, IL 61032
-              </ion-text>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-col>
+            <ion-row>
+              <ion-col size="3.5">
+                <ion-text>Phone:</ion-text>
+              </ion-col>
+              <ion-col size="4" class="ion-margin-start">
+                <ion-text>815-297-2290</ion-text>
+              </ion-col>
+            </ion-row>
+            <br>
+              <ion-row>
+                <ion-col size="3.5">
+                  <ion-text>Office Hours:</ion-text>
+                </ion-col>
+                <ion-col size="7.5" class="ion-margin-start">
+                  <ion-text>Monday - Thursday, 8:00am - 4:00pm</ion-text>
+                </ion-col>
+              </ion-row>
+              <br>
+                <ion-row>
+                  <ion-col size="3.5">
+                    <ion-text>Office Location:</ion-text>
+                  </ion-col>
+                  <ion-col size="6" class="ion-margin-start">
+                    <ion-text style="user-select: auto">
+                      The Father's House
+                      <br>
+                        302 W. Stephenson St.
+                        <br>
+                          Freeport, IL 61032
+                        </ion-text>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
 
-    </ion-row>
-  </ion-grid>
-  <br><br><br>
-  <app-footer></app-footer>
-</ion-content>
+              </ion-row>
+            </ion-grid>
+            <br><br><br>
+            <app-footer></app-footer>
+          </ion-content>

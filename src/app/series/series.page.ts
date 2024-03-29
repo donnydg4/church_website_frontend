@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map} from "rxjs/operators";
 import {sortByDateSeries} from "../utils/utils";
@@ -11,7 +11,10 @@ import {combineLatest} from "rxjs";
 })
 export class SeriesPage {
 
-  seriesCards$ = this.dataService.allWebsiteInformation$
+  private dataService = inject(AllChurchInformationService);
+  seriesTitle = 'Series';
+
+  seriesCards$ = this.dataService.allWebsiteInformationForCalendar$
     .pipe(
       map(seriesCards => seriesCards.allSeriesCards.filter(allCards => (allCards.category === 'series' || allCards.category === 'devotional'))
         .sort(sortByDateSeries))
@@ -30,10 +33,4 @@ export class SeriesPage {
           return cards.title.toLowerCase().indexOf(query) > -1;
         }
       )));
-
-  seriesTitle = 'Series';
-
-  constructor(private dataService: AllChurchInformationService) {
-  }
-
 }

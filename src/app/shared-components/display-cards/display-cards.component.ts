@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {Observable} from "rxjs";
 import {DisplayCardModel} from "../../models/sub-models/display-card.model";
 import {NavController} from "@ionic/angular";
@@ -10,11 +10,12 @@ import {NavController} from "@ionic/angular";
 })
 export class DisplayCardsComponent {
 
+  private navCtrl = inject(NavController);
+
   isSelected: number;
 
-  @Input() displayCards: Observable<DisplayCardModel[]>;
+  @Input() displayCards: DisplayCardModel[];
 
-  constructor(private navCtrl: NavController) { }
   navigateToPage() {
     this.navCtrl.navigateForward([`connect`]);
   }

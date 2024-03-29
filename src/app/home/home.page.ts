@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
 import {NavController} from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
@@ -14,18 +14,18 @@ import {Navigation, Pagination} from "swiper";
 })
 export class HomePage {
 
-  constructor(private navCtrl: NavController, private dataService: AllChurchInformationService) {
-  }
+  private dataService = inject(AllChurchInformationService);
+  private navCtrl = inject(NavController);
 
   waysToEngage = signal<WaysToEngageModel[]>([]);
 
-  homeInformation$ = this.dataService.allWebsiteInformation$
-    .pipe(
-      tap(data => {
-        this.waysToEngage.set(data.allWebsiteInformation.homePage.waysToEngage);
-      }),
-      map(data => data.allWebsiteInformation.homePage)
-    );
+  //TODO: understand why this fails when converted to a signal?
+  homeInformation$ = this.dataService.allWebsiteInformationForCalendar$.pipe(
+    tap(data => {
+      this.waysToEngage.set(data.allWebsiteInformation.homePage.waysToEngage);
+    }),
+    map(data => data.allWebsiteInformation.homePage)
+  );
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);

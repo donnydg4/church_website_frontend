@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";
@@ -16,6 +16,10 @@ import {ExtrasService} from "../../service/extras.service";
 })
 export class AllWatchComponent {
 
+  private dataService = inject(AllChurchInformationService);
+  private router = inject(Router);
+  private extrasService = inject(ExtrasService);
+
   page: number = 1;
 
   @Input() title = '';
@@ -29,9 +33,6 @@ export class AllWatchComponent {
 
   handleChange(event) {
     this.dataService.searchQueryWord(event.target.value.toLowerCase());
-  }
-
-  constructor(private dataService: AllChurchInformationService, public router: Router, private extrasService: ExtrasService) {
   }
 
   pageEvent(page: number) {
