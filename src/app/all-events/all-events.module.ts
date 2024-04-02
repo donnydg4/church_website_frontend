@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {DatePipe, NgOptimizedImage} from '@angular/common';
 
 import {IonicModule} from '@ionic/angular';
 
@@ -11,12 +10,13 @@ import {EventComponent} from "./event/event.component";
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-    imports: [
-        IonicModule,
-        AllEventsPageRoutingModule,
-        SharedComponentsModule,
-        NgOptimizedImage
-    ],
+  imports: [
+    IonicModule,
+    AllEventsPageRoutingModule,
+    SharedComponentsModule,
+    NgOptimizedImage,
+    DatePipe
+  ],
     exports: [
         EventComponent,
         AllEventsPage

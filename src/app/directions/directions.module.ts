@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {NgOptimizedImage} from '@angular/common';
 
 import {IonicModule} from '@ionic/angular';
 

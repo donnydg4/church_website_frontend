@@ -1,9 +1,6 @@
 import {Component, computed, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map} from "rxjs/operators";
-import {sortByDate, sortByDateSeries} from "../utils/utils";
-import {combineLatest} from "rxjs";
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
+import {sortByDate} from "../utils/utils";
 
 @Component({
   selector: 'app-series',

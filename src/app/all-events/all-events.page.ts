@@ -1,8 +1,5 @@
-import {Component, computed, inject, signal} from '@angular/core';
+import {Component, computed, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map, tap} from "rxjs/operators";
-import {MainEventModel} from "../models/sub-models/main-event.model";
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-all-events',
