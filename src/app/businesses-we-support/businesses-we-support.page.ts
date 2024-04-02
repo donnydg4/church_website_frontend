@@ -1,9 +1,6 @@
-import {Component, computed, inject, signal} from '@angular/core';
-import {BusinessesWeSupportModel} from "../models/sub-models/businesses-we-support.model";
-import {map, tap} from "rxjs/operators";
+import {Component, computed, inject} from '@angular/core';
 import {sortByCardCategory} from "../utils/utils";
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-businesses-we-support',

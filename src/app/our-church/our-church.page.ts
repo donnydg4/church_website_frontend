@@ -1,10 +1,6 @@
-import {Component, computed, HostListener, inject, signal} from '@angular/core';
+import {Component, computed, HostListener, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map, tap} from "rxjs/operators";
 import {Platform} from "@ionic/angular";
-import {History} from "../models/sub-models/history.model";
-import {sortByDateHistory} from "../utils/utils";
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-our-church',

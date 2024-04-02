@@ -1,8 +1,6 @@
 import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {BehaviorSubject, combineLatest} from "rxjs";
-import {map} from "rxjs/operators";
 import {convertSpaceToDash, sortByDateCalendar} from "../utils/utils";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {ExtrasService} from "../service/extras.service";
@@ -70,6 +68,7 @@ export class CalendarPage implements OnInit {
   navigateToStandardLayout(calendarEvent: CalendarEvent): void {
     this.navExtras.setCalendarEvent(calendarEvent);
     localStorage.setItem('calendar', JSON.stringify(this.navExtras.getCalendarEvents()));
+    console.log(JSON.stringify(this.navExtras.getCalendarEvents()));
     this.router.navigate(['/calendar', convertSpaceToDash(calendarEvent.title)]);
   }
 

@@ -1,16 +1,17 @@
 <ion-grid [fixed]="true" style="margin-top: 3%; margin-bottom: 3%">
   @if (displayCards) {
     <ion-row class="ion-text-left">
-      @for (card of displayCards; track card; let i = $index) {
+      @for (card of displayCards;track card;let i = $index) {
         <ion-col size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
           <ion-card mode="md" style="max-width: 421px;">
             <swiper-container style="height: 300px" pagination="true">
-              @for (cardImage of card.imageUrl; track cardImage) {
+              @for (cardImage of card.imageUrl;track cardImage) {
                 <swiper-slide>
                   <div style="height: 100%; width: 100%">
                     <picture>
-                      <source type="image/webp"  >
-                      <img [ngSrc]="cardImage" alt="" style="min-height: 300px; max-height: 300px; width: 100%;" decoding="async" priority width="" height="" ngSrcset="" sizes="">
+                      <source type="image/webp">
+                      <img [ngSrc]="cardImage" alt="" style="min-height: 300px; max-height: 300px; width: 100%;"
+                           decoding="async" priority width="" height="" ngSrcset="" sizes="">
                     </picture>
                   </div>
                 </swiper-slide>
@@ -19,34 +20,37 @@
             <ion-card-header>
               @if (card.type !== 'CHURCH LEADERSHIP') {
                 @if (card.startDate !== null) {
-                  <ion-card-subtitle>{{card.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                  <ion-card-subtitle>{{ card.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
                 }
                 @if (card.type !== null && card.startDate === null) {
-                  <ion-card-subtitle>{{card.type}}</ion-card-subtitle>
+                  <ion-card-subtitle>{{ card.type }}</ion-card-subtitle>
                 }
-              }
-              @if (card.type === 'CHURCH LEADERSHIP') {
+              } @else {
                 @if (card.type !== null && card.startDate === null) {
-                  <ion-card-subtitle>{{card.description}}</ion-card-subtitle>
+                  <ion-card-subtitle>{{ card.description }}</ion-card-subtitle>
                 }
               }
-              <ion-card-title>{{card.title}}</ion-card-title>
+              <ion-card-title>{{ card.title }}</ion-card-title>
             </ion-card-header>
             @if (card.type !== 'CHURCH LEADERSHIP') {
-              <ion-card-content [ngClass]="{'limitTextHeight': isSelected !== i}">{{card.description}}</ion-card-content>
+              <ion-card-content [ngClass]="{'limitTextHeight': isSelected !== i}">{{ card.description }}
+              </ion-card-content>
             }
             @if (card.type !== 'CHURCH LEADERSHIP') {
               <ion-grid class="custom_buttons" fixed="true">
-                <ion-row >
+                <ion-row>
                   <ion-col size="6" class="ion-no-padding">
                     <ion-button class="transparent"
-                      (click)="isSelected === i ? isSelected = null : isSelected = i"
-                      style="text-transform: capitalize">
-                    {{ isSelected !== i ? 'Read More' : 'Read Less'}}</ion-button>
+                                (click)="isSelected === i ? isSelected = null : isSelected = i"
+                                style="text-transform: capitalize">
+                      {{ isSelected !== i ? 'Read More' : 'Read Less' }}
+                    </ion-button>
                   </ion-col>
                   <ion-col style="text-align: end" class="ion-no-padding">
                     @if (card.learnMore) {
-                      <ion-button (click)="navigateToPage()" class="learn" style="text-transform: capitalize">Contact Us</ion-button>
+                      <ion-button (click)="navigateToPage()" class="learn" style="text-transform: capitalize">Contact
+                        Us
+                      </ion-button>
                     }
                   </ion-col>
                 </ion-row>

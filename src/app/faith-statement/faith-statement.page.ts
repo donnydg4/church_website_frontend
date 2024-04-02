@@ -1,7 +1,5 @@
-import {Component, computed, inject, signal,} from '@angular/core';
+import {Component, computed, inject,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {map} from "rxjs/operators";
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-faith-statement',

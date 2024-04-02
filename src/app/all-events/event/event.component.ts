@@ -1,5 +1,4 @@
-import {Component, Input, signal} from '@angular/core';
-import {Observable} from "rxjs";
+import {Component, Input} from '@angular/core';
 import {convertSpaceToDash,} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
