@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, computed, effect, inject, signal} from '@angular/core';
 import {NavController} from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
@@ -18,18 +18,20 @@ export class HomePage {
   private dataService = inject(AllChurchInformationService);
   private navCtrl = inject(NavController);
 
-  waysToEngage = signal<WaysToEngageModel[]>([]);
 
-  //TODO: understand why this fails when converted to a signal?
-  homeInformation$ = toObservable(this.dataService.allChurchInformation)
-    .pipe(
-    tap(data => {
-      this.waysToEngage.set(data.allWebsiteInformation.homePage.waysToEngage);
-    }),
-    map(data => data.allWebsiteInformation.homePage)
-  );
+  // waysToEngage = signal<WaysToEngageModel[]>([]);
+  // TODO: understand why this fails when converted to a signal?
+  // homeInformation$ = toObservable(this.dataService.allChurchInformation)
+  //   .pipe(
+  //   tap(data => {
+  //     this.waysToEngage.set(data.allWebsiteInformation.homePage.waysToEngage);
+  //   }),
+  //   map(data => data.allWebsiteInformation.homePage)
+  // );
 
-  homeInfo = toSignal(this.homeInformation$);
+  homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
+  waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
+
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);

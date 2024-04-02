@@ -5,10 +5,10 @@
         <div class="outside">
           <picture>
             <source type="image/webp">
-            <img [ngSrc]="leadershipInfo().coverPhoto" decoding="async" width="" height="" alt="">
+            <img [ngSrc]="leadershipInfo()?.coverPhoto" decoding="async" width="" height="" alt="">
           </picture>
           <div class="inside">
-            <h1>{{leadershipInfo().title}}</h1>
+            <h1>{{leadershipInfo()?.title}}</h1>
           </div>
         </div>
       </ion-col>

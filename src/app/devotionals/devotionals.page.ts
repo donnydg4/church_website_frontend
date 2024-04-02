@@ -16,16 +16,17 @@ export class DevotionalsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  devotionalCards$ = toObservable(this.dataService.allChurchInformation)
-    .pipe(
-      map(devotionalCards => devotionalCards.allWatchCards.filter(allCards => allCards.category === 'devotional')
-        .sort(sortByDate))
-    );
+  // devotionalCards$ = toObservable(this.dataService.allChurchInformation)
+  //   .pipe(
+  //     map(devotionalCards => devotionalCards.allWatchCards.filter(allCards => allCards.category === 'devotional')
+  //       .sort(sortByDate))
+  //   );
+  //
+  // devotionalCards = toSignal(this.devotionalCards$);
 
-  devotionalCards = toSignal(this.devotionalCards$);
-
-  devotionalCardsSearchable = computed(() => this.devotionalCards().filter(
-    cards => {
+  devotionalCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards
+    .filter(allCards => allCards.category === 'devotional').sort(sortByDate)
+    .filter(cards => {
       if (!this.dataService.searchQuerySignal()) {
         return cards
       }

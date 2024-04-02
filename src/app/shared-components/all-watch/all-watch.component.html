@@ -17,7 +17,7 @@
   </ion-row>
 
   @if (title !== 'Series') {
-    @if (objectArray.length > 0) {
+    @if (objectArray) {
       <ion-row style="padding-top: 30px">
         @for (cards of objectArray | paginate: {itemsPerPage: 15, currentPage: page, totalItems: objectArray.length}; track cards) {
           <ion-col size-xl="4" size-sm="4" size-xs="12" class="custom"
@@ -26,12 +26,12 @@
               <div class="img_good">
                 <picture>
                   <source type="image/webp"  >
-                  <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
+                  <img alt="img-src" [ngSrc]="cards?.imageUrl" decoding="async" width="" height="">
                 </picture>
               </div>
               <ion-card-header>
-                <ion-card-title>{{cards.title}}</ion-card-title>
-                <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-title>{{cards?.title}}</ion-card-title>
+                <ion-card-subtitle>{{cards?.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
               </ion-card-header>
             </ion-card>
           </ion-col>
@@ -41,7 +41,7 @@
   }
 
   @if (title === 'Series') {
-    @if (seriesArray.length > 0) {
+    @if (seriesArray) {
       <ion-row style="padding-top: 30px">
         @for (cards of seriesArray | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesArray.length}; track cards) {
           <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
@@ -50,12 +50,12 @@
               <div class="img_good">
                 <picture>
                   <source type="image/webp"  >
-                  <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
+                  <img alt="img-src" [ngSrc]="cards?.imageUrl" decoding="async" width="" height="">
                 </picture>
               </div>
               <ion-card-header>
-                <ion-card-title>{{cards.title}}</ion-card-title>
-                <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-title>{{cards?.title}}</ion-card-title>
+                <ion-card-subtitle>{{cards?.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
               </ion-card-header>
             </ion-card>
           </ion-col>

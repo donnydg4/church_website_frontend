@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, computed, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {MinistriesWeSupportModel} from "../models/sub-models/ministries-we-support.model";
@@ -13,15 +13,16 @@ export class MinistriesWeSupportPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  ministriesWeSupportInfo = signal<MinistriesWeSupportModel>({});
 
   //rxjs to modify
-  displayMinistriesWeSupportCards$ = toObservable(this.dataService.allChurchInformation)
-    .pipe(
-      tap(data => this.ministriesWeSupportInfo.set(data.ministriesWeSupportPage)),
-      map(ministriesWeSupportInfo => ministriesWeSupportInfo.ministriesWeSupportPage.displayCards)
-    );
+  // displayMinistriesWeSupportCards$ = toObservable(this.dataService.allChurchInformation)
+  //   .pipe(
+  //     tap(data => this.ministriesWeSupportInfo.set(data.ministriesWeSupportPage)),
+  //     map(ministriesWeSupportInfo => ministriesWeSupportInfo.ministriesWeSupportPage.displayCards)
+  //   );
+
+  ministriesWeSupportInfo = computed(() => this.dataService.allChurchInformation().ministriesWeSupportPage);
 
   //rxjs to signal
-  displayMinistriesWeSupportCards = toSignal(this.displayMinistriesWeSupportCards$);
+  displayMinistriesWeSupportCards = computed(() => this.dataService.allChurchInformation().ministriesWeSupportPage?.displayCards);
 }

@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, computed, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {LeadershipModel} from "../models/sub-models/leadership.model";
@@ -13,18 +13,20 @@ export class LeadershipPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  leadershipInfo = signal<LeadershipModel>({});
 
-  //rxjs to modify call
-  leadershipCards$ = toObservable(this.dataService.allChurchInformation)
-    .pipe(
-      tap(data => {
-        this.leadershipInfo.set(data.leadershipPage);
-        console.log(data)
-      }),
-      map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards)
-    );
+  // //rxjs to modify call
+  // leadershipCards$ = toObservable(this.dataService.allChurchInformation)
+  //   .pipe(
+  //     tap(data => {
+  //       this.leadershipInfo.set(data.leadershipPage);
+  //       console.log(data)
+  //     }),
+  //     map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards)
+  //   );
+
+
+  leadershipInfo = computed(() => this.dataService.allChurchInformation()!.leadershipPage);
 
   //signal
-  leadershipCards = toSignal(this.leadershipCards$);
+  leadershipCards = computed(() => this.dataService.allChurchInformation().leadershipPage?.displayCards);
 }

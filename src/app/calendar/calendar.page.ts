@@ -37,7 +37,7 @@ export class CalendarPage implements OnInit {
   firstDate = signal<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate()));
   secondDate = signal<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate() + 14));
 
-  calendarEventsSignal = computed(() => this.dataService.allChurchInformation().allCalendarInformation.filter(
+  calendarEventsSignal = computed(() => this.dataService.allChurchInformation()?.allCalendarInformation.filter(
     event => {
       if (this.secondDate() === null || new Date(this.firstDate()).toDateString() === new Date(this.secondDate()).toDateString()) {
         return new Date(event.date).toDateString() === new Date(this.firstDate()).toDateString();

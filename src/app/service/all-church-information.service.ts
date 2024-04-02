@@ -39,6 +39,6 @@ export class AllChurchInformationService {
     );
 
   //convert http call to signal
-  allChurchInformation = toSignal(this.allWebsiteInformation$.pipe(tap(data => console.log(data))));
+  allChurchInformation = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
 
 }
