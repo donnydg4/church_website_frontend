@@ -18,12 +18,6 @@ export class OurChurchPage {
   public platformWidth = this.platform.width()
   selectedSegment: string = 'history';
 
-  // historyItems = signal<History>({
-  //   title: '',
-  //   subTitle: '',
-  //   individualHistoryObject: []
-  // });
-
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
     this.platformWidth = this.platform.width();
@@ -33,17 +27,6 @@ export class OurChurchPage {
     this.selectedSegment = event.currentTarget.value;
     console.log(this.selectedSegment);
   }
-
-  // //rxjs to modify
-  // ourChurch$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     tap(data => {
-  //       data.allWebsiteInformation.ourChurch.history.individualHistoryObject.sort(sortByDateHistory);
-  //       this.historyItems.set(data.allWebsiteInformation.ourChurch.history);
-  //       console.log(data.allWebsiteInformation.ourChurch.history);
-  //     }),
-  //     map(data => data.allWebsiteInformation.ourChurch)
-  //   );
 
   //signals which replaced rxjs
   historyItems = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch?.history);

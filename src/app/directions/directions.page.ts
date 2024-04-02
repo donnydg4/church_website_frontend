@@ -12,12 +12,6 @@ export class DirectionsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  //rxjs to modify
-  // locations$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //   map(directions => directions.allWebsiteInformation.directions)
-  // );
-
   //convert rxjs to signal
   locations = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.directions);
 }

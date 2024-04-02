@@ -14,17 +14,8 @@ export class OurMinistriesPage {
 
   private dataService = inject(AllChurchInformationService);
 
-
- // //rxjs to modify
- //  displayOurMinistryCards$ = toObservable(this.dataService.allChurchInformation)
- //    .pipe(
- //      tap(data => this.ourMinistries.set(data.ourMinistriesPage)),
- //      map(ourMinistryPageInfo => ourMinistryPageInfo.ourMinistriesPage.displayCards.sort(sortByCardCategory))
- //    );
-
-
-  ourMinistries = computed(() => this.dataService?.allChurchInformation()!.ourMinistriesPage!);
-  //rjxs to signal
+  //signals
+  ourMinistries = computed(() => this.dataService?.allChurchInformation()?.ourMinistriesPage!);
   displayOurMinistryCards = computed(() => this.dataService.allChurchInformation()?.ourMinistriesPage?.displayCards.sort(sortByCardCategory));
 }
 

@@ -15,8 +15,6 @@ import {SwiperDirective} from "../swiper.directive";
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     IonicModule,
     HomePageRoutingModule,
     MatToolbarModule,

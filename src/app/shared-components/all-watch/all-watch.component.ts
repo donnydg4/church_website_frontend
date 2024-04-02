@@ -23,7 +23,7 @@ export class AllWatchComponent {
   page: number = 1;
 
   @Input() title = ''
-  objectArray = input<WatchModel[]>();
+  @Input() objectArray: WatchModel[] = [];
   @Input() seriesArray: SeriesCardModel[] = [];
 
   public config: PaginationInstance = {

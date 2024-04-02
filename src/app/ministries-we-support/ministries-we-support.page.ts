@@ -13,16 +13,7 @@ export class MinistriesWeSupportPage {
 
   private dataService = inject(AllChurchInformationService);
 
-
-  //rxjs to modify
-  // displayMinistriesWeSupportCards$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     tap(data => this.ministriesWeSupportInfo.set(data.ministriesWeSupportPage)),
-  //     map(ministriesWeSupportInfo => ministriesWeSupportInfo.ministriesWeSupportPage.displayCards)
-  //   );
-
+  //signals
   ministriesWeSupportInfo = computed(() => this.dataService.allChurchInformation().ministriesWeSupportPage);
-
-  //rxjs to signal
   displayMinistriesWeSupportCards = computed(() => this.dataService.allChurchInformation().ministriesWeSupportPage?.displayCards);
 }

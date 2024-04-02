@@ -15,7 +15,7 @@ import {TimelineComponent} from "./timeline/timeline.component";
 
 @NgModule({
     imports: [
-        CommonModule,
+      CommonModule,
         RouterModule.forChild([]),
         IonicModule,
         MatToolbarModule,

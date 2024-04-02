@@ -8,8 +8,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     IonicModule,
     DevotionalsPageRoutingModule,
     SharedComponentsModule

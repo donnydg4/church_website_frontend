@@ -15,22 +15,6 @@ export class GuestSpeakersPage {
   private dataService = inject(AllChurchInformationService);
   guestSpeakersTitle = 'Guest Speakers';
 
-  // guestSpeakersCards$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     map(guestSpeakerCards => guestSpeakerCards.allWatchCards.filter(allCards => allCards.category === 'guest')
-  //       .sort(sortByDate))
-  //   );
-  //
-  // guestSpeakerCards = toSignal(this.guestSpeakersCards$);
-  //
-  // guestSpeakerCardsSearchable = computed(() => this.guestSpeakerCards().filter(
-  //   cards => {
-  //     if (!this.dataService.searchQuerySignal()) {
-  //       return cards
-  //     }
-  //     return cards.title.toLowerCase().indexOf(this.dataService.searchQuerySignal()) > -1;
-  //   }
-  // ));
   guestSpeakerCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards
     .filter(allCards => allCards.category === 'guest').sort(sortByDate)
     .filter(cards => {
@@ -40,19 +24,4 @@ export class GuestSpeakersPage {
         return cards.title.toLowerCase().indexOf(this.dataService.searchQuerySignal()) > -1;
       }
     ));
-
-  // guestSpeakerCardsSearchable$ = combineLatest([
-  //   this.guestSpeakersCards$,
-  //   this.dataService.searchQueryAction$
-  // ])
-  //   .pipe(
-  //     map(([cards, query]) => cards.filter(
-  //       cards => {
-  //         if (!query) {
-  //           return cards
-  //         }
-  //         return cards.title.toLowerCase().indexOf(query) > -1;
-  //       }
-  //     )));
-
 }

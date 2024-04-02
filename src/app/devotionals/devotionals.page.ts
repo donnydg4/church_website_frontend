@@ -16,14 +16,6 @@ export class DevotionalsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  // devotionalCards$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     map(devotionalCards => devotionalCards.allWatchCards.filter(allCards => allCards.category === 'devotional')
-  //       .sort(sortByDate))
-  //   );
-  //
-  // devotionalCards = toSignal(this.devotionalCards$);
-
   devotionalCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards
     .filter(allCards => allCards.category === 'devotional').sort(sortByDate)
     .filter(cards => {
@@ -34,18 +26,4 @@ export class DevotionalsPage {
     }
   ));
 
-  // devotionalCardsSearchable$ = combineLatest([
-  //   this.devotionalCards$,
-  //   this.dataService.searchQueryAction$
-  // ])
-  //   .pipe(
-  //     map(([cards, query]) => cards.filter(
-  //       cards => {
-  //         if (!query) {
-  //           return cards
-  //         }
-  //         return cards.title.toLowerCase().indexOf(query) > -1;
-  //       }
-  //     ))
-  //   );
 }

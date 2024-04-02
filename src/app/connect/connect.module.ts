@@ -12,7 +12,6 @@ import {StandardLayoutPageModule} from "../standard-layout/standard-layout.modul
 
 @NgModule({
   imports: [
-    CommonModule,
     FormsModule,
     IonicModule,
     ConnectPageRoutingModule,

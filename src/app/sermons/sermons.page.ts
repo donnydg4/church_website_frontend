@@ -15,13 +15,6 @@ export class SermonsPage {
   private dataService = inject(AllChurchInformationService);
   sermonTitle = 'Sermons';
 
-  // sermonCards$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     tap(data => console.log(data)),
-  //     map(sermonCards => sermonCards.allWatchCards.filter(allCards => allCards.category === 'sermon')
-  //     .sort(sortByDate))
-  // );
-
   sermonCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards.filter(allCards => allCards!.category === 'sermon').sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {
@@ -31,16 +24,4 @@ export class SermonsPage {
       }
     ));
 
-  // //signal
-  // sermonCards = toSignal(this.sermonCards$);
-  //
-  // //computed signal
-  // sermonCardsSearchable = computed(() => this.sermonCards().filter(
-  //   cards => {
-  //     if (!this.dataService.searchQuerySignal()) {
-  //       return cards
-  //     }
-  //     return cards.title.toLowerCase().indexOf(this.dataService.searchQuerySignal()) > -1;
-  //   }
-  // ));
 }

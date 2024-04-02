@@ -12,8 +12,6 @@ import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
     imports: [
-        CommonModule,
-        FormsModule,
         IonicModule,
         FaithStatementPageRoutingModule,
         SharedComponentsModule,

@@ -18,20 +18,8 @@ export class HomePage {
   private dataService = inject(AllChurchInformationService);
   private navCtrl = inject(NavController);
 
-
-  // waysToEngage = signal<WaysToEngageModel[]>([]);
-  // TODO: understand why this fails when converted to a signal?
-  // homeInformation$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //   tap(data => {
-  //     this.waysToEngage.set(data.allWebsiteInformation.homePage.waysToEngage);
-  //   }),
-  //   map(data => data.allWebsiteInformation.homePage)
-  // );
-
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
   waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
-
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);

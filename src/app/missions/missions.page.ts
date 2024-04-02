@@ -14,16 +14,7 @@ export class MissionsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-
-  // //rxjs to modify
-  // missionCards$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     tap(data => this.missions.set(data.missionsPage)),
-  //     map(missionsInfo => missionsInfo.missionsPage.displayCards.sort(sortByDateDisplay).sort(sortByCardCategory))
-  //   );
-
+  //signals
   missions = computed(() => this.dataService.allChurchInformation()?.missionsPage);
-
-  //rxjs to signal
   missionCards = computed(() => this.dataService.allChurchInformation()?.missionsPage?.displayCards.sort(sortByDateDisplay).sort(sortByCardCategory));
 }

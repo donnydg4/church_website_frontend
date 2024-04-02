@@ -12,12 +12,6 @@ export class FaithStatementPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  // //rxjs modify
-  // faithStuff$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     map(data => data.statementOfFaith)
-  //   );
-
   //convert rxjs to signal
   faithStuff = computed(() => this.dataService.allChurchInformation()?.statementOfFaith);
 

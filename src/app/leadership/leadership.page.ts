@@ -13,20 +13,7 @@ export class LeadershipPage {
 
   private dataService = inject(AllChurchInformationService);
 
-
-  // //rxjs to modify call
-  // leadershipCards$ = toObservable(this.dataService.allChurchInformation)
-  //   .pipe(
-  //     tap(data => {
-  //       this.leadershipInfo.set(data.leadershipPage);
-  //       console.log(data)
-  //     }),
-  //     map(leadershipPageInfo => leadershipPageInfo.leadershipPage.displayCards)
-  //   );
-
-
+  //signals
   leadershipInfo = computed(() => this.dataService.allChurchInformation()!.leadershipPage);
-
-  //signal
   leadershipCards = computed(() => this.dataService.allChurchInformation().leadershipPage?.displayCards);
 }
