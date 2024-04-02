@@ -17,21 +17,21 @@
   </ion-row>
 
   @if (title !== 'Series') {
-    @if (objectArray | async; as watchCards) {
+    @if (objectArray) {
       <ion-row style="padding-top: 30px">
-        @for (cards of watchCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: watchCards.length}; track cards) {
+        @for (cards of objectArray | paginate: {itemsPerPage: 15, currentPage: page, totalItems: objectArray.length}; track cards) {
           <ion-col size-xl="4" size-sm="4" size-xs="12" class="custom"
             >
             <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
               <div class="img_good">
                 <picture>
-                  <source type="image/webp"  >
-                  <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
+                  <source type="image/webp"   srcset="">
+                  <img alt="img-src" [ngSrc]="cards?.imageUrl" decoding="async" width="" height="" ngSrcset="" sizes="">
                 </picture>
               </div>
               <ion-card-header>
-                <ion-card-title>{{cards.title}}</ion-card-title>
-                <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-title>{{cards?.title}}</ion-card-title>
+                <ion-card-subtitle>{{cards?.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
               </ion-card-header>
             </ion-card>
           </ion-col>
@@ -41,21 +41,21 @@
   }
 
   @if (title === 'Series') {
-    @if (seriesArray | async; as seriesCards) {
+    @if (seriesArray) {
       <ion-row style="padding-top: 30px">
-        @for (cards of seriesCards | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesCards.length}; track cards) {
+        @for (cards of seriesArray | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesArray.length}; track cards) {
           <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
             >
             <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
               <div class="img_good">
                 <picture>
                   <source type="image/webp"  >
-                  <img alt="img-src" [ngSrc]="cards.imageUrl" decoding="async" width="" height="">
+                  <img alt="img-src" [ngSrc]="cards?.imageUrl" decoding="async" width="" height="" ngSrcset="" sizes="">
                 </picture>
               </div>
               <ion-card-header>
-                <ion-card-title>{{cards.title}}</ion-card-title>
-                <ion-card-subtitle>{{cards.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-title>{{cards?.title}}</ion-card-title>
+                <ion-card-subtitle>{{cards?.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
               </ion-card-header>
             </ion-card>
           </ion-col>

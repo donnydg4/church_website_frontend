@@ -5,8 +5,8 @@
         <ion-col size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
           <ion-card button mode="md" (click)="takeToStandardLayout(events)">
             <picture>
-              <source type="image/webp"  >
-              <img alt="img-src" [ngSrc]="events.imageUrl" decoding="async" height="" width="">
+              <source type="image/webp" srcset="{{events.imageUrl}}?width=100, 100w">
+              <img alt="img-src" [ngSrc]="events.imageUrl" decoding="async" height="" width="" ngSrcset="">
             </picture>
             <ion-card-header>
               <ion-card-title>{{events.title}}</ion-card-title>

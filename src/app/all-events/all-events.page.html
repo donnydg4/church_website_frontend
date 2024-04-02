@@ -6,10 +6,10 @@
           <div class="outside">
             <picture>
               <source type="image/webp">
-              <img [ngSrc]="eventsInfo().coverPhoto" decoding="async" width="" height="" alt="">
+              <img [ngSrc]="eventsInfo()?.coverPhoto" decoding="async" width="" height="" alt="" sizes="" ngSrcset="">
             </picture>
             <div class="inside">
-              <h1>{{eventsInfo().title}}</h1>
+              <h1>{{eventsInfo()?.title}}</h1>
             </div>
           </div>
         </ion-col>

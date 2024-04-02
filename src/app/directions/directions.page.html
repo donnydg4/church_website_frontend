@@ -11,23 +11,23 @@
                     >
                     <div style="text-align: center">
                       <h5>
-                        {{ location.title }}
+                        {{ location?.title }}
                       </h5>
                       <div>
                         <ion-text style="white-space: pre-wrap">
-                          {{ location.address.streetName }}
+                          {{ location?.address.streetName }}
                           <br>
-                            {{ location.address.cityStateZip }}
+                            {{ location?.address.cityStateZip }}
                             <br>
-                              {{ location.address.phoneNumber }}
+                              {{ location?.address.phoneNumber }}
                             </ion-text>
                           </div>
                         </div>
                         <br>
                           <div>
                             <picture>
-                              <source type="image/webp">
-                              <img [ngSrc]="location.imageUrl" decoding="async" width="" height="" alt="">
+                              <source type="image/webp" srcset="">
+                              <img [ngSrc]="location?.imageUrl" decoding="async" width="" height="" alt="" ngSrcset="" sizes="">
                             </picture>
                           </div>
                           <br>
@@ -45,23 +45,23 @@
                           <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="6">
                             <div style="text-align: center">
                               <h5>
-                                {{ location.title }}
+                                {{ location?.title }}
                               </h5>
                               <div>
                                 <ion-text style="white-space: pre-wrap">
-                                  {{ location.address.streetName }}
+                                  {{ location?.address.streetName }}
                                   <br>
-                                    {{ location.address.cityStateZip }}
+                                    {{ location?.address.cityStateZip }}
                                     <br>
-                                      {{ location.address.phoneNumber }}
+                                      {{ location?.address.phoneNumber }}
                                     </ion-text>
                                   </div>
                                 </div>
                                 <br>
                                   <div>
                                     <picture>
-                                      <source type="image/webp">
-                                      <img [ngSrc]="location.imageUrl" width="" height="" decoding="sync" priority alt="">
+                                      <source type="image/webp" srcset="">
+                                      <img [ngSrc]="location?.imageUrl" width="" height="" decoding="sync" priority alt="" ngSrcset="" sizes="">
                                     </picture>
                                   </div>
                                   <br>

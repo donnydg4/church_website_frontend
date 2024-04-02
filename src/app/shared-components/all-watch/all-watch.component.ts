@@ -1,4 +1,4 @@
-import {Component, inject, Input} from '@angular/core';
+import {Component, inject, input, Input} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {Observable} from "rxjs";
@@ -22,9 +22,9 @@ export class AllWatchComponent {
 
   page: number = 1;
 
-  @Input() title = '';
-  @Input() objectArray: Observable<WatchModel[]>
-  @Input() seriesArray: Observable<SeriesCardModel[]>
+  @Input() title = ''
+  @Input() objectArray: WatchModel[] = [];
+  @Input() seriesArray: SeriesCardModel[] = [];
 
   public config: PaginationInstance = {
     itemsPerPage: 15,

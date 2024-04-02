@@ -4,11 +4,11 @@
       <ion-col size="12">
         <div class="outside">
           <picture>
-            <source type="image/webp"  >
-            <img [ngSrc]="missions().coverPhoto" decoding="async" width="" height="">
+            <source type="image/webp"   srcset="">
+            <img [ngSrc]="missions()?.coverPhoto" decoding="async" width="" height="" sizes="" ngSrcset="">
           </picture>
           <div class="inside">
-            <h1>{{missions().title}}</h1>
+            <h1>{{missions()?.title}}</h1>
           </div>
         </div>
       </ion-col>

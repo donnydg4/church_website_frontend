@@ -18,8 +18,6 @@ import {LeadershipPageModule} from "../leadership/leadership.module";
 
 @NgModule({
     imports: [
-        CommonModule,
-        FormsModule,
         IonicModule,
         OurChurchPageRoutingModule,
         SharedComponentsModule,

@@ -12,7 +12,6 @@ import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   imports: [
-    CommonModule,
     FormsModule,
     IonicModule,
     CalendarPageRoutingModule,

@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, computed, inject, signal} from '@angular/core';
 import {BusinessesWeSupportModel} from "../models/sub-models/businesses-we-support.model";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";
@@ -14,16 +14,8 @@ export class BusinessesWeSupportPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  businessesWeSupport = signal<BusinessesWeSupportModel>({});
-
-  //convert signal to observable to modify it
-  private displayBusinessCards$ = toObservable(this.dataService.allChurchInformation)
-    .pipe(
-      tap(data => this.businessesWeSupport.set(data.businessesWeSupportPage)),
-      map(businessInfo => businessInfo.businessesWeSupportPage.displayCards.sort(sortByCardCategory))
-    );
-
   //convert back to signal to use in template!
-  displayBusinessCards = toSignal(this.displayBusinessCards$);
+  displayBusinessCards = computed(() => this.dataService.allChurchInformation().businessesWeSupportPage?.displayCards.sort(sortByCardCategory));
+  businessesWeSupport = computed(() => this.dataService.allChurchInformation()?.businessesWeSupportPage);
 
 }

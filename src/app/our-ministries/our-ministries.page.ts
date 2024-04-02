@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, computed, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {map, tap} from "rxjs/operators";
 import {sortByCardCategory} from "../utils/utils";
@@ -14,17 +14,9 @@ export class OurMinistriesPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  ourMinistries = signal<OurMinistriesModel>({});
-
- //rxjs to modify
-  displayOurMinistryCards$ = toObservable(this.dataService.allChurchInformation)
-    .pipe(
-      tap(data => this.ourMinistries.set(data.ourMinistriesPage)),
-      map(ourMinistryPageInfo => ourMinistryPageInfo.ourMinistriesPage.displayCards.sort(sortByCardCategory))
-    );
-
-  //rjxs to signal
-  displayOurMinistryCards = toSignal(this.displayOurMinistryCards$);
+  //signals
+  ourMinistries = computed(() => this.dataService?.allChurchInformation()?.ourMinistriesPage!);
+  displayOurMinistryCards = computed(() => this.dataService.allChurchInformation()?.ourMinistriesPage?.displayCards.sort(sortByCardCategory));
 }
 
 

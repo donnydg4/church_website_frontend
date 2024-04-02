@@ -55,8 +55,7 @@ import {NgOptimizedImage} from "@angular/common";
     FaithStatementPageModule,
     NgxPaginationModule,
     HttpClientModule,
-    MatSnackBarModule,
-    NgOptimizedImage
+    MatSnackBarModule
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],

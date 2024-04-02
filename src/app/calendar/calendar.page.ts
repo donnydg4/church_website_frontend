@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {BehaviorSubject, combineLatest} from "rxjs";
@@ -25,30 +25,17 @@ export class CalendarPage implements OnInit {
   twoWeeksDate: Date;
   date = new Date();
 
-  //TODO: Figure out how to incorporate signals here maybe?
+  firstDate = signal<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate()));
+  secondDate = signal<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate() + 14));
 
-  //CalendarEvents subjects
-  private beginningDateSubject: BehaviorSubject<Date> = new BehaviorSubject<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate()));
-  beginningDateAction$ = this.beginningDateSubject.asObservable();
-
-  private endDateSubject: BehaviorSubject<Date> = new BehaviorSubject<Date>(new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate() + 14));
-  endDateAction$ = this.endDateSubject.asObservable();
-
-  calendarEvents$ = combineLatest([
-    this.dataService.allWebsiteInformationForCalendar$,
-    this.beginningDateAction$,
-    this.endDateAction$
-  ])
-    .pipe(
-      map(([calendarEvents, firstDate, secondDate]) => calendarEvents.allCalendarInformation.filter(
-        event => {
-          if (secondDate === null || new Date(firstDate).toDateString() === new Date(secondDate).toDateString()) {
-            return new Date(event.date).toDateString() === new Date(firstDate).toDateString();
-          }
-          return new Date(event.date).getTime() >= firstDate.getTime() && new Date(event.date).getTime() <= secondDate.getTime()
-        }
-      ).sort(sortByDateCalendar))
-    );
+  calendarEventsSignal = computed(() => this.dataService.allChurchInformation()?.allCalendarInformation.filter(
+    event => {
+      if (this.secondDate() === null || new Date(this.firstDate()).toDateString() === new Date(this.secondDate()).toDateString()) {
+        return new Date(event.date).toDateString() === new Date(this.firstDate()).toDateString();
+      }
+      return new Date(event.date).getTime() >= this.firstDate().getTime() && new Date(event.date).getTime() <= this.secondDate().getTime()
+    }
+  ).sort(sortByDateCalendar));
 
   constructor() {
     const date = new Date();
@@ -76,8 +63,8 @@ export class CalendarPage implements OnInit {
   }
 
   selectDateRange(startDate?: Date, endDate?: Date) {
-    this.beginningDateSubject.next(startDate);
-    this.endDateSubject.next(endDate);
+    this.firstDate.set(startDate);
+    this.secondDate.set(endDate);
   }
 
   navigateToStandardLayout(calendarEvent: CalendarEvent): void {
