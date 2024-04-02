@@ -22,8 +22,8 @@ export class AllWatchComponent {
   page: number = 1;
 
   @Input() title = ''
-  @Input() objectArray: WatchModel[] = [];
-  @Input() seriesArray: SeriesCardModel[] = [];
+  @Input() objectArray?: WatchModel[] = [];
+  @Input() seriesArray?: SeriesCardModel[] = [];
 
   public config: PaginationInstance = {
     itemsPerPage: 15,

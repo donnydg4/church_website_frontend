@@ -10,11 +10,9 @@ import {sortByDate} from "../utils/utils";
 export class DevotionalsPage {
 
   devotionalsTitle = 'Devotionals';
-
   private dataService = inject(AllChurchInformationService);
 
-  devotionalCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards
-    .filter(allCards => allCards.category === 'devotional').sort(sortByDate)
+  devotionalCardsSearchable = computed(() => this.dataService?.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'devotional').sort(sortByDate)
     .filter(cards => {
       if (!this.dataService.searchQuerySignal()) {
         return cards

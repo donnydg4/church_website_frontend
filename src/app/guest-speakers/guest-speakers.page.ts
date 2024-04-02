@@ -12,8 +12,7 @@ export class GuestSpeakersPage {
   private dataService = inject(AllChurchInformationService);
   guestSpeakersTitle = 'Guest Speakers';
 
-  guestSpeakerCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards
-    .filter(allCards => allCards.category === 'guest').sort(sortByDate)
+  guestSpeakerCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'guest').sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {
           return cards
