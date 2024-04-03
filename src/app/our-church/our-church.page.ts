@@ -1,4 +1,4 @@
-import {Component, computed, HostListener, inject} from '@angular/core';
+import {Component, computed, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {Platform} from "@ionic/angular";
 
@@ -8,6 +8,8 @@ import {Platform} from "@ionic/angular";
   styleUrls: ['./our-church.page.scss'],
 })
 export class OurChurchPage {
+
+  clicked = signal<boolean>(false);
 
   private dataService = inject(AllChurchInformationService);
   private platform = inject(Platform);
@@ -27,4 +29,6 @@ export class OurChurchPage {
   //signals which replaced rxjs
   historyItems = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch?.history);
   ourChurch = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch);
+  faithStuff = computed(() => this.dataService.allChurchInformation()?.statementOfFaith);
+
 }

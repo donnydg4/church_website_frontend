@@ -6,7 +6,8 @@
           <div class="outside">
             <picture>
               <source type="image/webp">
-              <img [ngSrc]="ourChurch().coverPhoto" decoding="async" width="" height="" alt="hello" class="cover" sizes="">
+              <img [ngSrc]="ourChurch().coverPhoto" decoding="async" width="" height="" alt="hello" class="cover"
+                   sizes="">
             </picture>
             <div class="inside">
               <h1>{{ ourChurch().title }}</h1>
@@ -66,75 +67,103 @@
             <picture>
               <source type="image/webp" srcset="">
               <img [ngSrc]="ourChurch().about.crazyForJesusImage" decoding="async" priority height="" width="" alt=""
-                style="padding: 5%" class="test" sizes="" ngSrcset="">
-              </picture>
-            </ion-col>
-            <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
-              class="ion-text-start ion-justify-content-center">
-              <div class="about">
-                <h1 class="fake_h1">
-                  CRAZY FOR JESUS
-                </h1>
-                <ion-text class="about">
-                  We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and
-                  explore. The lost, prodigals, and disconnected are who we want to reach. Our heart is to share the love
-                  of Jesus with everyone we encounter.
-                </ion-text>
-              </div>
-            </ion-col>
-          </ion-row>
-          <ion-row style="padding: 1.9%">
-            <ion-col size-md="6" size-xs="12">
+                   style="padding: 5%" class="test" sizes="" ngSrcset="">
+            </picture>
+          </ion-col>
+          <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
+                   class="ion-text-start ion-justify-content-center">
+            <div class="about">
+              <h1 class="fake_h1">
+                CRAZY FOR JESUS
+              </h1>
+              <ion-text class="about">
+                We are a ministry focused on Jesus and implementing the five-fold with a purpose to encourage, equip and
+                explore. The lost, prodigals, and disconnected are who we want to reach. Our heart is to share the love
+                of Jesus with everyone we encounter.
+              </ion-text>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 1.9%">
+          @for (values of ourChurch().about.churchInfo;track values;let index = $index) {
+            <ion-col size-md="4" size-xs="12">
               <ion-card>
                 <ion-card-header>
-                  <ion-card-title>Core Values</ion-card-title>
-                  <ion-card-subtitle>The Father's House</ion-card-subtitle>
+                  <ion-card-title>{{ values.title }}</ion-card-title>
                 </ion-card-header>
-                <ion-card-content> Here's a small text description for the card content. Nothing more, nothing less.
+                <ion-card-content style="padding: 2%">
+                  @if (index != 2) {
+                    <ol>
+                      @for (value of values.descriptions;track value) {
+                        <li style="margin-bottom: 1%">
+                          {{ value }}
+                        </li>
+                      }
+                    </ol>
+                  } @else {
+                    <ion-row style="padding: 2%">
+                    @for (value of values.missionVisionTargetTitles; track value; let index = $index) {
+                      <ion-col size="12" style="text-align: center">
+                        <ion-text class="bold">{{value}}</ion-text>
+                      </ion-col>
+                      <br>
+                      <ion-col size="12" style="text-align: center; padding: 1% 4% 2% 4%">
+                        <ion-text class="standard">{{values.missionVisionTarget[index]}}</ion-text>
+                      </ion-col>
+                    }
+                    </ion-row>
+                  }
                 </ion-card-content>
               </ion-card>
             </ion-col>
-            <ion-col size-md="6" size-xs="12">
+          }
+        </ion-row>
+      }
+      @if (selectedSegment === 'beliefs') {
+        <ion-row style="height: auto; padding: 5%">
+          <ion-col size-lg="8" offset-lg="2" style="height:  100%; text-align: center" size-xs="12">
+            @if (faithStuff()) {
               <ion-card>
-                <ion-card-header>
-                  <ion-card-title>Our Declarations</ion-card-title>
-                  <ion-card-subtitle>The Father's House</ion-card-subtitle>
-                </ion-card-header>
-                <ion-card-content> Here's a small text description for the card content. Nothing more, nothing less.
-                </ion-card-content>
+                <ion-grid class="ion-no-padding">
+                  <ion-row style=" border-bottom: solid 2px #497588">
+                    <ion-col size="12">
+                      <div class="outside">
+                        <picture>
+                          <source type="image/webp" srcset="">
+                          <img [ngSrc]="faithStuff().imageUrl" decoding="async" width="" height="" alt="" ngSrcset="" sizes="" class="faith">
+                        </picture>
+                        <div class="inside">
+                          <h1 class="faith">The Father's House Statement Of Faith</h1>
+                        </div>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size-lg="12">
+                      <section class="dl-blurbs">
+                        <dl>
+                          @for (allInfo of faithStuff().statementInformation; track allInfo) {
+                            <dt>{{allInfo.title}}</dt>
+                            <dd>
+                              {{allInfo.description}}
+                            </dd>
+                            @for (scripture of allInfo.scriptures; track scripture) {
+                              <dd>
+                                {{scripture}}
+                              </dd>
+                            }
+                          }
+                        </dl>
+                      </section>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
               </ion-card>
-            </ion-col>
-          </ion-row>
-        }
-        @if (selectedSegment === 'beliefs') {
-          <ion-row style="height: auto">
-            <ion-col>
-              <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-                of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-                during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-                section 1.10.32.
-              </p>
-              <p>
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914 translation by H. Rackham.
-              </p>
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum."
-              </p>
-            </ion-col>
-          </ion-row>
-        }
-      </ion-grid>
-    }
-    <app-footer></app-footer>
-  </ion-content>
+            }
+          </ion-col>
+        </ion-row>
+      }
+    </ion-grid>
+  }
+  <app-footer></app-footer>
+</ion-content>
