@@ -10,8 +10,6 @@ export interface HomePageModel {
   newHereTitle: string;
   newHereDescription: string;
   newHereImageUrl: string;
-  appTitle: string;
-  appDescription: string;
-  appImages: string[];
   waysToEngage: WaysToEngageModel[];
+  monthlyEvents: string[];
 }

@@ -6,4 +6,5 @@ export interface CalendarEvent {
   time?: string;
   description: string;
   type?: string;
+  featured?: boolean;
 }
