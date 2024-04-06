@@ -13,12 +13,13 @@
               <ion-grid>
                 <ion-row class="ion-text-center">
                   <ion-col>
-                    <h1 class="video_text">This is just placeholder Text</h1>
+                    <h1 class="video_text">We Are His Revival Of Love</h1>
                   </ion-col>
                 </ion-row>
                 <ion-row class="ion-text-center">
                   <ion-col class="ion-justify-content-between">
-                    <ion-button fill="outline" class="video_text"(click)="navigateToPage('connect')" style="margin-right: 3%">
+                    <ion-button fill="outline" class="video_text" (click)="navigateToPage('connect')"
+                                style="margin-right: 3%">
                       Connect
                     </ion-button>
                     <ion-button fill="outline" class="video_text" (click)="navigateToPage('directions')">
@@ -40,23 +41,23 @@
         </ion-col>
       </ion-row>
       <!--    WHO WE ARE-->
-      <ion-row style="height: auto; min-height: auto; background: white">
+      <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col style="padding: 4%; height: auto" size-lg="7" size-xs="12">
-          <h1 class="about">
+          <h1 class="new_here">
             {{ homeInfo().whoWeAreTitle }}
           </h1>
           <div class="about">
-            <div style="width: 90%">
-              <ion-text class="about">
+            <div style="width: 90%" class="new_here">
+              <ion-text class="new_here">
                 {{ homeInfo().whoWeAreDescription }}
               </ion-text>
             </div>
           </div>
           <div style="margin-top: 4%">
-            <ion-button fill="outline" class="about" style="margin-right: 5%" (click)="navigateToPage('our-church')">
+            <ion-button fill="outline" class="new_here" style="margin-right: 5%" (click)="navigateToPage('our-church')">
               Learn More
             </ion-button>
-            <ion-button fill="outline" class="about" (click)="navigateToPage('faith-statement')">
+            <ion-button fill="outline" class="new_here" (click)="navigateToPage('faith-statement')">
               statement of faith
             </ion-button>
           </div>
@@ -70,8 +71,65 @@
           </div>
         </ion-col>
       </ion-row>
+      <!--      Featured Events  -->
+      <ion-row style="height: auto; padding: 3%; background: #ffffff;">
+
+        <ion-col size-md="6" size-xs="12" size-xl="5">
+
+          <ion-row>
+            <ion-col size="12">
+              <h1 class="events">
+                {{ featuredEventTitle() }}
+              </h1>
+            </ion-col>
+            <ion-col size-md="1.5" size-lg="1" size-xs="1.25">
+              <div class="swiper-button-prev purple_div"></div>
+            </ion-col>
+            <ion-col size-md="9" size-lg="10" size-xs="9.5">
+              <swiper-container swipey [config]="configTwo" init="false" class="eventSwiper">
+                @for (object of featuredEvents();track object) {
+                  <swiper-slide>
+                    <picture>
+                      <source type="image/webp">
+                      <img [ngSrc]="object.imageUrl" class="customEvent" priority="" width="100%" height="100%">
+                    </picture>
+                  </swiper-slide>
+                }
+              </swiper-container>
+            </ion-col>
+            <ion-col size-md="1.5" size-lg="1" size-xs="1.25" class="ion-align-items-center">
+              <div class="swiper-button-next purple_div"></div>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+
+        <ion-col size-md="6" size-xs="12" size-xl="7">
+          <ion-row>
+            <ion-col size="12">
+              <h1 class="events ion-text-sm-wrap">
+                {{monthlyEventsTitle()}}
+              </h1>
+            </ion-col>
+
+            <ion-col size-xs="10" size-md="10" offset-xs="1" offset-md="1" size-lg="8" offset-lg="2" size-xl="8" offset-xl="2">
+              <ion-card style="background: #6a4e77d9; margin: 0">
+                <ion-card-content>
+                  @for (events of monthlyEvents();track events) {
+                    <ion-text>
+                      {{ events}}
+                    </ion-text>
+                    <br>
+                  }
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+
+      </ion-row>
       <!--    NEW HERE ROW-->
-      <ion-row style="height: auto; min-height: auto; background: #363636;">
+      <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
             <picture class="new_here_img">
@@ -107,13 +165,11 @@
           </div>
         </ion-col>
         <ion-col size-md=".5" size-xs="1.25">
-          <div>
-            <div class="swiper-button-prev purple_div"></div>
-          </div>
+          <div class="swiper-button-prev purple_div"></div>
         </ion-col>
         <ion-col size-md="11" size-xs="9.5">
-          <swiper-container swipey [config]="config" init="false">
-            @for (object of waysToEngage(); track object) {
+          <swiper-container swipey [config]="config" init="false" class="engageSwiper">
+            @for (object of waysToEngage();track object) {
               <swiper-slide (click)="navigateToPage(object.type)">
                 <h3>{{ object.description }}</h3>
                 <picture>
@@ -128,47 +184,9 @@
           <div class="swiper-button-next purple_div"></div>
         </ion-col>
       </ion-row>
-      <!--    GET THE TFH APP-->
-      <ion-row style="height: 450px; align-items: center; background: #ffffff">
-        <ion-col style="text-align: center; padding: 40px 50px 40px 50px;" size-lg="6" size-xs="12" size-md="12">
-          <h1 style="font-size: 40px; font-family: Georgia; font-weight: normal; color: black">
-            <div class="ion-text-wrap">
-              {{ homeInfo().appTitle }}
-            </div>
-          </h1>
-          <ion-text style="font-size: 20px; color: #363636">
-            <div style="padding-top: 10px">
-              {{ homeInfo().appDescription }}
-            </div>
-          </ion-text>
-          <div style="padding-top: 10px">
-            <ion-button fill="clear" href="https://play.google.com/store/apps/details?id=com.churchmobile.app">
-              <ion-icon slot="icon-only" name="logo-google-playstore" class="app"></ion-icon>
-            </ion-button>
-            <ion-button fill="clear" href="#">
-              <ion-icon slot="icon-only" name="logo-apple" class="app"></ion-icon>
-            </ion-button>
-          </div>
-        </ion-col>
-        <ion-col size-lg="6" style="height: 100%; padding: 20px 30px 20px 30px" class="ion-hide-lg-down">
-          <div style="text-align: center; height: 100%; display: flex; justify-content: center">
-            @for (appImgs of homeInfo().appImages; track appImgs; let i = $index) {
-              <div style="height: 100%;">
-                <picture>
-                  <source type="image/webp">
-                  <img [ngSrc]="appImgs" class="app_images"
-                    style="height: 100%; border-radius: 5px; margin: 0rem 1rem 0rem 1rem; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"
-                    decoding="sync" height="" width="" alt="" sizes="" ngSrcset="">
-                  </picture>
-                </div>
-              }
-            </div>
-          </ion-col>
-        </ion-row>
-        <!--  Website footer-->
-        <app-footer></app-footer>
-      </ion-grid>
-    }
-
-  </ion-content>
+      <!--  Website footer-->
+      <app-footer></app-footer>
+    </ion-grid>
+  }
+</ion-content>
 
