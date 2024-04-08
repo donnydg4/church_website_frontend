@@ -72,11 +72,11 @@
         </ion-col>
       </ion-row>
       <!--      Featured Events  -->
-      <ion-row style="height: auto; padding: 3%; background: #ffffff;">
+      <ion-row style="height: auto; margin: 3%; background: #ffffff;">
 
-        <ion-col size-md="6" size-xs="12" size-xl="5">
+        <ion-col size-md="8" size-xs="12" size-xl="5" offset-xl="1">
 
-          <ion-row>
+          <ion-row style="margin-top: 3%" >
             <ion-col size="12">
               <h1 class="events">
                 {{ featuredEventTitle() }}
@@ -104,16 +104,16 @@
 
         </ion-col>
 
-        <ion-col size-md="6" size-xs="12" size-xl="7">
-          <ion-row>
+        <ion-col size-md="4" size-xs="12" size-xl="5">
+          <ion-row style="margin-top: 3%" >
             <ion-col size="12">
-              <h1 class="events ion-text-sm-wrap">
+              <h1 class="events">
                 {{monthlyEventsTitle()}}
               </h1>
             </ion-col>
 
-            <ion-col size-xs="10" size-md="10" offset-xs="1" offset-md="1" size-lg="8" offset-lg="2" size-xl="8" offset-xl="2">
-              <ion-card style="background: #6a4e77d9; margin: 0">
+            <ion-col size-xs="10" size-md="10" offset-xs="1" offset-md="1" size-lg="10" offset-lg="1" size-xl="8" offset-xl="2">
+              <ion-card style="background: purple; margin: 0">
                 <ion-card-content>
                   @for (events of monthlyEvents();track events) {
                     <ion-text>
