@@ -54,14 +54,14 @@
           </mat-toolbar>
         </ion-col>
       </ion-row>
-      @if (selectedSegment === 'history') {
+      @if (selectedSegment() === 'history') {
         <ion-row style="height: auto; padding: 5%">
           <ion-col size-md="12">
             <app-timeline [items]="historyItems()"></app-timeline>
           </ion-col>
         </ion-row>
       }
-      @if (selectedSegment === 'about') {
+      @if (selectedSegment() === 'about') {
         <ion-row style="height: auto" class="ion-justify-content-center ion-align-items-center">
           <ion-col size-md="6" size-xs="12">
             <picture>
@@ -117,9 +117,9 @@
           }
         </ion-row>
       }
-      @if (selectedSegment === 'beliefs') {
+      @if (selectedSegment() === 'beliefs') {
         <ion-row style="height: auto; padding: 5%">
-          <ion-col size-lg="8" offset-lg="2" style="height:  100%; text-align: center" size-xs="12">
+          <ion-col size-lg="10" offset-lg="1" style="height:  100%; text-align: center" size-xs="12" size-xl="8" offset-xl="2">
             @if (faithStuff()) {
               <ion-card>
                 <ion-grid class="ion-no-padding">

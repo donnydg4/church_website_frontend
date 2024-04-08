@@ -18,7 +18,7 @@ export class HomePage {
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
   waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
   featuredEvents = computed(() => this.dataService.allChurchInformation().mainEvents?.events?.filter(event => event.featured === true));
-  featuredEventTitle = signal('Featured Event(s)');
+  featuredEventTitle = signal('Featured Events');
   monthlyEventsTitle = signal('Monthly Events');
   monthlyEvents = computed(() => this.dataService.allChurchInformation().allWebsiteInformation.homePage.monthlyEvents);
 
