@@ -1,6 +1,7 @@
 import {WaysToEngageModel} from "./ways-to-engage.model";
 
 export interface HomePageModel {
+  homePageTitle: string;
   videoUrl: string;
   serviceTimesTitle: string;
   serviceTimes: string;

@@ -36,7 +36,7 @@ h1.events {
   font-family: Roboto, serif;
   color: black;
   font-weight: normal;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   text-align: center;
 }
 
@@ -143,7 +143,6 @@ swiper-container.engageSwiper {
 }
 
 swiper-container.eventSwiper {
-  width: 100%;
 }
 
 swiper-slide.eventSlide img{
@@ -164,7 +163,7 @@ swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
+  width: 100%;
 }
 
 swiper-slide img {
@@ -217,7 +216,7 @@ h3 {
 
 .purple_div {
   color: purple;
-  --swiper-navigation-size: clamp(34px, 3vw, 54px);
+  --swiper-navigation-size: clamp(38px, 3vw, 54px);
 }
 
 .home_images {

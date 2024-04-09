@@ -8,13 +8,11 @@ import {Platform} from "@ionic/angular";
   styleUrls: ['./our-church.page.scss'],
 })
 export class OurChurchPage {
-
-  clicked = signal<boolean>(false);
-
   private dataService = inject(AllChurchInformationService);
   private platform = inject(Platform);
+
   public platformWidth = this.platform.width()
-  selectedSegment: string = 'history';
+  selectedSegment = signal('history');
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
@@ -22,8 +20,7 @@ export class OurChurchPage {
   }
 
   segmentChanged(event: any) {
-    this.selectedSegment = event.currentTarget.value;
-    console.log(this.selectedSegment);
+    this.selectedSegment.set(event.currentTarget.value);
   }
 
   //signals which replaced rxjs

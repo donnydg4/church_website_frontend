@@ -1,4 +1,4 @@
-import {Component, computed, inject} from '@angular/core';
+import {Component, computed, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {sortByDate} from "../utils/utils";
 
@@ -10,9 +10,9 @@ import {sortByDate} from "../utils/utils";
 export class GuestSpeakersPage {
 
   private dataService = inject(AllChurchInformationService);
-  guestSpeakersTitle = 'Guest Speakers';
+  podcasts = signal('Podcasts');
 
-  guestSpeakerCardsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'guest').sort(sortByDate)
+  podcastsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'guest').sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {
           return cards
