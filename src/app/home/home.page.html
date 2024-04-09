@@ -13,7 +13,10 @@
               <ion-grid>
                 <ion-row class="ion-text-center">
                   <ion-col>
-                    <h1 class="video_text">We Are His Revival Of Love</h1>
+                    <picture>
+                      <source type="image/webp">
+                      <img src="{{homeInfo().homePageTitle}}" decoding="async" priority="" alt="" fill="" style="min-height: 100px;">
+                    </picture>
                   </ion-col>
                 </ion-row>
                 <ion-row class="ion-text-center">
@@ -112,7 +115,7 @@
               </h1>
             </ion-col>
 
-            <ion-col size-xs="10" size-md="10" offset-xs="1" offset-md="1" size-lg="10" offset-lg="1" size-xl="8" offset-xl="2">
+            <ion-col size-xs="10" size-md="10" offset-xs="1" offset-md="1" size-lg="10" offset-lg="1" size-xl="9" offset-xl="1.5">
               <ion-card style="background: purple; margin: 0">
                 <ion-card-content>
                   @for (events of monthlyEvents();track events) {
