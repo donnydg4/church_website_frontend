@@ -18,9 +18,6 @@ export class HomePage {
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
   waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
   featuredEvents = computed(() => this.dataService.allChurchInformation().mainEvents?.events?.filter(event => event.featured === true));
-  featuredEventTitle = signal('Featured Events');
-  monthlyEventsTitle = signal('Monthly Events');
-  monthlyEvents = computed(() => this.dataService.allChurchInformation().allWebsiteInformation.homePage.monthlyEvents);
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);
@@ -63,27 +60,6 @@ export class HomePage {
         centeredSlides: true,
         setWrapperSize: true
       }
-    }
-  }
-
-
-  public configTwo: SwiperOptions = {
-    modules: [Navigation, Pagination],
-    spaceBetween: 10,
-    pagination: {clickable: true},
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    centeredSlides: true,
-    loop: true,
-    effect: "slide",
-    autoplay: {
-      delay: 2000,
-      reverseDirection: true,
-      disableOnInteraction: true
-      // }
     }
   }
 }
