@@ -17,11 +17,11 @@
       <ion-row style="height: 87vh; background: black">
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
-            <video autoplay playsinline loop [muted]="true"  id="video" height="100%" >
+            <video autoplay playsinline loop [muted]="true"  id="video" height="100%" style="z-index: 0">
               <source src="{{homeInfo().videoUrl}}">
             </video>
             <div class="inside">
-              <ion-grid>
+              <ion-grid style="z-index: 5">
                 <ion-row class="ion-text-center">
                   <ion-col size="12">
                     <picture>
