@@ -22,8 +22,8 @@ export class AllWatchComponent {
   page: number = 1;
 
   @Input() title = ''
-  @Input() objectArray?: WatchModel[] = [];
-  @Input() seriesArray?: SeriesCardModel[] = [];
+  @Input() objectArray!: WatchModel[];
+  @Input() seriesArray!: SeriesCardModel[];
 
   public config: PaginationInstance = {
     itemsPerPage: 15,
@@ -51,10 +51,10 @@ export class AllWatchComponent {
       localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
       this.router.navigate(['/devotionals', convertSpaceToDash(card.title)]);
     }
-    if (card.category.toLowerCase() === 'guest') {
+    if (card.category.toLowerCase() === 'podcasts') {
       this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
       localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
-      this.router.navigate(['/guest-speakers', convertSpaceToDash(card.title)]);
+      this.router.navigate(['/podcasts', convertSpaceToDash(card.title)]);
     }
   }
 
