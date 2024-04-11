@@ -36,7 +36,7 @@ const routes: Routes = [
         loadChildren: () => import('./series/series.module').then( m => m.SeriesPageModule)
       },
       {
-        path: 'guest-speakers',
+        path: 'podcasts',
         loadChildren: () => import('./guest-speakers/guest-speakers.module').then( m => m.GuestSpeakersPageModule)
       },
       {
@@ -76,7 +76,7 @@ const routes: Routes = [
         loadChildren: () => import('./shared-components/video/video.module').then(m => m.VideoPageModule)
       },
       {
-        path: 'guest-speakers/:title',
+        path: 'podcasts/:title',
         loadChildren: () => import('./shared-components/video/video.module').then(m => m.VideoPageModule)
       },
       {
