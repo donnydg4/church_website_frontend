@@ -17,14 +17,14 @@
       <ion-row style="height: 87vh; background: black">
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
-            <video autoplay playsinline loop [muted]="true"  id="video" height="100%" style="z-index: 0">
+            <video autoplay playsinline loop [muted]="true"  id="video" height="100%">
               <source src="{{homeInfo().videoUrl}}">
             </video>
             <div class="inside">
-              <ion-grid style="z-index: 5">
+              <ion-grid style="z-index: 100; position:relative;">
                 <ion-row class="ion-text-center">
                   <ion-col size="12">
-                    <picture>
+                    <picture style="z-index: 100; position:relative;">
                       <source type="image/webp" srcset="">
                       <img src="{{homeInfo().homePageTitle}}" decoding="async" alt="" style="min-height: 80px;">
                     </picture>
@@ -36,7 +36,7 @@
                                 style="margin-right: 3%">
                       Connect
                     </ion-button>
-                    <ion-button fill="outline" class="video_text" (click)="navigateToPage('directions')">
+                    <ion-button fill="outline" class="video_text" (click)="navigateToPage('directions')" style="z-index: 100; position:relative;">
                       Join in Person
                     </ion-button>
                   </ion-col>
