@@ -26,16 +26,15 @@
 <!--            <source src="{{homeInfo().videoUrl}}" type="video/mov">-->
 <!--            <source src="{{homeInfo().videoUrl}}" type="video/webm">-->
 <!--          </video>-->
-          <div class="container">
+          <div id="wrapper">
             <video autoplay [muted]="true" loop id="video" height="100%" playsinline>-->
               <source src="{{homeInfo().videoUrl}}" type="video/mp4">
               <source src="{{homeInfo().videoUrl}}" type="video/mov">
               <source src="{{homeInfo().videoUrl}}" type="video/webm">
             </video>
-            <div class="overlay">
-              <p>Content above your video</p>
+            <div id="form">
+              <p>I am over the video</p>
               <form>
-                <p>Content Below Your Video</p>
                 <label for="input">Form Input Label</label>
                 <input id="input" name="input" value="" />
                 <button type="submit">Submit</button>
