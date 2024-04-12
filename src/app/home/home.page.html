@@ -16,71 +16,46 @@
           </ion-col>
         </ion-row>
       }
-      <ion-row style="height: 87vh">
-
-        <!--        <ion-col style="height: 100%">-->
-        <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
-          <source src="{{homeInfo().videoUrl}}" type="video/mp4">
-          <source src="{{homeInfo().videoUrl}}" type="video/mov">
-          <source src="{{homeInfo().videoUrl}}" type="video/webm">
-        </video>
-        <div style="position: relative; width: 100%; height: 100%">
-          <picture>
-            <source type="image/webp" srcset="">
-            <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px;"
-                 width="" height="">
-          </picture>
-        </div>
-
-
-        <!--        </ion-col>-->
+      <ion-row style="height: 87vh; background: black">
+        <ion-col style="height: 100%" size="12">
+          <div class="outside_home">
+            <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
+              <source src="{{homeInfo().videoUrl}}" type="video/mp4">
+              <source src="{{homeInfo().videoUrl}}" type="video/webm">
+              <source src="{{homeInfo().videoUrl}}" type="video/mov">
+            </video>
+            <div class="inside">
+              <ion-grid>
+                <ion-row class="ion-text-center ion-justify-content-center">
+                  <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
+                    <picture>
+                      <source type="image/webp" srcset="">
+                      <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px;"
+                           width="" height="">
+                    </picture>
+                  </ion-col>
+                </ion-row>
+                <ion-row class="ion-text-center">
+                  <ion-col size-sm="6" class="ion-text-sm-end" size-xs="12">
+                    <div style="padding-right: 3%; padding-left: 3%">
+                      <ion-button fill="outline" class="video_text" (click)="navigateToPage('connect')">
+                        Connect
+                      </ion-button>
+                    </div>
+                  </ion-col>
+                  <ion-col size-sm="6" class="ion-text-sm-start" size-xs="12">
+                    <div style="padding-left: 3%; padding-right: 3%">
+                      <ion-button fill="outline" class="video_text" (click)="navigateToPage('directions')">
+                        Join in Person
+                      </ion-button>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+        </ion-col>
       </ion-row>
-      <!--      <ion-row style="height: 87vh; background: black">-->
-      <!--        <ion-col style="height: 100%" size="12">-->
-      <!--          <div class="outside_home" style="background: black">-->
-      <!--            <div class="inside">-->
-      <!--              <div style="width: 100%; z-index: 100">-->
-      <!--                <ion-grid>-->
-      <!--                  <ion-row class="ion-text-center ion-justify-content-center">-->
-      <!--                    <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">-->
-      <!--                      <picture>-->
-      <!--                        <source type="image/webp" srcset="">-->
-      <!--                        <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px;"-->
-      <!--                             width="" height="">-->
-      <!--                      </picture>-->
-      <!--                    </ion-col>-->
-      <!--                    <br><br><br><br><br>-->
-      <!--                    <ion-col size="12">-->
-      <!--                      <ion-row>-->
-      <!--                        <ion-col size-sm="6" class="ion-text-sm-end" size-xs="12">-->
-      <!--                          <div style="padding-right: 3%; padding-left: 3%">-->
-      <!--                            <ion-button fill="outline" class="video_text" (click)="navigateToPage('connect')">-->
-      <!--                              Connect-->
-      <!--                            </ion-button>-->
-      <!--                          </div>-->
-      <!--                        </ion-col>-->
-      <!--                        <ion-col size-sm="6" class="ion-text-sm-start" size-xs="12">-->
-      <!--                          <div style="padding-left: 3%; padding-right: 3%">-->
-      <!--                            <ion-button fill="outline" class="video_text" (click)="navigateToPage('directions')">-->
-      <!--                              Join in Person-->
-      <!--                            </ion-button>-->
-      <!--                          </div>-->
-      <!--                        </ion-col>-->
-      <!--                      </ion-row>-->
-      <!--                    </ion-col>-->
-      <!--                  </ion-row>-->
-      <!--                </ion-grid>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--            <video autoplay [muted]="true" loop id="video" height="100%" playsinline>-->
-      <!--              <source src="{{homeInfo().videoUrl}}" type="video/mp4">-->
-      <!--              <source src="{{homeInfo().videoUrl}}" type="video/mov">-->
-      <!--              <source src="{{homeInfo().videoUrl}}" type="video/webm">-->
-      <!--            </video>-->
-
-      <!--          </div>-->
-      <!--        </ion-col>-->
-      <!--      </ion-row>-->
 
       <ion-row style="background: white">
         <ion-col size="12">
