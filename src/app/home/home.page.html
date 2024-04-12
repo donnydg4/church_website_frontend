@@ -20,12 +20,6 @@
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
             <div class="inside">
-              <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
-                <source src="{{homeInfo().videoUrl}}" type="video/mp4">
-                <source src="{{homeInfo().videoUrl}}" type="video/mov">
-                <source src="{{homeInfo().videoUrl}}" type="video/webm">
-              </video>
-
               <div style="width: 100%; z-index: 100">
                 <ion-grid>
                   <ion-row class="ion-text-center ion-justify-content-center">
@@ -59,6 +53,11 @@
                 </ion-grid>
               </div>
             </div>
+            <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
+              <source src="{{homeInfo().videoUrl}}" type="video/mp4">
+              <source src="{{homeInfo().videoUrl}}" type="video/mov">
+              <source src="{{homeInfo().videoUrl}}" type="video/webm">
+            </video>
 
           </div>
         </ion-col>
