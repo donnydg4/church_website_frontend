@@ -190,16 +190,17 @@ div.outside {
 div.outside_home {
   display: flex;
   overflow: hidden;
+  position: absolute;
   width: 100%;
   min-height: 87vh;
   vertical-align: middle;
   justify-content: center;
-  position: relative;
 }
 
 div.inside {
   width: 100%; /* Can be in percentage also. */
   height: auto;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
