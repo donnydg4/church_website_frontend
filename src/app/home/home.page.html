@@ -26,21 +26,15 @@
 <!--            <source src="{{homeInfo().videoUrl}}" type="video/mov">-->
 <!--            <source src="{{homeInfo().videoUrl}}" type="video/webm">-->
 <!--          </video>-->
-          <div id="wrapper">
             <video autoplay [muted]="true" loop id="video" height="100%" playsinline>-->
               <source src="{{homeInfo().videoUrl}}" type="video/mp4">
               <source src="{{homeInfo().videoUrl}}" type="video/mov">
               <source src="{{homeInfo().videoUrl}}" type="video/webm">
             </video>
-            <div id="form">
-              <p>I am over the video</p>
-              <form>
-                <label for="input">Form Input Label</label>
-                <input id="input" name="input" value="" />
-                <button type="submit">Submit</button>
-              </form>
-            </div>
+          <div class="overlay">
+            <h2>Meet the crazy-smart women we asked.</h2>
           </div>
+
           <!--            <picture>-->
           <!--              <source type="image/webp" srcset="">-->
           <!--              <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px;"-->
