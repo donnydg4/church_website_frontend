@@ -16,7 +16,7 @@
           </ion-col>
         </ion-row>
       }
-      <ion-row style="height: 87vh; background: black">
+      <ion-row style="height: 87vh; background: black; --background: black;">
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
             <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
@@ -27,9 +27,9 @@
 
             <div class="inside">
               <div style="width: 100%; z-index: 1">
-                <ion-text>text inside div</ion-text>
+                <ion-text style="color: #0d0d0d">text inside div</ion-text>
                 <ion-grid>
-                  <ion-text>text inside grid</ion-text>
+                  <ion-text style="color: red">text inside grid</ion-text>
                   <ion-row class="ion-text-center ion-justify-content-center">
                     <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
                       <ion-text>text inside col</ion-text>
