@@ -1,15 +1,28 @@
-video {
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-}
+//video {
+//  width: 100%;
+//  object-fit: cover;
+//  position: absolute;
+//  z-index:-10;
+//}
 
-div.overlay {
+div.outside_home {
   display: flex;
+  position: absolute;
+  width: 100%;
+  min-height: 87vh;
+  vertical-align: middle;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
+  z-index: 1;   //Changes added
+
+  video {   //Changes added
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    //left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-10;
+  }
 }
 
 h1.video_text {
