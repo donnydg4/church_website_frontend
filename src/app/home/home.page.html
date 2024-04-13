@@ -19,7 +19,7 @@
       <ion-row style="height: 87vh; background: black">
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
-            <video autoplay [muted]="true" loop id="video" height="100%" >
+            <video autoplay [muted]="true" loop id="video" height="100%" playsinline>
               <source src="{{homeInfo().videoUrl}}" type="video/mp4">
               <source src="{{homeInfo().videoUrl}}" type="video/webm">
               <source src="{{homeInfo().videoUrl}}" type="video/mov">
