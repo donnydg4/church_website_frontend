@@ -15,9 +15,10 @@ div.outside_home {
   z-index: 1;   //Changes added
 
   video {   //Changes added
+    object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0;
+    //left: 0;
     min-width: 100%;
     min-height: 100%;
     z-index:-10;
