@@ -2,6 +2,7 @@ video {
   width: 100%;
   object-fit: cover;
   position: absolute;
+  -webkit-transform-style: preserve-3d;
 }
 
 div.overlay {
