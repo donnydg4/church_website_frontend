@@ -24,7 +24,7 @@
         </mat-form-field>
       </ion-col>
     </ion-row>
-    @if (calendarEventsSignal()) {
+    @if (calendarEventsSignal()?.length > 0) {
       <ion-row>
         @for (calendarEvent of calendarEventsSignal(); track calendarEvent) {
           <ion-col size-lg="4" size-md="6" style="padding: 10px" size-xs="12">
@@ -46,7 +46,13 @@
             </ion-col>
           }
         </ion-row>
-      }
+      } @else {
+      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
+        <ion-col size="12">
+          <h2 style="color: black">Events will be added soon...</h2>
+        </ion-col>
+      </ion-row>
+    }
     </ion-grid>
     <app-footer></app-footer>
   </ion-content>

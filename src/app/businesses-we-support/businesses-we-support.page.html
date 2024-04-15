@@ -14,6 +14,14 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <app-display-cards [displayCards]="displayBusinessCards()"></app-display-cards>
+  @if (displayBusinessCards()?.length > 0) {
+    <app-display-cards [displayCards]="displayBusinessCards()"></app-display-cards>
+  } @else {
+      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
+        <ion-col size="12">
+          <h2 style="color: black">This page will be updated in the near future...</h2>
+        </ion-col>
+      </ion-row>
+  }
   <app-footer></app-footer>
 </ion-content>

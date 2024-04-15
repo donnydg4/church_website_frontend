@@ -1,4 +1,4 @@
-@if (eventsArray) {
+@if (eventsArray?.length > 0) {
   <ion-grid [fixed]="true" style="margin-top: 3%">
     <ion-row class="ion-text-left">
       @for (events of eventsArray; track events) {
