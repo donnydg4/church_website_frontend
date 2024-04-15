@@ -1,21 +1,27 @@
 <ion-content style="--background: white; --color: black">
-  @if (getAllEvents()) {
-    <ion-grid class="ion-no-padding">
-      <ion-row>
-        <ion-col size="12">
-          <div class="outside">
-            <picture>
-              <source type="image/webp">
-              <img [ngSrc]="eventsInfo()?.coverPhoto" decoding="async" width="" height="" alt="" sizes="" ngSrcset="">
-            </picture>
-            <div class="inside">
-              <h1>{{eventsInfo()?.title}}</h1>
-            </div>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <div class="outside">
+          <picture>
+            <source type="image/webp">
+            <img [ngSrc]="eventsInfo()?.coverPhoto" decoding="async" width="" height="" alt="" sizes="" ngSrcset="">
+          </picture>
+          <div class="inside">
+            <h1>{{ eventsInfo()?.title }}</h1>
           </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  @if (getAllEvents()?.length > 0) {
+    <app-event [eventsArray]="getAllEvents()"></app-event>
+  } @else {
+    <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
+      <ion-col size="12">
+        <h2 style="color: black">This page will be updated in the near future...</h2>
+      </ion-col>
+    </ion-row>
   }
-  <app-event [eventsArray]="getAllEvents()"></app-event>
   <app-footer></app-footer>
 </ion-content>
