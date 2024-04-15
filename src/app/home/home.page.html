@@ -110,7 +110,7 @@
         <ion-col size-md="11" size-xs="9.5">
           <swiper-container swipey [config]="config" init="false" class="engageSwiper">
             @for (object of featuredEvents();track object) {
-              <swiper-slide (click)="navigateToPage(object.type)">
+              <swiper-slide (click)="navigateToEvents()">
                 <picture>
                   <source type="image/webp">
                   <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">

@@ -23,6 +23,10 @@ export class HomePage {
     this.navCtrl.navigateForward([type]);
   }
 
+  navigateToEvents() {
+    this.navCtrl.navigateForward(['/events'])
+  }
+
   public config: SwiperOptions = {
     modules: [Navigation, Pagination],
     spaceBetween: 10,
