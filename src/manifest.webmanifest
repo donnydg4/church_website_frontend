@@ -1,8 +1,8 @@
 {
   "name": "The Father's House Ministry",
   "short_name": "The Father's House Ministry",
-  "theme_color": "#fafafa",
-  "background_color": "#fafafa",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
