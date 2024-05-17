@@ -1,7 +1,7 @@
 {
   "name": "The Father's House Ministry",
-  "short_name": "app",
-  "theme_color": "#1976d2",
+  "short_name": "The Father's House Ministry",
+  "theme_color": "#fafafa",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
