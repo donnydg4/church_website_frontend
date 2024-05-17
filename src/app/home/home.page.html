@@ -28,22 +28,22 @@
               <ion-grid>
                 <ion-row class="ion-text-center ion-justify-content-center">
                   <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                    <picture>
+                    <picture style="display: block">
                       <source type="image/webp">
-                      <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px; display: block"
+                      <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px; "
                            width="" height="">
                     </picture>
                   </ion-col>
                 </ion-row>
                 <ion-row class="ion-text-center">
-                  <ion-col size-sm="6" class="ion-text-sm-end" size-xs="12">
+                  <ion-col size-sm="6" class="ion-text-sm-end" size-xs="6">
                     <div style="padding-right: 3%; padding-left: 3%">
                       <ion-button fill="outline" class="video_text" (click)="navigateToPage('connect')">
                         Connect
                       </ion-button>
                     </div>
                   </ion-col>
-                  <ion-col size-sm="6" class="ion-text-sm-start" size-xs="12">
+                  <ion-col size-sm="6" class="ion-text-sm-start" size-xs="6">
                     <div style="padding-left: 3%; padding-right: 3%">
                       <ion-button fill="outline" class="video_text" (click)="navigateToPage('directions')">
                         Join in Person
