@@ -1,4 +1,4 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, isDevMode} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouteReuseStrategy} from '@angular/router';
 import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
@@ -26,6 +26,7 @@ import {LeadershipPageModule} from "./leadership/leadership.module";
 import {SeriesListPageModule} from "./series/series-list/series-list.module";
 import {VideoPageModule} from "./shared-components/video/video.module";
 import {FaithStatementPageModule} from "./faith-statement/faith-statement.module";
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent],
@@ -54,7 +55,13 @@ import {FaithStatementPageModule} from "./faith-statement/faith-statement.module
     FaithStatementPageModule,
     NgxPaginationModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],

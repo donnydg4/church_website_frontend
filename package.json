@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^17.3.9",
     "@angular/platform-browser-dynamic": "^17.3.9",
     "@angular/router": "^17.3.9",
+    "@angular/service-worker": "^17.3.9",
     "@capacitor/clipboard": "^6.0.0",
     "@ionic/angular": "^8.1.2",
     "express": "^4.18.2",
