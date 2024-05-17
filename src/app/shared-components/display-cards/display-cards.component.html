@@ -42,13 +42,14 @@
                   <ion-col size="6" class="ion-no-padding">
                     <ion-button class="transparent"
                                 (click)="isSelected === i ? isSelected = null : isSelected = i"
-                                style="text-transform: capitalize">
+                                style="text-transform: capitalize"
+                                size="small">
                       {{ isSelected !== i ? 'Read More' : 'Read Less' }}
                     </ion-button>
                   </ion-col>
                   <ion-col style="text-align: end" class="ion-no-padding">
                     @if (card.learnMore) {
-                      <ion-button (click)="navigateToPage()" class="learn" style="text-transform: capitalize">Contact
+                      <ion-button (click)="navigateToPage()" class="learn" style="text-transform: capitalize" size="small">Contact
                         Us
                       </ion-button>
                     }
