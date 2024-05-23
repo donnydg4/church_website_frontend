@@ -27,6 +27,7 @@ import {SeriesListPageModule} from "./series/series-list/series-list.module";
 import {VideoPageModule} from "./shared-components/video/video.module";
 import {FaithStatementPageModule} from "./faith-statement/faith-statement.module";
 import { ServiceWorkerModule } from '@angular/service-worker';
+import {WorshipPageModule} from "./worship/worship.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -53,6 +54,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     SeriesListPageModule,
     VideoPageModule,
     FaithStatementPageModule,
+    WorshipPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule,

@@ -116,7 +116,12 @@ const routes: Routes = [
         component: HomePage
       }
     ]
+  },
+  {
+    path: 'worship',
+    loadChildren: () => import('./worship/worship.module').then( m => m.WorshipPageModule)
   }
+
 ];
 
 @NgModule({

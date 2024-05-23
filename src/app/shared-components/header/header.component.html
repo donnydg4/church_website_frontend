@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="inner-center-div">
-          <ion-button style="min-width: 80px; padding-right: 10px" disabled="true">
+          <ion-button style="min-width: 80px; padding-right: 10px" disabled="true" routerLink="/worship">
             Worship
           </ion-button>
         </div>
@@ -216,8 +216,7 @@
                 </div>
               </ion-accordion>
             </ion-accordion-group>
-            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
-              class="font-size custom_color" disabled>
+            <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md" class="font-size custom_color" disabled (click)="navigateToPage('worship')">
               <ion-label>Worship</ion-label>
             </ion-item>
             <ion-item button fill="clear" style="width: 100%; --min-height: 70px" lines="full" mode="md"
