@@ -10,7 +10,11 @@
             </picture>
             <ion-card-header>
               <ion-card-title>{{events.title}}</ion-card-title>
-              <ion-card-subtitle>{{events.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+              @if (events.endDate) {
+                <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }} - {{events.endDate | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
+              } @else {
+                <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+              }
             </ion-card-header>
             <ion-card-content>{{events.description}}</ion-card-content>
           </ion-card>

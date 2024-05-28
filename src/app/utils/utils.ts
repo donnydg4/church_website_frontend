@@ -4,9 +4,14 @@ import {CalendarModel} from "../models/sub-models/calendar.model";
 import {DisplayCardModel} from "../models/sub-models/display-card.model";
 import {Category} from "../models/sub-models/categories.model";
 import {IndividualHistoryModel} from "../models/sub-models/individual-history.model";
+import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 
 export function sortByDate(a: WatchModel, b: WatchModel) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
+}
+
+export function sortByDateEvent(a: CalendarEvent, b: CalendarEvent) {
+  return new Date(a.startDate).getTime() - new Date(b.startDate).getTime();
 }
 
 export function sortByDateSeries(a: SeriesCardModel, b: SeriesCardModel) {

@@ -1,7 +1,8 @@
 export interface CalendarEvent {
   imageUrl?: string
   title: string;
-  date?: Date;
+  startDate?: Date;
+  endDate?: Date;
   location?: string;
   time?: string;
   description: string;
