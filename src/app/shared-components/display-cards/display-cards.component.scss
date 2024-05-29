@@ -10,6 +10,7 @@ ion-card:hover {
 ion-grid {
   --ion-grid-width: 75%;
   --ion-grid-width-xs: 95%;
+  --ion-grid-width-xl: 70%;
 }
 
 ion-card-subtitle {
@@ -25,7 +26,7 @@ ion-card-header {
 }
 
 ion-card-title {
-  font-size:clamp(14px, 2vw, 17px);
+  font-size:clamp(13px, 2vw, 16px);
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: black;
 }
