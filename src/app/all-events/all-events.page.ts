@@ -14,16 +14,7 @@ export class AllEventsPage {
   private dataService = inject(AllChurchInformationService);
 
   //TODO: Figure out how to mess with specific dates... Filter on the model date most likely
-  getAllEvents = computed(() =>
-    this.dataService.allChurchInformation()
-      ?.allCalendarInformation
-      ?.reduce((acc: CalendarEvent[], cur: CalendarModel) => [...acc, ...cur.events], [] as CalendarEvent[])
-      .filter((event: CalendarEvent) =>
-          event.type === 'event' &&
-          event.featured === true &&
-          event.startDate && new Date(event.startDate).getTime() >= new Date().setHours(0, 0, 0, 0))
-      .sort(sortByDateEvent)
-      );
+  getAllEvents = this.dataService.featuredEvents;
 
   eventsInfo = computed(() => this.dataService.allChurchInformation()?.mainEvents);
 

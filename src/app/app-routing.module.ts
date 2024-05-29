@@ -112,16 +112,19 @@ const routes: Routes = [
         loadChildren: () => import('./directions/directions.module').then( m => m.DirectionsPageModule)
       },
       {
+        path: 'sozo',
+        loadChildren: () => import('./sozo/sozo.module').then( m => m.SozoPageModule)
+      },
+      {
+        path: 'worship',
+        loadChildren: () => import('./worship/worship.module').then( m => m.WorshipPageModule)
+      },
+      {
         path: '**',
         component: HomePage
       }
     ]
   },
-  {
-    path: 'worship',
-    loadChildren: () => import('./worship/worship.module').then( m => m.WorshipPageModule)
-  }
-
 ];
 
 @NgModule({

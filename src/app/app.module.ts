@@ -28,6 +28,7 @@ import {VideoPageModule} from "./shared-components/video/video.module";
 import {FaithStatementPageModule} from "./faith-statement/faith-statement.module";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import {WorshipPageModule} from "./worship/worship.module";
+import {SozoPageModule} from "./sozo/sozo.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -55,6 +56,7 @@ import {WorshipPageModule} from "./worship/worship.module";
     VideoPageModule,
     FaithStatementPageModule,
     WorshipPageModule,
+    SozoPageModule,
     NgxPaginationModule,
     HttpClientModule,
     MatSnackBarModule,
