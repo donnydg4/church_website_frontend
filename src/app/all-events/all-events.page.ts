@@ -14,7 +14,7 @@ export class AllEventsPage {
   private dataService = inject(AllChurchInformationService);
 
   //TODO: Figure out how to mess with specific dates... Filter on the model date most likely
-  getAllEvents = this.dataService.featuredEvents;
+  getAllEvents = this.dataService.featuredEventsTwo;
 
   eventsInfo = computed(() => this.dataService.allChurchInformation()?.mainEvents);
 

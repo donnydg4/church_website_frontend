@@ -8,9 +8,8 @@ ion-card:hover {
 }
 
 ion-grid {
-  --ion-grid-width: 75%;
   --ion-grid-width-xs: 95%;
-  --ion-grid-width-xl: 70%;
+  --ion-grid-width-xl: 75%;
 }
 
 ion-card-subtitle {
@@ -69,7 +68,7 @@ img {
 ion-grid.custom_buttons {
   --ion-grid-width: 91%;
   --ion-grid-width-xs: 91%;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 5%;
+  padding-right: 5%
 }
 

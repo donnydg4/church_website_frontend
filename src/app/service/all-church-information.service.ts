@@ -54,5 +54,17 @@ export class AllChurchInformationService {
       .sort(sortByDateEvent)
   );
 
+  featuredEventsTwo = computed(() =>
+    this.allChurchInformation()
+      ?.allCalendarInformation
+      ?.reduce((acc: CalendarEvent[], cur: CalendarModel) => [...acc, ...cur.events], [] as CalendarEvent[])
+      .filter((event: CalendarEvent) =>
+        event.type === 'event' &&
+        event.featured === true &&
+        event.startDate &&
+        (event.endDate ? (new Date(event.endDate).getTime() >= new Date().setHours(0, 0, 0, 0) ? event.startDate : new Date(event.startDate).getTime() >= new Date().setHours(0, 0, 0, 0)) : new Date(event.startDate).getTime() >= new Date().setHours(0, 0, 0, 0)))
+      .sort(sortByDateEvent)
+  );
+
 
 }

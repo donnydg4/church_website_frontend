@@ -20,7 +20,7 @@ export class HomePage {
 
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
   waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
-  featuredEvents = this.dataService.featuredEvents;
+  featuredEvents = this.dataService.featuredEventsTwo;
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);
