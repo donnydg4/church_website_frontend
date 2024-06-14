@@ -124,11 +124,12 @@
         </ion-row>
       } @else {
         <ion-row style="background: white">
-          <ion-col size="12" style="height: 108px">
-            <div style="text-align: center; border-bottom: 2px solid black">
-              <picture>
+          <ion-col size="12" style="height: 100px">
+            <div style="text-align: center;">
+              <picture style="display: block; height: 100px">
                 <source type="image/webp">
-                <img [ngSrc]="homeInfo().establishedImg" decoding="async" priority>
+                <img [ngSrc]="homeInfo().establishedImg" priority="true" alt="" style="min-height: 100px; max-height: 100px"
+                     width="" height="">
               </picture>
             </div>
           </ion-col>
