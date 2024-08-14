@@ -5,6 +5,7 @@ import {DefaultLayoutComponent} from "./shared-components/default-layout/default
 import {HomePage} from "./home/home.page";
 import {SeriesListPage} from "./series/series-list/series-list.page";
 import {VideoPage} from "./shared-components/video/video.page";
+import {WorshipPage} from "./worship/worship.page";
 
 const routes: Routes = [
   {
@@ -117,7 +118,7 @@ const routes: Routes = [
       },
       {
         path: 'worship',
-        loadChildren: () => import('./worship/worship.module').then( m => m.WorshipPageModule)
+        component: WorshipPage
       },
       {
         path: '**',

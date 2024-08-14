@@ -1,0 +1,18 @@
+
+h1.video_text {
+  font-size: clamp(34px, 4vw, 60px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  line-height: 1.5em;
+  color: white;
+}
+
+ion-button.video_text {
+  font-size: 15px;
+  height: 3.55em;
+  font-family: Roboto, serif;
+  color: white;
+  --border-color: white;
+  text-transform: uppercase;
+  width: 165px;
+}
