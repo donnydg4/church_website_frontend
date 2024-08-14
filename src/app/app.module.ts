@@ -16,7 +16,7 @@ import {DevotionalsPageModule} from "./devotionals/devotionals.module";
 import {SeriesPageModule} from "./series/series.module";
 import {GuestSpeakersPageModule} from "./guest-speakers/guest-speakers.module";
 import {NgxPaginationModule} from "ngx-pagination";
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {ConnectPageModule} from "./connect/connect.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AllEventsPageModule} from "./all-events/all-events.module";
@@ -30,47 +30,40 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import {WorshipPageModule} from "./worship/worship.module";
 import {SozoPageModule} from "./sozo/sozo.module";
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule,
-    HomePageModule,
-    SharedComponentsModule,
-    CalendarPageModule,
-    DevotionalsPageModule,
-    SermonsPageModule,
-    SeriesPageModule,
-    GuestSpeakersPageModule,
-    ConnectPageModule,
-    AllEventsPageModule,
-    OurMinistriesPageModule,
-    MinistriesWeSupportPageModule,
-    LeadershipPageModule,
-    SeriesListPageModule,
-    VideoPageModule,
-    FaithStatementPageModule,
-    WorshipPageModule,
-    SozoPageModule,
-    NgxPaginationModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  ],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
-  bootstrap: [AppComponent],
-  exports: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent],
+    exports: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], imports: [BrowserModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule,
+        HomePageModule,
+        SharedComponentsModule,
+        CalendarPageModule,
+        DevotionalsPageModule,
+        SermonsPageModule,
+        SeriesPageModule,
+        GuestSpeakersPageModule,
+        ConnectPageModule,
+        AllEventsPageModule,
+        OurMinistriesPageModule,
+        MinistriesWeSupportPageModule,
+        LeadershipPageModule,
+        SeriesListPageModule,
+        VideoPageModule,
+        FaithStatementPageModule,
+        WorshipPageModule,
+        SozoPageModule,
+        NgxPaginationModule,
+        MatSnackBarModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000'
+        })], providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
 }
