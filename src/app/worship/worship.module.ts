@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { WorshipPageRoutingModule } from './worship-routing.module';
 
 import { WorshipPage } from './worship.page';
+import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { WorshipPage } from './worship.page';
         FormsModule,
         IonicModule,
         WorshipPageRoutingModule,
-        NgOptimizedImage
+        NgOptimizedImage,
+        SharedComponentsModule
     ],
   declarations: [WorshipPage]
 })

@@ -205,6 +205,26 @@ div.outside_home {
   }
 }
 
+div.outside_home_worship {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  //min-height: 87vh;
+  height: 100%;
+  vertical-align: middle;
+  justify-content: center;
+  z-index: 1;
+
+  video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-10;
+  }
+}
+
 div.inside {
   width: 100%; /* Can be in percentage also. */
   height: auto;
