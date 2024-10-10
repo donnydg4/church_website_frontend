@@ -5,7 +5,6 @@ import {SomeChurchWebsiteInformationModel} from "./sub-models/some-church-websit
 import {MinistriesWeSupportModel} from "./sub-models/ministries-we-support.model";
 import {OurMinistriesModel} from "./sub-models/our-ministries.model";
 import {LeadershipModel} from "./sub-models/leadership.model";
-import {BusinessesWeSupportModel} from "./sub-models/businesses-we-support.model";
 import {MissionsModel} from "./sub-models/missions.model";
 import {StatementOfFaithModel} from "./sub-models/statement-of-faith.model";
 import {MainEventModel} from "./sub-models/main-event.model";
