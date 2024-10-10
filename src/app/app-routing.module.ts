@@ -89,10 +89,6 @@ const routes: Routes = [
         loadChildren: () => import('./missions/missions.module').then(m => m.MissionsPageModule)
       },
       {
-        path: 'businesses-we-support',
-        loadChildren: () => import('./businesses-we-support/businesses-we-support.module').then(m => m.BusinessesWeSupportPageModule)
-      },
-      {
         path: 'series/:title',
         component: SeriesListPage
       },

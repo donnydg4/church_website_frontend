@@ -17,7 +17,6 @@ export interface AllWebsiteInformationModel {
   leadershipPage: LeadershipModel;
   ourMinistriesPage: OurMinistriesModel;
   ministriesWeSupportPage: MinistriesWeSupportModel;
-  businessesWeSupportPage: BusinessesWeSupportModel;
   missionsPage: MissionsModel;
   allCalendarInformation: CalendarModel[];
   mainEvents: MainEventModel;
