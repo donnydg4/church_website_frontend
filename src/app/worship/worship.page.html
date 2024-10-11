@@ -14,7 +14,8 @@
                 <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
                   <picture style="display: block">
                     <source type="image/webp">
-                    <img [ngSrc]="homeInfo()?.homePageTitle" priority="true" alt="" style="min-height: 80px; "
+                    <img [ngSrc]="homeInfo()?.homePageTitle" priority="true" alt=""
+                         style="min-height: 80px; "
                          width="" height="">
                   </picture>
                 </ion-col>
@@ -44,13 +45,19 @@
 
       <ion-col size-xs="12" size-md="6">
         <h1 style="font-size: 50px">Music Videos</h1>
-        <ion-grid>
+        <ion-grid class="ion-no-padding">
           <ion-row>
-            @for (item of fakeArray; track item) {
+            @for (item of fakeArray; track item; let index = $index) {
               <ion-col size-md="6" size-xs="6">
-                <ion-card style="max-width: 330px; min-width: 220px;">
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
-                </ion-card>
+                <picture style="display: block">
+                  <source type="image/webp">
+                  <ion-icon name="logo-youtube" class="worship"></ion-icon>
+                  <img alt="Silhouette of mountains" src="https://img.youtube.com/vi/{{item}}/hqdefault.jpg" class="worship"
+                  (click)="openVideoModal(index)"/>
+                </picture>
+<!--                <iframe [src]="youtubeUrl" class="worship">-->
+
+<!--                </iframe>-->
               </ion-col>
             }
           </ion-row>
@@ -58,7 +65,7 @@
       </ion-col>
 
     </ion-row>
+    <!--    Website footer-->
+    <app-footer></app-footer>
   </ion-grid>
-  <!--  Website footer-->
-  <!--  <app-footer></app-footer>-->
 </ion-content>

@@ -39,3 +39,36 @@ ion-grid.inside {
   //--ion-grid-width-lg: 480px;
   //--ion-grid-width-xl: 570px;
 }
+
+img.worship {
+  display: block;
+  padding: 1%;
+  aspect-ratio: 10/6;
+  object-fit: none;
+}
+
+img.worship:hover {
+  cursor: pointer;
+  opacity: .65;
+}
+
+//iframe.worship {
+//  display: block;
+//  //margin: 1%;
+//  aspect-ratio: 10/5.75;
+//  width: 97%;
+//  margin: 1.25%
+//}
+
+ion-icon.worship {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  font-size: clamp(45px, 4vw, 60px);
+
+  display: block;
+  margin: auto;
+}
