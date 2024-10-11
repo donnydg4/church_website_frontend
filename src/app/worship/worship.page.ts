@@ -14,6 +14,8 @@ export class WorshipPage {
 
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
 
+  fakeArray: string[] = ['', '', '',''];
+
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);
   }

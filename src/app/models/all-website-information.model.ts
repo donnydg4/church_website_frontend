@@ -9,6 +9,7 @@ import {MissionsModel} from "./sub-models/missions.model";
 import {StatementOfFaithModel} from "./sub-models/statement-of-faith.model";
 import {MainEventModel} from "./sub-models/main-event.model";
 import {WorshipModel} from "./sub-models/worship.model";
+import {Sozo} from "./sub-models/sozo.model";
 
 export interface AllWebsiteInformationModel {
   id: string;
@@ -22,5 +23,6 @@ export interface AllWebsiteInformationModel {
   allWatchCards: WatchModel[];
   allSeriesCards: SeriesCardModel[];
   statementOfFaith: StatementOfFaithModel;
+  sozoPage: Sozo;
   worshipPage: WorshipModel;
 }

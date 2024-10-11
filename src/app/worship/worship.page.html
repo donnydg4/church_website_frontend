@@ -25,11 +25,11 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid style="height: 100%" class="ion-no-padding inside" [fixed]="true" >
+  <ion-grid style="height: 100%" class="ion-no-padding inside" [fixed]="true">
     <ion-row style="padding: 2% 0 2% 0">
       <ion-col size-xs="12" size-md="6">
         <h1 style="font-size: 50px">Audio</h1>
-        <ion-card style="max-width: 450px; min-width: 300px;">
+        <ion-card style="max-width: 450px; min-width: 300px;" class="audio">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
           <ion-card-header>
             <ion-card-title>Card Title</ion-card-title>
@@ -40,25 +40,25 @@
             Here's a small text description for the card content. Nothing more, nothing less.
           </ion-card-content>
         </ion-card>
-
       </ion-col>
+
       <ion-col size-xs="12" size-md="6">
         <h1 style="font-size: 50px">Music Videos</h1>
-        <ion-card style="max-width: 450px; min-width: 300px;">
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
-          <ion-card-header>
-            <ion-card-title>Card Title</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
-
+        <ion-grid>
+          <ion-row>
+            @for (item of fakeArray; track item) {
+              <ion-col size-md="6" size-xs="6">
+                <ion-card style="max-width: 330px; min-width: 220px;">
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
+                </ion-card>
+              </ion-col>
+            }
+          </ion-row>
+        </ion-grid>
       </ion-col>
+
     </ion-row>
   </ion-grid>
   <!--  Website footer-->
-<!--  <app-footer></app-footer>-->
+  <!--  <app-footer></app-footer>-->
 </ion-content>
