@@ -27,6 +27,7 @@
     "@capacitor/clipboard": "^6.0.0",
     "@ionic/angular": "^8.1.2",
     "express": "^4.18.2",
+    "howler": "^2.2.4",
     "ionicons": "^6.0.3",
     "ngx-pagination": "^6.0.3",
     "path": "^0.12.7",
