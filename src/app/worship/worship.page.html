@@ -34,14 +34,35 @@
 
           <ion-grid class="ion-padding">
             <ion-row>
-              <ion-col size="4" class="ion-no-padding">
-                <picture style="display: block">
+              <ion-col size="4.5" class="ion-no-padding">
+                <picture style="display: block; width: 100%">
                   <source type="image/webp">
-                  <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg" style="display: block; aspect-ratio: 10/9; border-radius: 12px; object-fit: fill"/>
+                  <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg" style="display: block; aspect-ratio: 10/10; border-radius: 12px; object-fit: fill; max-width: 152px; max-height: 152px"/>
                 </picture>
               </ion-col>
-              <ion-col size="8" class="ion-no-padding" style="padding-left: 16px">
-
+              <ion-col size="7.5" class="ion-no-padding" style="padding-left: 16px">
+                <ion-row>
+                  <ion-col size="12">
+                    <h3>In Over My Head</h3>
+                    <ion-text>The father's House worship Team</ion-text>
+                  </ion-col>
+                  <ion-col size="12" class="">
+                    <ion-button fill="clear">
+                      <ion-icon name="play-skip-back-sharp" class="back-button"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear">
+                      <ion-icon name="play-circle" class="play-button"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear">
+                      <ion-icon name="play-skip-forward-sharp" class="next-button"></ion-icon>
+                    </ion-button>
+                  </ion-col>
+                  <ion-col>
+                    <mat-slider>
+                      <input matSliderThumb>
+                    </mat-slider>
+                  </ion-col>
+                </ion-row>
               </ion-col>
             </ion-row>
           </ion-grid>
