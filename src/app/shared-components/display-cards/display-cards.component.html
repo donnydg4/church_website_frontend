@@ -49,9 +49,11 @@
                   </ion-col>
                   <ion-col style="text-align: end" class="ion-no-padding">
                     @if (card.learnMore) {
-                      <ion-button (click)="navigateToPage()" class="learn" style="text-transform: capitalize" size="small">Contact
-                        Us
-                      </ion-button>
+                      @if (card.title === 'Kid\'s Ministry') {
+                        <ion-button (click)="navigateToKidsPage()" fill="outline" class="learn" style="text-transform: capitalize" size="small">Learn More</ion-button>
+                      } @else {
+                        <ion-button (click)="navigateToPage()" fill="outline" class="learn" style="text-transform: capitalize" size="small">Contact Us</ion-button>
+                      }
                     }
                   </ion-col>
                 </ion-row>

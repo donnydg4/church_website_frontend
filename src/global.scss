@@ -153,23 +153,24 @@ swiper-slide {
 }
 
 ion-button.learn {
-  --background: green;
-  --background-activated: #029e02;
-  color: white;
+  --background-activated: purple;
+  color: purple;
   height: 1.8em;
   --box-shadow: 0px;
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 15px);
   --padding-start: .5em;
   --padding-end: .5em;
   margin-bottom: 4%;
   --border-radius: 5px;
+  --border-color: purple;
 }
 
 ion-button.transparent {
   --background: purple;
   color: #eaeaea;
   --box-shadow: 0px;
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 15px);
+  height: 1.8em;
   --padding-start: .5em;
   --padding-end: .5em;
   margin-bottom: 4%;

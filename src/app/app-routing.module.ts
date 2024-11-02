@@ -113,6 +113,10 @@ const routes: Routes = [
         loadChildren: () => import('./sozo/sozo.module').then( m => m.SozoPageModule)
       },
       {
+        path: 'kids-ministry',
+        loadChildren: () => import('./kids-ministry/kids-ministry.module').then( m => m.KidsMinistryPageModule)
+      },
+      {
         path: 'worship',
         component: WorshipPage
       },
@@ -122,6 +126,8 @@ const routes: Routes = [
       }
     ]
   },
+
+
 ];
 
 @NgModule({
