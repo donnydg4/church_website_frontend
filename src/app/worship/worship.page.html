@@ -29,42 +29,32 @@
   <ion-grid style="height: 100%" class="ion-no-padding inside" [fixed]="true">
     <ion-row style="padding: 2% 0 2% 0">
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px">Moments</h1>
-        <ion-card style="max-width: 485px; min-width: 300px;" class="audio">
+        <h1 style="font-size: 50px; color: black;">Audio | Moments</h1>
+        <ion-card style="max-width: 750px; min-width: 300px;" class="audio">
 
-          <ion-grid class="ion-padding">
-            <ion-row>
-              <ion-col size="4.5" class="ion-no-padding">
+          <ion-grid style="padding: 3%">
+            <ion-row style="max-height: 200px">
+              <ion-col size="3" class="ion-no-padding">
                 <picture style="display: block; width: 100%">
                   <source type="image/webp">
                   <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
-                       style="display: block; aspect-ratio: auto; border-radius: 12px; object-fit: fill;"/>
+                       style="display: block; border-radius: 12px; object-fit: fill; aspect-ratio: 20/20"/>
                 </picture>
               </ion-col>
-              <ion-col size="7.5" class="ion-no-padding" style="padding-left: 16px">
+              <ion-col size="9" class="ion-no-padding" style="padding-left: 16px">
                 <ion-row>
                   <ion-col size="12">
-                    <h3>In Over My Head</h3>
-                    <ion-text>The father's House worship Team</ion-text>
-                  </ion-col>
-                  <ion-col size="12" class="">
-                    <!--                    <ion-buttons>-->
-                    <!--                      <ion-button fill="clear">-->
-                    <!--                      </ion-button>-->
-
-                    <!--                      <ion-button fill="clear">-->
-
-                    <!--                      </ion-button>-->
-                    <!--                    </ion-buttons>-->
+                    <h3 style="color: black;">In Over My Head</h3>
+                    <ion-text style="color: black;">The father's House worship Team</ion-text>
                   </ion-col>
                   <ion-col size="12">
-                    <ion-range aria-label="Volume" [pin]="true" labelPlacement="end" label="3:45">
+                    <ion-range aria-label="timer" [pin]="true" labelPlacement="end" label="3:45">
                       <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
                       <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
                     </ion-range>
-                    <ion-button fill="clear">
-                      <ion-icon name="play-circle" class="play-button"></ion-icon>
-                    </ion-button>
+<!--                    <ion-button fill="clear" style="display: inline">-->
+<!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
+<!--                    </ion-button>-->
                   </ion-col>
                 </ion-row>
               </ion-col>
@@ -82,7 +72,7 @@
       </ion-col>
 
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px">Music Videos</h1>
+        <h1 style="font-size: 50px; color: black">Music Videos</h1>
         <ion-grid class="ion-no-padding">
           <ion-row>
             @for (item of fakeArray; track item; let index = $index) {

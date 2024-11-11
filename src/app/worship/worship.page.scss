@@ -89,27 +89,12 @@ ion-icon.next-button {
   vertical-align: middle;
   color: black;
 }
-//always dispalys pin
-//ion-range::part(pin) {
-//  transform: translate3d(0px, -24px, 0px) scale(1);
-//}
-
-//ion-range {
-//  --bar-background: #1a1a1a;
-//  --bar-background-active: #bde0fe;
-//  --knob-background: black;
-//}
 
 ion-range {
   --bar-background: #414141;
   --bar-background-active: #000000;
-  --knob-background: purple;
+  --knob-background: #262626;
   --pin-background: #242424;
   --pin-color: white;
   --bar-height: 4px;
 }
-
-//for ion-range slider
-//mat-tooltip {
-//  color: #242424
-//}
