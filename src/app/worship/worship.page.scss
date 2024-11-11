@@ -73,18 +73,43 @@ ion-icon.worship {
   margin: auto;
 }
 
-
 ion-icon.back-button {
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   vertical-align: middle;
+  color: black
 }
+
 ion-icon.play-button {
   font-size: 2.5rem !important;
   vertical-align: middle;
-
 }
+
 ion-icon.next-button {
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
   vertical-align: middle;
-
+  color: black;
 }
+//always dispalys pin
+//ion-range::part(pin) {
+//  transform: translate3d(0px, -24px, 0px) scale(1);
+//}
+
+//ion-range {
+//  --bar-background: #1a1a1a;
+//  --bar-background-active: #bde0fe;
+//  --knob-background: black;
+//}
+
+ion-range {
+  --bar-background: #414141;
+  --bar-background-active: #000000;
+  --knob-background: purple;
+  --pin-background: #242424;
+  --pin-color: white;
+  --bar-height: 4px;
+}
+
+//for ion-range slider
+//mat-tooltip {
+//  color: #242424
+//}

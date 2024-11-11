@@ -37,7 +37,8 @@
               <ion-col size="4.5" class="ion-no-padding">
                 <picture style="display: block; width: 100%">
                   <source type="image/webp">
-                  <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg" style="display: block; aspect-ratio: 10/10; border-radius: 12px; object-fit: fill;"/>
+                  <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
+                       style="display: block; aspect-ratio: auto; border-radius: 12px; object-fit: fill;"/>
                 </picture>
               </ion-col>
               <ion-col size="7.5" class="ion-no-padding" style="padding-left: 16px">
@@ -47,20 +48,23 @@
                     <ion-text>The father's House worship Team</ion-text>
                   </ion-col>
                   <ion-col size="12" class="">
-                    <ion-button fill="clear">
-                      <ion-icon name="play-skip-back-sharp" class="back-button"></ion-icon>
-                    </ion-button>
+                    <!--                    <ion-buttons>-->
+                    <!--                      <ion-button fill="clear">-->
+                    <!--                      </ion-button>-->
+
+                    <!--                      <ion-button fill="clear">-->
+
+                    <!--                      </ion-button>-->
+                    <!--                    </ion-buttons>-->
+                  </ion-col>
+                  <ion-col size="12">
+                    <ion-range aria-label="Volume" [pin]="true" labelPlacement="end" label="3:45">
+                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
+                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
+                    </ion-range>
                     <ion-button fill="clear">
                       <ion-icon name="play-circle" class="play-button"></ion-icon>
                     </ion-button>
-                    <ion-button fill="clear">
-                      <ion-icon name="play-skip-forward-sharp" class="next-button"></ion-icon>
-                    </ion-button>
-                  </ion-col>
-                  <ion-col>
-                    <mat-slider>
-                      <input matSliderThumb>
-                    </mat-slider>
                   </ion-col>
                 </ion-row>
               </ion-col>
@@ -86,8 +90,9 @@
                 <picture style="display: block">
                   <source type="image/webp">
                   <ion-icon name="logo-youtube" class="worship"></ion-icon>
-                  <img alt="Silhouette of mountains" src="https://img.youtube.com/vi/{{item}}/hqdefault.jpg" class="worship"
-                  (click)="openVideoModal(index)"/>
+                  <img alt="Silhouette of mountains" src="https://img.youtube.com/vi/{{item}}/hqdefault.jpg"
+                       class="worship"
+                       (click)="openVideoModal(index)"/>
                 </picture>
               </ion-col>
             }
@@ -98,8 +103,8 @@
     </ion-row>
     <!--    Website footer-->
   </ion-grid>
-<!--  <ion-grid>-->
-<!--    <app-footer></app-footer>-->
+  <!--  <ion-grid>-->
+  <!--    <app-footer></app-footer>-->
 
-<!--  </ion-grid>-->
+  <!--  </ion-grid>-->
 </ion-content>
