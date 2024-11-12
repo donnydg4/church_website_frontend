@@ -30,36 +30,35 @@
     <ion-row style="padding: 2% 0 2% 0">
       <ion-col size-xs="12" size-md="6">
         <h1 style="font-size: 50px; color: black;">Audio | Moments</h1>
-        <ion-card style="max-width: 750px; min-width: 300px;" class="audio">
+        <ion-card class="audio">
+          <ion-row style="max-height: 200px">
 
-          <ion-grid style="padding: 3%">
-            <ion-row style="max-height: 200px">
-              <ion-col size="3" class="ion-no-padding">
-                <picture style="display: block; width: 100%">
-                  <source type="image/webp">
-                  <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
-                       style="display: block; border-radius: 12px; object-fit: fill; aspect-ratio: 20/20"/>
-                </picture>
-              </ion-col>
-              <ion-col size="9" class="ion-no-padding" style="padding-left: 16px">
-                <ion-row>
-                  <ion-col size="12">
-                    <h3 style="color: black;">In Over My Head</h3>
-                    <ion-text style="color: black;">The father's House worship Team</ion-text>
-                  </ion-col>
-                  <ion-col size="12">
-                    <ion-range aria-label="timer" [pin]="true" labelPlacement="end" label="3:45">
-                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
-                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
-                    </ion-range>
-<!--                    <ion-button fill="clear" style="display: inline">-->
-<!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
-<!--                    </ion-button>-->
-                  </ion-col>
-                </ion-row>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+            <ion-col size="3" class="ion-padding" style="height: 100%">
+              <picture style="display: block; width: 100%">
+                <source type="image/webp">
+                <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
+                     style="display: block; border-radius: 12px; object-fit: cover; aspect-ratio: 20/20"/>
+              </picture>
+            </ion-col>
+
+            <ion-col size="9" class="ion-no-padding" style="padding-left: 16px; height: 100%; padding-right: 16px">
+              <ion-row>
+                <ion-col size="12" class="ion-no-padding">
+                  <h3 style="color: black;">In Over My Head</h3>
+                  <ion-text style="color: black;">The father's House worship Team</ion-text>
+                </ion-col>
+                <ion-col size="12" class="ion-no-padding">
+                  <ion-range aria-label="timer" labelPlacement="end" label="3:45">
+                    <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
+                    <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
+                  </ion-range>
+                  <!--                    <ion-button fill="clear" style="display: inline">-->
+                  <!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
+                  <!--                    </ion-button>-->
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
           <ion-card-header>
             <ion-card-title>Card Title</ion-card-title>
             <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -69,6 +68,18 @@
             Here's a small text description for the card content. Nothing more, nothing less.
           </ion-card-content>
         </ion-card>
+        <!--        <ion-card class="audio">-->
+        <!--          <ion-grid style="padding: 3%">-->
+        <!--            <ion-row style="max-height: 200px">-->
+        <!--              <ion-col size="3" class="ion-no-padding" style="height: 100%">-->
+        <!--              </ion-col>-->
+        <!--            </ion-row>-->
+        <!--          </ion-grid>-->
+
+        <!--          <ion-card-content>-->
+        <!--            Here's a small text description for the card content. Nothing more, nothing less.-->
+        <!--          </ion-card-content>-->
+        <!--        </ion-card>-->
       </ion-col>
 
       <ion-col size-xs="12" size-md="6">
@@ -77,7 +88,7 @@
           <ion-row>
             @for (item of fakeArray; track item; let index = $index) {
               <ion-col size-md="6" size-xs="6">
-                <picture style="display: block">
+                <picture style="display: block; width: 100%">
                   <source type="image/webp">
                   <ion-icon name="logo-youtube" class="worship"></ion-icon>
                   <img alt="Silhouette of mountains" src="https://img.youtube.com/vi/{{item}}/hqdefault.jpg"

@@ -18,6 +18,8 @@ ion-button.video_text {
 
 ion-card.audio {
   margin: 0 auto !important;
+  //padding: 1.2%;
+  //margin: 1.2%;
 }
 
 h1 {
@@ -44,7 +46,8 @@ img.worship {
   display: block;
   padding: 1.2%;
   aspect-ratio: 10/6;
-  object-fit: none;
+  object-fit: cover;
+  width: 100%;
 }
 
 img.worship:hover {
