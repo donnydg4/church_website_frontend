@@ -3,6 +3,9 @@ import {NavController} from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {SwiperOptions} from "swiper/types";
 import {Navigation, Pagination} from "swiper";
+import {CalendarEvent} from "../models/sub-models/calendar-events.model";
+import {CalendarModel} from "../models/sub-models/calendar.model";
+import {sortByDateEvent} from "../utils/utils";
 
 
 @Component({
@@ -17,7 +20,7 @@ export class HomePage {
 
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
   waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
-  featuredEvents = computed(() => this.dataService.allChurchInformation().mainEvents?.events?.filter(event => event.featured === true));
+  featuredEvents = this.dataService.featuredEventsTwo;
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);

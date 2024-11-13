@@ -1,7 +1,7 @@
 import {Component, inject, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {ContactFormModel} from "../models/contact-form.model";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import {ContactFormModel} from "../models/sub-models/contact-form.model";
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 

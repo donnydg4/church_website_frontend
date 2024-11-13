@@ -34,7 +34,11 @@
             </ion-col>
             <ion-col size="7" size-sm="7.5">
               <div class="custom-cols">
-                <ion-text class="custom-text">{{calendarEvent.date | date: 'MMMM dd, yyyy' }}</ion-text>
+                @if (calendarEvent.endDate) {
+                  <ion-text class="custom-text">{{calendarEvent.startDate | date: 'MMMM dd, yyyy' }} - {{calendarEvent.endDate | date: 'MMMM dd, yyyy'}}</ion-text>
+                } @else {
+                  <ion-text class="custom-text">{{calendarEvent.startDate | date: 'MMMM dd, yyyy' }}</ion-text>
+                }
               </div>
             </ion-col>
             <ion-col size="4" size-sm="4.5">

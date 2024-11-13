@@ -5,10 +5,11 @@ import {SomeChurchWebsiteInformationModel} from "./sub-models/some-church-websit
 import {MinistriesWeSupportModel} from "./sub-models/ministries-we-support.model";
 import {OurMinistriesModel} from "./sub-models/our-ministries.model";
 import {LeadershipModel} from "./sub-models/leadership.model";
-import {BusinessesWeSupportModel} from "./sub-models/businesses-we-support.model";
 import {MissionsModel} from "./sub-models/missions.model";
 import {StatementOfFaithModel} from "./sub-models/statement-of-faith.model";
 import {MainEventModel} from "./sub-models/main-event.model";
+import {WorshipModel} from "./sub-models/worship.model";
+import {Sozo} from "./sub-models/sozo.model";
 
 export interface AllWebsiteInformationModel {
   id: string;
@@ -16,11 +17,12 @@ export interface AllWebsiteInformationModel {
   leadershipPage: LeadershipModel;
   ourMinistriesPage: OurMinistriesModel;
   ministriesWeSupportPage: MinistriesWeSupportModel;
-  businessesWeSupportPage: BusinessesWeSupportModel;
   missionsPage: MissionsModel;
   allCalendarInformation: CalendarModel[];
   mainEvents: MainEventModel;
   allWatchCards: WatchModel[];
   allSeriesCards: SeriesCardModel[];
   statementOfFaith: StatementOfFaithModel;
+  sozoPage: Sozo;
+  worshipPage: WorshipModel;
 }

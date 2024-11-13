@@ -5,6 +5,7 @@ import {DefaultLayoutComponent} from "./shared-components/default-layout/default
 import {HomePage} from "./home/home.page";
 import {SeriesListPage} from "./series/series-list/series-list.page";
 import {VideoPage} from "./shared-components/video/video.page";
+import {WorshipPage} from "./worship/worship.page";
 
 const routes: Routes = [
   {
@@ -88,10 +89,6 @@ const routes: Routes = [
         loadChildren: () => import('./missions/missions.module').then(m => m.MissionsPageModule)
       },
       {
-        path: 'businesses-we-support',
-        loadChildren: () => import('./businesses-we-support/businesses-we-support.module').then(m => m.BusinessesWeSupportPageModule)
-      },
-      {
         path: 'series/:title',
         component: SeriesListPage
       },
@@ -112,11 +109,25 @@ const routes: Routes = [
         loadChildren: () => import('./directions/directions.module').then( m => m.DirectionsPageModule)
       },
       {
+        path: 'sozo',
+        loadChildren: () => import('./sozo/sozo.module').then( m => m.SozoPageModule)
+      },
+      {
+        path: 'kids-ministry',
+        loadChildren: () => import('./kids-ministry/kids-ministry.module').then( m => m.KidsMinistryPageModule)
+      },
+      {
+        path: 'worship',
+        component: WorshipPage
+      },
+      {
         path: '**',
         component: HomePage
       }
     ]
-  }
+  },
+
+
 ];
 
 @NgModule({

@@ -14,5 +14,5 @@ export interface HomePageModel {
   newHereDescription: string;
   newHereImageUrl: string;
   waysToEngage: WaysToEngageModel[];
-  monthlyEvents: string[];
+  establishedImg: string;
 }

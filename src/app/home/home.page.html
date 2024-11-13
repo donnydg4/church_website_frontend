@@ -89,40 +89,50 @@
           </div>
         </ion-col>
         <ion-col size-lg="5">
-          <div style="text-align: center; height: 100%">
             <picture class="who_we_are" style="height: 100%">
               <source type="image/webp">
               <img [ngSrc]="homeInfo().whoWeAreImageUrl" decoding="async" priority fill alt="" class="home_images">
             </picture>
-          </div>
         </ion-col>
       </ion-row>
       <!--      Featured Events  -->
-      <ion-row style="height: auto; background: #ffffff; padding: 1% 0 3% 0;">
-        <ion-col size="12">
-          <div style="text-align: center">
-            <h5 class="custom">Featured Events</h5>
-          </div>
-        </ion-col>
-        <ion-col size-md=".5" size-xs="1.25">
-          <div class="swiper-button-prev purple_div"></div>
-        </ion-col>
-        <ion-col size-md="11" size-xs="9.5">
-          <swiper-container swipey [config]="config" init="false" class="engageSwiper">
-            @for (object of featuredEvents();track object) {
-              <swiper-slide (click)="navigateToEvents()">
-                <picture>
-                  <source type="image/webp">
-                  <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">
-                </picture>
-              </swiper-slide>
-            }
-          </swiper-container>
-        </ion-col>
-        <ion-col size-md=".5" size-xs="1.25" class="ion-align-items-center">
-          <div class="swiper-button-next purple_div"></div>
-        </ion-col>
-      </ion-row>
+      @if (featuredEvents().length > 2) {
+        <ion-row style="height: auto; background: #ffffff; padding: 1% 0 3% 0;">
+          <ion-col size="12">
+            <div style="text-align: center">
+              <h5 class="custom">Featured Events</h5>
+            </div>
+          </ion-col>
+          <ion-col size-md=".5" size-xs="1.25">
+            <div class="swiper-button-prev purple_div"></div>
+          </ion-col>
+          <ion-col size-md="11" size-xs="9.5">
+            <swiper-container swipey [config]="config" init="false" class="engageSwiper">
+              @for (object of featuredEvents();track object) {
+                <swiper-slide (click)="navigateToEvents()">
+                  <picture>
+                    <source type="image/webp">
+                    <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">
+                  </picture>
+                </swiper-slide>
+              }
+            </swiper-container>
+          </ion-col>
+          <ion-col size-md=".5" size-xs="1.25" class="ion-align-items-center">
+            <div class="swiper-button-next purple_div"></div>
+          </ion-col>
+        </ion-row>
+      } @else {
+        <ion-row class="ion-text-center ion-justify-content-center" style="max-height: 110px; background: white">
+          <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6" style="height: 100%">
+            <picture style="display: block; height: 100%; max-height: 110px; text-align: -webkit-center">
+              <source type="image/webp">
+              <img [ngSrc]="homeInfo().establishedImg" priority="true" alt="" style="min-height: 80px; display: block; height: 100%; max-height: 110px"
+                   width="" height="">
+            </picture>
+          </ion-col>
+        </ion-row>
+      }
       <!--    NEW HERE ROW-->
       <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col size-lg="5">

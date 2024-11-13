@@ -19,4 +19,8 @@ export class DisplayCardsComponent {
     this.navCtrl.navigateForward([`connect`]);
   }
 
+  navigateToKidsPage() {
+    this.navCtrl.navigateForward([`kids-ministry`]);
+  }
+
 }

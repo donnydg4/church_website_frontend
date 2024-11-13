@@ -1,0 +1,103 @@
+h1.video_text {
+  font-size: clamp(34px, 4vw, 60px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  line-height: 1.5em;
+  color: white;
+}
+
+ion-button.video_text {
+  font-size: 15px;
+  height: 3.55em;
+  font-family: Roboto, serif;
+  color: white;
+  --border-color: white;
+  text-transform: uppercase;
+  width: 165px;
+}
+
+ion-card.audio {
+  margin: 0 auto !important;
+  //padding: 1.2%;
+  //margin: 1.2%;
+}
+
+h1 {
+  font-size: clamp(34px, 3vw, 60px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  line-height: 1.5em;
+  color: white;
+  margin: 2% 0 2% 0;
+}
+
+ion-grid.inside {
+  --ion-grid-width: 95%;
+  --ion-grid-column-padding-md: 15px;
+  --ion-grid-column-padding-sm: 30px;
+
+  //--ion-grid-width-sm: 288px;
+  //--ion-grid-width-md: 384px;
+  //--ion-grid-width-lg: 480px;
+  //--ion-grid-width-xl: 570px;
+}
+
+img.worship {
+  display: block;
+  padding: 1.2%;
+  aspect-ratio: 10/6;
+  object-fit: cover;
+  width: 100%;
+}
+
+img.worship:hover {
+  cursor: pointer;
+  opacity: .65;
+}
+
+//iframe.worship {
+//  display: block;
+//  //margin: 1%;
+//  aspect-ratio: 10/5.75;
+//  width: 97%;
+//  margin: 1.25%
+//}
+
+ion-icon.worship {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  font-size: clamp(45px, 4vw, 60px);
+
+  display: block;
+  margin: auto;
+}
+
+ion-icon.back-button {
+  font-size: 1.2rem !important;
+  vertical-align: middle;
+  color: black
+}
+
+ion-icon.play-button {
+  font-size: 2.5rem !important;
+  vertical-align: middle;
+}
+
+ion-icon.next-button {
+  font-size: 1.2rem !important;
+  vertical-align: middle;
+  color: black;
+}
+
+ion-range {
+  --bar-background: #414141;
+  --bar-background-active: #000000;
+  --knob-background: #262626;
+  --pin-background: #242424;
+  --pin-color: white;
+  --bar-height: 4px;
+}

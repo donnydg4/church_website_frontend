@@ -1,5 +1,8 @@
 import {Component, computed, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
+import {CalendarEvent} from "../models/sub-models/calendar-events.model";
+import {CalendarModel} from "../models/sub-models/calendar.model";
+import {sortByDateEvent} from "../utils/utils";
 
 @Component({
   selector: 'app-all-events',
@@ -10,12 +13,8 @@ export class AllEventsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  //create two signals
-  getAllEvents = computed(() => this.dataService.allChurchInformation()?.mainEvents?.events?.filter(event => event.type === 'event')
-    .filter(event => {
-      return new Date(event.date).getTime() >= new Date().setHours(0,0,0,0);
-    })
-  );
+  //TODO: Figure out how to mess with specific dates... Filter on the model date most likely
+  getAllEvents = this.dataService.featuredEventsTwo;
 
   eventsInfo = computed(() => this.dataService.allChurchInformation()?.mainEvents);
 
