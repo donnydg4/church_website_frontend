@@ -34,4 +34,8 @@ export class WorshipPage {
   openVideoModal(id: number){
     console.log(this.youtubeUrl);
   }
+
+  play() {
+
+  }
 }

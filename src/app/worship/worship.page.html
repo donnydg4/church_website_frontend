@@ -28,12 +28,12 @@
   </ion-grid>
   <ion-grid style="height: 100%" class="ion-no-padding inside" [fixed]="true">
     <ion-row style="padding: 2% 0 2% 0">
-      <ion-col size-xs="12" size-md="6">
+      <ion-col size-xs="12" size-md="6" style="padding-right: 2%; padding-left: 2%">
         <h1 style="font-size: 50px; color: black;">Audio | Moments</h1>
         <ion-card class="audio">
           <ion-row style="max-height: 200px">
 
-            <ion-col size="3" class="ion-padding" style="height: 100%">
+            <ion-col size="4" size-lg="3" class="ion-padding" style="height: 100%">
               <picture style="display: block; width: 100%">
                 <source type="image/webp">
                 <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
@@ -41,20 +41,30 @@
               </picture>
             </ion-col>
 
-            <ion-col size="9" class="ion-no-padding" style="padding-left: 16px; height: 100%; padding-right: 16px">
+            <ion-col size="8" size-lg="9" class="ion-no-padding" style="padding-left: 16px; height: 100%; padding-right: 16px">
               <ion-row>
-                <ion-col size="12" class="ion-no-padding">
+                <ion-col size="12" class="ion-no-padding" style="margin-bottom: 2%">
                   <h3 style="color: black;">In Over My Head</h3>
                   <ion-text style="color: black;">The father's House worship Team</ion-text>
                 </ion-col>
                 <ion-col size="12" class="ion-no-padding">
-                  <ion-range aria-label="timer" labelPlacement="end" label="3:45">
-                    <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
-                    <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
+                  <ion-buttons>
+                    <ion-button fill="clear" style="display: inline">
+                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear" style="display: inline">
+                      <ion-icon name="play-circle" class="play-button"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear" style="display: inline">
+                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-range aria-label="timer" labelPlacement="end">
+                    <div slot="label">3:45</div>
+                    <!--                    <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>-->
+                    <!--                    <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>-->
+                    <!--                    <ion-icon slot="end" name="play-circle" class="play-button" (click)="play()"></ion-icon>-->
                   </ion-range>
-                  <!--                    <ion-button fill="clear" style="display: inline">-->
-                  <!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
-                  <!--                    </ion-button>-->
                 </ion-col>
               </ion-row>
             </ion-col>
