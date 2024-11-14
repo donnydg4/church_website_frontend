@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "church_website_frontend",
       "schematics": {},
       "architect": {
         "build": {
