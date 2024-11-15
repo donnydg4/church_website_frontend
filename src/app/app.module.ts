@@ -28,7 +28,6 @@ import {VideoPageModule} from "./shared-components/video/video.module";
 import {FaithStatementPageModule} from "./faith-statement/faith-statement.module";
 import {WorshipPageModule} from "./worship/worship.module";
 import {SozoPageModule} from "./sozo/sozo.module";
-import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent],
@@ -60,13 +59,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     WorshipPageModule,
     SozoPageModule,
     NgxPaginationModule,
-    MatSnackBarModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    }),
+    MatSnackBarModule
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, provideHttpClient(withInterceptorsFromDi())]
 })
