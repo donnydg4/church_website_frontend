@@ -80,18 +80,21 @@ ion-icon.worship {
 ion-icon.back-button {
   font-size: 1.2rem !important;
   vertical-align: middle;
-  color: black
+  color: black;
+  cursor: pointer;
 }
 
 ion-icon.play-button {
   font-size: 2.5rem !important;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 ion-icon.next-button {
   font-size: 1.2rem !important;
   vertical-align: middle;
   color: black;
+  cursor: pointer;
 }
 
 ion-range {
@@ -101,4 +104,15 @@ ion-range {
   --pin-background: #242424;
   --pin-color: white;
   --bar-height: 4px;
+}
+
+@media (max-width: 576px) {
+  .trial {
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+h3 {
+  font-size: clamp(16px, 2vw, 22px);
 }
