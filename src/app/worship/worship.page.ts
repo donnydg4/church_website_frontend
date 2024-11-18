@@ -18,6 +18,8 @@ import {
   IonText,
   NavController
 } from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {logoYoutube, playSkipBackSharp, playSkipForwardSharp} from "ionicons/icons";
 
 @Component({
   selector: 'app-worship',
@@ -43,6 +45,7 @@ export class WorshipPage {
 
   constructor() {
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.fakeArray[0]);
+    addIcons({logoYoutube, playSkipBackSharp, playSkipForwardSharp})
   }
 
   navigateToPage(type: string) {
