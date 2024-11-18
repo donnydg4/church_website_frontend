@@ -9,9 +9,8 @@ describe('VideoPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), VideoPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(VideoPage);
     component = fixture.componentInstance;

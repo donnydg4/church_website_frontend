@@ -7,12 +7,12 @@ import {SermonsPage} from './sermons.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    SermonsPageRoutingModule,
-    SharedComponentsModule,
-  ],
-  declarations: [SermonsPage]
+    imports: [
+        IonicModule,
+        SermonsPageRoutingModule,
+        SharedComponentsModule,
+        SermonsPage,
+    ]
 })
 export class SermonsPageModule {
 }

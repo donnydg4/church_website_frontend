@@ -1,15 +1,39 @@
 import {Component, computed, inject, OnInit, signal} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {convertSpaceToDash, sortByDateCalendar} from "../utils/utils";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {ExtrasService} from "../service/extras.service";
 import {Router} from "@angular/router";
+import { IonicModule } from '@ionic/angular';
+import { MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
+import { MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatDateRangePicker, MatDatepickerActions, MatDatepickerCancel, MatDatepickerApply } from '@angular/material/datepicker';
+import { FooterComponent } from '../shared-components/footer/footer.component';
+import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-calendar',
-  templateUrl: './calendar.page.html',
-  styleUrls: ['./calendar.page.scss'],
+    selector: 'app-calendar',
+    templateUrl: './calendar.page.html',
+    styleUrls: ['./calendar.page.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        MatFormField,
+        MatLabel,
+        MatDateRangeInput,
+        FormsModule,
+        ReactiveFormsModule,
+        MatStartDate,
+        MatEndDate,
+        MatDatepickerToggle,
+        MatSuffix,
+        MatDateRangePicker,
+        MatDatepickerActions,
+        MatDatepickerCancel,
+        MatDatepickerApply,
+        FooterComponent,
+        DatePipe,
+    ],
 })
 export class CalendarPage implements OnInit {
 

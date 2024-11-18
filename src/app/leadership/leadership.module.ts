@@ -13,11 +13,11 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         IonicModule,
         LeadershipPageRoutingModule,
         SharedComponentsModule,
-        NgOptimizedImage
+        NgOptimizedImage,
+        LeadershipPage
     ],
     exports: [
         LeadershipPage
-    ],
-    declarations: [LeadershipPage]
+    ]
 })
 export class LeadershipPageModule {}

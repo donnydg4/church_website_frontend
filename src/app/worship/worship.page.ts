@@ -1,13 +1,16 @@
 import {Component, computed, inject, OnInit} from '@angular/core';
-import {NavController} from "@ionic/angular";
+import { NavController, IonicModule } from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {Audio} from "../models/sub-models/audio.model";
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-worship',
-  templateUrl: './worship.page.html',
-  styleUrls: ['./worship.page.scss'],
+    selector: 'app-worship',
+    templateUrl: './worship.page.html',
+    styleUrls: ['./worship.page.scss'],
+    standalone: true,
+    imports: [IonicModule, NgOptimizedImage],
 })
 export class WorshipPage {
 

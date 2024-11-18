@@ -9,12 +9,12 @@ import { KidsMinistryPageRoutingModule } from './kids-ministry-routing.module';
 import { KidsMinistryPage } from './kids-ministry.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    KidsMinistryPageRoutingModule
-  ],
-  declarations: [KidsMinistryPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        KidsMinistryPageRoutingModule,
+        KidsMinistryPage
+    ]
 })
 export class KidsMinistryPageModule {}

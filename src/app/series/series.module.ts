@@ -8,12 +8,12 @@ import {SeriesPage} from './series.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    SeriesPageRoutingModule,
-    SharedComponentsModule
-  ],
-  declarations: [SeriesPage]
+    imports: [
+        IonicModule,
+        SeriesPageRoutingModule,
+        SharedComponentsModule,
+        SeriesPage
+    ]
 })
 export class SeriesPageModule {
 }

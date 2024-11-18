@@ -10,14 +10,14 @@ import { SozoPage } from './sozo.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    SozoPageRoutingModule,
-    NgOptimizedImage,
-    SharedComponentsModule
-  ],
-  declarations: [SozoPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        SozoPageRoutingModule,
+        NgOptimizedImage,
+        SharedComponentsModule,
+        SozoPage
+    ]
 })
 export class SozoPageModule {}

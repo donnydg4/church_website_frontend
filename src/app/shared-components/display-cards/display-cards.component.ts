@@ -1,11 +1,19 @@
 import {Component, inject, Input} from '@angular/core';
 import {DisplayCardModel} from "../../models/sub-models/display-card.model";
-import {NavController} from "@ionic/angular";
+import { NavController, IonicModule } from "@ionic/angular";
+import { NgOptimizedImage, NgClass, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-display-cards',
-  templateUrl: './display-cards.component.html',
-  styleUrls: ['./display-cards.component.scss'],
+    selector: 'app-display-cards',
+    templateUrl: './display-cards.component.html',
+    styleUrls: ['./display-cards.component.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        NgOptimizedImage,
+        NgClass,
+        DatePipe,
+    ],
 })
 export class DisplayCardsComponent {
 

@@ -1,14 +1,35 @@
 import {Component, inject, ViewChild} from '@angular/core';
-import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
+import { FormControl, FormGroup, FormGroupDirective, Validators, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import {ContactFormModel} from "../models/sub-models/contact-form.model";
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { IonicModule } from '@ionic/angular';
+import { MatFormField, MatLabel, MatError, MatHint } from '@angular/material/form-field';
+import { MatSelect, MatSelectTrigger } from '@angular/material/select';
+import { MatOption } from '@angular/material/core';
+import { MatInput } from '@angular/material/input';
+import { FooterComponent } from '../shared-components/footer/footer.component';
 
 
 @Component({
-  selector: 'app-connect',
-  templateUrl: './connect.page.html',
-  styleUrls: ['./connect.page.scss'],
+    selector: 'app-connect',
+    templateUrl: './connect.page.html',
+    styleUrls: ['./connect.page.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormField,
+        MatLabel,
+        MatSelect,
+        MatSelectTrigger,
+        MatOption,
+        MatError,
+        MatInput,
+        MatHint,
+        FooterComponent,
+    ],
 })
 export class ConnectPage {
 

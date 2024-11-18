@@ -6,7 +6,7 @@
           <ion-card button mode="md" (click)="takeToStandardLayout(events)">
             <picture>
               <source type="image/webp">
-              <img alt="img-src" [ngSrc]="events?.imageUrl" decoding="async" height="" width="" ngSrcset="">
+              <img alt="img-src" [ngSrc]="events?.imageUrl" decoding="async" fill ngSrcset="">
             </picture>
             <ion-card-header>
               <ion-card-title>{{events.title}}</ion-card-title>

@@ -11,16 +11,16 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 import {MatSlider, MatSliderThumb} from "@angular/material/slider";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    WorshipPageRoutingModule,
-    NgOptimizedImage,
-    SharedComponentsModule,
-    MatSlider,
-    MatSliderThumb
-  ],
-  declarations: [WorshipPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        WorshipPageRoutingModule,
+        NgOptimizedImage,
+        SharedComponentsModule,
+        MatSlider,
+        MatSliderThumb,
+        WorshipPage
+    ]
 })
 export class WorshipPageModule {}

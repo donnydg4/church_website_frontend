@@ -8,12 +8,12 @@ import {GuestSpeakersPage} from './guest-speakers.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    GuestSpeakersPageRoutingModule,
-    SharedComponentsModule
-  ],
-  declarations: [GuestSpeakersPage]
+    imports: [
+        IonicModule,
+        GuestSpeakersPageRoutingModule,
+        SharedComponentsModule,
+        GuestSpeakersPage
+    ]
 })
 export class GuestSpeakersPageModule {
 }

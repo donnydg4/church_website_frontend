@@ -15,8 +15,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
         FaithStatementPageRoutingModule,
         SharedComponentsModule,
         MatExpansionModule,
-        NgOptimizedImage
-    ],
-  declarations: [FaithStatementPage]
+        NgOptimizedImage,
+        FaithStatementPage
+    ]
 })
 export class FaithStatementPageModule {}

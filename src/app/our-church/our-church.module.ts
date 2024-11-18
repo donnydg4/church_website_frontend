@@ -28,7 +28,7 @@ import {LeadershipPageModule} from "../leadership/leadership.module";
         MatTabsModule,
         MatButtonToggleModule,
         LeadershipPageModule,
-    ],
-  declarations: [OurChurchPage]
+        OurChurchPage,
+    ]
 })
 export class OurChurchPageModule {}

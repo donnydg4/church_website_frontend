@@ -13,17 +13,17 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    VideoPageRoutingModule,
-    SharedComponentsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatButtonModule
-  ],
-  declarations: [VideoPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        VideoPageRoutingModule,
+        SharedComponentsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        VideoPage
+    ]
 })
 export class VideoPageModule {}

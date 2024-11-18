@@ -10,14 +10,14 @@ import {SharedComponentsModule} from "../../shared-components/shared-components.
 import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    SeriesListPageRoutingModule,
-    SharedComponentsModule,
-    NgxPaginationModule,
-    NgOptimizedImage,
-    DatePipe
-  ],
-  declarations: [SeriesListPage]
+    imports: [
+        IonicModule,
+        SeriesListPageRoutingModule,
+        SharedComponentsModule,
+        NgxPaginationModule,
+        NgOptimizedImage,
+        DatePipe,
+        SeriesListPage
+    ]
 })
 export class SeriesListPageModule {}

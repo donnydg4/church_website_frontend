@@ -2,16 +2,26 @@ import {Component, inject, Input} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {SeriesCardModel} from "../../models/sub-models/series-card.model";
-import {PaginationInstance} from "ngx-pagination";
+import { PaginationInstance, NgxPaginationModule } from "ngx-pagination";
 import {Router} from '@angular/router';
 import {convertSpaceToDash} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
+import { IonicModule } from '@ionic/angular';
+import { NgOptimizedImage, UpperCasePipe, DatePipe } from '@angular/common';
 
 
 @Component({
-  selector: 'app-all-watch',
-  templateUrl: './all-watch.component.html',
-  styleUrls: ['./all-watch.component.scss'],
+    selector: 'app-all-watch',
+    templateUrl: './all-watch.component.html',
+    styleUrls: ['./all-watch.component.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        NgOptimizedImage,
+        NgxPaginationModule,
+        UpperCasePipe,
+        DatePipe,
+    ],
 })
 export class AllWatchComponent {
 

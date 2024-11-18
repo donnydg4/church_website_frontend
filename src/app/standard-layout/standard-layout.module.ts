@@ -16,8 +16,8 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         IonicModule,
         StandardLayoutPageRoutingModule,
         SharedComponentsModule,
-        NgOptimizedImage
-    ],
-  declarations: [StandardLayoutPage]
+        NgOptimizedImage,
+        StandardLayoutPage
+    ]
 })
 export class StandardLayoutPageModule {}

@@ -13,20 +13,20 @@ import {SwiperDirective} from "../swiper.directive";
 
 
 @NgModule({
-  imports: [
-    IonicModule,
-    HomePageRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule,
-    SharedComponentsModule,
-    AllEventsPageModule,
-    SwiperDirective,
-    NgOptimizedImage
-  ],
-  exports: [],
-  declarations: [HomePage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    imports: [
+        IonicModule,
+        HomePageRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule,
+        SharedComponentsModule,
+        AllEventsPageModule,
+        SwiperDirective,
+        NgOptimizedImage,
+        HomePage
+    ],
+    exports: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {
 }

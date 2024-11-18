@@ -10,18 +10,18 @@ import {MatInputModule} from "@angular/material/input";
 import {StandardLayoutPageModule} from "../standard-layout/standard-layout.module";
 
 @NgModule({
-  imports: [
-    FormsModule,
-    IonicModule,
-    ConnectPageRoutingModule,
-    SharedComponentsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    StandardLayoutPageModule
-  ],
-  declarations: [ConnectPage]
+    imports: [
+        FormsModule,
+        IonicModule,
+        ConnectPageRoutingModule,
+        SharedComponentsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        StandardLayoutPageModule,
+        ConnectPage
+    ]
 })
 export class ConnectPageModule {
 }

@@ -9,9 +9,8 @@ describe('DirectionsPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DirectionsPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), DirectionsPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(DirectionsPage);
     component = fixture.componentInstance;

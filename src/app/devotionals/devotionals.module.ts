@@ -5,12 +5,12 @@ import {DevotionalsPage} from './devotionals.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    DevotionalsPageRoutingModule,
-    SharedComponentsModule
-  ],
-  declarations: [DevotionalsPage]
+    imports: [
+        IonicModule,
+        DevotionalsPageRoutingModule,
+        SharedComponentsModule,
+        DevotionalsPage
+    ]
 })
 export class DevotionalsPageModule {
 }

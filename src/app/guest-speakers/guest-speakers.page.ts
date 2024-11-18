@@ -1,11 +1,20 @@
 import {Component, computed, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {sortByDate} from "../utils/utils";
+import { IonicModule } from '@ionic/angular';
+import { AllWatchComponent } from '../shared-components/all-watch/all-watch.component';
+import { FooterComponent } from '../shared-components/footer/footer.component';
 
 @Component({
-  selector: 'app-guest-speakers',
-  templateUrl: './guest-speakers.page.html',
-  styleUrls: ['./guest-speakers.page.scss'],
+    selector: 'app-guest-speakers',
+    templateUrl: './guest-speakers.page.html',
+    styleUrls: ['./guest-speakers.page.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        AllWatchComponent,
+        FooterComponent,
+    ],
 })
 export class GuestSpeakersPage {
 

@@ -10,17 +10,17 @@ import {EventComponent} from "./event/event.component";
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    AllEventsPageRoutingModule,
-    SharedComponentsModule,
-    NgOptimizedImage,
-    DatePipe
-  ],
+    imports: [
+        IonicModule,
+        AllEventsPageRoutingModule,
+        SharedComponentsModule,
+        NgOptimizedImage,
+        DatePipe,
+        AllEventsPage, EventComponent
+    ],
     exports: [
         EventComponent,
         AllEventsPage
-    ],
-    declarations: [AllEventsPage, EventComponent]
+    ]
 })
 export class AllEventsPageModule {}

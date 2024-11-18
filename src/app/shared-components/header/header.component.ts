@@ -1,10 +1,20 @@
 import {Component, HostListener, inject} from '@angular/core';
-import {MenuController, NavController, Platform} from "@ionic/angular";
+import { MenuController, NavController, Platform, IonicModule } from "@ionic/angular";
+import { MatToolbar } from '@angular/material/toolbar';
+import { NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        MatToolbar,
+        NgOptimizedImage,
+        RouterLink,
+    ],
 })
 export class HeaderComponent {
 

@@ -11,19 +11,19 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    CalendarPageRoutingModule,
-    SharedComponentsModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatInputModule,
-    ReactiveFormsModule
-  ],
-  declarations: [CalendarPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        CalendarPageRoutingModule,
+        SharedComponentsModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        CalendarPage
+    ]
 })
 export class CalendarPageModule {
 }

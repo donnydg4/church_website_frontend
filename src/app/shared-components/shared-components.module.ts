@@ -15,31 +15,29 @@ import {TimelineComponent} from "./timeline/timeline.component";
 
 @NgModule({
     imports: [
-      CommonModule,
+        CommonModule,
         RouterModule.forChild([]),
         IonicModule,
         MatToolbarModule,
         MatPaginatorModule,
         NgxPaginationModule,
         NgOptimizedImage,
+        FooterComponent,
+        HeaderComponent,
+        AllWatchComponent,
+        DisplayCardsComponent,
+        DefaultLayoutComponent,
+        TimelineComponent,
     ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    AllWatchComponent,
-    DisplayCardsComponent,
-    DefaultLayoutComponent,
-    TimelineComponent
-  ],
-  declarations: [
-    FooterComponent,
-    HeaderComponent,
-    AllWatchComponent,
-    DisplayCardsComponent,
-    DefaultLayoutComponent,
-    TimelineComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    exports: [
+        HeaderComponent,
+        FooterComponent,
+        AllWatchComponent,
+        DisplayCardsComponent,
+        DefaultLayoutComponent,
+        TimelineComponent
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SharedComponentsModule {
 }

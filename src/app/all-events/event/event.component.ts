@@ -3,11 +3,19 @@ import {convertSpaceToDash,} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
 import {CalendarEvent} from "../../models/sub-models/calendar-events.model";
+import { IonicModule } from '@ionic/angular';
+import { NgOptimizedImage, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.scss'],
+    selector: 'app-event',
+    templateUrl: './event.component.html',
+    styleUrls: ['./event.component.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        NgOptimizedImage,
+        DatePipe,
+    ],
 })
 export class EventComponent {
 

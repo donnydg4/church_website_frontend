@@ -9,9 +9,8 @@ describe('AllWatchComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AllWatchComponent],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), AllWatchComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(AllWatchComponent);
     component = fixture.componentInstance;

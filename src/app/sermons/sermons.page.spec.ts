@@ -9,9 +9,8 @@ describe('SermonsPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SermonsPage],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), SermonsPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(SermonsPage);
     component = fixture.componentInstance;

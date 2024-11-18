@@ -14,8 +14,8 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         IonicModule,
         MinistriesWeSupportPageRoutingModule,
         SharedComponentsModule,
-        NgOptimizedImage
+        NgOptimizedImage,
+        MinistriesWeSupportPage
     ],
-  declarations: [MinistriesWeSupportPage],
 })
 export class MinistriesWeSupportPageModule {}

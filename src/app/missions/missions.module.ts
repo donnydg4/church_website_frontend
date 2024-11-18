@@ -13,8 +13,8 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
         IonicModule,
         MissionsPageRoutingModule,
         SharedComponentsModule,
-        NgOptimizedImage
-    ],
-  declarations: [MissionsPage]
+        NgOptimizedImage,
+        MissionsPage
+    ]
 })
 export class MissionsPageModule {}
