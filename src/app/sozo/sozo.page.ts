@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { FooterComponent } from '../shared-components/footer/footer.component';
 
 @Component({
@@ -7,7 +6,7 @@ import { FooterComponent } from '../shared-components/footer/footer.component';
     templateUrl: './sozo.page.html',
     styleUrls: ['./sozo.page.scss'],
     standalone: true,
-    imports: [IonicModule, FooterComponent],
+    imports: [FooterComponent],
 })
 export class SozoPage implements OnInit {
 

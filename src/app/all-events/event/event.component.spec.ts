@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {EventComponent} from './event.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('EventComponent', () => {
   let component: EventComponent;

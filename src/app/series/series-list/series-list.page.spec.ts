@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {SeriesListPage} from './series-list.page';
+import {IonicModule} from "@ionic/angular";
 
 describe('SeriesListPage', () => {
   let component: SeriesListPage;

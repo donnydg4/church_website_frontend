@@ -1,16 +1,31 @@
-import {Component, computed, inject, OnInit} from '@angular/core';
-import { NavController, IonicModule } from "@ionic/angular";
+import {Component, computed, inject,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import {Audio} from "../models/sub-models/audio.model";
-import { NgOptimizedImage } from '@angular/common';
+import {NgOptimizedImage} from '@angular/common';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonIcon,
+  IonRange,
+  IonRow,
+  IonText,
+  NavController
+} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-worship',
-    templateUrl: './worship.page.html',
-    styleUrls: ['./worship.page.scss'],
-    standalone: true,
-    imports: [IonicModule, NgOptimizedImage],
+  selector: 'app-worship',
+  templateUrl: './worship.page.html',
+  styleUrls: ['./worship.page.scss'],
+  standalone: true,
+  imports: [NgOptimizedImage, IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon, IonRange]
 })
 export class WorshipPage {
 
@@ -20,7 +35,7 @@ export class WorshipPage {
 
   homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
 
-  fakeArray: string[] = ['5xQEgz7J3RA', 'Xk6LKuqj3Xc', 'qv3-TDdD1pM','-h9wpvwAF-M'];
+  fakeArray: string[] = ['5xQEgz7J3RA', 'Xk6LKuqj3Xc', 'qv3-TDdD1pM', '-h9wpvwAF-M'];
   defaultUrl: string = "https://www.youtube.com/embed/";
   youtubeUrl: SafeResourceUrl;
 
@@ -34,7 +49,7 @@ export class WorshipPage {
     this.navCtrl.navigateForward([type]);
   }
 
-  openVideoModal(id: number){
+  openVideoModal(id: number) {
     console.log(this.youtubeUrl);
   }
 

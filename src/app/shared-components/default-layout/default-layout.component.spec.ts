@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {DefaultLayoutComponent} from './default-layout.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('DefaultLayoutComponent', () => {
   let component: DefaultLayoutComponent;

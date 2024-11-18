@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {IonicModule} from '@ionic/angular';
+
 
 import {GuestSpeakersPageRoutingModule} from './guest-speakers-routing.module';
 
@@ -9,7 +9,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
     imports: [
-        IonicModule,
         GuestSpeakersPageRoutingModule,
         SharedComponentsModule,
         GuestSpeakersPage

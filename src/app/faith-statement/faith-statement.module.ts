@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
+
 
 import {FaithStatementPageRoutingModule} from './faith-statement-routing.module';
 
@@ -11,7 +11,6 @@ import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
     imports: [
-        IonicModule,
         FaithStatementPageRoutingModule,
         SharedComponentsModule,
         MatExpansionModule,

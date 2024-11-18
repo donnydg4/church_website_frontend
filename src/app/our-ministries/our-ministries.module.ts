@@ -1,7 +1,7 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
+
 
 import {OurMinistriesPageRoutingModule} from './our-ministries-routing.module';
 
@@ -10,7 +10,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
     imports: [
-        IonicModule,
         OurMinistriesPageRoutingModule,
         SharedComponentsModule,
         NgOptimizedImage,

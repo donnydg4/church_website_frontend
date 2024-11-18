@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
+
 
 import {DirectionsPageRoutingModule} from './directions-routing.module';
 
@@ -10,7 +10,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
     imports: [
-        IonicModule,
         DirectionsPageRoutingModule,
         SharedComponentsModule,
         NgOptimizedImage,

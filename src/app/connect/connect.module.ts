@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {IonicModule} from '@ionic/angular';
+
 import {ConnectPageRoutingModule} from './connect-routing.module';
 import {ConnectPage} from './connect.page';
 import {SharedComponentsModule} from "../shared-components/shared-components.module";
@@ -12,7 +12,6 @@ import {StandardLayoutPageModule} from "../standard-layout/standard-layout.modul
 @NgModule({
     imports: [
         FormsModule,
-        IonicModule,
         ConnectPageRoutingModule,
         SharedComponentsModule,
         MatFormFieldModule,

@@ -1,19 +1,20 @@
 import {Component, computed, inject,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import { IonicModule } from '@ionic/angular';
-import { NgOptimizedImage } from '@angular/common';
-import { FooterComponent } from '../shared-components/footer/footer.component';
+import {NgOptimizedImage} from '@angular/common';
+import {FooterComponent} from '../shared-components/footer/footer.component';
+import {IonButton, IonCard, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-faith-statement',
-    templateUrl: './faith-statement.page.html',
-    styleUrls: ['./faith-statement.page.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        NgOptimizedImage,
-        FooterComponent,
-    ],
+  selector: 'app-faith-statement',
+  templateUrl: './faith-statement.page.html',
+  styleUrls: ['./faith-statement.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonButton, IonText
+
+  ],
 })
 export class FaithStatementPage {
 

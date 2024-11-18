@@ -1,20 +1,20 @@
 import {Component, computed, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {sortByDate} from "../utils/utils";
-import { IonicModule } from '@ionic/angular';
-import { AllWatchComponent } from '../shared-components/all-watch/all-watch.component';
-import { FooterComponent } from '../shared-components/footer/footer.component';
+import {AllWatchComponent} from '../shared-components/all-watch/all-watch.component';
+import {FooterComponent} from '../shared-components/footer/footer.component';
+import {IonContent} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-sermons',
-    templateUrl: './sermons.page.html',
-    styleUrls: ['./sermons.page.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        AllWatchComponent,
-        FooterComponent,
-    ],
+  selector: 'app-sermons',
+  templateUrl: './sermons.page.html',
+  styleUrls: ['./sermons.page.scss'],
+  standalone: true,
+  imports: [
+    IonContent,
+    AllWatchComponent,
+    FooterComponent,
+  ],
 })
 export class SermonsPage {
 

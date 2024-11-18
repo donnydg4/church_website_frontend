@@ -1,6 +1,6 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
+
 import {HomePage} from './home.page';
 
 import {HomePageRoutingModule} from './home-routing.module';
@@ -14,7 +14,6 @@ import {SwiperDirective} from "../swiper.directive";
 
 @NgModule({
     imports: [
-        IonicModule,
         HomePageRoutingModule,
         MatToolbarModule,
         MatButtonModule,

@@ -3,26 +3,37 @@ import {convertSpaceToDash,} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
 import {CalendarEvent} from "../../models/sub-models/calendar-events.model";
-import { IonicModule } from '@ionic/angular';
-import { NgOptimizedImage, DatePipe } from '@angular/common';
+import {DatePipe, NgOptimizedImage} from '@angular/common';
+import {
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonRow
+} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-event',
-    templateUrl: './event.component.html',
-    styleUrls: ['./event.component.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        NgOptimizedImage,
-        DatePipe,
-    ],
+  selector: 'app-event',
+  templateUrl: './event.component.html',
+  styleUrls: ['./event.component.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    DatePipe,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent
+  ],
 })
 export class EventComponent {
 
   @Input()
   eventsArray: CalendarEvent[];
 
-  constructor(private navExtras: ExtrasService, private router: Router) { }
+  constructor(private navExtras: ExtrasService, private router: Router) {
+  }
 
   takeToStandardLayout(event: CalendarEvent) {
     this.navExtras.setCalendarEvent(event);

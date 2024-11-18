@@ -1,31 +1,48 @@
 import {Component, computed, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import { Platform, IonicModule } from "@ionic/angular";
-import { NgOptimizedImage } from '@angular/common';
-import { MatToolbar } from '@angular/material/toolbar';
-import { MatIconButton } from '@angular/material/button';
-import { MatMenuTrigger, MatMenu, MatMenuItem } from '@angular/material/menu';
-import { MatIcon } from '@angular/material/icon';
-import { TimelineComponent } from '../shared-components/timeline/timeline.component';
-import { FooterComponent } from '../shared-components/footer/footer.component';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonLabel,
+  IonRow,
+  IonSegment,
+  IonSegmentButton,
+  IonText,
+  Platform
+} from "@ionic/angular/standalone";
+import {NgOptimizedImage} from '@angular/common';
+import {MatToolbar} from '@angular/material/toolbar';
+import {MatIconButton} from '@angular/material/button';
+import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
+import {MatIcon} from '@angular/material/icon';
+import {TimelineComponent} from '../shared-components/timeline/timeline.component';
+import {FooterComponent} from '../shared-components/footer/footer.component';
 
 @Component({
-    selector: 'app-our-church',
-    templateUrl: './our-church.page.html',
-    styleUrls: ['./our-church.page.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        NgOptimizedImage,
-        MatToolbar,
-        MatIconButton,
-        MatMenuTrigger,
-        MatIcon,
-        MatMenu,
-        MatMenuItem,
-        TimelineComponent,
-        FooterComponent,
-    ],
+  selector: 'app-our-church',
+  templateUrl: './our-church.page.html',
+  styleUrls: ['./our-church.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    MatToolbar,
+    MatIconButton,
+    MatMenuTrigger,
+    MatIcon,
+    MatMenu,
+    MatMenuItem,
+    TimelineComponent,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSegment, IonSegmentButton, IonLabel
+  ],
 })
 export class OurChurchPage {
   private dataService = inject(AllChurchInformationService);

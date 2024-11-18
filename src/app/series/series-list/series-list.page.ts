@@ -4,21 +4,34 @@ import {SeriesCardModel} from "../../models/sub-models/series-card.model";
 import {convertSpaceToDash, sortByDate} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
-import { IonicModule } from '@ionic/angular';
-import { NgOptimizedImage, DatePipe } from '@angular/common';
-import { FooterComponent } from '../../shared-components/footer/footer.component';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonRow,
+  IonText
+} from "@ionic/angular/standalone";
+import {DatePipe, NgOptimizedImage} from '@angular/common';
+import {FooterComponent} from '../../shared-components/footer/footer.component';
 
 @Component({
-    selector: 'app-series-list',
-    templateUrl: './series-list.page.html',
-    styleUrls: ['./series-list.page.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        NgOptimizedImage,
-        FooterComponent,
-        DatePipe,
-    ],
+  selector: 'app-series-list',
+  templateUrl: './series-list.page.html',
+  styleUrls: ['./series-list.page.scss'],
+  standalone: true,
+  imports: [
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
+    NgOptimizedImage,
+    FooterComponent,
+    DatePipe,
+  ],
 })
 export class SeriesListPage {
 

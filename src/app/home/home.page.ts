@@ -1,27 +1,38 @@
 import {Component, computed, inject} from '@angular/core';
-import { NavController, IonicModule } from "@ionic/angular";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {SwiperOptions} from "swiper/types";
 import {Navigation, Pagination} from "swiper";
-import {CalendarEvent} from "../models/sub-models/calendar-events.model";
-import {CalendarModel} from "../models/sub-models/calendar.model";
-import {sortByDateEvent} from "../utils/utils";
-import { NgOptimizedImage } from '@angular/common';
-import { SwiperDirective } from '../swiper.directive';
-import { FooterComponent } from '../shared-components/footer/footer.component';
-
+import {NgOptimizedImage} from '@angular/common';
+import {SwiperDirective} from '../swiper.directive';
+import {FooterComponent} from '../shared-components/footer/footer.component';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonIcon,
+  IonRow,
+  IonText,
+  NavController
+} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-home',
-    templateUrl: 'home.page.html',
-    styleUrls: ['home.page.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        NgOptimizedImage,
-        SwiperDirective,
-        FooterComponent,
-    ],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    SwiperDirective,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
+  ],
 })
 export class HomePage {
 

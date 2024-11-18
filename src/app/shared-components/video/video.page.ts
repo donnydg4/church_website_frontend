@@ -1,29 +1,47 @@
 import {Component, inject} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import { MenuController, NavController, Platform, ToastController, IonicModule } from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
 import {WatchModel} from "../../models/sub-models/watch.model";
-import { MatFormField, MatLabel, MatHint } from '@angular/material/form-field';
-import { MatInput } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import { FooterComponent } from '../footer/footer.component';
-import { DatePipe } from '@angular/common';
+import {MatFormField, MatHint, MatLabel} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import {FooterComponent} from '../footer/footer.component';
+import {DatePipe} from '@angular/common';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonIcon,
+  IonRow,
+  IonText,
+  MenuController,
+  NavController,
+  Platform,
+  ToastController
+} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-video',
-    templateUrl: './video.page.html',
-    styleUrls: ['./video.page.scss'],
-    standalone: true,
-    imports: [
-        IonicModule,
-        MatFormField,
-        MatLabel,
-        MatInput,
-        FormsModule,
-        MatHint,
-        FooterComponent,
-        DatePipe,
-    ],
+  selector: 'app-video',
+  templateUrl: './video.page.html',
+  styleUrls: ['./video.page.scss'],
+  standalone: true,
+  imports: [
+    MatFormField,
+    MatLabel,
+    MatInput,
+    FormsModule,
+    MatHint,
+    FooterComponent,
+    DatePipe,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
+  ],
 })
 export class VideoPage {
 

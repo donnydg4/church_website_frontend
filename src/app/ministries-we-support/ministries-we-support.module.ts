@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
+
 
 import {MinistriesWeSupportPageRoutingModule} from './ministries-we-support-routing.module';
 
@@ -11,7 +11,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
     imports: [
-        IonicModule,
         MinistriesWeSupportPageRoutingModule,
         SharedComponentsModule,
         NgOptimizedImage,

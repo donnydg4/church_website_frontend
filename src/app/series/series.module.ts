@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {IonicModule} from '@ionic/angular';
+
 
 import {SeriesPageRoutingModule} from './series-routing.module';
 
@@ -9,7 +9,6 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
     imports: [
-        IonicModule,
         SeriesPageRoutingModule,
         SharedComponentsModule,
         SeriesPage

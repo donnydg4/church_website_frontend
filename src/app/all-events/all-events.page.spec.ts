@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {AllEventsPage} from './all-events.page';
+import {IonicModule} from "@ionic/angular";
 
 describe('AllEventsPage', () => {
   let component: AllEventsPage;

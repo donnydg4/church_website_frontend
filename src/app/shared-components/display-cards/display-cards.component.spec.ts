@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {DisplayCardsComponent} from './display-cards.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('DisplayCardsComponent', () => {
   let component: DisplayCardsComponent;
