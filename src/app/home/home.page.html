@@ -28,10 +28,7 @@
               <ion-grid>
                 <ion-row class="ion-text-center ion-justify-content-center">
                   <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                    <picture style="display: block">
-                      <source type="image/webp">
-                      <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px;" fill>
-                    </picture>
+                      <img ngSrc="{{homeInfo().homePageTitle}}" priority alt="" style="min-height: 80px;" fill>
                   </ion-col>
                 </ion-row>
                 <ion-row class="ion-text-center">
@@ -88,10 +85,7 @@
           </div>
         </ion-col>
         <ion-col size-lg="5">
-            <picture class="who_we_are" style="height: 100%">
-              <source type="image/webp">
-              <img [ngSrc]="homeInfo().whoWeAreImageUrl" decoding="async" priority fill alt="" class="home_images">
-            </picture>
+            <img ngSrc="{{homeInfo().whoWeAreImageUrl}}" decoding="async" priority fill alt="" class="home_images">
         </ion-col>
       </ion-row>
       <!--      Featured Events  -->
@@ -107,12 +101,9 @@
           </ion-col>
           <ion-col size-md="11" size-xs="9.5">
             <swiper-container swipey [config]="config" init="false" class="engageSwiper">
-              @for (object of featuredEvents();track object) {
+              @for (object of featuredEvents(); track object) {
                 <swiper-slide (click)="navigateToEvents()">
-                  <picture>
-                    <source type="image/webp">
-                    <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">
-                  </picture>
+                    <img ngSrc="{{object.imageUrl}}" class="custom" priority width="100%" height="100%">
                 </swiper-slide>
               }
             </swiper-container>
@@ -124,11 +115,9 @@
       } @else {
         <ion-row class="ion-text-center ion-justify-content-center" style="max-height: 110px; background: white">
           <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6" style="height: 100%">
-            <picture style="display: block; height: 100%; max-height: 110px; text-align: -webkit-center">
-              <source type="image/webp">
-              <img [ngSrc]="homeInfo().establishedImg" priority="true" alt="" style="min-height: 80px; display: block; height: 100%; max-height: 110px"
+              <img ngSrc="{{homeInfo().establishedImg}}" priority alt=""
+                   style="min-height: 80px; display: block; height: 100%; max-height: 110px"
                    fill>
-            </picture>
           </ion-col>
         </ion-row>
       }
@@ -136,10 +125,7 @@
       <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
-            <picture class="new_here_img">
-              <source type="image/webp">
-              <img [ngSrc]="homeInfo().newHereImageUrl" decoding="async" priority fill class="home_images">
-            </picture>
+              <img ngSrc="{{homeInfo().newHereImageUrl}}" decoding="async" priority fill class="home_images">
           </div>
         </ion-col>
         <ion-col size-lg="7" size-xs="12" style="height: auto; padding: 4%">
@@ -174,13 +160,10 @@
         </ion-col>
         <ion-col size-md="11" size-xs="9.5">
           <swiper-container swipey [config]="config" init="false" class="engageSwiper">
-            @for (object of waysToEngage();track object) {
+            @for (object of waysToEngage(); track object) {
               <swiper-slide (click)="navigateToPage(object.type)">
                 <h3>{{ object.description }}</h3>
-                <picture>
-                  <source type="image/webp">
-                  <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">
-                </picture>
+                <img ngSrc="{{object.imageUrl}}" class="custom" priority width="100%" height="100%">
               </swiper-slide>
             }
           </swiper-container>

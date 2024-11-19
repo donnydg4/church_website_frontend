@@ -3,10 +3,7 @@
     <ion-row>
       <ion-col size="12">
         <div class="outside">
-          <picture>
-            <source type="image/webp">
-            <img [ngSrc]="eventsInfo()?.coverPhoto" decoding="async" fill sizes="" ngSrcset="">
-          </picture>
+            <img ngSrc="{{eventsInfo()?.coverPhoto}}" decoding="async" fill sizes="" ngSrcset="">
           <div class="inside">
             <h1>{{ eventsInfo()?.title }}</h1>
           </div>

@@ -32,6 +32,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {AppComponent} from './app/app.component';
 import {provideIonicAngular} from "@ionic/angular/standalone";
+import {provideImgixLoader} from "@angular/common";
 
 if (environment.production) {
   enableProdMode();
@@ -67,7 +68,8 @@ bootstrapApplication(AppComponent, {
     {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     provideHttpClient(withInterceptorsFromDi()),
     provideIonicAngular(),
-    provideAnimations()
+    provideAnimations(),
+    // provideImgixLoader('https://thefathershouse.imgix.net/')
   ]
 })
   .catch(err => console.log(err));

@@ -4,19 +4,18 @@
       @for (events of eventsArray; track events) {
         <ion-col size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
           <ion-card button mode="md" (click)="takeToStandardLayout(events)">
-            <picture>
-              <source type="image/webp">
-              <img alt="img-src" [ngSrc]="events?.imageUrl" decoding="async" fill ngSrcset="">
-            </picture>
+            <img ngSrc="{{events?.imageUrl}}" decoding="async" fill ngSrcset="" alt="">
             <ion-card-header>
-              <ion-card-title>{{events.title}}</ion-card-title>
+              <ion-card-title>{{ events.title }}</ion-card-title>
               @if (events.endDate) {
-                <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }} - {{events.endDate | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
+                <ion-card-subtitle>{{ events.startDate | date: 'MMMM dd, yyyy' }}
+                  - {{ events.endDate | date: 'MMMM dd, yyyy' }}
+                </ion-card-subtitle>
               } @else {
-                <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-subtitle>{{ events.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
               }
             </ion-card-header>
-            <ion-card-content>{{events.description}}</ion-card-content>
+            <ion-card-content>{{ events.description }}</ion-card-content>
           </ion-card>
         </ion-col>
       }

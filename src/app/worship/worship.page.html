@@ -12,12 +12,9 @@
             <ion-grid>
               <ion-row class="ion-text-center ion-justify-content-center">
                 <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                  <picture style="display: block">
-                    <source type="image/webp">
-                    <img [ngSrc]="homeInfo()?.homePageTitle" priority="true" alt=""
+                    <img ngSrc="{{homeInfo()?.homePageTitle}}" priority="true" alt=""
                          style="min-height: 80px; "
                          fill>
-                  </picture>
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -34,11 +31,8 @@
           <ion-row style="max-height: 200px">
 
             <ion-col size="4" size-lg="3" class="ion-padding trial" style="height: 100%">
-              <picture style="display: block; width: 100%">
-                <source type="image/webp">
-                <img src="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
+                <img ngSrc="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
                      style="display: block; border-radius: 12px; object-fit: cover; aspect-ratio: 20/20;"/>
-              </picture>
             </ion-col>
 
             <ion-col size="8" size-lg="9" class="ion-no-padding" style="padding-left: 16px; height: 100%; padding-right: 16px">
@@ -97,13 +91,10 @@
           <ion-row>
             @for (item of fakeArray; track item; let index = $index) {
               <ion-col size-md="6" size-xs="6">
-                <picture style="display: block; width: 100%">
-                  <source type="image/webp">
                   <ion-icon name="logo-youtube" class="worship"></ion-icon>
                   <img alt="Silhouette of mountains" src="https://img.youtube.com/vi/{{item}}/hqdefault.jpg"
                        class="worship"
                        (click)="openVideoModal(index)"/>
-                </picture>
               </ion-col>
             }
           </ion-row>

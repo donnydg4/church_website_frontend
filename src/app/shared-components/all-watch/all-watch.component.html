@@ -24,10 +24,7 @@
             >
             <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
               <div class="img_good">
-                <picture>
-                  <source type="image/webp"   srcset="">
-                  <img alt="img-src" [ngSrc]="cards?.imageUrl" decoding="async" fill ngSrcset="" sizes="">
-                </picture>
+                  <img alt="img-src" ngSrc="{{cards?.imageUrl}}" decoding="async" fill ngSrcset="" sizes="">
               </div>
               <ion-card-header>
                 <ion-card-title>{{cards?.title}}</ion-card-title>
@@ -54,10 +51,7 @@
             >
             <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
               <div class="img_good">
-                <picture>
-                  <source type="image/webp"  >
-                  <img alt="img-src" [ngSrc]="cards?.imageUrl" decoding="async" fill ngSrcset="" sizes="">
-                </picture>
+                  <img alt="img-src" ngSrc="{{cards?.imageUrl}}" decoding="async" fill ngSrcset="" sizes="">
               </div>
               <ion-card-header>
                 <ion-card-title>{{cards?.title}}</ion-card-title>

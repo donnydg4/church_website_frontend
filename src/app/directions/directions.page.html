@@ -25,10 +25,7 @@
                         </div>
                         <br>
                           <div>
-                            <picture>
-                              <source type="image/webp" srcset="">
-                              <img [ngSrc]="location?.imageUrl" decoding="async" fill alt="" ngSrcset="" sizes="">
-                            </picture>
+                              <img ngSrc="{{location?.imageUrl}}" decoding="async" fill alt="" ngSrcset="" sizes="">
                           </div>
                           <br>
                             <div style="text-align: center">
@@ -59,10 +56,8 @@
                                 </div>
                                 <br>
                                   <div>
-                                    <picture>
-                                      <source type="image/webp" srcset="">
-                                      <img [ngSrc]="location?.imageUrl" fill decoding="sync" priority alt="" ngSrcset="" sizes="">
-                                    </picture>
+
+                                      <img ngSrc="{{location?.imageUrl}}" fill decoding="sync" priority alt="" ngSrcset="" sizes="">
                                   </div>
                                   <br>
                                     <div style="text-align: center">
