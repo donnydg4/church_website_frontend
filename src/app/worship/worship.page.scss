@@ -20,7 +20,7 @@ ion-card.audio {
   margin: 0 auto !important;
   //padding: 1.2%;
   //margin: 1.2%;
-  padding-right: 5%;
+  margin-right: 5%;
 }
 
 h1 {
@@ -34,8 +34,8 @@ h1 {
 
 ion-grid.inside {
   --ion-grid-width: 95%;
-  --ion-grid-column-padding-md: 15px;
-  --ion-grid-column-padding-sm: 30px;
+  --ion-grid-column-padding-xs: 3%;
+  --ion-grid-column-padding-sm: 3%;
 
   //--ion-grid-width-sm: 288px;
   //--ion-grid-width-md: 384px;
@@ -104,13 +104,6 @@ ion-range {
   --pin-background: #242424;
   --pin-color: white;
   --bar-height: 4px;
-}
-
-@media (max-width: 576px) {
-  .trial {
-    padding-right: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 h3 {

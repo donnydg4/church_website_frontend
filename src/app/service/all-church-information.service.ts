@@ -1,6 +1,6 @@
 import {computed, inject, Injectable, signal} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import {shareReplay} from "rxjs/operators";
+import {shareReplay, tap} from "rxjs/operators";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
 import {toSignal} from "@angular/core/rxjs-interop";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
@@ -37,7 +37,8 @@ export class AllChurchInformationService {
   //http call
   private allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
     .pipe(
-      shareReplay(1)
+      shareReplay(1),
+      tap(data => console.log(data))
     );
 
   //convert http call to signal

@@ -4,7 +4,7 @@
       @for (events of eventsArray; track events) {
         <ion-col size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
           <ion-card button mode="md" (click)="takeToStandardLayout(events)">
-            <img ngSrc="{{events?.imageUrl}}" decoding="async" fill ngSrcset="" alt="">
+            <img ngSrc="{{events?.imageUrl}}" decoding="async" fill alt="">
             <ion-card-header>
               <ion-card-title>{{ events.title }}</ion-card-title>
               @if (events.endDate) {

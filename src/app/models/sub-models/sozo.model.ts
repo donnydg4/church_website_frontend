@@ -1,4 +1,4 @@
-export interface Sozo {
+export interface SozoPageModel {
   firstImage: string;
   firstImageTitle: string;
   textBreak: string;

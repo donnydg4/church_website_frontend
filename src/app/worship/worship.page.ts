@@ -12,7 +12,7 @@ import {
   IonCol,
   IonContent,
   IonGrid,
-  IonIcon,
+  IonIcon, IonItem, IonLabel, IonList, IonNote,
   IonRange,
   IonRow,
   IonText,
@@ -27,7 +27,7 @@ import {logoYoutube, playSkipBackSharp, playSkipForwardSharp} from "ionicons/ico
   styleUrls: ['./worship.page.scss'],
   standalone: true,
   imports: [NgOptimizedImage, IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon, IonRange]
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon, IonRange, IonList, IonItem, IonLabel, IonNote]
 })
 export class WorshipPage {
 
@@ -35,7 +35,7 @@ export class WorshipPage {
   private navCtrl = inject(NavController);
   private sanitizer = inject(DomSanitizer);
 
-  homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
+  worshipPage = computed(() => this.dataService.allChurchInformation()?.worshipPage);
 
   fakeArray: string[] = ['5xQEgz7J3RA', 'Xk6LKuqj3Xc', 'qv3-TDdD1pM', '-h9wpvwAF-M'];
   defaultUrl: string = "https://www.youtube.com/embed/";

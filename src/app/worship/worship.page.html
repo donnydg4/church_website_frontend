@@ -4,17 +4,15 @@
       <ion-col style="height: 100%" size="12">
         <div class="outside_home_worship">
           <video playsinline [muted]="true" loop id="video" height="100%" autoplay>
-            <source src="{{homeInfo()?.videoUrl}}" type="video/mp4">
-            <source src="{{homeInfo()?.videoUrl}}" type="video/webm">
-            <source src="{{homeInfo()?.videoUrl}}" type="video/mov">
+            <source src="{{worshipPage()?.videoUrl}}" type="video/mp4">
+            <source src="{{worshipPage()?.videoUrl}}" type="video/webm">
+            <source src="{{worshipPage()?.videoUrl}}" type="video/mov">
           </video>
           <div class="inside">
             <ion-grid>
               <ion-row class="ion-text-center ion-justify-content-center">
                 <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                    <img ngSrc="{{homeInfo()?.homePageTitle}}" priority="true" alt=""
-                         style="min-height: 80px; "
-                         fill>
+                  <img ngSrc="{{worshipPage()?.worshipPageTitle}}" priority alt="" style="min-height: 80px;" width="1920" height="100">
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -25,34 +23,40 @@
   </ion-grid>
   <ion-grid style="height: 100%" class="ion-no-padding inside" [fixed]="true">
     <ion-row style="padding: 2% 0 2% 0">
-      <ion-col size-xs="12" size-md="6" style="padding-right: 5%; padding-left: 2.5%">
-        <h1 style="font-size: 50px; color: black;">Audio | Moments</h1>
-        <ion-card class="audio">
-          <ion-row style="max-height: 200px">
 
-            <ion-col size="4" size-lg="3" class="ion-padding trial" style="height: 100%">
-                <img ngSrc="https://img.youtube.com/vi/qv3-TDdD1pM/hqdefault.jpg"
-                     style="display: block; border-radius: 12px; object-fit: cover; aspect-ratio: 20/20;"/>
+<!--      Audio Stuff-->
+      <ion-col size-xs="12" size-md="6">
+        <h1 style="font-size: 50px; color: black;">{{worshipPage().audioTitle}}</h1>
+        <ion-card class="audio">
+
+          <ion-row style="min-height: 125px; max-height: 200px;">
+            <ion-col size="4" size-lg="3" size-md="3" class="ion-no-padding">
+              <div style="padding: 16px 0 16px 16px">
+                <img ngSrc="{{worshipPage()?.audioImg}}"
+                     style="border-radius: 12px; height: auto; width: auto;" alt="" height="1080" width="1920"
+                     ngSrcset="100w, 200w"/>
+              </div>
             </ion-col>
 
-            <ion-col size="8" size-lg="9" class="ion-no-padding" style="padding-left: 16px; height: 100%; padding-right: 16px">
+            <ion-col size="8" size-lg="9" size-md="9" class="ion-no-padding"
+                     style="padding-left: 16px; height: 100%; padding-right: 16px">
               <ion-row>
                 <ion-col size="12" class="ion-no-padding" style="margin-bottom: 2%">
                   <h3 style="color: black;">In Over My Head</h3>
                   <ion-text style="color: black;">The father's House worship Team</ion-text>
                 </ion-col>
                 <ion-col size="12" class="ion-no-padding">
-<!--                  <ion-buttons>-->
-<!--                    <ion-button fill="clear" style="display: inline">-->
-<!--                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>-->
-<!--                    </ion-button>-->
-<!--                    <ion-button fill="clear" style="display: inline">-->
-<!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
-<!--                    </ion-button>-->
-<!--                    <ion-button fill="clear" style="display: inline">-->
-<!--                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>-->
-<!--                    </ion-button>-->
-<!--                  </ion-buttons>-->
+                  <!--                  <ion-buttons>-->
+                  <!--                    <ion-button fill="clear" style="display: inline">-->
+                  <!--                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>-->
+                  <!--                    </ion-button>-->
+                  <!--                    <ion-button fill="clear" style="display: inline">-->
+                  <!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
+                  <!--                    </ion-button>-->
+                  <!--                    <ion-button fill="clear" style="display: inline">-->
+                  <!--                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>-->
+                  <!--                    </ion-button>-->
+                  <!--                  </ion-buttons>-->
                   <ion-range aria-label="timer" labelPlacement="end">
                     <div slot="label">3:45</div>
                     <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
@@ -62,42 +66,42 @@
               </ion-row>
             </ion-col>
           </ion-row>
-          <ion-card-header>
-            <ion-card-title>Card Title</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+          <ion-card-content class="ion-no-padding">
+            <ion-item button lines="none">
+              <ion-note slot="start">1</ion-note>
+              <ion-label>
+                <h2>H2 Heading</h2>
+                <p>Paragraph</p>
+              </ion-label>
+              <ion-note slot="end">6:11</ion-note>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-note slot="start">1</ion-note>
+              <ion-label>
+                <h2>H2 Heading</h2>
+                <p>Paragraph</p>
+              </ion-label>
+              <ion-note slot="end">6:11</ion-note>
+            </ion-item>
           </ion-card-content>
         </ion-card>
-        <!--        <ion-card class="audio">-->
-        <!--          <ion-grid style="padding: 3%">-->
-        <!--            <ion-row style="max-height: 200px">-->
-        <!--              <ion-col size="3" class="ion-no-padding" style="height: 100%">-->
-        <!--              </ion-col>-->
-        <!--            </ion-row>-->
-        <!--          </ion-grid>-->
-
-        <!--          <ion-card-content>-->
-        <!--            Here's a small text description for the card content. Nothing more, nothing less.-->
-        <!--          </ion-card-content>-->
-        <!--        </ion-card>-->
       </ion-col>
 
+<!--      Music video stuff-->
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px; color: black">Music Videos</h1>
+        <h1 style="font-size: 50px; color: black">{{worshipPage()?.videoTitle}}</h1>
         <ion-grid class="ion-no-padding">
-          <ion-row>
-            @for (item of fakeArray; track item; let index = $index) {
-              <ion-col size-md="6" size-xs="6">
-                  <ion-icon name="logo-youtube" class="worship"></ion-icon>
-                  <img alt="Silhouette of mountains" src="https://img.youtube.com/vi/{{item}}/hqdefault.jpg"
-                       class="worship"
-                       (click)="openVideoModal(index)"/>
-              </ion-col>
-            }
-          </ion-row>
+<!--          <ion-row>-->
+<!--            @for (url of worshipPage()?.musicVideosImageUrls; track url; let index = $index) {-->
+<!--              <ion-col size-md="6" size-xs="6">-->
+<!--                <ion-icon name="logo-youtube" class="worship"></ion-icon>-->
+<!--                <img alt="Silhouette of mountains"-->
+<!--                     ngSrc="{{url}}"-->
+<!--                     fill-->
+<!--                     class="worship" (click)="openVideoModal(index)"/>-->
+<!--              </ion-col>-->
+<!--            }-->
+<!--          </ion-row>-->
         </ion-grid>
       </ion-col>
 
