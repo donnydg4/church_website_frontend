@@ -12,7 +12,8 @@
             <ion-grid>
               <ion-row class="ion-text-center ion-justify-content-center">
                 <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                  <img ngSrc="{{worshipPage()?.worshipPageTitle}}" priority alt="" style="min-height: 80px;" width="1920" height="100">
+                  <img ngSrc="{{worshipPage()?.worshipPageTitle}}" priority alt="" style="min-height: 80px; height: auto; width: auto"
+                       width="1920" height="100" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -24,9 +25,9 @@
   <ion-grid style="height: 100%" class="ion-no-padding inside" [fixed]="true">
     <ion-row style="padding: 2% 0 2% 0">
 
-<!--      Audio Stuff-->
+      <!--      Audio Stuff-->
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px; color: black;">{{worshipPage().audioTitle}}</h1>
+        <h1 style="font-size: 50px; color: black;">{{ worshipPage()?.audioTitle }}</h1>
         <ion-card class="audio">
 
           <ion-row style="min-height: 125px; max-height: 200px;">
@@ -34,7 +35,7 @@
               <div style="padding: 16px 0 16px 16px">
                 <img ngSrc="{{worshipPage()?.audioImg}}"
                      style="border-radius: 12px; height: auto; width: auto;" alt="" height="1080" width="1920"
-                     ngSrcset="100w, 200w"/>
+                     ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w"/>
               </div>
             </ion-col>
 
@@ -87,21 +88,19 @@
         </ion-card>
       </ion-col>
 
-<!--      Music video stuff-->
+      <!--      Music video stuff-->
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px; color: black">{{worshipPage()?.videoTitle}}</h1>
+        <h1 style="font-size: 50px; color: black">{{ worshipPage()?.videoTitle }}</h1>
         <ion-grid class="ion-no-padding">
-<!--          <ion-row>-->
-<!--            @for (url of worshipPage()?.musicVideosImageUrls; track url; let index = $index) {-->
-<!--              <ion-col size-md="6" size-xs="6">-->
-<!--                <ion-icon name="logo-youtube" class="worship"></ion-icon>-->
-<!--                <img alt="Silhouette of mountains"-->
-<!--                     ngSrc="{{url}}"-->
-<!--                     fill-->
-<!--                     class="worship" (click)="openVideoModal(index)"/>-->
-<!--              </ion-col>-->
-<!--            }-->
-<!--          </ion-row>-->
+          <ion-row>
+            @for (url of worshipPage()?.musicVideosImageUrls; track url; let index = $index) {
+              <ion-col size-md="6" size-xs="6">
+                <ion-icon name="logo-youtube" class="worship"></ion-icon>
+                <img ngSrc="{{url}}" height="1080" width="1920" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w"
+                     class="worship" alt="Silhouette of mountains" style="height: auto; width: auto" (click)="openVideoModal(index)"/>
+              </ion-col>
+            }
+          </ion-row>
         </ion-grid>
       </ion-col>
 

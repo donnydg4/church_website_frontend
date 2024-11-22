@@ -44,6 +44,8 @@ export class AllChurchInformationService {
   //convert http call to signal
   allChurchInformation = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
 
+  worshipPageSignal = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
+
   // featuredEvents = computed(() =>
   //   this.allChurchInformation()
   //     ?.allCalendarInformation
