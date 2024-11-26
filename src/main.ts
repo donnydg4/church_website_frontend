@@ -9,10 +9,14 @@ import {provideAnimations} from '@angular/platform-browser/animations';
 import {AppComponent} from './app/app.component';
 import {provideIonicAngular} from "@ionic/angular/standalone";
 import {provideImgixLoader} from "@angular/common";
+import {register, register as registerSwiperElements} from 'swiper/element/bundle';
+
 
 if (environment.production) {
   enableProdMode();
 }
+register();
+registerSwiperElements();
 
 bootstrapApplication(AppComponent, {
   providers: [

@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {MinistriesWeSupportPageRoutingModule} from './ministries-we-support-routing.module';
 
 import {MinistriesWeSupportPage} from './ministries-we-support.page';

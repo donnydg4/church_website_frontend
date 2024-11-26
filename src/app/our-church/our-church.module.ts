@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {OurChurchPageRoutingModule} from './our-church-routing.module';
 
 import {OurChurchPage} from './our-church.page';

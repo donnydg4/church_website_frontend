@@ -1,4 +1,4 @@
-import {Component, inject, Input} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, inject, Input} from '@angular/core';
 import {DisplayCardModel} from "../../models/sub-models/display-card.model";
 import {
   IonButton,
@@ -28,6 +28,7 @@ import {DatePipe, NgClass, NgOptimizedImage} from '@angular/common';
     NgClass,
     DatePipe,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DisplayCardsComponent {
 

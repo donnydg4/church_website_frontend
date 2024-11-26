@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {LeadershipPageRoutingModule} from './leadership-routing.module';
 
 import {LeadershipPage} from './leadership.page';

@@ -1,4 +1,4 @@
-import {Component, computed, inject} from '@angular/core';
+import {Component, computed, CUSTOM_ELEMENTS_SCHEMA, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {SwiperOptions} from "swiper/types";
 import {Navigation, Pagination} from "swiper";
@@ -33,6 +33,7 @@ import {
     IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
     IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage {
 

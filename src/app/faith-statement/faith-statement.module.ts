@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {FaithStatementPageRoutingModule} from './faith-statement-routing.module';
 
 import {FaithStatementPage} from './faith-statement.page';

@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 
 
-
 import {GuestSpeakersPageRoutingModule} from './guest-speakers-routing.module';
 
 import {GuestSpeakersPage} from './guest-speakers.page';

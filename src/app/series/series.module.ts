@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 
 
-
 import {SeriesPageRoutingModule} from './series-routing.module';
 
 import {SeriesPage} from './series.page';

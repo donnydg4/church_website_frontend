@@ -61,8 +61,7 @@
       @if (selectedSegment() === 'about') {
         <ion-row style="height: auto" class="ion-justify-content-center ion-align-items-center">
           <ion-col size-md="6" size-xs="12">
-              <img ngSrc="{{ourChurch().about.crazyForJesusImage}}" decoding="async" priority fill alt=""
-                   style="padding: 5%" class="test">
+              <img ngSrc="{{ourChurch()?.about.crazyForJesusImage}}" decoding="async" priority width="1920" height="1080" style="height: auto; width: auto; padding: 5%" alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="test">
           </ion-col>
           <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
                    class="ion-text-start ion-justify-content-center">

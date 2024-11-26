@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {MissionsPageRoutingModule} from './missions-routing.module';
 
 import {MissionsPage} from './missions.page';

@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {DirectionsPageRoutingModule} from './directions-routing.module';
 
 import {DirectionsPage} from './directions.page';

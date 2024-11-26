@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {DatePipe, NgOptimizedImage} from '@angular/common';
 
 
-
 import {SeriesListPageRoutingModule} from './series-list-routing.module';
 
 import {SeriesListPage} from './series-list.page';

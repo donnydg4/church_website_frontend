@@ -2,7 +2,6 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 
-
 import {OurMinistriesPageRoutingModule} from './our-ministries-routing.module';
 
 import {OurMinistriesPage} from './our-ministries.page';

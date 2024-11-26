@@ -1,5 +1,5 @@
 import {computed, inject, Injectable, signal} from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {shareReplay, tap} from "rxjs/operators";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
 import {toSignal} from "@angular/core/rxjs-interop";
