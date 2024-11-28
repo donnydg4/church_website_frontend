@@ -1,4 +1,4 @@
-import {Component, HostListener, inject} from '@angular/core';
+import {Component, HostListener, inject, ViewEncapsulation} from '@angular/core';
 import {MatToolbar} from '@angular/material/toolbar';
 import {NgOptimizedImage} from '@angular/common';
 import {RouterLink} from '@angular/router';
@@ -31,6 +31,7 @@ import {
 } from "@ionic/angular/standalone";
 import {addIcons} from "ionicons";
 import {chevronDownOutline} from "ionicons/icons";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-header',
@@ -44,8 +45,9 @@ import {chevronDownOutline} from "ionicons/icons";
     IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
     IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
     IonButtons, IonIcon, IonMenuButton, IonMenu, IonHeader, IonToolbar, IonLabel, IonItem,
-    IonAccordion, IonAccordionGroup, IonItemGroup
+    IonAccordion, IonAccordionGroup, IonItemGroup, MatTooltip
   ],
+  encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
 

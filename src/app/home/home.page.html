@@ -28,7 +28,7 @@
               <ion-grid>
                 <ion-row class="ion-text-center ion-justify-content-center">
                   <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                      <img ngSrc="{{homeInfo().homePageTitle}}" priority alt="" style="min-height: 80px;" width="1920" height="100">
+                      <img ngSrc="{{homeInfo().homePageTitle}}" priority alt="" style="min-height: 80px; max-height: 90px; width: auto; height: auto" width="1920" height="100" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
                   </ion-col>
                 </ion-row>
                 <ion-row class="ion-text-center">
@@ -85,7 +85,7 @@
           </div>
         </ion-col>
         <ion-col size-lg="5">
-            <img ngSrc="{{homeInfo().whoWeAreImageUrl}}" decoding="async" priority fill alt="" class="home_images">
+            <img ngSrc="{{homeInfo().whoWeAreImageUrl}}" decoding="async" priority height="1280" width="1920" alt="" class="home_images" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
         </ion-col>
       </ion-row>
       <!--      Featured Events  -->
@@ -103,7 +103,7 @@
             <swiper-container swipey [config]="config" init="false" class="engageSwiper">
               @for (object of featuredEvents(); track object) {
                 <swiper-slide (click)="navigateToEvents()">
-                  <img ngSrc="{{object.imageUrl}}" class="custom" priority width="465" height="260" alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
+                  <img ngSrc="{{object.imageUrl}}" class="custom" style="height: auto; width: auto" priority width="1920" height="1080" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
                 </swiper-slide>
               }
             </swiper-container>
@@ -115,9 +115,9 @@
       } @else {
         <ion-row class="ion-text-center ion-justify-content-center" style="max-height: 110px; background: white;">
           <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6" style="height: 100%">
-            <div style="height: 110px;">
+            <div style="max-height: 110px;">
               <img ngSrc="{{homeInfo().establishedImg}}" priority alt="" height="508" width="1920"
-                   style="min-height: 80px; height: auto; width: auto; max-height: 110px">
+                   style="min-height: 80px; height: auto; width: auto; max-height: 110px" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
             </div>
           </ion-col>
         </ion-row>
@@ -126,7 +126,7 @@
       <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
-              <img ngSrc="{{homeInfo().newHereImageUrl}}" decoding="async" priority fill class="home_images" alt="">
+              <img ngSrc="{{homeInfo().newHereImageUrl}}" style="height: auto; width: auto" decoding="async" priority width="2560" height="1920" class="home_images" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
           </div>
         </ion-col>
         <ion-col size-lg="7" size-xs="12" style="height: auto; padding: 4%">
@@ -164,7 +164,7 @@
             @for (object of waysToEngage(); track object) {
               <swiper-slide (click)="navigateToPage(object.type)">
                 <h3>{{ object.description }}</h3>
-                <img ngSrc="{{object.imageUrl}}" class="custom" priority width="465" height="260" alt="">
+                <img ngSrc="{{object.imageUrl}}" style="height: auto; width: auto" class="custom" priority width="1920" height="1080" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
               </swiper-slide>
             }
           </swiper-container>

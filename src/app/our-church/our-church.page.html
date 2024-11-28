@@ -4,8 +4,7 @@
       <ion-row>
         <ion-col size="12">
           <div class="outside">
-              <img ngSrc="{{ourChurch().coverPhoto}}" decoding="async" fill alt="hello" class="cover"
-                   sizes="">
+              <img ngSrc="{{ourChurch().coverPhoto}}" priority alt="hello" class="cover" fill ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
             <div class="inside">
               <h1>{{ ourChurch().title }}</h1>
             </div>
@@ -61,7 +60,7 @@
       @if (selectedSegment() === 'about') {
         <ion-row style="height: auto" class="ion-justify-content-center ion-align-items-center">
           <ion-col size-md="6" size-xs="12">
-              <img ngSrc="{{ourChurch()?.about.crazyForJesusImage}}" decoding="async" priority width="1920" height="1080" style="height: auto; width: auto; padding: 5%" alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="test">
+              <img ngSrc="{{ourChurch()?.about.crazyForJesusImage}}" priority width="1920" height="1080" style="height: auto; width: auto; padding: 5%" alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="test">
           </ion-col>
           <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
                    class="ion-text-start ion-justify-content-center">
@@ -119,7 +118,7 @@
                   <ion-row style=" border-bottom: solid 2px #497588">
                     <ion-col size="12">
                       <div class="outside">
-                          <img ngSrc="{{faithStuff().imageUrl}}" decoding="async" fill alt="" class="faith">
+                          <img ngSrc="{{faithStuff().imageUrl}}" priority fill alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="faith">
                         <div class="inside">
                           <h1 class="faith">The Father's House Statement Of Faith</h1>
                         </div>

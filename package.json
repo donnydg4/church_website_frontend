@@ -72,8 +72,8 @@
     "webpack-bundle-analyzer": "^4.10.2"
   },
   "engines": {
-    "node": ">=18.13.0",
-    "npm": "9.5.1"
+    "node": ">=20.10.0",
+    "npm": "10.9.0"
   },
   "description": "The Father's House Website"
 }

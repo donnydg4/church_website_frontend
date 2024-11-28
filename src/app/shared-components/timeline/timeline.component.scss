@@ -209,6 +209,7 @@ header p{
   box-shadow: 0 0 1px rgba(0,0,0,0.20);
   z-index: 15;
   text-align: left;
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 .direction-l .desc,
