@@ -11,11 +11,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build --configuration production",
-    "build:stats":"ng build --stats-json",
+    "build:stats": "ng build --stats-json",
     "analyze": "webpack-bundle-analyzer dist/church_website_frontend/stats.json"
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/schematics": "^19.0.2",
     "@angular/animations": "^18.2.0",
     "@angular/cdk": "^18.2.0",
     "@angular/common": "^18.2.0",
