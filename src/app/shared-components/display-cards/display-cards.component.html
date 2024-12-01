@@ -2,14 +2,14 @@
   @if (displayCards) {
     <ion-row class="ion-text-left">
       @for (card of displayCards;track card;let i = $index) {
-        <ion-col size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
-          <ion-card mode="md" style="max-width: 421px;">
-            <swiper-container style="height: 330px" pagination="true">
+        <ion-col size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding" style="max-width: 335px">
+          <ion-card mode="md" style="max-width: 335px">
+            <swiper-container style="height: 330px;" pagination="true">
               @for (cardImage of card.imageUrl;track cardImage) {
                 <swiper-slide>
                   <div style="height: 100%; width: 100%">
-                      <img ngSrc="{{cardImage}}" alt="" style="min-height: 330px; max-height: 330px; width: 100%;"
-                           decoding="async" priority fill>
+                      <img ngSrc="{{cardImage}}" alt="" style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
+                           priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w" >
                   </div>
                 </swiper-slide>
               }

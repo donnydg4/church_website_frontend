@@ -1,7 +1,7 @@
 import {Category} from "./categories.model";
 
 export interface DisplayCardModel {
-  imageUrl: string[];
+  imageUrl?: string[];
   title: string;
   description: string;
   startDate?: Date;
