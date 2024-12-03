@@ -23,24 +23,25 @@ import {
 } from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-connect',
-    templateUrl: './connect.page.html',
-    styleUrls: ['./connect.page.scss'],
-    imports: [
-        FormsModule,
-        ReactiveFormsModule,
-        MatFormField,
-        MatLabel,
-        MatSelect,
-        MatSelectTrigger,
-        MatOption,
-        MatError,
-        MatInput,
-        MatHint,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText
-    ]
+  selector: 'app-connect',
+  templateUrl: './connect.page.html',
+  styleUrls: ['./connect.page.scss'],
+  standalone: true,
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormField,
+    MatLabel,
+    MatSelect,
+    MatSelectTrigger,
+    MatOption,
+    MatError,
+    MatInput,
+    MatHint,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText
+  ]
 })
 export class ConnectPage {
 

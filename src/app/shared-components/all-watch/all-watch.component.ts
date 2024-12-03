@@ -1,4 +1,4 @@
-import {Component, inject, Input} from '@angular/core';
+import {Component, inject, input} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {SeriesCardModel} from "../../models/sub-models/series-card.model";
@@ -24,17 +24,18 @@ import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 
 
 @Component({
-    selector: 'app-all-watch',
-    templateUrl: './all-watch.component.html',
-    styleUrls: ['./all-watch.component.scss'],
-    imports: [
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSearchbar,
-        NgOptimizedImage,
-        NgxPaginationModule,
-        UpperCasePipe,
-        DatePipe,
-    ]
+  selector: 'app-all-watch',
+  templateUrl: './all-watch.component.html',
+  styleUrls: ['./all-watch.component.scss'],
+  standalone: true,
+  imports: [
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSearchbar,
+    NgOptimizedImage,
+    NgxPaginationModule,
+    UpperCasePipe,
+    DatePipe,
+  ]
 })
 export class AllWatchComponent {
 
@@ -44,9 +45,9 @@ export class AllWatchComponent {
 
   page: number = 1;
 
-  @Input() title = ''
-  @Input() objectArray!: WatchModel[];
-  @Input() seriesArray!: SeriesCardModel[];
+  readonly title = input('');
+  readonly objectArray = input.required<WatchModel[]>();
+  readonly seriesArray = input.required<SeriesCardModel[]>();
 
   public config: PaginationInstance = {
     itemsPerPage: 15,

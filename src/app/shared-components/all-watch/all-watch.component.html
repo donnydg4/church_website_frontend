@@ -3,7 +3,7 @@
     <ion-col size-xl="12">
       <div class="ion-text-wrap">
         <h3 style="text-align: center;">
-          {{title | uppercase}}
+          {{title() | uppercase}}
         </h3>
       </div>
     </ion-col>
@@ -16,10 +16,10 @@
     </ion-col>
   </ion-row>
 
-  @if (title !== 'Series') {
-    @if (objectArray?.length > 0) {
+  @if (title() !== 'Series') {
+    @if (objectArray()?.length > 0) {
       <ion-row style="padding-top: 30px">
-        @for (cards of objectArray | paginate: {itemsPerPage: 15, currentPage: page, totalItems: objectArray.length}; track cards) {
+        @for (cards of objectArray() | paginate: {itemsPerPage: 15, currentPage: page, totalItems: objectArray().length}; track cards) {
           <ion-col size-xl="4" size-sm="4" size-xs="12" class="custom"
             >
             <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
@@ -37,16 +37,16 @@
     } @else {
       <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
         <ion-col size="12">
-          <h2>There are no {{title}}'s videos right now... They will be added as they come</h2>
+          <h2>There are no {{title()}}'s videos right now... They will be added as they come</h2>
         </ion-col>
       </ion-row>
     }
   }
 
-  @if (title === 'Series') {
-    @if (seriesArray?.length > 0) {
+  @if (title() === 'Series') {
+    @if (seriesArray()?.length > 0) {
       <ion-row style="padding-top: 30px">
-        @for (cards of seriesArray | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesArray.length}; track cards) {
+        @for (cards of seriesArray() | paginate: {itemsPerPage: 15, currentPage: page, totalItems: seriesArray().length}; track cards) {
           <ion-col size-xl="4" size-sm="6" size-xs="12" class="custom"
             >
             <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
@@ -64,7 +64,7 @@
     } @else {
       <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
         <ion-col size="12">
-          <h2>There are no {{title}}'s videos right now... They will be added as they come</h2>
+          <h2>There are no {{title()}}'s videos right now... They will be added as they come</h2>
         </ion-col>
       </ion-row>
     }

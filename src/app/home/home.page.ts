@@ -22,17 +22,18 @@ import {
 } from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-home',
-    templateUrl: 'home.page.html',
-    styleUrls: ['home.page.scss'],
-    imports: [
-        NgOptimizedImage,
-        SwiperDirective,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+  imports: [
+    NgOptimizedImage,
+    SwiperDirective,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
+  ],
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage {
 

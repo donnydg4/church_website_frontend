@@ -4,10 +4,11 @@ import {IonButton, IonCol, IonContent, IonFooter, IonGrid, IonRow, IonText} from
 import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
-    selector: 'app-footer',
-    templateUrl: './footer.component.html',
-    styleUrls: ['./footer.component.scss'],
-    imports: [RouterLink, IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonFooter, MatTooltip]
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss'],
+  standalone: true,
+  imports: [RouterLink, IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonFooter, MatTooltip]
 })
 export class FooterComponent implements OnInit {
 

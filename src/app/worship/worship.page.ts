@@ -26,11 +26,12 @@ import {addIcons} from "ionicons";
 import {logoYoutube, playSkipBackSharp, playSkipForwardSharp} from "ionicons/icons";
 
 @Component({
-    selector: 'app-worship',
-    templateUrl: './worship.page.html',
-    styleUrls: ['./worship.page.scss'],
-    imports: [NgOptimizedImage, IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon, IonRange, IonList, IonItem, IonLabel, IonNote]
+  selector: 'app-worship',
+  templateUrl: './worship.page.html',
+  styleUrls: ['./worship.page.scss'],
+  standalone: true,
+  imports: [NgOptimizedImage, IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon, IonRange, IonList, IonItem, IonLabel, IonNote]
 })
 export class WorshipPage {
 

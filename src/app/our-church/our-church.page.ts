@@ -26,22 +26,23 @@ import {TimelineComponent} from '../shared-components/timeline/timeline.componen
 import {FooterComponent} from '../shared-components/footer/footer.component';
 
 @Component({
-    selector: 'app-our-church',
-    templateUrl: './our-church.page.html',
-    styleUrls: ['./our-church.page.scss'],
-    imports: [
-        NgOptimizedImage,
-        MatToolbar,
-        MatIconButton,
-        MatMenuTrigger,
-        MatIcon,
-        MatMenu,
-        MatMenuItem,
-        TimelineComponent,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSegment, IonSegmentButton, IonLabel
-    ]
+  selector: 'app-our-church',
+  templateUrl: './our-church.page.html',
+  styleUrls: ['./our-church.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    MatToolbar,
+    MatIconButton,
+    MatMenuTrigger,
+    MatIcon,
+    MatMenu,
+    MatMenuItem,
+    TimelineComponent,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSegment, IonSegmentButton, IonLabel
+  ]
 })
 export class OurChurchPage {
   private dataService = inject(AllChurchInformationService);

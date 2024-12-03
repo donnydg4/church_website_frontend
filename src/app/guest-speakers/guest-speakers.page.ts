@@ -6,14 +6,15 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonContent} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-guest-speakers',
-    templateUrl: './guest-speakers.page.html',
-    styleUrls: ['./guest-speakers.page.scss'],
-    imports: [
-        AllWatchComponent,
-        FooterComponent,
-        IonContent
-    ]
+  selector: 'app-guest-speakers',
+  templateUrl: './guest-speakers.page.html',
+  styleUrls: ['./guest-speakers.page.scss'],
+  standalone: true,
+  imports: [
+    AllWatchComponent,
+    FooterComponent,
+    IonContent
+  ]
 })
 export class GuestSpeakersPage {
 

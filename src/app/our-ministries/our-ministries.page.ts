@@ -7,15 +7,16 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-our-ministries',
-    templateUrl: './our-ministries.page.html',
-    styleUrls: ['./our-ministries.page.scss'],
-    imports: [
-        NgOptimizedImage,
-        DisplayCardsComponent,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol
-    ]
+  selector: 'app-our-ministries',
+  templateUrl: './our-ministries.page.html',
+  styleUrls: ['./our-ministries.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    DisplayCardsComponent,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol
+  ]
 })
 export class OurMinistriesPage {
 

@@ -1,4 +1,4 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA, inject, Input} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, inject, input} from '@angular/core';
 import {DisplayCardModel} from "../../models/sub-models/display-card.model";
 import {
   IonButton,
@@ -17,17 +17,18 @@ import {
 import {DatePipe, NgClass, NgOptimizedImage} from '@angular/common';
 
 @Component({
-    selector: 'app-display-cards',
-    templateUrl: './display-cards.component.html',
-    styleUrls: ['./display-cards.component.scss'],
-    imports: [
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
-        NgOptimizedImage,
-        NgClass,
-        DatePipe,
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  selector: 'app-display-cards',
+  templateUrl: './display-cards.component.html',
+  styleUrls: ['./display-cards.component.scss'],
+  imports: [
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
+    NgOptimizedImage,
+    NgClass,
+    DatePipe,
+  ],
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DisplayCardsComponent {
 
@@ -35,7 +36,7 @@ export class DisplayCardsComponent {
 
   isSelected: number;
 
-  @Input() displayCards?: DisplayCardModel[];
+  readonly displayCards = input<DisplayCardModel[]>(undefined);
 
   navigateToPage() {
     this.navCtrl.navigateForward([`connect`]);

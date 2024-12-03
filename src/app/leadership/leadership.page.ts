@@ -6,15 +6,16 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-leadership',
-    templateUrl: './leadership.page.html',
-    styleUrls: ['./leadership.page.scss'],
-    imports: [
-        NgOptimizedImage,
-        DisplayCardsComponent,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol
-    ]
+  selector: 'app-leadership',
+  templateUrl: './leadership.page.html',
+  styleUrls: ['./leadership.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    DisplayCardsComponent,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol
+  ]
 })
 export class LeadershipPage {
 

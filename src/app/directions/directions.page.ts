@@ -6,14 +6,15 @@ import {IonButton, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/an
 
 
 @Component({
-    selector: 'app-directions',
-    templateUrl: './directions.page.html',
-    styleUrls: ['./directions.page.scss'],
-    imports: [
-        NgOptimizedImage,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol, IonButton, IonText
-    ]
+  selector: 'app-directions',
+  templateUrl: './directions.page.html',
+  styleUrls: ['./directions.page.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText
+  ]
 })
 export class DirectionsPage {
 

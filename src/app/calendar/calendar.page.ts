@@ -33,28 +33,29 @@ import {
 } from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-calendar',
-    templateUrl: './calendar.page.html',
-    styleUrls: ['./calendar.page.scss'],
-    imports: [
-        MatFormField,
-        MatLabel,
-        MatDateRangeInput,
-        FormsModule,
-        ReactiveFormsModule,
-        MatStartDate,
-        MatEndDate,
-        MatDatepickerToggle,
-        MatSuffix,
-        MatDateRangePicker,
-        MatDatepickerActions,
-        MatDatepickerCancel,
-        MatDatepickerApply,
-        FooterComponent,
-        DatePipe,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText
-    ]
+  selector: 'app-calendar',
+  templateUrl: './calendar.page.html',
+  styleUrls: ['./calendar.page.scss'],
+  standalone: true,
+  imports: [
+    MatFormField,
+    MatLabel,
+    MatDateRangeInput,
+    FormsModule,
+    ReactiveFormsModule,
+    MatStartDate,
+    MatEndDate,
+    MatDatepickerToggle,
+    MatSuffix,
+    MatDateRangePicker,
+    MatDatepickerActions,
+    MatDatepickerCancel,
+    MatDatepickerApply,
+    FooterComponent,
+    DatePipe,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText
+  ]
 })
 export class CalendarPage implements OnInit {
 

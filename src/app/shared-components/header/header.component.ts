@@ -34,19 +34,20 @@ import {chevronDownOutline} from "ionicons/icons";
 import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
-    imports: [
-        MatToolbar,
-        NgOptimizedImage,
-        RouterLink,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
-        IonButtons, IonIcon, IonMenuButton, IonMenu, IonHeader, IonToolbar, IonLabel, IonItem,
-        IonAccordion, IonAccordionGroup, IonItemGroup, MatTooltip
-    ],
-    encapsulation: ViewEncapsulation.None
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
+  imports: [
+    MatToolbar,
+    NgOptimizedImage,
+    RouterLink,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
+    IonButtons, IonIcon, IonMenuButton, IonMenu, IonHeader, IonToolbar, IonLabel, IonItem,
+    IonAccordion, IonAccordionGroup, IonItemGroup, MatTooltip
+  ],
+  standalone: true,
+  encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
 

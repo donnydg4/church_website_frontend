@@ -6,14 +6,15 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonContent} from "@ionic/angular/standalone";
 
 @Component({
-    selector: 'app-devotionals',
-    templateUrl: './devotionals.page.html',
-    styleUrls: ['./devotionals.page.scss'],
-    imports: [
-        AllWatchComponent,
-        FooterComponent,
-        IonContent
-    ]
+  selector: 'app-devotionals',
+  templateUrl: './devotionals.page.html',
+  styleUrls: ['./devotionals.page.scss'],
+  standalone: true,
+  imports: [
+    AllWatchComponent,
+    FooterComponent,
+    IonContent
+  ]
 })
 export class DevotionalsPage {
 
