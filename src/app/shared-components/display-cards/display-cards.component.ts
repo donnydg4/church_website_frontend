@@ -17,18 +17,17 @@ import {
 import {DatePipe, NgClass, NgOptimizedImage} from '@angular/common';
 
 @Component({
-  selector: 'app-display-cards',
-  templateUrl: './display-cards.component.html',
-  styleUrls: ['./display-cards.component.scss'],
-  standalone: true,
-  imports: [
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
-    NgOptimizedImage,
-    NgClass,
-    DatePipe,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    selector: 'app-display-cards',
+    templateUrl: './display-cards.component.html',
+    styleUrls: ['./display-cards.component.scss'],
+    imports: [
+        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
+        NgOptimizedImage,
+        NgClass,
+        DatePipe,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DisplayCardsComponent {
 

@@ -24,18 +24,17 @@ import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 
 
 @Component({
-  selector: 'app-all-watch',
-  templateUrl: './all-watch.component.html',
-  styleUrls: ['./all-watch.component.scss'],
-  standalone: true,
-  imports: [
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSearchbar,
-    NgOptimizedImage,
-    NgxPaginationModule,
-    UpperCasePipe,
-    DatePipe,
-  ],
+    selector: 'app-all-watch',
+    templateUrl: './all-watch.component.html',
+    styleUrls: ['./all-watch.component.scss'],
+    imports: [
+        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSearchbar,
+        NgOptimizedImage,
+        NgxPaginationModule,
+        UpperCasePipe,
+        DatePipe,
+    ]
 })
 export class AllWatchComponent {
 

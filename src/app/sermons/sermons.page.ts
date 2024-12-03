@@ -6,15 +6,14 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonContent} from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-sermons',
-  templateUrl: './sermons.page.html',
-  styleUrls: ['./sermons.page.scss'],
-  standalone: true,
-  imports: [
-    IonContent,
-    AllWatchComponent,
-    FooterComponent,
-  ],
+    selector: 'app-sermons',
+    templateUrl: './sermons.page.html',
+    styleUrls: ['./sermons.page.scss'],
+    imports: [
+        IonContent,
+        AllWatchComponent,
+        FooterComponent,
+    ]
 })
 export class SermonsPage {
 

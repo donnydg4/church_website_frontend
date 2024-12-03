@@ -7,16 +7,15 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-all-events',
-  templateUrl: './all-events.page.html',
-  styleUrls: ['./all-events.page.scss'],
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    EventComponent,
-    FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol
-  ],
+    selector: 'app-all-events',
+    templateUrl: './all-events.page.html',
+    styleUrls: ['./all-events.page.scss'],
+    imports: [
+        NgOptimizedImage,
+        EventComponent,
+        FooterComponent,
+        IonContent, IonGrid, IonRow, IonCol
+    ]
 })
 export class AllEventsPage {
 

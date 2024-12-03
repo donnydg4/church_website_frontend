@@ -7,16 +7,15 @@ import {DisplayCardsComponent} from '../shared-components/display-cards/display-
 import {FooterComponent} from '../shared-components/footer/footer.component';
 
 @Component({
-  selector: 'app-missions',
-  templateUrl: './missions.page.html',
-  styleUrls: ['./missions.page.scss'],
-  standalone: true,
-  imports: [
-    IonContent, IonGrid, IonRow, IonCol,
-    NgOptimizedImage,
-    DisplayCardsComponent,
-    FooterComponent,
-  ],
+    selector: 'app-missions',
+    templateUrl: './missions.page.html',
+    styleUrls: ['./missions.page.scss'],
+    imports: [
+        IonContent, IonGrid, IonRow, IonCol,
+        NgOptimizedImage,
+        DisplayCardsComponent,
+        FooterComponent,
+    ]
 })
 export class MissionsPage {
 

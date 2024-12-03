@@ -6,15 +6,14 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonContent} from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-series',
-  templateUrl: './series.page.html',
-  styleUrls: ['./series.page.scss'],
-  standalone: true,
-  imports: [
-    AllWatchComponent,
-    FooterComponent,
-    IonContent
-  ],
+    selector: 'app-series',
+    templateUrl: './series.page.html',
+    styleUrls: ['./series.page.scss'],
+    imports: [
+        AllWatchComponent,
+        FooterComponent,
+        IonContent
+    ]
 })
 export class SeriesPage {
 

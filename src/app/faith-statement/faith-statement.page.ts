@@ -5,16 +5,14 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
 import {IonButton, IonCard, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-faith-statement',
-  templateUrl: './faith-statement.page.html',
-  styleUrls: ['./faith-statement.page.scss'],
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonButton, IonText
-
-  ],
+    selector: 'app-faith-statement',
+    templateUrl: './faith-statement.page.html',
+    styleUrls: ['./faith-statement.page.scss'],
+    imports: [
+        NgOptimizedImage,
+        FooterComponent,
+        IonContent, IonGrid, IonRow, IonCol, IonCard, IonButton, IonText
+    ]
 })
 export class FaithStatementPage {
 

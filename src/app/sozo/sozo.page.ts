@@ -5,8 +5,7 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
     selector: 'app-sozo',
     templateUrl: './sozo.page.html',
     styleUrls: ['./sozo.page.scss'],
-    standalone: true,
-    imports: [FooterComponent],
+    imports: [FooterComponent]
 })
 export class SozoPage implements OnInit {
 

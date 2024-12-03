@@ -7,13 +7,11 @@ register();
 registerSwiperElements();
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
-  standalone: true,
-  imports: [IonApp, IonRouterOutlet],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.scss'],
+    imports: [IonApp, IonRouterOutlet],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
   constructor() {

@@ -27,21 +27,20 @@ import {
 } from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-video',
-  templateUrl: './video.page.html',
-  styleUrls: ['./video.page.scss'],
-  standalone: true,
-  imports: [
-    MatFormField,
-    MatLabel,
-    MatInput,
-    FormsModule,
-    MatHint,
-    FooterComponent,
-    DatePipe,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
-  ],
+    selector: 'app-video',
+    templateUrl: './video.page.html',
+    styleUrls: ['./video.page.scss'],
+    imports: [
+        MatFormField,
+        MatLabel,
+        MatInput,
+        FormsModule,
+        MatHint,
+        FooterComponent,
+        DatePipe,
+        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
+    ]
 })
 export class VideoPage {
 

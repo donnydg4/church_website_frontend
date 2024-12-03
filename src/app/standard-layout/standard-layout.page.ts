@@ -19,17 +19,16 @@ import {
 } from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-standard-layout',
-  templateUrl: './standard-layout.page.html',
-  styleUrls: ['./standard-layout.page.scss'],
-  standalone: true,
-  imports: [
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon,
-    NgOptimizedImage,
-    FooterComponent,
-    DatePipe,
-  ],
+    selector: 'app-standard-layout',
+    templateUrl: './standard-layout.page.html',
+    styleUrls: ['./standard-layout.page.scss'],
+    imports: [
+        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+        IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon,
+        NgOptimizedImage,
+        FooterComponent,
+        DatePipe,
+    ]
 })
 export class StandardLayoutPage {
 

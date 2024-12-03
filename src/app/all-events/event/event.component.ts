@@ -17,15 +17,14 @@ import {
 } from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.scss'],
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    DatePipe,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent
-  ],
+    selector: 'app-event',
+    templateUrl: './event.component.html',
+    styleUrls: ['./event.component.scss'],
+    imports: [
+        NgOptimizedImage,
+        DatePipe,
+        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent
+    ]
 })
 export class EventComponent {
 
