@@ -2,9 +2,10 @@
   <ion-grid [fixed]="true" style="margin-top: 3%">
     <ion-row class="ion-text-left">
       @for (events of eventsArray(); track events) {
-        <ion-col size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
+        <ion-col size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
           <ion-card button mode="md" (click)="takeToStandardLayout(events)">
-            <img ngSrc="{{events?.imageUrl}}" decoding="async" fill alt="">
+            <img ngSrc="{{events?.imageUrl}}" style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
+                 priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
             <ion-card-header>
               <ion-card-title>{{ events.title }}</ion-card-title>
               @if (events.endDate) {

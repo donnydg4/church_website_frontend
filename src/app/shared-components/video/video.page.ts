@@ -25,6 +25,8 @@ import {
   Platform,
   ToastController
 } from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {arrowBackOutline} from "ionicons/icons";
 
 @Component({
   selector: 'app-video',
@@ -61,6 +63,7 @@ export class VideoPage {
   constructor() {
     this.anyCard = JSON.parse(localStorage.getItem('card'));
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
+    addIcons({ arrowBackOutline });
   }
 
   openTextArea() {

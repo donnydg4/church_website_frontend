@@ -24,7 +24,8 @@
             >
             <ion-card mode="md" (click)="navigateToSermonOrDevotionalOrGuestSpeaker(cards)">
               <div class="img_good">
-                  <img alt="img-src" ngSrc="{{cards?.imageUrl}}" decoding="async" fill >
+                <img ngSrc="{{cards?.imageUrl}}" alt="" style="width: auto; height: auto"
+                     priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
               </div>
               <ion-card-header>
                 <ion-card-title>{{cards?.title}}</ion-card-title>
@@ -51,7 +52,8 @@
             >
             <ion-card mode="md" (click)="navigateToSeriesPage(cards)">
               <div class="img_good">
-                  <img alt="img-src" ngSrc="{{cards?.imageUrl}}" decoding="async" fill>
+                  <img alt="img-src" ngSrc="{{cards?.imageUrl}}" style="width: auto; height: auto"
+                       priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
               </div>
               <ion-card-header>
                 <ion-card-title>{{cards?.title}}</ion-card-title>
