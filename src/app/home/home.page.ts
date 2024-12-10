@@ -40,8 +40,9 @@ export class HomePage {
   private dataService = inject(AllChurchInformationService);
   private navCtrl = inject(NavController);
 
-  homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
-  waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
+  // homeInfo = computed(() => this.dataService.allChurchInformation()?.allWebsiteInformation?.homePage);
+  homeInfo = this.dataService.allWebsiteInformationTwo.value;
+  // waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
   featuredEvents = this.dataService.featuredEventsTwo;
 
   navigateToPage(type: string) {

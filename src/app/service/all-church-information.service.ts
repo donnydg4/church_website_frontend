@@ -1,8 +1,8 @@
-import {computed, inject, Injectable, signal} from '@angular/core';
+import {computed, effect, inject, Injectable, ResourceStatus, signal} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {shareReplay, tap} from "rxjs/operators";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
-import {toSignal} from "@angular/core/rxjs-interop";
+import {rxResource, toSignal} from "@angular/core/rxjs-interop";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
 import {sortByDateEvent} from "../utils/utils";
@@ -41,6 +41,15 @@ export class AllChurchInformationService {
       tap(data => console.log(data))
     );
 
+  allWebsiteInformationTwo = rxResource({
+    loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
+  });
+
+  eff = effect(() => {
+    console.log('Status:', ResourceStatus[this.allWebsiteInformationTwo.status()]);
+    console.log('Value: ', this.allWebsiteInformationTwo.value());
+  })
+
   //convert http call to signal
   allChurchInformation = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
 
@@ -58,10 +67,7 @@ export class AllChurchInformationService {
   // );
 
   featuredEventsTwo = computed(() =>
-    this.allChurchInformation()
-      ?.allCalendarInformation
-      ?.reduce((acc: CalendarEvent[], cur: CalendarModel) => [...acc, ...cur.events], [] as CalendarEvent[])
-      .filter((event: CalendarEvent) =>
+    this.allWebsiteInformationTwo.value()?.allCalendarInformation?.reduce((acc: CalendarEvent[], cur: CalendarModel) => [...acc, ...cur.events], [] as CalendarEvent[]).filter((event: CalendarEvent) =>
         event.type === 'event' &&
         event.featured === true &&
         event.startDate &&

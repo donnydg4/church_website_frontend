@@ -17,6 +17,8 @@ import {
   IonText,
   NavController
 } from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {arrowBackOutline} from "ionicons/icons";
 
 @Component({
   selector: 'app-standard-layout',
@@ -38,6 +40,7 @@ export class StandardLayoutPage {
   calendarEvent: CalendarEvent;
 
   constructor() {
+    addIcons({ arrowBackOutline });
     this.calendarEvent = JSON.parse(localStorage.getItem('calendar'));
   }
 
