@@ -34,26 +34,26 @@ export class AllChurchInformationService {
   //signal
   searchQuerySignal = signal('');
 
-  //http call
-  private allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
-    .pipe(
-      shareReplay(1),
-      tap(data => console.log(data))
-    );
+  // //http call
+  // private allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
+  //   .pipe(
+  //     shareReplay(1),
+  //     tap(data => console.log(data))
+  //   );
 
+  //async rxresource call
   allWebsiteInformationTwo = rxResource({
     loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
   });
+  //
+  // eff = effect(() => {
+  //   console.log('Status:', ResourceStatus[this.allWebsiteInformationTwo.status()]);
+  //   console.log('Value: ', this.allWebsiteInformationTwo.value());
+  // })
 
-  eff = effect(() => {
-    console.log('Status:', ResourceStatus[this.allWebsiteInformationTwo.status()]);
-    console.log('Value: ', this.allWebsiteInformationTwo.value());
-  })
+  // //convert http call to signal
+  // allChurchInformation = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
 
-  //convert http call to signal
-  allChurchInformation = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
-
-  worshipPageSignal = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
 
   // featuredEvents = computed(() =>
   //   this.allChurchInformation()
