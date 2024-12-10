@@ -21,7 +21,6 @@ export class MinistriesWeSupportPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  //signals
-  ministriesWeSupportInfo = computed(() => this.dataService.allChurchInformation().ministriesWeSupportPage);
-  displayMinistriesWeSupportCards = computed(() => this.dataService.allChurchInformation().ministriesWeSupportPage?.displayCards);
+  //rxResource signal from http request
+  ministriesWeSupport = this.dataService.allWebsiteInformationTwo.value;
 }

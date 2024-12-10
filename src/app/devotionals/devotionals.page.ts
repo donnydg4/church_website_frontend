@@ -21,7 +21,7 @@ export class DevotionalsPage {
   devotionalsTitle = signal('Devotionals');
   private dataService = inject(AllChurchInformationService);
 
-  devotionalCardsSearchable = computed(() => this.dataService?.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'devotional').sort(sortByDate)
+  devotionalCardsSearchable = computed(() => this.dataService?.allWebsiteInformationTwo.value()?.allWatchCards?.filter(allCards => allCards?.category === 'devotional').sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {
           return cards

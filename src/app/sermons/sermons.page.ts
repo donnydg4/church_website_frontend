@@ -21,7 +21,7 @@ export class SermonsPage {
   private dataService = inject(AllChurchInformationService);
   sermonTitle = signal('Sermons');
 
-  sermonCardsSearchable = computed(() => this.dataService?.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'sermon')
+  sermonCardsSearchable = computed(() => this.dataService?.allWebsiteInformationTwo.value()?.allWatchCards?.filter(allCards => allCards?.category === 'sermon')
     .sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {

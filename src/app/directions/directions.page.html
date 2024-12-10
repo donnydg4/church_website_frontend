@@ -5,10 +5,10 @@
         <ion-col size="12" style="padding: 15px;">
           <ion-grid>
             <ion-row>
-              @if (locations().length <= 1) {
-                @for (location of locations(); track location) {
+              @if (locations().allWebsiteInformation.directions.length <= 1) {
+                @for (location of locations().allWebsiteInformation.directions; track location) {
                   <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="12" size-lg="10" offset-lg="1"
-                    >
+                  >
                     <div style="text-align: center">
                       <h5>
                         {{ location?.title }}
@@ -17,73 +17,75 @@
                         <ion-text style="white-space: pre-wrap">
                           {{ location?.address.streetName }}
                           <br>
-                            {{ location?.address.cityStateZip }}
-                            <br>
-                              {{ location?.address.phoneNumber }}
-                            </ion-text>
-                          </div>
-                        </div>
-                        <br>
-                          <div>
-                              <img ngSrc="{{location?.imageUrl}}" decoding="async" width="1920" height="1080" style="height: auto; width: auto" alt="" priority ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
-                          </div>
+                          {{ location?.address.cityStateZip }}
                           <br>
-                            <div style="text-align: center">
-                              <ion-button fill="outline" class="about"
-                                href="https://www.google.com/maps/dir/?api=1&destination=The%20Father%27s%20House%20Freeport%20Illinois">
-                                Directions
-                              </ion-button>
-                            </div>
-                          </ion-col>
-                        }
-                      }
-                      @if (locations().length > 1) {
-                        @for (location of locations(); track location) {
-                          <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="6">
-                            <div style="text-align: center">
-                              <h5>
-                                {{ location?.title }}
-                              </h5>
-                              <div>
-                                <ion-text style="white-space: pre-wrap">
-                                  {{ location?.address.streetName }}
-                                  <br>
-                                    {{ location?.address.cityStateZip }}
-                                    <br>
-                                      {{ location?.address.phoneNumber }}
-                                    </ion-text>
-                                  </div>
-                                </div>
-                                <br>
-                                  <div>
+                          {{ location?.address.phoneNumber }}
+                        </ion-text>
+                      </div>
+                    </div>
+                    <br>
+                    <div>
+                      <img ngSrc="{{location?.imageUrl}}" decoding="async" width="1920" height="1080"
+                           style="height: auto; width: auto" alt="" priority
+                           ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
+                    </div>
+                    <br>
+                    <div style="text-align: center">
+                      <ion-button fill="outline" class="about"
+                                  href="https://www.google.com/maps/dir/?api=1&destination=The%20Father%27s%20House%20Freeport%20Illinois">
+                        Directions
+                      </ion-button>
+                    </div>
+                  </ion-col>
+                }
+              }
+              @if (locations().allWebsiteInformation.directions.length > 1) {
+                @for (location of locations().allWebsiteInformation.directions; track location) {
+                  <ion-col style="padding: 15px" size-xs="12" size-sm="12" size-md="6">
+                    <div style="text-align: center">
+                      <h5>
+                        {{ location?.title }}
+                      </h5>
+                      <div>
+                        <ion-text style="white-space: pre-wrap">
+                          {{ location?.address.streetName }}
+                          <br>
+                          {{ location?.address.cityStateZip }}
+                          <br>
+                          {{ location?.address.phoneNumber }}
+                        </ion-text>
+                      </div>
+                    </div>
+                    <br>
+                    <div>
 
-                                      <img ngSrc="{{location?.imageUrl}}" fill decoding="sync" priority alt="">
-                                  </div>
-                                  <br>
-                                    <div style="text-align: center">
-                                      <ion-button fill="outline" class="about"
-                                        href="https://www.google.com/maps/dir/?api=1&destination=The%20Father%27s%20House%20Freeport%20Illinois">
-                                        Directions
-                                      </ion-button>
-                                    </div>
-                                  </ion-col>
-                                }
-                              }
-                            </ion-row>
-                          </ion-grid>
-                        </ion-col>
-                      </ion-row>
-                    </ion-grid>
-                    <ion-grid>
-                      <ion-row style="background: white">
-                        <ion-col size="12" class="ion-no-padding">
-                          <div style="text-align: center; border-bottom: 2px solid black; border-top: 2px solid black">
-                            <h4 class="times">SERVICE TIMES</h4>
-                            <p class="times">Sunday: 10:00am | Wednesday: 6:30pm</p>
-                          </div>
-                        </ion-col>
-                      </ion-row>
-                    </ion-grid>
-                  }
-                  <app-footer></app-footer>
-                </ion-content>
+                      <img ngSrc="{{location?.imageUrl}}" fill decoding="sync" priority alt="">
+                    </div>
+                    <br>
+                    <div style="text-align: center">
+                      <ion-button fill="outline" class="about"
+                                  href="https://www.google.com/maps/dir/?api=1&destination=The%20Father%27s%20House%20Freeport%20Illinois">
+                        Directions
+                      </ion-button>
+                    </div>
+                  </ion-col>
+                }
+              }
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row style="background: white">
+        <ion-col size="12" class="ion-no-padding">
+          <div style="text-align: center; border-bottom: 2px solid black; border-top: 2px solid black">
+            <h4 class="times">SERVICE TIMES</h4>
+            <p class="times">Sunday: 10:00am | Wednesday: 6:30pm</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  }
+  <app-footer></app-footer>
+</ion-content>

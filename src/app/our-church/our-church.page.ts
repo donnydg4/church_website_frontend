@@ -50,6 +50,9 @@ export class OurChurchPage {
 
   public platformWidth = this.platform.width()
   selectedSegment = signal('history');
+  //rxResource signal from http request
+  ourChurch = this.dataService.allWebsiteInformationTwo.value;
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
@@ -61,8 +64,10 @@ export class OurChurchPage {
   }
 
   //signals which replaced rxjs
-  historyItems = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch?.history);
-  ourChurch = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch);
-  faithStuff = computed(() => this.dataService.allChurchInformation()?.statementOfFaith);
+  // historyItems = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch?.history);
+  // ourChurch = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.ourChurch);
+  // faithStuff = computed(() => this.dataService.allChurchInformation()?.statementOfFaith);
+  // historyItems = this.dataService.allWebsiteInformationTwo.value;
+  // faithStuff = this.dataService.allWebsiteInformationTwo.value;
 
 }

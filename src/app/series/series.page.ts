@@ -21,7 +21,7 @@ export class SeriesPage {
   private dataService = inject(AllChurchInformationService);
   seriesTitle = 'Series';
 
-  seriesCardsSearchable = computed(() => this.dataService?.allChurchInformation()?.allSeriesCards?.filter(allCards => (allCards?.category === 'series' || allCards?.category === 'devotional')).sort(sortByDate)
+  seriesCardsSearchable = computed(() => this.dataService?.allWebsiteInformationTwo.value()?.allSeriesCards?.filter(allCards => (allCards?.category === 'series' || allCards?.category === 'devotional')).sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {
           return cards

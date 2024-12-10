@@ -22,9 +22,12 @@ export class OurMinistriesPage {
 
   private dataService = inject(AllChurchInformationService);
 
+  //rxResource signal from http request
+  ourMinistries = this.dataService.allWebsiteInformationTwo.value;
+
   //signals
-  ourMinistries = computed(() => this.dataService?.allChurchInformation()?.ourMinistriesPage!);
-  displayOurMinistryCards = computed(() => this.dataService.allChurchInformation()?.ourMinistriesPage?.displayCards.sort(sortByCardCategory));
+  // ourMinistries = computed(() => this.dataService?.allChurchInformation()?.ourMinistriesPage!);
+  // displayOurMinistryCards = computed(() => this.dataService.allChurchInformation()?.ourMinistriesPage?.displayCards.sort(sortByCardCategory));
 }
 
 

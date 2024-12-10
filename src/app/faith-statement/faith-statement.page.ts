@@ -20,6 +20,7 @@ export class FaithStatementPage {
   private dataService = inject(AllChurchInformationService);
 
   //convert rxjs to signal
-  faithStuff = computed(() => this.dataService.allChurchInformation()?.statementOfFaith);
-
+  // faithStuff = computed(() => this.dataService.allChurchInformation()?.statementOfFaith);
+  //rxResource signal from http request
+  faithStuff = this.dataService.allWebsiteInformationTwo.value;
 }

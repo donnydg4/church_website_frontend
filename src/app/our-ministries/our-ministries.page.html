@@ -4,15 +4,15 @@
       <ion-row>
         <ion-col size="12">
           <div class="outside">
-            <img ngSrc="{{ourMinistries()?.coverPhoto}}" priority fill alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
+            <img ngSrc="{{ourMinistries()?.ourMinistriesPage.coverPhoto}}" priority fill alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
             <div class="inside">
-              <h1>{{ourMinistries()?.title}}</h1>
+              <h1>{{ourMinistries()?.ourMinistriesPage.title}}</h1>
             </div>
           </div>
         </ion-col>
       </ion-row>
     }
   </ion-grid>
-  <app-display-cards [displayCards]="displayOurMinistryCards()"></app-display-cards>
+  <app-display-cards [displayCards]="ourMinistries()?.ourMinistriesPage?.displayCards"></app-display-cards>
   <app-footer></app-footer>
 </ion-content>

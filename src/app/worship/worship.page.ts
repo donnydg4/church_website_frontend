@@ -39,7 +39,7 @@ export class WorshipPage {
   private navCtrl = inject(NavController);
   private sanitizer = inject(DomSanitizer);
 
-  worshipPage = computed(() => this.dataService?.worshipPageSignal().worshipPage);
+  worshipPage = this.dataService.allWebsiteInformationTwo.value;
 
   fakeArray: string[] = ['5xQEgz7J3RA', 'Xk6LKuqj3Xc', 'qv3-TDdD1pM', '-h9wpvwAF-M'];
   defaultUrl: string = "https://www.youtube.com/embed/";

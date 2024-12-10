@@ -21,7 +21,6 @@ export class LeadershipPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  //signals
-  leadershipInfo = computed(() => this.dataService.allChurchInformation()?.leadershipPage);
-  leadershipCards = computed(() => this.dataService.allChurchInformation()?.leadershipPage?.displayCards);
+  //rxResource signal from http request
+  leadership = this.dataService.allWebsiteInformationTwo.value;
 }

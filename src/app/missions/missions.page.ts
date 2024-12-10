@@ -22,7 +22,6 @@ export class MissionsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  //signals
-  missions = computed(() => this.dataService.allChurchInformation()?.missionsPage);
-  missionCards = computed(() => this.dataService.allChurchInformation()?.missionsPage?.displayCards.sort(sortByDateDisplay).sort(sortByCardCategory));
+  //rxResource signal from http request
+  missions = this.dataService.allWebsiteInformationTwo.value;
 }

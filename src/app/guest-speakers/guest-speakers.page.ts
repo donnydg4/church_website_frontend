@@ -21,7 +21,8 @@ export class GuestSpeakersPage {
   private dataService = inject(AllChurchInformationService);
   podcasts = signal('Podcasts');
 
-  podcastsSearchable = computed(() => this.dataService.allChurchInformation()?.allWatchCards?.filter(allCards => allCards?.category === 'podcasts').sort(sortByDate)
+  //rxResource signal from http request
+  podcastsSearchable = computed(() => this.dataService.allWebsiteInformationTwo.value()?.allWatchCards?.filter(allCards => allCards?.category === 'podcasts').sort(sortByDate)
     .filter(cards => {
         if (!this.dataService.searchQuerySignal()) {
           return cards

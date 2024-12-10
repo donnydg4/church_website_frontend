@@ -4,15 +4,15 @@
       <ion-col style="height: 100%" size="12">
         <div class="outside_home_worship">
           <video playsinline [muted]="true" loop id="video" height="100%" autoplay>
-            <source src="{{worshipPage()?.videoUrl}}" type="video/mp4">
-            <source src="{{worshipPage()?.videoUrl}}" type="video/webm">
-            <source src="{{worshipPage()?.videoUrl}}" type="video/mov">
+            <source src="{{worshipPage()?.worshipPage.videoUrl}}" type="video/mp4">
+            <source src="{{worshipPage()?.worshipPage.videoUrl}}" type="video/webm">
+            <source src="{{worshipPage()?.worshipPage.videoUrl}}" type="video/mov">
           </video>
           <div class="inside">
             <ion-grid>
               <ion-row class="ion-text-center ion-justify-content-center">
                 <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                  <img ngSrc="{{worshipPage()?.worshipPageTitle}}" priority alt="" style="min-height: 80px; height: auto; width: auto"
+                  <img ngSrc="{{worshipPage()?.worshipPage.worshipPageTitle}}" priority alt="" style="min-height: 80px; height: auto; width: auto"
                        width="1920" height="100" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
                 </ion-col>
               </ion-row>
@@ -27,13 +27,13 @@
 
       <!--      Audio Stuff-->
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px; color: black;">{{ worshipPage()?.audioTitle }}</h1>
+        <h1 style="font-size: 50px; color: black;">{{ worshipPage()?.worshipPage.audioTitle }}</h1>
         <ion-card class="audio">
 
           <ion-row style="min-height: 125px; max-height: 200px;">
             <ion-col size="4" size-lg="3" size-md="3" class="ion-no-padding">
               <div style="padding: 16px 0 16px 16px">
-                <img ngSrc="{{worshipPage()?.audioImg}}"
+                <img ngSrc="{{worshipPage()?.worshipPage.audioImg}}"
                      style="border-radius: 12px; height: auto; width: auto;" alt="" height="1080" width="1920"
                      ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w"/>
               </div>
@@ -90,10 +90,10 @@
 
       <!--      Music video stuff-->
       <ion-col size-xs="12" size-md="6">
-        <h1 style="font-size: 50px; color: black">{{ worshipPage()?.videoTitle }}</h1>
+        <h1 style="font-size: 50px; color: black">{{ worshipPage()?.worshipPage.videoTitle }}</h1>
         <ion-grid class="ion-no-padding">
           <ion-row>
-            @for (url of worshipPage()?.musicVideosImageUrls; track url; let index = $index) {
+            @for (url of worshipPage()?.worshipPage.musicVideosImageUrls; track url; let index = $index) {
               <ion-col size-md="6" size-xs="6">
                 <ion-icon name="logo-youtube" class="worship"></ion-icon>
                 <img ngSrc="{{url}}" height="1080" width="1920" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w"

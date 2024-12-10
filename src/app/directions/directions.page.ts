@@ -20,6 +20,7 @@ export class DirectionsPage {
 
   private dataService = inject(AllChurchInformationService);
 
-  //convert rxjs to signal
-  locations = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.directions);
+  //rxResource signal from http request
+  locations = this.dataService.allWebsiteInformationTwo.value;
+
 }
