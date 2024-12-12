@@ -1,4 +1,4 @@
-import {Component, computed, HostListener, inject, signal} from '@angular/core';
+import {Component, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {
   IonButton,

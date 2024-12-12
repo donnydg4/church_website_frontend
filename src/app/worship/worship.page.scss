@@ -46,23 +46,13 @@ ion-grid.inside {
 img.worship {
   display: block;
   padding: 1.2%;
-  aspect-ratio: 10/6;
   object-fit: cover;
-  width: 100%;
 }
 
 img.worship:hover {
   cursor: pointer;
   opacity: .65;
 }
-
-//iframe.worship {
-//  display: block;
-//  //margin: 1%;
-//  aspect-ratio: 10/5.75;
-//  width: 97%;
-//  margin: 1.25%
-//}
 
 ion-icon.worship {
   position: absolute;

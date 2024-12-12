@@ -1,4 +1,4 @@
-import {Component, computed, inject,} from '@angular/core';
+import {Component, inject,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {NgOptimizedImage} from '@angular/common';

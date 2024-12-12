@@ -1,8 +1,7 @@
-import {computed, effect, inject, Injectable, ResourceStatus, signal} from '@angular/core';
+import {computed, inject, Injectable, signal} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {shareReplay, tap} from "rxjs/operators";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
-import {rxResource, toSignal} from "@angular/core/rxjs-interop";
+import {rxResource} from "@angular/core/rxjs-interop";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
 import {sortByDateEvent} from "../utils/utils";

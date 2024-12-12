@@ -1,6 +1,5 @@
-import {Component, computed, inject} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
-import {sortByCardCategory} from "../utils/utils";
 import {NgOptimizedImage} from '@angular/common';
 import {DisplayCardsComponent} from '../shared-components/display-cards/display-cards.component';
 import {FooterComponent} from '../shared-components/footer/footer.component';
