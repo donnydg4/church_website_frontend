@@ -4,11 +4,31 @@ import {SeriesCardModel} from "../../models/sub-models/series-card.model";
 import {convertSpaceToDash, sortByDate} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
+import {
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonRow
+} from "@ionic/angular/standalone";
+import {DatePipe, NgOptimizedImage} from '@angular/common';
+import {FooterComponent} from '../../shared-components/footer/footer.component';
 
 @Component({
   selector: 'app-series-list',
   templateUrl: './series-list.page.html',
   styleUrls: ['./series-list.page.scss'],
+  standalone: true,
+  imports: [
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle,
+    NgOptimizedImage,
+    FooterComponent,
+    DatePipe,
+  ]
 })
 export class SeriesListPage {
 

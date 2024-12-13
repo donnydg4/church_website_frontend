@@ -1,6 +1,6 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
+
 import {HomePage} from './home.page';
 
 import {HomePageRoutingModule} from './home-routing.module';
@@ -13,20 +13,19 @@ import {SwiperDirective} from "../swiper.directive";
 
 
 @NgModule({
-  imports: [
-    IonicModule,
-    HomePageRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule,
-    SharedComponentsModule,
-    AllEventsPageModule,
-    SwiperDirective,
-    NgOptimizedImage
-  ],
-  exports: [],
-  declarations: [HomePage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    imports: [
+        HomePageRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule,
+        SharedComponentsModule,
+        AllEventsPageModule,
+        SwiperDirective,
+        NgOptimizedImage,
+        HomePage
+    ],
+    exports: [],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {
 }

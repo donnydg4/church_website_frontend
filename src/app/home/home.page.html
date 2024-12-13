@@ -1,7 +1,7 @@
 <ion-content style="color: white">
   @if (homeInfo()) {
     <ion-grid class="ion-no-padding">
-      @if (homeInfo().emergency.emergency) {
+      @if (homeInfo().allWebsiteInformation.homePage.emergency.emergency) {
         <ion-row style="background: #ecebeb; height: 70px">
           <ion-col size="12" style="height: 100%">
             <div style="text-align: center; height: 100%; width: 100%; display: table">
@@ -9,7 +9,7 @@
                 style="display: table-cell; vertical-align: middle; color: black; --background: #ecebeb; pointer-events: none"
                 class="ion-text-wrap">
                 <ion-icon name="warning-outline" style="color: red; font-size: 30px"></ion-icon>
-                {{ homeInfo().emergency.title }}
+                {{ homeInfo().allWebsiteInformation.homePage.emergency.title }}
                 <ion-icon name="warning-outline" style="color: red; font-size: 30px"></ion-icon>
               </ion-button>
             </div>
@@ -20,19 +20,15 @@
         <ion-col style="height: 100%" size="12">
           <div class="outside_home">
             <video playsinline [muted]="true" loop id="video" height="100%" autoplay>
-              <source src="{{homeInfo().videoUrl}}" type="video/mp4">
-              <source src="{{homeInfo().videoUrl}}" type="video/webm">
-              <source src="{{homeInfo().videoUrl}}" type="video/mov">
+              <source src="{{homeInfo().allWebsiteInformation.homePage.videoUrl}}" type="video/mp4">
+              <source src="{{homeInfo().allWebsiteInformation.homePage.videoUrl}}" type="video/webm">
+              <source src="{{homeInfo().allWebsiteInformation.homePage.videoUrl}}" type="video/mov">
             </video>
             <div class="inside">
               <ion-grid>
                 <ion-row class="ion-text-center ion-justify-content-center">
                   <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                    <picture style="display: block">
-                      <source type="image/webp">
-                      <img [ngSrc]="homeInfo().homePageTitle" priority="true" alt="" style="min-height: 80px; "
-                           width="" height="">
-                    </picture>
+                      <img ngSrc="{{homeInfo().allWebsiteInformation.homePage.homePageTitle}}" priority alt="" style="min-height: 80px; max-height: 90px; width: auto; height: auto" width="1920" height="100" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
                   </ion-col>
                 </ion-row>
                 <ion-row class="ion-text-center">
@@ -60,8 +56,8 @@
       <ion-row style="background: white">
         <ion-col size="12">
           <div style="text-align: center; border-bottom: 2px solid black">
-            <h5>{{ homeInfo().serviceTimesTitle }}</h5>
-            <p class="times">{{ homeInfo().serviceTimes }}</p>
+            <h5>{{ homeInfo().allWebsiteInformation.homePage.serviceTimesTitle }}</h5>
+            <p class="times">{{ homeInfo().allWebsiteInformation.homePage.serviceTimes }}</p>
           </div>
         </ion-col>
       </ion-row>
@@ -69,12 +65,12 @@
       <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col style="padding: 4%; height: auto" size-lg="7" size-xs="12">
           <h1 class="new_here">
-            {{ homeInfo().whoWeAreTitle }}
+            {{ homeInfo().allWebsiteInformation.homePage.whoWeAreTitle }}
           </h1>
           <div class="about">
             <div style="width: 90%" class="new_here">
               <ion-text class="new_here">
-                {{ homeInfo().whoWeAreDescription }}
+                {{ homeInfo().allWebsiteInformation.homePage.whoWeAreDescription }}
               </ion-text>
             </div>
           </div>
@@ -89,14 +85,11 @@
           </div>
         </ion-col>
         <ion-col size-lg="5">
-            <picture class="who_we_are" style="height: 100%">
-              <source type="image/webp">
-              <img [ngSrc]="homeInfo().whoWeAreImageUrl" decoding="async" priority fill alt="" class="home_images">
-            </picture>
+            <img ngSrc="{{homeInfo().allWebsiteInformation.homePage.whoWeAreImageUrl}}" decoding="async" priority height="1280" width="1920" alt="" class="home_images" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
         </ion-col>
       </ion-row>
       <!--      Featured Events  -->
-      @if (featuredEvents().length > 2) {
+      @if (featuredEvents().length > 12) {
         <ion-row style="height: auto; background: #ffffff; padding: 1% 0 3% 0;">
           <ion-col size="12">
             <div style="text-align: center">
@@ -108,12 +101,9 @@
           </ion-col>
           <ion-col size-md="11" size-xs="9.5">
             <swiper-container swipey [config]="config" init="false" class="engageSwiper">
-              @for (object of featuredEvents();track object) {
+              @for (object of featuredEvents(); track object) {
                 <swiper-slide (click)="navigateToEvents()">
-                  <picture>
-                    <source type="image/webp">
-                    <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">
-                  </picture>
+                  <img ngSrc="{{object.imageUrl}}" class="custom" style="height: auto; width: auto" priority width="1920" height="1080" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
                 </swiper-slide>
               }
             </swiper-container>
@@ -123,13 +113,12 @@
           </ion-col>
         </ion-row>
       } @else {
-        <ion-row class="ion-text-center ion-justify-content-center" style="max-height: 110px; background: white">
+        <ion-row class="ion-text-center ion-justify-content-center" style="max-height: 110px; background: white;">
           <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6" style="height: 100%">
-            <picture style="display: block; height: 100%; max-height: 110px; text-align: -webkit-center">
-              <source type="image/webp">
-              <img [ngSrc]="homeInfo().establishedImg" priority="true" alt="" style="min-height: 80px; display: block; height: 100%; max-height: 110px"
-                   width="" height="">
-            </picture>
+            <div style="max-height: 110px;">
+              <img ngSrc="{{homeInfo().allWebsiteInformation.homePage.establishedImg}}" priority alt="" height="508" width="1920"
+                   style="min-height: 80px; height: auto; width: auto; max-height: 110px" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
+            </div>
           </ion-col>
         </ion-row>
       }
@@ -137,19 +126,16 @@
       <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col size-lg="5">
           <div style="text-align: center; height: 100%">
-            <picture class="new_here_img">
-              <source type="image/webp">
-              <img [ngSrc]="homeInfo().newHereImageUrl" decoding="async" priority fill class="home_images">
-            </picture>
+              <img ngSrc="{{homeInfo().allWebsiteInformation.homePage.newHereImageUrl}}" priority width="1920" height="1280" class="home_images" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
           </div>
         </ion-col>
         <ion-col size-lg="7" size-xs="12" style="height: auto; padding: 4%">
           <h1 class="new_here">
-            {{ homeInfo().newHereTitle }}
+            {{ homeInfo().allWebsiteInformation.homePage.newHereTitle }}
           </h1>
           <div class="new_here">
             <ion-text class="new_here">
-              {{ homeInfo().newHereDescription }}
+              {{ homeInfo().allWebsiteInformation.homePage.newHereDescription }}
             </ion-text>
           </div>
           <div style="margin-top: 4%">
@@ -175,13 +161,10 @@
         </ion-col>
         <ion-col size-md="11" size-xs="9.5">
           <swiper-container swipey [config]="config" init="false" class="engageSwiper">
-            @for (object of waysToEngage();track object) {
+            @for (object of homeInfo().allWebsiteInformation.homePage.waysToEngage; track object) {
               <swiper-slide (click)="navigateToPage(object.type)">
                 <h3>{{ object.description }}</h3>
-                <picture>
-                  <source type="image/webp">
-                  <img [ngSrc]="object.imageUrl" class="custom" priority="" width="100%" height="100%">
-                </picture>
+                <img ngSrc="{{object.imageUrl}}" style="height: auto; width: auto" class="custom" priority width="1920" height="1080" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
               </swiper-slide>
             }
           </swiper-container>

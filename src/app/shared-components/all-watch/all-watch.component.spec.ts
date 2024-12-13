@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {AllWatchComponent} from './all-watch.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('AllWatchComponent', () => {
   let component: AllWatchComponent;
@@ -9,9 +10,8 @@ describe('AllWatchComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AllWatchComponent],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), AllWatchComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(AllWatchComponent);
     component = fixture.componentInstance;

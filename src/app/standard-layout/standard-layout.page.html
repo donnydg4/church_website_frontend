@@ -11,10 +11,7 @@
     <ion-row>
       <ion-col size-xs="12" size-lg="5" size-sm="7" class="ion-text-center">
         <div>
-          <picture>
-            <source type="image/webp">
-            <img [ngSrc]="calendarEvent.imageUrl" decoding="async" width="" height="">
-          </picture>
+          <img ngSrc="{{calendarEvent.imageUrl}}" style="height: auto; width: auto" priority width="1920" height="1280" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
         </div>
       </ion-col>
       <ion-col size-xs="12" size-lg="5" size-sm="5">
@@ -22,7 +19,7 @@
           <ion-row>
             <ion-col size="12">
               <div>
-                <h2>{{calendarEvent.title}}</h2>
+                <h2>{{ calendarEvent.title }}</h2>
               </div>
             </ion-col>
           </ion-row>
@@ -35,20 +32,22 @@
             <ion-col size="7" size-sm="7.5">
               <div class="custom-cols">
                 @if (calendarEvent.endDate) {
-                  <ion-text class="custom-text">{{calendarEvent.startDate | date: 'MMMM dd, yyyy' }} - {{calendarEvent.endDate | date: 'MMMM dd, yyyy'}}</ion-text>
+                  <ion-text class="custom-text">{{ calendarEvent.startDate | date: 'MMMM dd, yyyy' }}
+                    - {{ calendarEvent.endDate | date: 'MMMM dd, yyyy' }}
+                  </ion-text>
                 } @else {
-                  <ion-text class="custom-text">{{calendarEvent.startDate | date: 'MMMM dd, yyyy' }}</ion-text>
+                  <ion-text class="custom-text">{{ calendarEvent.startDate | date: 'MMMM dd, yyyy' }}</ion-text>
                 }
               </div>
             </ion-col>
             <ion-col size="4" size-sm="4.5">
               <div class="custom-cols">
-                <ion-text> Time: </ion-text>
+                <ion-text> Time:</ion-text>
               </div>
             </ion-col>
             <ion-col size="7" size-sm="7.5">
               <div class="custom-cols">
-                <ion-text class="custom-text">{{calendarEvent.time}}</ion-text>
+                <ion-text class="custom-text">{{ calendarEvent.time }}</ion-text>
               </div>
             </ion-col>
             <ion-col size="4" size-sm="4.5">
@@ -58,7 +57,7 @@
             </ion-col>
             <ion-col size="7" size-sm="7.5">
               <div class="custom-cols">
-                <ion-text class="custom-text">{{calendarEvent.location}}</ion-text>
+                <ion-text class="custom-text">{{ calendarEvent.location }}</ion-text>
               </div>
             </ion-col>
           </ion-row>

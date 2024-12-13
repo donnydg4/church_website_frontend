@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
 
 import {OurChurchPageRoutingModule} from './our-church-routing.module';
 
@@ -17,7 +16,6 @@ import {LeadershipPageModule} from "../leadership/leadership.module";
 
 @NgModule({
     imports: [
-        IonicModule,
         OurChurchPageRoutingModule,
         SharedComponentsModule,
         NgOptimizedImage,
@@ -28,7 +26,7 @@ import {LeadershipPageModule} from "../leadership/leadership.module";
         MatTabsModule,
         MatButtonToggleModule,
         LeadershipPageModule,
-    ],
-  declarations: [OurChurchPage]
+        OurChurchPage,
+    ]
 })
 export class OurChurchPageModule {}

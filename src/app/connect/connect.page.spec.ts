@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {ConnectPage} from './connect.page';
+import {IonicModule} from "@ionic/angular";
 
 describe('ConnectPage', () => {
   let component: ConnectPage;
@@ -9,9 +10,8 @@ describe('ConnectPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConnectPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), ConnectPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(ConnectPage);
     component = fixture.componentInstance;

@@ -1,25 +1,42 @@
-import {Component, computed, inject} from '@angular/core';
-import {NavController} from "@ionic/angular";
+import {Component, CUSTOM_ELEMENTS_SCHEMA, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {SwiperOptions} from "swiper/types";
 import {Navigation, Pagination} from "swiper";
-import {CalendarEvent} from "../models/sub-models/calendar-events.model";
-import {CalendarModel} from "../models/sub-models/calendar.model";
-import {sortByDateEvent} from "../utils/utils";
-
+import {NgOptimizedImage} from '@angular/common';
+import {SwiperDirective} from '../swiper.directive';
+import {FooterComponent} from '../shared-components/footer/footer.component';
+import {
+  IonButton,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonIcon,
+  IonRow,
+  IonText,
+  NavController
+} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  imports: [
+    NgOptimizedImage,
+    SwiperDirective,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonIcon
+  ],
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage {
 
   private dataService = inject(AllChurchInformationService);
   private navCtrl = inject(NavController);
 
-  homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
-  waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
+  // homeInfo = computed(() => this.dataService.allChurchInformation()?.allWebsiteInformation?.homePage);
+  homeInfo = this.dataService.allWebsiteInformationTwo.value;
+  // waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
   featuredEvents = this.dataService.featuredEventsTwo;
 
   navigateToPage(type: string) {

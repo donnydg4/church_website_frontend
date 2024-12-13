@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {DatePipe, NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
 
 import {SeriesListPageRoutingModule} from './series-list-routing.module';
 
@@ -10,14 +9,13 @@ import {SharedComponentsModule} from "../../shared-components/shared-components.
 import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    SeriesListPageRoutingModule,
-    SharedComponentsModule,
-    NgxPaginationModule,
-    NgOptimizedImage,
-    DatePipe
-  ],
-  declarations: [SeriesListPage]
+    imports: [
+        SeriesListPageRoutingModule,
+        SharedComponentsModule,
+        NgxPaginationModule,
+        NgOptimizedImage,
+        DatePipe,
+        SeriesListPage
+    ]
 })
 export class SeriesListPageModule {}

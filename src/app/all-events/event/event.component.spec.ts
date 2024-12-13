@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {EventComponent} from './event.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('EventComponent', () => {
   let component: EventComponent;
@@ -9,9 +10,8 @@ describe('EventComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), EventComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(EventComponent);
     component = fixture.componentInstance;

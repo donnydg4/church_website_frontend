@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {VideoPage} from './video.page';
+import {IonicModule} from "@ionic/angular";
 
 describe('VideoPage', () => {
   let component: VideoPage;
@@ -9,9 +10,8 @@ describe('VideoPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), VideoPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(VideoPage);
     component = fixture.componentInstance;

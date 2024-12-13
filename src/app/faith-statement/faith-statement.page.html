@@ -8,10 +8,7 @@
               <ion-row style=" border-bottom: solid 2px #497588">
                 <ion-col size="12">
                   <div class="outside">
-                    <picture>
-                      <source type="image/webp" srcset="">
-                      <img [ngSrc]="faithStuff().imageUrl" decoding="async" width="" height="" alt="" ngSrcset="" sizes="">
-                    </picture>
+                      <img ngSrc="{{faithStuff().statementOfFaith.imageUrl}}" priority fill alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
                     <div class="inside">
                       <h1>The Father's House Statement Of Faith</h1>
                     </div>
@@ -22,7 +19,7 @@
                 <ion-col size-lg="12">
                   <section class="dl-blurbs">
                     <dl>
-                      @for (allInfo of faithStuff().statementInformation; track allInfo) {
+                      @for (allInfo of faithStuff().statementOfFaith.statementInformation; track allInfo) {
                         <dt>{{allInfo.title}}</dt>
                         <dd>
                           {{allInfo.description}}

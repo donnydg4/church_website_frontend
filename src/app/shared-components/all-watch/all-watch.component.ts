@@ -1,17 +1,37 @@
-import {Component, inject, Input} from '@angular/core';
+import {Component, inject, input} from '@angular/core';
 import {WatchModel} from "../../models/sub-models/watch.model";
 import {AllChurchInformationService} from "../../service/all-church-information.service";
 import {SeriesCardModel} from "../../models/sub-models/series-card.model";
-import {PaginationInstance} from "ngx-pagination";
+import {NgxPaginationModule, PaginationInstance} from "ngx-pagination";
 import {Router} from '@angular/router';
 import {convertSpaceToDash} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
+import {
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonGrid,
+  IonRow,
+  IonSearchbar
+} from "@ionic/angular/standalone";
+import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 
 
 @Component({
   selector: 'app-all-watch',
   templateUrl: './all-watch.component.html',
   styleUrls: ['./all-watch.component.scss'],
+  standalone: true,
+  imports: [
+    IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonSearchbar,
+    NgOptimizedImage,
+    NgxPaginationModule,
+    UpperCasePipe,
+    DatePipe,
+  ]
 })
 export class AllWatchComponent {
 
@@ -21,9 +41,9 @@ export class AllWatchComponent {
 
   page: number = 1;
 
-  @Input() title = ''
-  @Input() objectArray!: WatchModel[];
-  @Input() seriesArray!: SeriesCardModel[];
+  readonly title = input('');
+  readonly objectArray = input<WatchModel[]>();
+  readonly seriesArray = input<SeriesCardModel[]>();
 
   public config: PaginationInstance = {
     itemsPerPage: 15,
@@ -40,7 +60,7 @@ export class AllWatchComponent {
     window.scrollTo(0, 0);
   }
 
-  navigateToSermonOrDevotionalOrGuestSpeaker(card: WatchModel){
+  navigateToSermonOrDevotionalOrGuestSpeaker(card: WatchModel) {
     if (card.type.toLowerCase() === 'sermon') {
       this.extrasService.setSermonOrDevotionalOrGuestSpeakerCard(card);
       localStorage.setItem('card', JSON.stringify(this.extrasService.getSermonOrDevotionalOrGuestSpeakerCard()));
@@ -59,9 +79,9 @@ export class AllWatchComponent {
   }
 
   navigateToSeriesPage(seriesCard: SeriesCardModel) {
-      this.extrasService.setSeriesCard(seriesCard);
-      localStorage.setItem('series', JSON.stringify(this.extrasService.getSeriesCard()));
-      this.router.navigate(['/series', convertSpaceToDash(seriesCard.title)]);
+    this.extrasService.setSeriesCard(seriesCard);
+    localStorage.setItem('series', JSON.stringify(this.extrasService.getSeriesCard()));
+    this.router.navigate(['/series', convertSpaceToDash(seriesCard.title)]);
   }
 
 }

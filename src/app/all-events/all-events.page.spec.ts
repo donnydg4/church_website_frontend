@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {AllEventsPage} from './all-events.page';
+import {IonicModule} from "@ionic/angular";
 
 describe('AllEventsPage', () => {
   let component: AllEventsPage;
@@ -9,9 +10,8 @@ describe('AllEventsPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AllEventsPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), AllEventsPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(AllEventsPage);
     component = fixture.componentInstance;

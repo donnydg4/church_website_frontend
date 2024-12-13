@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import {IonicModule} from '@ionic/angular';
 
 import {VideoPageRoutingModule} from './video-routing.module';
 
@@ -16,14 +15,14 @@ import {MatButtonModule} from "@angular/material/button";
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
     VideoPageRoutingModule,
     SharedComponentsModule,
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatButtonModule
-  ],
-  declarations: [VideoPage]
+    MatButtonModule,
+    VideoPage
+  ]
 })
-export class VideoPageModule {}
+export class VideoPageModule {
+}

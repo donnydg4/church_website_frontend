@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {MinistriesWeSupportPage} from './ministries-we-support.page';
+import {IonicModule} from "@ionic/angular";
 
 describe('MinistriesWeSupportPage', () => {
   let component: MinistriesWeSupportPage;
@@ -9,9 +10,8 @@ describe('MinistriesWeSupportPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MinistriesWeSupportPage ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), MinistriesWeSupportPage]
+}).compileComponents();
 
     fixture = TestBed.createComponent(MinistriesWeSupportPage);
     component = fixture.componentInstance;

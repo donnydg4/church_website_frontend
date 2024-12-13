@@ -1,13 +1,32 @@
-import {Component, computed, inject, OnInit} from '@angular/core';
-import {NavController} from "@ionic/angular";
+import {Component, inject,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import {Audio} from "../models/sub-models/audio.model";
+import {NgOptimizedImage} from '@angular/common';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonIcon,
+  IonRow,
+  IonText,
+  NavController
+} from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {logoYoutube, playSkipBackSharp, playSkipForwardSharp} from "ionicons/icons";
 
 @Component({
   selector: 'app-worship',
   templateUrl: './worship.page.html',
   styleUrls: ['./worship.page.scss'],
+  standalone: true,
+  imports: [NgOptimizedImage, IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon]
 })
 export class WorshipPage {
 
@@ -15,9 +34,9 @@ export class WorshipPage {
   private navCtrl = inject(NavController);
   private sanitizer = inject(DomSanitizer);
 
-  homeInfo = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage);
+  worshipPage = this.dataService.allWebsiteInformationTwo.value;
 
-  fakeArray: string[] = ['5xQEgz7J3RA', 'Xk6LKuqj3Xc', 'qv3-TDdD1pM','-h9wpvwAF-M'];
+  fakeArray: string[] = ['5xQEgz7J3RA', 'Xk6LKuqj3Xc', 'qv3-TDdD1pM', '-h9wpvwAF-M'];
   defaultUrl: string = "https://www.youtube.com/embed/";
   youtubeUrl: SafeResourceUrl;
 
@@ -25,13 +44,14 @@ export class WorshipPage {
 
   constructor() {
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.fakeArray[0]);
+    addIcons({logoYoutube, playSkipBackSharp, playSkipForwardSharp})
   }
 
   navigateToPage(type: string) {
     this.navCtrl.navigateForward([type]);
   }
 
-  openVideoModal(id: number){
+  openVideoModal(id: number) {
     console.log(this.youtubeUrl);
   }
 

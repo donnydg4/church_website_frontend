@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 
-import {IonicModule} from '@ionic/angular';
 
 import {SermonsPageRoutingModule} from './sermons-routing.module';
 import {SermonsPage} from './sermons.page';
@@ -8,11 +7,10 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
   imports: [
-    IonicModule,
     SermonsPageRoutingModule,
     SharedComponentsModule,
-  ],
-  declarations: [SermonsPage]
+    SermonsPage,
+  ]
 })
 export class SermonsPageModule {
 }

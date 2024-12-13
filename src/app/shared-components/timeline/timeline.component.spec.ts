@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {TimelineComponent} from './timeline.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('TimelineComponent', () => {
   let component: TimelineComponent;
@@ -9,9 +10,8 @@ describe('TimelineComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimelineComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), TimelineComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(TimelineComponent);
     component = fixture.componentInstance;

@@ -1,22 +1,22 @@
-@if (eventsArray?.length > 0) {
+@if (eventsArray()?.length > 0) {
   <ion-grid [fixed]="true" style="margin-top: 3%">
     <ion-row class="ion-text-left">
-      @for (events of eventsArray; track events) {
-        <ion-col size-xl="4" size-sm="4" size-xs="12" class="ion-no-padding">
+      @for (events of eventsArray(); track events) {
+        <ion-col size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
           <ion-card button mode="md" (click)="takeToStandardLayout(events)">
-            <picture>
-              <source type="image/webp">
-              <img alt="img-src" [ngSrc]="events?.imageUrl" decoding="async" height="" width="" ngSrcset="">
-            </picture>
+            <img ngSrc="{{events?.imageUrl}}" style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
+                 priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
             <ion-card-header>
-              <ion-card-title>{{events.title}}</ion-card-title>
+              <ion-card-title>{{ events.title }}</ion-card-title>
               @if (events.endDate) {
-                <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }} - {{events.endDate | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
+                <ion-card-subtitle>{{ events.startDate | date: 'MMMM dd, yyyy' }}
+                  - {{ events.endDate | date: 'MMMM dd, yyyy' }}
+                </ion-card-subtitle>
               } @else {
-                <ion-card-subtitle>{{events.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-subtitle>{{ events.startDate | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
               }
             </ion-card-header>
-            <ion-card-content>{{events.description}}</ion-card-content>
+            <ion-card-content>{{ events.description }}</ion-card-content>
           </ion-card>
         </ion-col>
       }

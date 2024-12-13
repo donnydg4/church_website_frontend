@@ -1,13 +1,48 @@
 import {Component, inject} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
-import {MenuController, NavController, Platform, ToastController} from "@ionic/angular";
 import {Clipboard} from '@angular/cdk/clipboard';
 import {WatchModel} from "../../models/sub-models/watch.model";
+import {MatFormField, MatHint, MatLabel} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import {FooterComponent} from '../footer/footer.component';
+import {DatePipe} from '@angular/common';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonIcon,
+  IonRow,
+  IonText,
+  MenuController,
+  NavController,
+  Platform,
+  ToastController
+} from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {arrowBackOutline, create, shareSocialOutline} from "ionicons/icons";
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.page.html',
   styleUrls: ['./video.page.scss'],
+  standalone: true,
+  imports: [
+    MatFormField,
+    MatLabel,
+    MatInput,
+    FormsModule,
+    MatHint,
+    FooterComponent,
+    DatePipe,
+    IonContent, IonGrid, IonRow, IonCol, IonCard,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
+  ]
 })
 export class VideoPage {
 
@@ -27,6 +62,7 @@ export class VideoPage {
   constructor() {
     this.anyCard = JSON.parse(localStorage.getItem('card'));
     this.youtubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.defaultUrl + this.anyCard.videoId);
+    addIcons({ arrowBackOutline, create, shareSocialOutline });
   }
 
   openTextArea() {

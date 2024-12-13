@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {DisplayCardsComponent} from './display-cards.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('DisplayCardsComponent', () => {
   let component: DisplayCardsComponent;
@@ -9,9 +10,8 @@ describe('DisplayCardsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisplayCardsComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), DisplayCardsComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(DisplayCardsComponent);
     component = fixture.componentInstance;

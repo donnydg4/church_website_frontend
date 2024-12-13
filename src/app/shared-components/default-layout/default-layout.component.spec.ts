@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {IonicModule} from '@ionic/angular';
+
 
 import {DefaultLayoutComponent} from './default-layout.component';
+import {IonicModule} from "@ionic/angular";
 
 describe('DefaultLayoutComponent', () => {
   let component: DefaultLayoutComponent;
@@ -9,9 +10,8 @@ describe('DefaultLayoutComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefaultLayoutComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), DefaultLayoutComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(DefaultLayoutComponent);
     component = fixture.componentInstance;

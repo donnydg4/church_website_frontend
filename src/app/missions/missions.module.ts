@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
-import {IonicModule} from '@ionic/angular';
 
 import {MissionsPageRoutingModule} from './missions-routing.module';
 
@@ -10,11 +9,10 @@ import {SharedComponentsModule} from "../shared-components/shared-components.mod
 
 @NgModule({
     imports: [
-        IonicModule,
         MissionsPageRoutingModule,
         SharedComponentsModule,
-        NgOptimizedImage
-    ],
-  declarations: [MissionsPage]
+        NgOptimizedImage,
+        MissionsPage
+    ]
 })
 export class MissionsPageModule {}
