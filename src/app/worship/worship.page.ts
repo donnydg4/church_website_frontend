@@ -13,11 +13,6 @@ import {
   IonContent,
   IonGrid,
   IonIcon,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonNote,
-  IonRange,
   IonRow,
   IonText,
   NavController

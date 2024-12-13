@@ -8,10 +8,8 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonCol,
-  IonContent,
   IonGrid,
   IonRow,
-  IonText,
   NavController
 } from "@ionic/angular/standalone";
 import {DatePipe, NgClass, NgOptimizedImage} from '@angular/common';

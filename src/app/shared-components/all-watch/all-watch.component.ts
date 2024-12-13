@@ -7,18 +7,14 @@ import {Router} from '@angular/router';
 import {convertSpaceToDash} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {
-  IonButton,
   IonCard,
-  IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
   IonCol,
-  IonContent,
   IonGrid,
   IonRow,
-  IonSearchbar,
-  IonText
+  IonSearchbar
 } from "@ionic/angular/standalone";
 import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 

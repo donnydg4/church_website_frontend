@@ -8,19 +8,7 @@ import {MatSelect, MatSelectTrigger} from '@angular/material/select';
 import {MatOption} from '@angular/material/core';
 import {MatInput} from '@angular/material/input';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-  IonCol,
-  IonContent,
-  IonGrid,
-  IonRow,
-  IonText
-} from "@ionic/angular/standalone";
+import {IonButton, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-connect',

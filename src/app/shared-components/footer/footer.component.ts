@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {IonButton, IonCol, IonContent, IonFooter, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
+import {IonButton, IonCol, IonFooter, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
 import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({

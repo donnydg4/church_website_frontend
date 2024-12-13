@@ -7,11 +7,6 @@ import {SwiperDirective} from '../swiper.directive';
 import {FooterComponent} from '../shared-components/footer/footer.component';
 import {
   IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,

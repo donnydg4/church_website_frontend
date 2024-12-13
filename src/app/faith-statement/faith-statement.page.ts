@@ -2,7 +2,7 @@ import {Component, inject,} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {NgOptimizedImage} from '@angular/common';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {IonButton, IonCard, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
+import {IonCard, IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-faith-statement',

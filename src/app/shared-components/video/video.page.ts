@@ -11,7 +11,6 @@ import {
   IonButton,
   IonCard,
   IonCardContent,
-  IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
   IonCol,

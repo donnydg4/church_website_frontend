@@ -5,17 +5,14 @@ import {convertSpaceToDash, sortByDate} from "../../utils/utils";
 import {ExtrasService} from "../../service/extras.service";
 import {Router} from "@angular/router";
 import {
-  IonButton,
   IonCard,
-  IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
-  IonRow,
-  IonText
+  IonRow
 } from "@ionic/angular/standalone";
 import {DatePipe, NgOptimizedImage} from '@angular/common';
 import {FooterComponent} from '../../shared-components/footer/footer.component';

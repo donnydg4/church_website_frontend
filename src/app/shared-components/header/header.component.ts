@@ -1,17 +1,11 @@
 import {Component, HostListener, inject, ViewEncapsulation} from '@angular/core';
 import {MatToolbar} from '@angular/material/toolbar';
-import {NgOptimizedImage} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {
   IonAccordion,
   IonAccordionGroup,
   IonButton,
   IonButtons,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
@@ -23,7 +17,6 @@ import {
   IonMenu,
   IonMenuButton,
   IonRow,
-  IonText,
   IonToolbar,
   MenuController,
   NavController,

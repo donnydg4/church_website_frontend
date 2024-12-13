@@ -2,21 +2,7 @@ import {Component, inject} from '@angular/core';
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {DatePipe, NgOptimizedImage} from '@angular/common';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-  IonCol,
-  IonContent,
-  IonGrid,
-  IonIcon,
-  IonRow,
-  IonText,
-  NavController
-} from "@ionic/angular/standalone";
+import {IonCol, IonContent, IonGrid, IonIcon, IonRow, IonText, NavController} from "@ionic/angular/standalone";
 import {addIcons} from "ionicons";
 import {arrowBackOutline} from "ionicons/icons";
 
