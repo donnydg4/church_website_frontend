@@ -13,7 +13,8 @@
               <ion-grid>
                 <ion-row class="ion-text-center ion-justify-content-center">
                   <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6">
-                    <img ngSrc="{{worshipPage()?.worshipPage.worshipPageTitle}}" priority alt="" style="min-height: 80px; height: auto; width: auto"
+                    <img ngSrc="{{worshipPage()?.worshipPage.worshipPageTitle}}" priority alt=""
+                         style="min-height: 80px; height: auto; width: auto"
                          width="1920" height="100" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
                   </ion-col>
                 </ion-row>
@@ -48,22 +49,11 @@
                     <ion-text style="color: black;">The father's House worship Team</ion-text>
                   </ion-col>
                   <ion-col size="12" class="ion-no-padding">
-                    <!--                  <ion-buttons>-->
-                    <!--                    <ion-button fill="clear" style="display: inline">-->
-                    <!--                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>-->
-                    <!--                    </ion-button>-->
-                    <!--                    <ion-button fill="clear" style="display: inline">-->
-                    <!--                      <ion-icon name="play-circle" class="play-button"></ion-icon>-->
-                    <!--                    </ion-button>-->
-                    <!--                    <ion-button fill="clear" style="display: inline">-->
-                    <!--                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>-->
-                    <!--                    </ion-button>-->
-                    <!--                  </ion-buttons>-->
-                    <ion-range aria-label="timer" labelPlacement="end">
-                      <div slot="label">3:45</div>
-                      <ion-icon slot="start" name="play-skip-back-sharp" class="back-button"></ion-icon>
-                      <ion-icon slot="end" name="play-skip-forward-sharp" class="next-button"></ion-icon>
-                    </ion-range>
+                    <audio controls>
+                      <source src="horse.ogg" type="audio/ogg">
+                      <source src="horse.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
                   </ion-col>
                 </ion-row>
               </ion-col>
@@ -98,7 +88,8 @@
                 <ion-col size-md="6" size-xs="6">
                   <ion-icon name="logo-youtube" class="worship"></ion-icon>
                   <img ngSrc="{{url}}" height="1080" width="1920" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w"
-                       class="worship" alt="Silhouette of mountains" style="height: auto" (click)="openVideoModal(index)"/>
+                       class="worship" alt="Silhouette of mountains" style="height: auto"
+                       (click)="openVideoModal(index)"/>
                 </ion-col>
               }
             </ion-row>
