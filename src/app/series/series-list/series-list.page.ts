@@ -27,7 +27,7 @@ import {FooterComponent} from '../../shared-components/footer/footer.component';
   standalone: true,
   imports: [
     IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
+    IonCardSubtitle, IonCardTitle,
     NgOptimizedImage,
     FooterComponent,
     DatePipe,

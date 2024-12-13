@@ -29,8 +29,7 @@ import {
     NgOptimizedImage,
     SwiperDirective,
     FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
+    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonIcon
   ],
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

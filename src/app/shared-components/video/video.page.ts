@@ -41,7 +41,7 @@ import {arrowBackOutline, create, shareSocialOutline} from "ionicons/icons";
     MatHint,
     FooterComponent,
     DatePipe,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonContent, IonGrid, IonRow, IonCol, IonCard,
     IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon
   ]
 })

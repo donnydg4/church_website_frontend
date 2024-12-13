@@ -39,8 +39,7 @@ import {
     MatInput,
     MatHint,
     FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText
+    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText
   ]
 })
 export class ConnectPage {

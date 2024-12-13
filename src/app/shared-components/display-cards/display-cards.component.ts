@@ -21,8 +21,8 @@ import {DatePipe, NgClass, NgOptimizedImage} from '@angular/common';
   templateUrl: './display-cards.component.html',
   styleUrls: ['./display-cards.component.scss'],
   imports: [
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
+    IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton,
     NgOptimizedImage,
     NgClass,
     DatePipe,
@@ -36,7 +36,7 @@ export class DisplayCardsComponent {
 
   isSelected: number;
 
-  readonly displayCards = input<DisplayCardModel[]>(undefined);
+  displayCards = input<DisplayCardModel[]>(undefined);
 
   navigateToPage() {
     this.navCtrl.navigateForward([`connect`]);

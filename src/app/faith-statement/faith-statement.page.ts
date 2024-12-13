@@ -12,7 +12,7 @@ import {IonButton, IonCard, IonCol, IonContent, IonGrid, IonRow, IonText} from "
   imports: [
     NgOptimizedImage,
     FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonButton, IonText
+    IonContent, IonGrid, IonRow, IonCol, IonCard
   ]
 })
 export class FaithStatementPage {

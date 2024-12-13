@@ -40,8 +40,8 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
     MatMenuItem,
     TimelineComponent,
     FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSegment, IonSegmentButton, IonLabel
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardContent,IonCardHeader,
+    IonCardTitle, IonText, IonSegment, IonSegmentButton, IonLabel
   ]
 })
 export class OurChurchPage {

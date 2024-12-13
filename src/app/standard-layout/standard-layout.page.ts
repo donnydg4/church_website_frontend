@@ -26,8 +26,7 @@ import {arrowBackOutline} from "ionicons/icons";
   styleUrls: ['./standard-layout.page.scss'],
   standalone: true,
   imports: [
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon,
+    IonContent, IonGrid, IonRow, IonCol, IonText, IonIcon,
     NgOptimizedImage,
     FooterComponent,
     DatePipe,

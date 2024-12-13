@@ -11,7 +11,6 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonCol,
-  IonContent,
   IonGrid,
   IonRow
 } from "@ionic/angular/standalone";
@@ -24,7 +23,7 @@ import {
   imports: [
     NgOptimizedImage,
     DatePipe,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent
+    IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent
   ]
 })
 export class EventComponent {

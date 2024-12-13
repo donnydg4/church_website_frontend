@@ -39,11 +39,9 @@ import {MatTooltip} from "@angular/material/tooltip";
   styleUrls: ['./header.component.scss'],
   imports: [
     MatToolbar,
-    NgOptimizedImage,
+    // NgOptimizedImage,
     RouterLink,
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText,
-    IonButtons, IonIcon, IonMenuButton, IonMenu, IonHeader, IonToolbar, IonLabel, IonItem,
+    IonContent, IonGrid, IonRow, IonCol, IonButton, IonButtons, IonIcon, IonMenuButton, IonMenu, IonHeader, IonToolbar, IonLabel, IonItem,
     IonAccordion, IonAccordionGroup, IonItemGroup, MatTooltip
   ],
   standalone: true,

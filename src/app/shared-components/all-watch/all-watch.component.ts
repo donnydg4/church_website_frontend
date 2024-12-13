@@ -29,8 +29,8 @@ import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
   styleUrls: ['./all-watch.component.scss'],
   standalone: true,
   imports: [
-    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSearchbar,
+    IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
+    IonCardSubtitle, IonCardTitle, IonSearchbar,
     NgOptimizedImage,
     NgxPaginationModule,
     UpperCasePipe,
@@ -46,8 +46,8 @@ export class AllWatchComponent {
   page: number = 1;
 
   readonly title = input('');
-  readonly objectArray = input.required<WatchModel[]>();
-  readonly seriesArray = input.required<SeriesCardModel[]>();
+  readonly objectArray = input<WatchModel[]>();
+  readonly seriesArray = input<SeriesCardModel[]>();
 
   public config: PaginationInstance = {
     itemsPerPage: 15,

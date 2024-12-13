@@ -31,7 +31,7 @@ import {logoYoutube, playSkipBackSharp, playSkipForwardSharp} from "ionicons/ico
   styleUrls: ['./worship.page.scss'],
   standalone: true,
   imports: [NgOptimizedImage, IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon, IonRange, IonList, IonItem, IonLabel, IonNote]
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonIcon]
 })
 export class WorshipPage {
 
