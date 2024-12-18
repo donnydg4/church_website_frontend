@@ -29,8 +29,10 @@
             <a routerLink="/faith-statement">STATEMENT OF FAITH</a>
             <a routerLink="/leadership">LEADERSHIP</a>
             <a routerLink="/missions">MISSIONS</a>
+            <a routerLink="/kids-ministry">KIDS</a>
+            <a routerLink="/kids-ministry">YOUTH</a>
             <a routerLink="/our-ministries">OUR MINISTRIES</a>
-            <a routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>
+<!--            <a routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>-->
           </div>
         </div>
         <div class="dropdown">
@@ -79,11 +81,11 @@
             <a routerLink="/sozo">Sozo</a>
           </div>
         </div>
-<!--        <div class="inner-center-div" matTooltip="Coming Soon!" matTooltipClass="example-tooltip-uppercase" matTooltipPosition="below">-->
-          <ion-button style="min-width: 80px; padding-right: 10px;overflow: auto" routerLink="/worship">
+        <div class="inner-center-div" matTooltip="Coming Soon!" matTooltipClass="example-tooltip-uppercase" matTooltipPosition="below">
+          <ion-button style="min-width: 80px; padding-right: 10px;overflow: auto" routerLink="/worship" disabled>
             Worship
           </ion-button>
-<!--        </div>-->
+        </div>
         <div class="inner-center-div">
           <ion-button fill="outline" style="width: 100px;"
                       href="https://app.securegive.com/tfhfreeport/main/donate/category">
@@ -141,12 +143,18 @@
                     <ion-item button lines="none" (click)="navigateToPage('missions')">
                       <a class="changes">missions</a>
                     </ion-item>
+                    <ion-item button lines="none" (click)="navigateToPage('kids-ministry')">
+                      <a class="changes">kids</a>
+                    </ion-item>
+                    <ion-item button lines="none" (click)="navigateToPage('kids-ministry')">
+                      <a class="changes">youth</a>
+                    </ion-item>
                     <ion-item button lines="none" (click)="navigateToPage('our-ministries')">
                       <a class="changes">our ministries</a>
                     </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
-                      <a class="changes">ministries we support</a>
-                    </ion-item>
+<!--                    <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">-->
+<!--                      <a class="changes">ministries we support</a>-->
+<!--                    </ion-item>-->
                   </ion-item-group>
                 </div>
               </ion-accordion>
