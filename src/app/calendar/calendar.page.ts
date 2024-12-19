@@ -28,7 +28,7 @@ import {
   IonCol,
   IonContent,
   IonGrid,
-  IonRow,
+  IonRow, IonSpinner,
   IonText
 } from "@ionic/angular/standalone";
 
@@ -54,7 +54,7 @@ import {
     FooterComponent,
     DatePipe,
     IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardHeader,
-    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText
+    IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonText, IonSpinner
   ]
 })
 export class CalendarPage implements OnInit {

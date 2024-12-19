@@ -14,7 +14,7 @@ import {
   IonCol,
   IonGrid,
   IonRow,
-  IonSearchbar
+  IonSearchbar, IonSpinner
 } from "@ionic/angular/standalone";
 import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 
@@ -30,7 +30,7 @@ import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
     NgOptimizedImage,
     NgxPaginationModule,
     UpperCasePipe,
-    DatePipe,
+    DatePipe, IonSpinner,
   ]
 })
 export class AllWatchComponent {
