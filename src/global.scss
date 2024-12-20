@@ -213,6 +213,15 @@ div.outside {
   vertical-align: middle;
   justify-content: center;
 }
+div.outside_sozo {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 87vh;
+  vertical-align: middle;
+  justify-content: center;
+}
 
 div.outside_home {
   display: flex;
