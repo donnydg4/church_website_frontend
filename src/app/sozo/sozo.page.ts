@@ -18,7 +18,6 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
     IonRow,
     IonSpinner,
     NgOptimizedImage,
-    IonCard,
     IonText
   ]
 })
