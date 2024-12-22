@@ -218,7 +218,7 @@ div.outside_sozo {
   overflow: hidden;
   position: relative;
   width: 100%;
-  min-height: 87vh;
+  min-height: 60vh;
   vertical-align: middle;
   justify-content: center;
 }
@@ -269,6 +269,17 @@ div.inside {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+div.inside_sozo {
+  width: 100%; /* Can be in percentage also. */
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 12%;
+  padding-left: 12%;
 }
 
 h1 {

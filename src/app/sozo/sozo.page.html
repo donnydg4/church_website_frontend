@@ -1,27 +1,87 @@
 <ion-content style="--background: white; --color: black">
   @if (sozo()) {
     <ion-grid class="ion-no-padding">
-      <ion-row style="height: 87vh">
-        <ion-col size="12">
+      <ion-row style="height: 60vh">
+        <ion-col size="12" style="height: 100%">
           <div class="outside_sozo">
             <img ngSrc="{{sozo()?.sozoPage?.firstImage}}" priority fill alt=""
                  ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
-            <div class="inside">
-              <h1>{{ sozo()?.sozoPage?.firstImageTitle }}</h1>
+            <div class="inside_sozo">
+              <h1 class="sozo_title">{{ sozo()?.sozoPage?.firstImageTitle }}</h1>
             </div>
           </div>
         </ion-col>
       </ion-row>
-    </ion-grid>
-    <ion-grid class="ion-no-padding">
+      <!--    <ion-grid class="ion-no-padding">-->
       <ion-row style="background: white">
         <ion-col size="12" class="ion-no-padding">
           <div style="text-align: center; border-bottom: 2px solid black; border-top: 2px solid black">
-            <h4 class="times">{{ sozo()?.sozoPage?.textBreak }}</h4>
+            <h4 class="sozo_text_break">{{ sozo()?.sozoPage?.textBreak }}</h4>
           </div>
         </ion-col>
       </ion-row>
+
+      <ion-row style="height: auto" class="ion-justify-content-center ion-align-items-center">
+        <ion-col size-md="6" size-xs="12">
+          <img ngSrc="{{sozo()?.sozoPage.imageOne}}" priority width="1920" height="1080"
+               style="height: auto; width: auto; padding: 5%" alt=""
+               ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="test">
+        </ion-col>
+        <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
+                 class="ion-text-start ion-justify-content-center">
+          <div class="about">
+            <h1 class="fake_h1">
+              {{ sozo()?.sozoPage?.imageOneText[0] }}
+            </h1>
+            <ion-text class="about">
+              {{ sozo()?.sozoPage?.imageOneText[1] }}
+            </ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="height: auto" class="ion-justify-content-center ion-align-items-center">
+        <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
+                 class="ion-text-start ion-justify-content-center">
+          <div class="about">
+            <h1 class="fake_h1">
+              {{ sozo()?.sozoPage?.imageTwoText[0] }}
+            </h1>
+            <ion-text class="about">
+              {{ sozo()?.sozoPage?.imageTwoText[1] }}
+            </ion-text>
+          </div>
+        </ion-col>
+        <ion-col size-md="6" size-xs="12">
+          <img ngSrc="{{sozo()?.sozoPage.imageTwo}}" priority width="1920" height="1080"
+               style="height: auto; width: auto; padding: 5%" alt=""
+               ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="test">
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="height: auto" class="ion-justify-content-center ion-align-items-center">
+        <ion-col size-md="6" size-xs="12">
+          <img ngSrc="{{sozo()?.sozoPage.imageThree}}" priority width="1920" height="1080"
+               style="height: auto; width: auto; padding: 5%" alt=""
+               ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="test">
+        </ion-col>
+        <ion-col size-md="6" size-xs="12" style="padding: 5% 5% 8% 5%"
+                 class="ion-text-start ion-justify-content-center">
+          <div class="about">
+            <h1 class="fake_h1">
+              {{ sozo()?.sozoPage?.imageThreeText[0] }}
+            </h1>
+            <ion-text class="about">
+              {{ sozo()?.sozoPage?.imageThreeText[1] }}
+            </ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+
+
     </ion-grid>
+
+    <!--    </ion-grid>-->
     <app-footer></app-footer>
   } @else {
     <ion-grid [fixed]="true" style="height: 100%">
