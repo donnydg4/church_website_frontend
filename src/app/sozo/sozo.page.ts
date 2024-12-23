@@ -1,8 +1,17 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {IonCard, IonCol, IonContent, IonGrid, IonRow, IonSpinner, IonText} from "@ionic/angular/standalone";
+import {
+  IonCard,
+  IonCardHeader, IonCardSubtitle, IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonRow,
+  IonSpinner,
+  IonText
+} from "@ionic/angular/standalone";
 import {DisplayCardsComponent} from "../shared-components/display-cards/display-cards.component";
-import {NgOptimizedImage} from "@angular/common";
+import {DatePipe, NgOptimizedImage} from "@angular/common";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 
 @Component({
@@ -18,7 +27,12 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
     IonRow,
     IonSpinner,
     NgOptimizedImage,
-    IonText
+    IonText,
+    DatePipe,
+    IonCard,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle
   ]
 })
 export class SozoPage {

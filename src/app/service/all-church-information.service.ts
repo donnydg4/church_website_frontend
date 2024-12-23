@@ -44,7 +44,6 @@ export class AllChurchInformationService {
   //async rxresource call
   allWebsiteInformationTwo = rxResource({
     loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl).pipe(
-      delay(2000),
       tap(data => console.log(data))
     )
   });
