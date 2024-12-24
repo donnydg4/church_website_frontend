@@ -16,15 +16,27 @@ img.main {
 
 h4.sozo_text_break {
   font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
-  font-size: clamp(60px, 4vw, 80px);
+  font-size: clamp(50px, 4vw, 80px);
   color: black;
   line-height: 1em;
   text-transform: none;
   letter-spacing: 0.02em;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 2%;
   font-weight: 700;
 }
+
+h4.sozo_text_break_two {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(35px, 4vw, 45px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  margin-bottom: 2%;
+  margin-top: 0;
+}
+
 img.test {
   aspect-ratio: 1.1/1;
   //max-height: 550px;

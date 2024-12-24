@@ -17,6 +17,8 @@
         <ion-col size="12" class="ion-no-padding">
           <div style="text-align: center; border-bottom: 2px solid black; border-top: 2px solid black">
             <h4 class="sozo_text_break">{{ sozo()?.sozoPage?.textBreak }}</h4>
+            <br>
+            <i><h4 class="sozo_text_break_two">{{ sozo()?.sozoPage?.textBreakTwo }}</h4></i>
           </div>
         </ion-col>
       </ion-row>
@@ -59,47 +61,91 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <ion-col size="12">
-          <ion-card mode="md">
-            <ion-grid>
-              <ion-row>
-                <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4" offset-xl="2" offset-lg="2" offset-md="1">
-                  <div style="display: table; width: 100%; height: 100%; padding: 5%">
-                    <ion-card-header style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
-                      <ion-card-title>
-                        <ion-text class="fake_h1">
-                          {{ sozo()?.sozoPage?.imageTwoText[0] }}
-                        </ion-text>
-                      </ion-card-title>
-                      <ion-card-subtitle>
-                        <ion-text class="about">
-                          "{{ sozo()?.sozoPage?.imageTwoText[1] }}"
-                        </ion-text>
-                        <br><br>
-                        <ion-text class="about">
-                          "{{ sozo()?.sozoPage?.imageTwoText[2] }}"
-                        </ion-text>
-                        <br><br>
-                        <ion-text class="about">
-                          "{{ sozo()?.sozoPage?.imageTwoText[3] }}"
-                        </ion-text>
-                      </ion-card-subtitle>
-                    </ion-card-header>
-                  </div>
-                </ion-col>
-                <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4">
-                  <div class="img_good">
-                    <img alt="img-src" ngSrc="{{sozo()?.sozoPage.imageTwo}}" style="width: auto; height: auto; padding: 5%"
-                         priority width="1920" height="1080"
-                         ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
-                  </div>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+      @if(platformWidth < 576) {
+        <ion-row>
+          <ion-col size="12">
+            <ion-card mode="md">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4" offset-xl="2" offset-lg="2" offset-md="1">
+                    <div class="img_good">
+                      <img alt="img-src" ngSrc="{{sozo()?.sozoPage.imageTwo}}" style="width: auto; height: auto; padding: 5%"
+                           priority width="1920" height="1080"
+                           ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
+                    </div>
+                  </ion-col>
+                  <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4" >
+                    <div style="display: table; width: 100%; height: 100%; padding: 5%">
+                      <ion-card-header style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
+                        <ion-card-title>
+                          <ion-text class="fake_h1">
+                            {{ sozo()?.sozoPage?.imageTwoText[0] }}
+                          </ion-text>
+                        </ion-card-title>
+                        <ion-card-subtitle>
+                          <ion-text class="about">
+                            "{{ sozo()?.sozoPage?.imageTwoText[1] }}"
+                          </ion-text>
+                          <br><br>
+                          <ion-text class="about">
+                            "{{ sozo()?.sozoPage?.imageTwoText[2] }}"
+                          </ion-text>
+                          <br><br>
+                          <ion-text class="about">
+                            "{{ sozo()?.sozoPage?.imageTwoText[3] }}"
+                          </ion-text>
+                        </ion-card-subtitle>
+                      </ion-card-header>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      } @else {
+        <ion-row>
+          <ion-col size="12">
+            <ion-card mode="md">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4" offset-xl="2" offset-lg="2" offset-md="1">
+                    <div style="display: table; width: 100%; height: 100%; padding: 5%">
+                      <ion-card-header style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
+                        <ion-card-title>
+                          <ion-text class="fake_h1">
+                            {{ sozo()?.sozoPage?.imageTwoText[0] }}
+                          </ion-text>
+                        </ion-card-title>
+                        <ion-card-subtitle>
+                          <ion-text class="about">
+                            "{{ sozo()?.sozoPage?.imageTwoText[1] }}"
+                          </ion-text>
+                          <br><br>
+                          <ion-text class="about">
+                            "{{ sozo()?.sozoPage?.imageTwoText[2] }}"
+                          </ion-text>
+                          <br><br>
+                          <ion-text class="about">
+                            "{{ sozo()?.sozoPage?.imageTwoText[3] }}"
+                          </ion-text>
+                        </ion-card-subtitle>
+                      </ion-card-header>
+                    </div>
+                  </ion-col>
+                  <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4">
+                    <div class="img_good">
+                      <img alt="img-src" ngSrc="{{sozo()?.sozoPage.imageTwo}}" style="width: auto; height: auto; padding: 5%"
+                           priority width="1920" height="1080"
+                           ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      }
 
       <ion-row>
         <ion-col size="12" class="custom">
@@ -138,7 +184,44 @@
           </ion-card>
         </ion-col>
       </ion-row>
+<!--      ABOUT SOZO-->
+      <ion-row style="padding: 1.9%">
+        @for (values of ourChurch().allWebsiteInformation.ourChurch.about.churchInfo;track values;let index = $index) {
+          <ion-col size-md="4" size-xs="12">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>{{ values.title }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content style="padding: 2%">
+                @if (index != 2) {
+                  <ol>
+                    @for (value of values.descriptions;track value) {
+                      <li style="margin-bottom: 1%">
+                        {{ value }}
+                      </li>
+                    }
+                  </ol>
+                } @else {
+                  <ion-row style="padding: 2%">
+                    @for (value of values.missionVisionTargetTitles; track value; let index = $index) {
+                      <ion-col size="12" style="text-align: center">
+                        <ion-text class="bold">{{value}}</ion-text>
+                      </ion-col>
+                      <br>
+                      <ion-col size="12" style="text-align: center; padding: 1% 4% 2% 4%">
+                        <ion-text class="standard">{{values.missionVisionTarget[index]}}</ion-text>
+                      </ion-col>
+                    }
+                  </ion-row>
+                }
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
     </ion-grid>
+
+
       <!--    <app-footer></app-footer>-->
   } @else {
     <ion-grid [fixed]="true" style="height: 100%">
