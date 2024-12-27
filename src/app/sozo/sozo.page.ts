@@ -1,11 +1,12 @@
 import {Component, HostListener, inject, OnInit} from '@angular/core';
 import {FooterComponent} from '../shared-components/footer/footer.component';
 import {
+  IonButton,
   IonCard, IonCardContent,
   IonCardHeader, IonCardSubtitle, IonCardTitle,
   IonCol,
   IonContent,
-  IonGrid,
+  IonGrid, IonItem, IonLabel,
   IonRow,
   IonSpinner,
   IonText, Platform
@@ -35,7 +36,10 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
     IonCardTitle,
     IonCardContent,
     NgClass,
-    SlicePipe
+    SlicePipe,
+    IonButton,
+    IonItem,
+    IonLabel
   ]
 })
 export class SozoPage {

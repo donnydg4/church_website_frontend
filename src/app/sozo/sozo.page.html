@@ -81,8 +81,7 @@
                   </ion-col>
                   <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4">
                     <div style="display: table; width: 100%; height: 100%; padding: 5%">
-                      <ion-card-header
-                        style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
+                      <ion-card-header style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
                         <ion-card-title>
                           <ion-text class="fake_h1">
                             {{ sozo()?.sozoPage?.imageTwoText[0] }}
@@ -172,8 +171,7 @@
                 </ion-col>
                 <ion-col size-xs="12" size-sm="6" size-md="5" size-xl="4" size-lg="4">
                   <div style="display: table; width: 100%; height: 100%; padding: 5%">
-                    <ion-card-header
-                      style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
+                    <ion-card-header style="width: 100%; height: 100%; display: table-cell; vertical-align: middle; padding: 0">
                       <ion-card-title>
                         <ion-text class="fake_h1">
                           {{ sozo()?.sozoPage?.imageThreeText[0] }}
@@ -200,13 +198,13 @@
     <!--      ABOUT SOZO-->
     <ion-grid class="ion-no-padding">
       @for (values of sozo()?.sozoPage?.sozoInfos; track values; let index = $index) {
-        <ion-row [ngClass]="{'test': index === 0 || index === 3}">
+        <ion-row [ngClass]="{'test': index === 0 || index === 3}" style="padding-top: 2%; padding-bottom: 2%">
           <ion-col size-md="9" size-xs="12" offset-md="1.5">
             <ion-card [ngClass]="{'test': index === 0 || index === 3}">
               <ion-card-header>
-                <ion-card-title>{{ values.title }}</ion-card-title>
+                <ion-card-title [ngClass]="{'test': index === 0 || index === 3}">{{ values.title }}</ion-card-title>
               </ion-card-header>
-              <ion-card-content style="padding: 16px">
+              <ion-card-content style="padding: 16px 16px 0px 16px">
                 @if (index === 0) {
                   <ion-text class="test">{{ values.description[0] }}</ion-text>
                   <br><br><br>
@@ -220,7 +218,7 @@
                   <br>
                   <ol style="padding-left: 6%">
                     @for (value of values.description | slice: 2:7; track value; let index = $index) {
-                      <li style="margin-bottom: 1%" class="bold">
+                      <li style="margin-bottom: 1%" class="bold_white">
                         {{ value }}
                       </li>
                     }
@@ -235,28 +233,26 @@
                     }
                   </ol>
                 }
-                <!--                @else {-->
-                <!--                  <ion-row>-->
-                <!--                    @for (value of values.description; track value; let index = $index) {-->
-                <!--                      <ion-col size="12" style="text-align: center">-->
-                <!--                        <ion-text class="bold">{{value}}</ion-text>-->
-                <!--                      </ion-col>-->
-                <!--                      <br>-->
-                <!--                      <ion-col size="12" style="text-align: center; padding: 1% 4% 2% 4%">-->
-                <!--                        <ion-text class="standard">{{values.description[index]}}</ion-text>-->
-                <!--                      </ion-col>-->
-                <!--                    }-->
-                <!--                  </ion-row>-->
-                <!--                }-->
               </ion-card-content>
             </ion-card>
           </ion-col>
         </ion-row>
       }
     </ion-grid>
+    <ion-row style="background: white">
+      <ion-col size="10" class="ion-no-padding" offset="1">
+        <div style="text-align: center; margin-bottom: 5%">
+          <h4 class="sozo_last_text_break">{{ sozo()?.sozoPage?.lastTextBreak }}</h4>
+          <br>
+          <ion-button fill="outline"
+                      href="https://form.jotform.com/242706043166048">
+            Book a SOZO
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
 
-
-    <!--    <app-footer></app-footer>-->
+    <app-footer></app-footer>
   } @else {
     <ion-grid [fixed]="true" style="height: 100%">
       <ion-row style="height: 100%" class="ion-text-center">

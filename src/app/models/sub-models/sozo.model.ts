@@ -12,4 +12,5 @@ export interface SozoPageModel {
   imageThree: string;
   imageThreeText: string[];
   sozoInfos: SozoInfo[];
+  lastTextBreak: string;
 }

@@ -25,6 +25,18 @@ h4.sozo_text_break {
   font-weight: 700;
 }
 
+h4.sozo_last_text_break {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(35px, 4vw, 50px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-weight: 700;
+}
+
 h4.sozo_text_break_two {
   font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
   font-size: clamp(35px, 4vw, 45px);
@@ -67,7 +79,7 @@ ion-card {
 ion-card-title {
   font-size:clamp(45px, 4vw, 60px);
   font-family: Raleway, serif;
-  color: white;
+  color: black;
   text-align: left;
   font-weight: bold;
 }
@@ -77,9 +89,15 @@ li.bold {
   font-family: Raleway, serif;
   letter-spacing: .1em;
 }
+li.bold_white {
+  font-size: clamp(20px, 2vw, 24px);
+  color: white;
+  font-family: Raleway, serif;
+  letter-spacing: .1em;
+}
 ion-text.standard {
   font-size: clamp(20px, 2vw, 24px);
-  color: black;
+  color: white;
   font-family: Raleway, serif;
   letter-spacing: .1em;
   text-align: left;
@@ -87,14 +105,14 @@ ion-text.standard {
 
 ion-text.test {
   font-size: clamp(30px, 2vw, 45px);
-  color: black;
+  color: white;
   font-family: Raleway, serif;
   text-align: left;
   margin-bottom: 3%;
 }
 ion-text.three {
   font-size: clamp(24px, 2vw, 28px);
-  color: black;
+  color: white;
   font-family: Raleway, serif;
   text-align: left;
   margin-bottom: 3%;
@@ -104,4 +122,18 @@ ion-row.test{
 }
 ion-card.test{
   --background: #29595d;
+}
+ion-card-title.test {
+  color: white;
+}
+.font-size {
+  font-size: 18px;
+}
+ion-button {
+  color: black;
+  --border-color: #000;
+  height: 3.55em;
+}
+ion-card-header {
+  padding-bottom: 0;
 }
