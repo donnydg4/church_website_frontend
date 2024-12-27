@@ -200,9 +200,9 @@
     <!--      ABOUT SOZO-->
     <ion-grid class="ion-no-padding">
       @for (values of sozo()?.sozoPage?.sozoInfos; track values; let index = $index) {
-        <ion-row [ngClass]="{'test': index === 0}">
+        <ion-row [ngClass]="{'test': index === 0 || index === 3}">
           <ion-col size-md="9" size-xs="12" offset-md="1.5">
-            <ion-card [ngClass]="{'test': index === 0}">
+            <ion-card [ngClass]="{'test': index === 0 || index === 3}">
               <ion-card-header>
                 <ion-card-title>{{ values.title }}</ion-card-title>
               </ion-card-header>
