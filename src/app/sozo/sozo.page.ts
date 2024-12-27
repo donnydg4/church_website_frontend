@@ -11,7 +11,7 @@ import {
   IonText, Platform
 } from "@ionic/angular/standalone";
 import {DisplayCardsComponent} from "../shared-components/display-cards/display-cards.component";
-import {DatePipe, NgOptimizedImage} from "@angular/common";
+import {DatePipe, NgClass, NgOptimizedImage, SlicePipe} from "@angular/common";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 
 @Component({
@@ -33,7 +33,9 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
     IonCardHeader,
     IonCardSubtitle,
     IonCardTitle,
-    IonCardContent
+    IonCardContent,
+    NgClass,
+    SlicePipe
   ]
 })
 export class SozoPage {

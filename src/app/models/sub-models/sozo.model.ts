@@ -1,3 +1,5 @@
+import {SozoInfo} from "./sozo-info.model";
+
 export interface SozoPageModel {
   firstImage: string;
   firstImageTitle: string;
@@ -9,13 +11,5 @@ export interface SozoPageModel {
   imageTwoText: string[];
   imageThree: string;
   imageThreeText: string[];
-  whatIsSozo: string;
-  whatIsSozoDescription: string[];
-  sozoApproach: string;
-  sozoApproachDescription: string[];
-  sozoDeliverance: string;
-  sozoDeliveranceDescription: string[];
-  sozoSession: string;
-  sozoSessionDescription: string[];
-
+  sozoInfos: SozoInfo[];
 }
