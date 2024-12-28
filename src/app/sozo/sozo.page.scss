@@ -61,7 +61,7 @@ ion-text.fake_h1 {
   font-weight: normal;
   font-family: Arial, serif;
   line-height: 1.5em;
-  color: black;
+  color: white;
   margin-bottom: 1%;
   display: flex;
 }
@@ -70,7 +70,7 @@ ion-text.about {
   font-weight: normal;
   font-family: Arial, serif;
   line-height: 1.5em;
-  color: black;
+  color: white;
 }
 ion-card {
   box-shadow: none !important;
@@ -79,13 +79,13 @@ ion-card {
 ion-card-title {
   font-size:clamp(45px, 4vw, 60px);
   font-family: Raleway, serif;
-  color: black;
+  color: white;
   text-align: left;
   font-weight: bold;
 }
 li.bold {
   font-size: clamp(20px, 2vw, 24px);
-  color: black;
+  color: white;
   font-family: Raleway, serif;
   letter-spacing: .1em;
 }
@@ -110,6 +110,7 @@ ion-text.test {
   text-align: left;
   margin-bottom: 3%;
 }
+
 ion-text.three {
   font-size: clamp(24px, 2vw, 28px);
   color: white;
@@ -117,23 +118,37 @@ ion-text.three {
   text-align: left;
   margin-bottom: 3%;
 }
+
 ion-row.test{
   background-color: #29595d;
 }
+
 ion-card.test{
   --background: #29595d;
 }
+
+ion-row.color {
+  background-color: #1e2a4b;
+}
+
+ion-card.color {
+  --background: #1e2a4b;
+}
+
 ion-card-title.test {
   color: white;
 }
+
 .font-size {
   font-size: 18px;
 }
+
 ion-button {
   color: black;
   --border-color: #000;
   height: 3.55em;
 }
+
 ion-card-header {
   padding-bottom: 0;
 }
