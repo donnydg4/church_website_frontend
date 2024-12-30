@@ -1,12 +1,10 @@
 <ion-content style="--background: white; --color: black">
   @if (kidYouth()) {
     <ion-grid class="ion-no-padding">
-      <ion-row style="height: 60vh">
-        <ion-col size="12" style="height: 100%">
-          <div class="outside_sozo">
+      <ion-row style="height: 85vh">
+        <ion-col size="12" style="height: 85vh">
             <img ngSrc="{{kidYouth()?.kidYouthPage?.mainImageUrl}}" priority fill alt=""
                  ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="main">
-          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
