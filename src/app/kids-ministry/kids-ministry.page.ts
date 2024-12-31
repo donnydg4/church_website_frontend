@@ -11,13 +11,14 @@ import {
 } from "@ionic/angular/standalone";
 import {NgOptimizedImage} from "@angular/common";
 import {AllChurchInformationService} from "../service/all-church-information.service";
+import {FooterComponent} from "../shared-components/footer/footer.component";
 
 @Component({
   selector: 'app-kids-ministry',
   templateUrl: './kids-ministry.page.html',
   styleUrls: ['./kids-ministry.page.scss'],
   standalone: true,
-    imports: [IonContent, IonGrid, IonRow, IonCol, IonText, IonCard, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCardContent, NgOptimizedImage]
+    imports: [IonContent, IonGrid, IonRow, IonCol, IonText, IonCard, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCardContent, NgOptimizedImage, FooterComponent]
 })
 export class KidsMinistryPage {
   private platform = inject(Platform);

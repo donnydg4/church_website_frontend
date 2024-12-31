@@ -4,5 +4,8 @@ export interface KidYouthModel {
   textBreak: string;
   victorsLetterImages: string[];
   victorsWords: string[];
-  victorsDescriptions: [];
+  victorsDescriptions: string[];
+  visitHeader: string;
+  visitTitles: string[];
+  visitDescriptions: string[];
 }

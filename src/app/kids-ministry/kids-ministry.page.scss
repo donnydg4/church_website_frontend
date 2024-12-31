@@ -11,22 +11,46 @@ img.victors {
 }
 
 ion-text {
-  font-size: clamp(19px, 2vw, 22px);
+  font-size: clamp(23px, 2vw, 28px);
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  color: black;
-  letter-spacing: 0.02em;
+  color: white;
+  letter-spacing: 0.04em;
 }
-ion-card-title {
+ion-card-title.victor {
   font-family: "Inknut Antiqua", serif;
   text-align: center;
   color: black;
 }
-ion-card-content {
+ion-card-content.victor {
   font-family: "Inknut Antiqua", serif;
   text-align: center;
   color: black;
+  font-size: clamp(16px, 2vw, 18px);
+
 }
 ion-card {
   display: block;
   box-shadow: none !important;
+}
+span.font {
+  font-family: "Inknut Antiqua", serif;
+  text-align: center;
+  color: white;
+}
+h6 {
+  text-transform: uppercase;
+  font-size: clamp(40px, 3vw, 60px);
+  color: white;
+}
+ion-card-title.visit {
+  font-size: clamp(30px, 3vw, 40px);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: white;
+}
+ion-card-content.visit {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: white;
+  font-size: clamp(16px, 2vw, 18px);
 }
