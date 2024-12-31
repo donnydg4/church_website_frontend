@@ -21,8 +21,8 @@
       </ion-row>
       <ion-row>
         @for (victor of kidYouth()?.kidYouthPage?.victorsLetterImages; track victor; let idx = $index) {
-          <ion-col style="min-width: 240px;">
-            <ion-card style="">
+          <ion-col style="min-width: 240px;; --background: white">
+            <ion-card style="--background: white">
               <img ngSrc="{{kidYouth()?.kidYouthPage?.victorsLetterImages[idx]}}" priority width="1920" height="220" alt=""
                    ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="victors" style="max-height: 220px">
               <ion-card-header>
