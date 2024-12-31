@@ -1,5 +1,14 @@
 import {Component, HostListener, inject} from '@angular/core';
-import {IonCol, IonContent, IonGrid, IonRow, Platform} from "@ionic/angular/standalone";
+import {
+  IonCard, IonCardContent, IonCardHeader,
+  IonCardSubtitle, IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonRow,
+  IonText,
+  Platform
+} from "@ionic/angular/standalone";
 import {NgOptimizedImage} from "@angular/common";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 
@@ -8,7 +17,7 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
   templateUrl: './kids-ministry.page.html',
   styleUrls: ['./kids-ministry.page.scss'],
   standalone: true,
-    imports: [IonContent, IonGrid, IonRow, IonCol, NgOptimizedImage]
+    imports: [IonContent, IonGrid, IonRow, IonCol, IonText, IonCard, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCardContent, NgOptimizedImage]
 })
 export class KidsMinistryPage {
   private platform = inject(Platform);

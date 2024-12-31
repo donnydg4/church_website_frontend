@@ -1,11 +1,40 @@
 <ion-content style="--background: white; --color: black">
   @if (kidYouth()) {
     <ion-grid class="ion-no-padding">
-      <ion-row style="height: 85vh">
-        <ion-col size="12" style="height: 85vh">
-            <img ngSrc="{{kidYouth()?.kidYouthPage?.mainImageUrl}}" priority fill alt=""
+      <ion-row style="height: 100%">
+        <ion-col size="12" style="height: 86.5vh">
+          @if (platformWidth <= 500) {
+            <img ngSrc="{{kidYouth()?.kidYouthPage?.mobileImageUrl}}" priority fill alt=""
                  ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="main">
+          } @else {
+            <img ngSrc="{{kidYouth()?.kidYouthPage?.mainImageUrl}}" priority fill alt=""
+                 ngSrcset="1920w, 2560w" class="main">
+          }
         </ion-col>
+      </ion-row>
+      <ion-row class="ion-padding">
+        <ion-col size="12" class="ion-padding">
+          <ion-text>
+            {{ kidYouth()?.kidYouthPage?.textBreak }}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        @for (victor of kidYouth()?.kidYouthPage?.victorsLetterImages; track victor; let idx = $index) {
+          <ion-col style="min-width: 240px;">
+            <ion-card style="">
+              <img ngSrc="{{kidYouth()?.kidYouthPage?.victorsLetterImages[idx]}}" priority width="1920" height="220" alt=""
+                   ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="victors" style="max-height: 220px">
+              <ion-card-header>
+                <ion-card-title>{{kidYouth()?.kidYouthPage?.victorsWords[idx]}}</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content>
+                {{kidYouth()?.kidYouthPage?.victorsDescriptions[idx]}}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
       </ion-row>
     </ion-grid>
   }
