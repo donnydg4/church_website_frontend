@@ -12,7 +12,7 @@
           }
         </ion-col>
       </ion-row>
-      <ion-row style="background: #1e2a4b; padding: 3%">
+      <ion-row style="background: #1e2a4b; padding: 40px">
         <ion-col size="12" style="text-align: center">
           <ion-text style="text-align: center;">
             {{ kidYouth()?.kidYouthPage?.textBreak }}
@@ -29,7 +29,7 @@
           </ion-text>
         </ion-col>
       </ion-row>
-      <ion-row style="padding: 3%">
+      <ion-row style="padding: 30px">
         @for (victor of kidYouth()?.kidYouthPage?.victorsLetterImages; track victor; let idx = $index) {
           <ion-col style="min-width: 240px;; --background: white">
             <ion-card style="--background: white">
@@ -53,7 +53,7 @@
           </h6>
         </ion-col>
         @for (item of kidYouth()?.kidYouthPage?.visitTitles; track item; let idx = $index) {
-          <ion-col class="ion-padding" size-xl="6" size-xs="12" size-sm="12" size-md="6" size-lg="6">
+          <ion-col class="padding: 8px" size-xl="6" size-xs="12" size-sm="12" size-md="6" size-lg="6">
             <ion-card style="--background: #1e2a4b">
               <ion-card-header>
                 <ion-card-title class="visit">{{kidYouth()?.kidYouthPage?.visitTitles[idx]}}</ion-card-title>
