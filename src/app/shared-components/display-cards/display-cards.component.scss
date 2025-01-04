@@ -1,5 +1,4 @@
 ion-card {
-  //box-shadow: none !important;
   border-radius: 2px;
   background-color: #f3f3f3;
 }
@@ -33,7 +32,6 @@ ion-card-title {
 ion-card-content {
   font-size: clamp(13px, 2vw, 15px);
   padding-left: 5%;
-  //padding-bottom: 5%;
   color: black;
   font-family: Roboto, serif;
 }
@@ -48,13 +46,9 @@ ion-card-content {
 
 img {
   border-radius: 4px;
-  object-fit: fill;
+  object-fit: cover;
 }
-//
-//h1 {
-//  font-size: 4vh;
-//  color: black;
-//}
+
 .swiper-pagination-bullet {
   opacity: 1 !important;
   color: white;
