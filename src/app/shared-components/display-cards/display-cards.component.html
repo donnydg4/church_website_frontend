@@ -1,19 +1,29 @@
 <ion-grid [fixed]="true" style="margin-top: 3%; margin-bottom: 3%">
   @if (displayCards()) {
     <ion-row class="ion-text-left">
-      @for (card of displayCards();track card;let i = $index) {
-        <ion-col size-xl="4" size-sm="6" size-xs="12" class="ion-no-padding">
+      @for (card of displayCards(); track card; let i = $index) {
+        <ion-col size-xl="3" size-sm="6" size-md="4" size-xs="12" class="ion-no-padding">
           <ion-card mode="md">
-            <swiper-container style="height: 330px;" pagination="true">
-              @for (cardImage of card.imageUrl;track cardImage) {
-                <swiper-slide>
-                  <div style="height: 100%; width: 100%">
-                      <img ngSrc="{{cardImage}}" alt="" style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
-                           priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
-                  </div>
-                </swiper-slide>
+            @if (card.type === 'CHURCH LEADERSHIP') {
+              @for (cardImage of card.imageUrl; track cardImage) {
+                <img ngSrc="{{cardImage}}" alt=""
+                     style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
+                     priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
               }
-            </swiper-container>
+            } @else {
+              <swiper-container style="height: 330px;" pagination="true">
+                @for (cardImage of card.imageUrl; track cardImage) {
+                  <swiper-slide>
+                    <div style="height: 100%; width: 100%">
+                      <img ngSrc="{{cardImage}}" alt=""
+                           style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
+                           priority width="1920" height="1080"
+                           ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
+                    </div>
+                  </swiper-slide>
+                }
+              </swiper-container>
+            }
             <ion-card-header>
               @if (card.type !== 'CHURCH LEADERSHIP') {
                 @if (card.startDate !== null) {
@@ -47,9 +57,13 @@
                   <ion-col style="text-align: end" class="ion-no-padding">
                     @if (card.learnMore) {
                       @if (card.title === 'Kid\'s Ministry') {
-                        <ion-button (click)="navigateToKidsPage()" fill="outline" class="learn" style="text-transform: capitalize" size="small">Learn More</ion-button>
+                        <ion-button (click)="navigateToKidsPage()" fill="outline" class="learn"
+                                    style="text-transform: capitalize" size="small">Learn More
+                        </ion-button>
                       } @else {
-                        <ion-button (click)="navigateToPage()" fill="outline" class="learn" style="text-transform: capitalize" size="small">Contact Us</ion-button>
+                        <ion-button (click)="navigateToPage()" fill="outline" class="learn"
+                                    style="text-transform: capitalize" size="small">Contact Us
+                        </ion-button>
                       }
                     }
                   </ion-col>
