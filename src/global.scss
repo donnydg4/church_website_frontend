@@ -74,12 +74,15 @@
   border-color: purple !important;
 }
 
+.mat-mdc-form-field-hint-wrapper {
+  padding: 0px !important;
+}
+
 //mat-calendar
 
 .mat-calendar-body-cell-content.mat-focus-indicator {
   border-radius: 5px;
 }
-
 
 .mat-mdc-icon-button.mat-mdc-button-base {
   color: purple !important;

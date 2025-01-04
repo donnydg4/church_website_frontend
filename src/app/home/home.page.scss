@@ -14,6 +14,7 @@ ion-button.video_text {
   --border-color: white;
   text-transform: uppercase;
   width: 165px;
+  --ripple-color: transparent;
 }
 
 //events section
@@ -94,6 +95,7 @@ ion-button.new_here {
   color: white;
   --border-color: white;
   text-transform: uppercase;
+  --ripple-color: transparent;
 }
 
 ion-text.new_here {
