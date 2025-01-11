@@ -7,7 +7,7 @@
             @if (card.type === 'CHURCH LEADERSHIP') {
               @for (cardImage of card.imageUrl; track cardImage) {
                 <img ngSrc="{{cardImage}}" alt=""
-                     style="min-height: 330px; max-height: 330px; width: 100%; height: auto"
+                     style="min-height: auto; max-height: 280px; width: 100%; height: auto"
                      priority width="1920" height="1080" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
               }
             } @else {
