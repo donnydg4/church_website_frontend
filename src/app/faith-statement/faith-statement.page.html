@@ -1,15 +1,14 @@
 <ion-content style="--background: white; --color: black">
-  @if (faithStuff()) {
-    <ion-grid [fixed]="true" class="background-grid">
-      <ion-row style="justify-content: center">
-        <ion-col size-lg="10" style="height:  100%; text-align: center" size-xs="12">
+  <ion-grid [fixed]="true" class="background-grid">
+    <ion-row style="justify-content: center">
+      <ion-col size-lg="10" style="height:  100%; text-align: center" size-xs="12">
+        @if (faithStuff()) {
           <ion-card>
             <ion-grid class="ion-no-padding">
               <ion-row style=" border-bottom: solid 2px #497588">
                 <ion-col size="12">
                   <div class="outside">
-                    <img ngSrc="{{faithStuff().statementOfFaith.imageUrl}}" priority fill alt=""
-                         ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
+                      <img ngSrc="{{faithStuff().statementOfFaith.imageUrl}}" priority fill alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
                     <div class="inside">
                       <h1>The Father's House Statement Of Faith</h1>
                     </div>
@@ -21,13 +20,13 @@
                   <section class="dl-blurbs">
                     <dl>
                       @for (allInfo of faithStuff().statementOfFaith.statementInformation; track allInfo) {
-                        <dt>{{ allInfo.title }}</dt>
+                        <dt>{{allInfo.title}}</dt>
                         <dd>
-                          {{ allInfo.description }}
+                          {{allInfo.description}}
                         </dd>
                         @for (scripture of allInfo.scriptures; track scripture) {
                           <dd>
-                            {{ scripture }}
+                            {{scripture}}
                           </dd>
                         }
                       }
@@ -37,18 +36,9 @@
               </ion-row>
             </ion-grid>
           </ion-card>
-
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <app-footer></app-footer>
-  } @else {
-    <ion-grid [fixed]="true" style="height: 100%">
-      <ion-row style="height: 100%" class="ion-text-center">
-        <ion-col style="height: 100%" class="ion-text-center">
-          <ion-spinner name="lines"></ion-spinner>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  }
+        }
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-footer></app-footer>
 </ion-content>

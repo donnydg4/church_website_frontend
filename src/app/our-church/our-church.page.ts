@@ -1,19 +1,19 @@
 import {Component, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {
-    IonCard,
-    IonCardContent,
-    IonCardHeader,
-    IonCardTitle,
-    IonCol,
-    IonContent,
-    IonGrid,
-    IonLabel,
-    IonRow,
-    IonSegment,
-    IonSegmentButton, IonSpinner,
-    IonText,
-    Platform
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonLabel,
+  IonRow,
+  IonSegment,
+  IonSegmentButton,
+  IonText,
+  Platform
 } from "@ionic/angular/standalone";
 import {NgOptimizedImage} from '@angular/common';
 import {MatToolbar} from '@angular/material/toolbar';
@@ -28,19 +28,19 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
   templateUrl: './our-church.page.html',
   styleUrls: ['./our-church.page.scss'],
   standalone: true,
-    imports: [
-        NgOptimizedImage,
-        MatToolbar,
-        MatIconButton,
-        MatMenuTrigger,
-        MatIcon,
-        MatMenu,
-        MatMenuItem,
-        TimelineComponent,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardContent, IonCardHeader,
-        IonCardTitle, IonText, IonSegment, IonSegmentButton, IonLabel, IonSpinner
-    ]
+  imports: [
+    NgOptimizedImage,
+    MatToolbar,
+    MatIconButton,
+    MatMenuTrigger,
+    MatIcon,
+    MatMenu,
+    MatMenuItem,
+    TimelineComponent,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardContent,IonCardHeader,
+    IonCardTitle, IonText, IonSegment, IonSegmentButton, IonLabel
+  ]
 })
 export class OurChurchPage {
   private dataService = inject(AllChurchInformationService);

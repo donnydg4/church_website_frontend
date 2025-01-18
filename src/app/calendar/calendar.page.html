@@ -8,8 +8,8 @@
         <mat-form-field appearance="outline" style="color: purple">
           <mat-label style="color: purple">Enter a date range</mat-label>
           <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker"
-                                [min]="minDate"
-                                [max]="maxDate">
+            [min]="minDate"
+            [max]="maxDate">
             <input matStartDate placeholder="Start date" formControlName="start">
             <input matEndDate placeholder="End date" formControlName="end">
           </mat-date-range-input>
@@ -30,36 +30,29 @@
           <ion-col size-lg="4" size-md="6" style="padding: 10px" size-xs="12">
             <ion-card mode="md">
               <ion-card-header>
-                <ion-card-title style="--color: black">{{ calendarEvent.date | date: 'EEEE' }}</ion-card-title>
-                <ion-card-subtitle>{{ calendarEvent.date | date: 'MMMM dd, yyyy' }}</ion-card-subtitle>
+                <ion-card-title style="--color: black">{{calendarEvent.date | date: 'EEEE'}}</ion-card-title>
+                <ion-card-subtitle>{{calendarEvent.date | date: 'MMMM dd, yyyy'}}</ion-card-subtitle>
               </ion-card-header>
               @for (content of calendarEvent.events; track content) {
                 <ion-card-content>
-                  <a (click)="navigateToStandardLayout(content)"
-                     style="font-size: 24px; color: purple; cursor: pointer">{{ content.title }}</a>
+                  <a (click)="navigateToStandardLayout(content)" style="font-size: 24px; color: purple; cursor: pointer">{{content.title}}</a>
                   <br>
-                  <ion-text>
-                    {{ content.description }}
-                  </ion-text>
-                </ion-card-content>
-              }
-            </ion-card>
-          </ion-col>
-        }
-      </ion-row>
-    } @else if (calendarEventsSignal()?.length === 0) {
+                    <ion-text>
+                      {{content.description}}
+                    </ion-text>
+                  </ion-card-content>
+                }
+              </ion-card>
+            </ion-col>
+          }
+        </ion-row>
+      } @else {
       <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
         <ion-col size="12">
-          <h2 style="color: black">This page will be updated with events soon...</h2>
-        </ion-col>
-      </ion-row>
-    } @else {
-      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
-        <ion-col size="12">
-          <ion-spinner name="lines" style="height: 50px; width: 50px"></ion-spinner>
+          <h2 style="color: black">Events will be added soon...</h2>
         </ion-col>
       </ion-row>
     }
-  </ion-grid>
-  <app-footer></app-footer>
-</ion-content>
+    </ion-grid>
+    <app-footer></app-footer>
+  </ion-content>
