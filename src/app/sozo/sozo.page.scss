@@ -1,0 +1,154 @@
+img.main {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.sozo_title {
+  font-size: clamp(60px, 15vw, 110px);
+  font-weight: normal;
+  font-family: Raleway, serif;
+  color: white;
+}
+
+h4.sozo_text_break {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(50px, 4vw, 80px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-top: 2%;
+  font-weight: 700;
+}
+
+h4.sozo_last_text_break {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(35px, 4vw, 50px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-weight: 700;
+}
+
+h4.sozo_text_break_two {
+  font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: clamp(35px, 4vw, 45px);
+  color: black;
+  line-height: 1em;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  margin-bottom: 2%;
+  margin-top: 0;
+}
+
+img.test {
+  aspect-ratio: 1.1/1;
+  //max-height: 550px;
+}
+div.about {
+  margin-top: 3%;
+}
+ion-text.fake_h1 {
+  font-size: clamp(40px, 4vw, 60px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  line-height: 1.5em;
+  color: white;
+  margin-bottom: 1%;
+  display: flex;
+}
+ion-text.about {
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: normal;
+  font-family: Arial, serif;
+  line-height: 1.5em;
+  color: white;
+}
+ion-card {
+  box-shadow: none !important;
+  --background: white;
+}
+ion-card-title {
+  font-size:clamp(45px, 4vw, 60px);
+  font-family: Raleway, serif;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+li.bold {
+  font-size: clamp(20px, 2vw, 24px);
+  color: white;
+  font-family: Raleway, serif;
+  letter-spacing: .1em;
+}
+li.bold_white {
+  font-size: clamp(20px, 2vw, 24px);
+  color: white;
+  font-family: Raleway, serif;
+  letter-spacing: .1em;
+}
+ion-text.standard {
+  font-size: clamp(20px, 2vw, 24px);
+  color: white;
+  font-family: Raleway, serif;
+  letter-spacing: .1em;
+  text-align: left;
+}
+
+ion-text.test {
+  font-size: clamp(30px, 2vw, 45px);
+  color: white;
+  font-family: Raleway, serif;
+  text-align: left;
+  margin-bottom: 3%;
+}
+
+ion-text.three {
+  font-size: clamp(24px, 2vw, 28px);
+  color: white;
+  font-family: Raleway, serif;
+  text-align: left;
+  margin-bottom: 3%;
+}
+
+ion-row.test{
+  background-color: #1e2a4b;
+}
+
+ion-card.test{
+  --background: #1e2a4b;
+}
+
+ion-row.color {
+  background-color: #1e2a4b;
+}
+
+ion-card.color {
+  --background: #1e2a4b;
+}
+
+ion-card-title.test {
+  color: white;
+}
+
+.font-size {
+  font-size: 18px;
+}
+
+ion-button {
+  color: black;
+  --border-color: #000;
+  height: 3.55em;
+}
+
+ion-card-header {
+  padding-bottom: 0;
+}

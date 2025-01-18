@@ -1,13 +1,73 @@
-<!--<ion-header [translucent]="true">-->
-<!--  <ion-toolbar>-->
-<!--    <ion-title>kids-ministry</ion-title>-->
-<!--  </ion-toolbar>-->
-<!--</ion-header>-->
+<ion-content style="--background: white; --color: black">
+  @if (kidYouth()) {
+    <ion-grid class="ion-no-padding">
+      <ion-row style="height: 100%">
+        <ion-col size="12" style="height: 86.5vh">
+          @if (platformWidth <= 500) {
+            <img ngSrc="{{kidYouth()?.kidYouthPage?.mobileImageUrl}}" priority fill alt=""
+                 ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="main">
+          } @else {
+            <img ngSrc="{{kidYouth()?.kidYouthPage?.mainImageUrl}}" priority fill alt=""
+                 ngSrcset="1920w, 2560w" class="main">
+          }
+        </ion-col>
+      </ion-row>
+      <ion-row style="background: #1e2a4b; padding: 40px">
+        <ion-col size="12" style="text-align: center">
+          <ion-text style="text-align: center;">
+            {{ kidYouth()?.kidYouthPage?.textBreak }}
+          </ion-text>
+          <br><br>
+           <ion-text style="text-align: center">
+             <span class="font"> V.I.C.T.O.R.S Village</span> is an acronym for the kind of kids we are training and raising up in our ministry.
+           </ion-text>
+          <br><br>
+          <ion-text>
+            Why a Village?
 
-<!--<ion-content [fullscreen]="true">-->
-<!--  <ion-header collapse="condense">-->
-<!--    <ion-toolbar>-->
-<!--      <ion-title size="large">kids-ministry</ion-title>-->
-<!--    </ion-toolbar>-->
-<!--  </ion-header>-->
-<!--</ion-content>-->
+            A village is a small community, typically close-knit where the residents have a strong sense of belonging.
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row style="padding: 30px">
+        @for (victor of kidYouth()?.kidYouthPage?.victorsLetterImages; track victor; let idx = $index) {
+          <ion-col style="min-width: 240px;; --background: white">
+            <ion-card style="--background: white">
+              <img ngSrc="{{kidYouth()?.kidYouthPage?.victorsLetterImages[idx]}}" priority width="1920" height="220" alt=""
+                   ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w" class="victors" style="max-height: 220px">
+              <ion-card-header>
+                <ion-card-title class="victor">{{kidYouth()?.kidYouthPage?.victorsWords[idx]}}</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content class="victor">
+                {{kidYouth()?.kidYouthPage?.victorsDescriptions[idx]}}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+      <ion-row style="padding: 2%; background: #1e2a4b;">
+        <ion-col size="12" style="text-align: center; border-bottom: 2px solid white;">
+          <h6 style="font-size: clamp(40px, 4vw, 60px)">
+            {{kidYouth()?.kidYouthPage?.visitHeader}}
+          </h6>
+        </ion-col>
+        @for (item of kidYouth()?.kidYouthPage?.visitTitles; track item; let idx = $index) {
+          <ion-col class="padding: 8px" size-xl="6" size-xs="12" size-sm="12" size-md="6" size-lg="6">
+            <ion-card style="--background: #1e2a4b">
+              <ion-card-header>
+                <ion-card-title class="visit">{{kidYouth()?.kidYouthPage?.visitTitles[idx]}}</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content class="visit">
+                {{ kidYouth()?.kidYouthPage?.visitDescriptions[idx] }}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+    </ion-grid>
+    <app-footer></app-footer>
+
+  }
+</ion-content>

@@ -6,6 +6,12 @@ h1.video_text {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  ion-button.video_text {
+    width: 120px;
+  }
+}
+
 ion-button.video_text {
   font-size: 15px;
   height: 3.55em;
@@ -13,7 +19,8 @@ ion-button.video_text {
   color: white;
   --border-color: white;
   text-transform: uppercase;
-  width: 165px;
+  width: max-content;
+  --ripple-color: transparent;
 }
 
 //events section
@@ -88,12 +95,13 @@ div.new_here {
 }
 
 ion-button.new_here {
-  font-size: 15px;
+  font-size: 14px;
   height: 3.55em;
   font-family: Roboto, serif;
   color: white;
   --border-color: white;
   text-transform: uppercase;
+  --ripple-color: transparent;
 }
 
 ion-text.new_here {
@@ -206,3 +214,4 @@ ion-card-content {
   color: white;
   font-size: clamp(18px, 2vw, 22px);
 }
+

@@ -2,7 +2,7 @@ import {Component, inject} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {NgOptimizedImage} from '@angular/common';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {IonButton, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/angular/standalone";
+import {IonButton, IonCol, IonContent, IonGrid, IonRow, IonSpinner, IonText} from "@ionic/angular/standalone";
 
 
 @Component({
@@ -10,11 +10,11 @@ import {IonButton, IonCol, IonContent, IonGrid, IonRow, IonText} from "@ionic/an
   templateUrl: './directions.page.html',
   styleUrls: ['./directions.page.scss'],
   standalone: true,
-  imports: [
-    NgOptimizedImage,
-    FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText
-  ]
+    imports: [
+        NgOptimizedImage,
+        FooterComponent,
+        IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonSpinner
+    ]
 })
 export class DirectionsPage {
 

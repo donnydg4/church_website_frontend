@@ -3,19 +3,19 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {NgOptimizedImage} from '@angular/common';
 import {DisplayCardsComponent} from '../shared-components/display-cards/display-cards.component';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
+import {IonCol, IonContent, IonGrid, IonRow, IonSpinner} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-our-ministries',
   templateUrl: './our-ministries.page.html',
   styleUrls: ['./our-ministries.page.scss'],
   standalone: true,
-  imports: [
-    NgOptimizedImage,
-    DisplayCardsComponent,
-    FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol
-  ]
+    imports: [
+        NgOptimizedImage,
+        DisplayCardsComponent,
+        FooterComponent,
+        IonContent, IonGrid, IonRow, IonCol, IonSpinner
+    ]
 })
 export class OurMinistriesPage {
 

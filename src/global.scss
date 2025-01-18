@@ -74,12 +74,15 @@
   border-color: purple !important;
 }
 
+.mat-mdc-form-field-hint-wrapper {
+  padding: 0px !important;
+}
+
 //mat-calendar
 
 .mat-calendar-body-cell-content.mat-focus-indicator {
   border-radius: 5px;
 }
-
 
 .mat-mdc-icon-button.mat-mdc-button-base {
   color: purple !important;
@@ -213,6 +216,16 @@ div.outside {
   vertical-align: middle;
   justify-content: center;
 }
+div.outside_sozo {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  vertical-align: middle;
+  justify-content: center;
+}
+
 
 div.outside_home {
   display: flex;
@@ -262,6 +275,17 @@ div.inside {
   justify-content: center;
 }
 
+div.inside_sozo {
+  width: 100%; /* Can be in percentage also. */
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 12%;
+  padding-left: 12%;
+}
+
 h1 {
   font-family: "Montserrat",Arial,"Helvetica Neue",Helvetica,sans-serif;
   font-weight: bold;
@@ -284,3 +308,7 @@ h1 {
   text-transform: uppercase;
 }
 
+ion-spinner {
+  width: 15%;
+  height: 100%;
+}

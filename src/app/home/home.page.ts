@@ -10,8 +10,8 @@ import {
   IonCol,
   IonContent,
   IonGrid,
-  IonIcon,
-  IonRow,
+  IonIcon, IonLabel,
+  IonRow, IonSpinner,
   IonText,
   NavController
 } from "@ionic/angular/standalone";
@@ -24,7 +24,7 @@ import {
     NgOptimizedImage,
     SwiperDirective,
     FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonIcon
+    IonContent, IonGrid, IonRow, IonCol, IonButton, IonText, IonIcon, IonSpinner, IonLabel
   ],
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -34,9 +34,7 @@ export class HomePage {
   private dataService = inject(AllChurchInformationService);
   private navCtrl = inject(NavController);
 
-  // homeInfo = computed(() => this.dataService.allChurchInformation()?.allWebsiteInformation?.homePage);
   homeInfo = this.dataService.allWebsiteInformationTwo.value;
-  // waysToEngage = computed(() => this.dataService.allChurchInformation().allWebsiteInformation?.homePage?.waysToEngage);
   featuredEvents = this.dataService.featuredEventsTwo;
 
   navigateToPage(type: string) {
