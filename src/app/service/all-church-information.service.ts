@@ -5,7 +5,6 @@ import {rxResource} from "@angular/core/rxjs-interop";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
 import {sortByDateEvent} from "../utils/utils";
-import {delay, tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -43,11 +42,8 @@ export class AllChurchInformationService {
 
   //async rxresource call
   allWebsiteInformationTwo = rxResource({
-    loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl).pipe(
-      tap(data => console.log(data))
-    )
+    loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
   });
-
   //
   // eff = effect(() => {
   //   console.log('Status:', ResourceStatus[this.allWebsiteInformationTwo.status()]);

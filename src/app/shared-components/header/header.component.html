@@ -10,7 +10,7 @@
     <!--    </ion-buttons>-->
     <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
       <a href="/home">
-        <img src="assets/icon/church_home_logo.svg" style="height: 10vh; padding: 5px" alt="">
+        <img src="assets/icon/church_home_logo.svg" style="height: 12vh; padding: 5px" alt="">
       </a>
     </ion-buttons>
 
@@ -29,9 +29,8 @@
             <a routerLink="/faith-statement">STATEMENT OF FAITH</a>
             <a routerLink="/leadership">LEADERSHIP</a>
             <a routerLink="/missions">MISSIONS</a>
-            <a routerLink="/kids-ministry">KIDS</a>
             <a routerLink="/our-ministries">OUR MINISTRIES</a>
-<!--            <a routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>-->
+            <a routerLink="/supported-ministries">MINISTRIES WE SUPPORT</a>
           </div>
         </div>
         <div class="dropdown">
@@ -80,11 +79,11 @@
             <a routerLink="/sozo">Sozo</a>
           </div>
         </div>
-        <div class="inner-center-div" matTooltip="Coming Soon!" matTooltipClass="example-tooltip-uppercase" matTooltipPosition="below">
-          <ion-button style="min-width: 80px; padding-right: 10px;overflow: auto" routerLink="/worship" disabled>
+<!--        <div class="inner-center-div" matTooltip="Coming Soon!" matTooltipClass="example-tooltip-uppercase" matTooltipPosition="below">-->
+          <ion-button style="min-width: 80px; padding-right: 10px;overflow: auto" routerLink="/worship">
             Worship
           </ion-button>
-        </div>
+<!--        </div>-->
         <div class="inner-center-div">
           <ion-button fill="outline" style="width: 100px;"
                       href="https://app.securegive.com/tfhfreeport/main/donate/category">
@@ -98,7 +97,7 @@
       <ion-buttons slot="end" class="right-side">
         <div id="main-content">
           <ion-buttons slot="end" style="padding: 5px">
-            <ion-menu-button style="color: black"></ion-menu-button>
+            <ion-menu-button></ion-menu-button>
           </ion-buttons>
         </div>
       </ion-buttons>
@@ -109,7 +108,7 @@
 
 @if (platformWidth <= 975) {
   <ion-menu contentId="main-content" type="overlay" side="start" menuId="menu-one">
-    <ion-header style="height: 12vh">
+    <ion-header style="height: 14vh">
       <ion-toolbar class="custom_toolbar_menu">
         <h3>The Father's House</h3>
       </ion-toolbar>
@@ -142,15 +141,12 @@
                     <ion-item button lines="none" (click)="navigateToPage('missions')">
                       <a class="changes">missions</a>
                     </ion-item>
-                    <ion-item button lines="none" (click)="navigateToPage('kids-ministry')">
-                      <a class="changes">kids</a>
-                    </ion-item>
                     <ion-item button lines="none" (click)="navigateToPage('our-ministries')">
                       <a class="changes">our ministries</a>
                     </ion-item>
-<!--                    <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">-->
-<!--                      <a class="changes">ministries we support</a>-->
-<!--                    </ion-item>-->
+                    <ion-item button lines="none" (click)="navigateToPage('supported-ministries')">
+                      <a class="changes">ministries we support</a>
+                    </ion-item>
                   </ion-item-group>
                 </div>
               </ion-accordion>
