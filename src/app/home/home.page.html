@@ -94,31 +94,31 @@
         </ion-col>
       </ion-row>
       <!--      Featured Events  -->
-      @if (featuredEvents().length > 4) {
-        <ion-row style="height: auto; background: #ffffff; padding: 1% 0 3% 0;">
-          <ion-col size="12">
-            <div style="text-align: center">
-              <h5 class="custom">Featured Events</h5>
-            </div>
-          </ion-col>
-          <ion-col size-md=".5" size-xs="1.25">
-            <div class="swiper-button-prev purple_div"></div>
-          </ion-col>
-          <ion-col size-md="11" size-xs="9.5">
-            <swiper-container swipey [config]="config" init="false" class="engageSwiper">
-              @for (object of featuredEvents(); track object) {
-                <swiper-slide (click)="navigateToEvents()">
-                  <img ngSrc="{{object.imageUrl}}" class="custom" style="height: auto; width: auto" priority
-                       width="1920" height="1080" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">
-                </swiper-slide>
-              }
-            </swiper-container>
-          </ion-col>
-          <ion-col size-md=".5" size-xs="1.25" class="ion-align-items-center">
-            <div class="swiper-button-next purple_div"></div>
-          </ion-col>
-        </ion-row>
-      } @else {
+<!--      @if (featuredEvents().length > 4) {-->
+<!--        <ion-row style="height: auto; background: #ffffff; padding: 1% 0 3% 0;">-->
+<!--          <ion-col size="12">-->
+<!--            <div style="text-align: center">-->
+<!--              <h5 class="custom">Featured Events</h5>-->
+<!--            </div>-->
+<!--          </ion-col>-->
+<!--          <ion-col size-md=".5" size-xs="1.25">-->
+<!--            <div class="swiper-button-prev purple_div"></div>-->
+<!--          </ion-col>-->
+<!--          <ion-col size-md="11" size-xs="9.5">-->
+<!--            <swiper-container swipey [config]="config" init="false" class="engageSwiper">-->
+<!--              @for (object of featuredEvents(); track object) {-->
+<!--                <swiper-slide (click)="navigateToEvents()">-->
+<!--                  <img ngSrc="{{object.imageUrl}}" class="custom" style="height: auto; width: auto" priority-->
+<!--                       width="1920" height="1080" alt="" ngSrcset="100w, 200w, 400w, 600w, 800w, 1200w, 1920w, 2560w">-->
+<!--                </swiper-slide>-->
+<!--              }-->
+<!--            </swiper-container>-->
+<!--          </ion-col>-->
+<!--          <ion-col size-md=".5" size-xs="1.25" class="ion-align-items-center">-->
+<!--            <div class="swiper-button-next purple_div"></div>-->
+<!--          </ion-col>-->
+<!--        </ion-row>-->
+<!--      } @else {-->
         <ion-row class="ion-text-center ion-justify-content-center" style="max-height: 110px; background: white;">
           <ion-col size-xs="12" size-sm="10" size-md="8" size-lg="7" size-xl="6" style="height: 100%">
             <div style="max-height: 110px;">
@@ -129,7 +129,7 @@
             </div>
           </ion-col>
         </ion-row>
-      }
+<!--      }-->
       <!--    NEW HERE ROW-->
       <ion-row style="height: auto; min-height: auto; background: #1e2a4b;">
         <ion-col size-lg="5">
