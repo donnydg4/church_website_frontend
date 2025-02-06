@@ -35,7 +35,14 @@
           </ion-col>
         }
       </ion-row>
-    } @else {
+    } @else if (objectArray()?.length === 0) {
+      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 10%; margin-bottom: 10%">
+        <ion-col size="12">
+          <h2 style="color: black">This page will be updated with videos soon...</h2>
+        </ion-col>
+      </ion-row>
+    }
+    @else {
       <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
         <ion-col size="12">
           <ion-spinner name="lines" style="width: 50px; height: 50px"></ion-spinner>
@@ -63,8 +70,15 @@
           </ion-col>
         }
       </ion-row>
-    } @else {
-      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 5%; margin-bottom: 5%">
+    } @else if (seriesArray()?.length === 0) {
+      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 10%; margin-bottom: 10%">
+        <ion-col size="12">
+          <h2 style="color: black">This page will be updated with videos soon...</h2>
+        </ion-col>
+      </ion-row>
+    }
+    @else {
+      <ion-row class="ion-justify-content-center ion-text-center" style="margin-top: 10%; margin-bottom: 10%">
         <ion-col size="12">
           <ion-spinner name="lines" style="width: 50px; height: 50px"></ion-spinner>
         </ion-col>
@@ -72,11 +86,14 @@
     }
   }
 
-  <ion-row>
-    <ion-col>
-      <div style="text-align: center">
-        <pagination-controls (pageChange)="pageEvent($event)"></pagination-controls>
-      </div>
-    </ion-col>
-  </ion-row>
+  @if (objectArray()?.length !== 0) {
+    <ion-row>
+      <ion-col>
+        <div style="text-align: center">
+          <pagination-controls (pageChange)="pageEvent($event)"></pagination-controls>
+        </div>
+      </ion-col>
+    </ion-row>
+  }
+
 </ion-grid>
