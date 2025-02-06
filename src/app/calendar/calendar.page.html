@@ -5,23 +5,43 @@
         <h3 style="color: black">Calendar</h3>
       </ion-col>
       <ion-col style="padding-left: 10px">
-        <mat-form-field appearance="outline" style="color: purple">
-          <mat-label style="color: purple">Enter a date range</mat-label>
-          <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker"
-                                [min]="minDate"
-                                [max]="maxDate">
-            <input matStartDate placeholder="Start date" formControlName="start">
-            <input matEndDate placeholder="End date" formControlName="end">
-          </mat-date-range-input>
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-date-range-picker #picker touchUi>
-            <mat-date-range-picker-actions>
-              <ion-button fill="clear" mat-button matDateRangePickerCancel>Cancel</ion-button>
-              <ion-button class="apply" mat-raised-button matDateRangePickerApply (click)="dateChanged()">Apply
-              </ion-button>
-            </mat-date-range-picker-actions>
-          </mat-date-range-picker>
-        </mat-form-field>
+        @if (platform.is('android') || platform.is('ios')) {
+          <mat-form-field appearance="outline" style="color: purple">
+            <mat-label style="color: purple">Enter a date range</mat-label>
+            <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker"
+                                  [min]="minDate"
+                                  [max]="maxDate">
+              <input matStartDate placeholder="Start date" formControlName="start">
+              <input matEndDate placeholder="End date" formControlName="end">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker>
+              <mat-date-range-picker-actions>
+                <ion-button fill="clear" mat-button matDateRangePickerCancel>Cancel</ion-button>
+                <ion-button class="apply" mat-raised-button matDateRangePickerApply (click)="dateChanged()">Apply
+                </ion-button>
+              </mat-date-range-picker-actions>
+            </mat-date-range-picker>
+          </mat-form-field>
+        } @else {
+          <mat-form-field appearance="outline" style="color: purple">
+            <mat-label style="color: purple">Enter a date range</mat-label>
+            <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker"
+                                  [min]="minDate"
+                                  [max]="maxDate">
+              <input matStartDate placeholder="Start date" formControlName="start">
+              <input matEndDate placeholder="End date" formControlName="end">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker>
+              <mat-date-range-picker-actions>
+                <ion-button fill="clear" mat-button matDateRangePickerCancel>Cancel</ion-button>
+                <ion-button class="apply" mat-raised-button matDateRangePickerApply (click)="dateChanged()">Apply
+                </ion-button>
+              </mat-date-range-picker-actions>
+            </mat-date-range-picker>
+          </mat-form-field>
+        }
       </ion-col>
     </ion-row>
     @if (calendarEventsSignal()?.length > 0) {

@@ -29,7 +29,7 @@ import {
   IonContent,
   IonGrid,
   IonRow, IonSpinner,
-  IonText
+  IonText, Platform
 } from "@ionic/angular/standalone";
 
 @Component({
@@ -62,6 +62,7 @@ export class CalendarPage implements OnInit {
   private dataService = inject(AllChurchInformationService);
   private router = inject(Router);
   private navExtras = inject(ExtrasService);
+  platform = inject(Platform);
 
   dateRange: FormGroup;
   minDate: Date;
