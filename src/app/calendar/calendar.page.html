@@ -15,7 +15,7 @@
               <input matEndDate placeholder="End date" formControlName="end">
             </mat-date-range-input>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker>
+            <mat-date-range-picker #picker touchUi>
               <mat-date-range-picker-actions>
                 <ion-button fill="clear" mat-button matDateRangePickerCancel>Cancel</ion-button>
                 <ion-button class="apply" mat-raised-button matDateRangePickerApply (click)="dateChanged()">Apply
