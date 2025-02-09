@@ -28,8 +28,10 @@ import {
   IonCol,
   IonContent,
   IonGrid,
-  IonRow, IonSpinner,
-  IonText, Platform
+  IonRow,
+  IonSpinner,
+  IonText,
+  Platform
 } from "@ionic/angular/standalone";
 
 @Component({

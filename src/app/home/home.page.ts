@@ -10,8 +10,10 @@ import {
   IonCol,
   IonContent,
   IonGrid,
-  IonIcon, IonLabel,
-  IonRow, IonSpinner,
+  IonIcon,
+  IonLabel,
+  IonRow,
+  IonSpinner,
   IonText,
   NavController
 } from "@ionic/angular/standalone";

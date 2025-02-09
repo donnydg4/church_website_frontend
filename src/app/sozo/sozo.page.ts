@@ -1,17 +1,22 @@
-import {Component, HostListener, inject, OnInit} from '@angular/core';
+import {Component, HostListener, inject} from '@angular/core';
 import {FooterComponent} from '../shared-components/footer/footer.component';
 import {
   IonButton,
-  IonCard, IonCardContent,
-  IonCardHeader, IonCardSubtitle, IonCardTitle,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
   IonCol,
   IonContent,
-  IonGrid, IonItem, IonLabel,
+  IonGrid,
+  IonItem,
+  IonLabel,
   IonRow,
   IonSpinner,
-  IonText, Platform
+  IonText,
+  Platform
 } from "@ionic/angular/standalone";
-import {DisplayCardsComponent} from "../shared-components/display-cards/display-cards.component";
 import {DatePipe, NgClass, NgOptimizedImage, SlicePipe} from "@angular/common";
 import {AllChurchInformationService} from "../service/all-church-information.service";
 

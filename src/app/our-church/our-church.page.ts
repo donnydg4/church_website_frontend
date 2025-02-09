@@ -1,19 +1,20 @@
 import {Component, HostListener, inject, signal} from '@angular/core';
 import {AllChurchInformationService} from "../service/all-church-information.service";
 import {
-    IonCard,
-    IonCardContent,
-    IonCardHeader,
-    IonCardTitle,
-    IonCol,
-    IonContent,
-    IonGrid,
-    IonLabel,
-    IonRow,
-    IonSegment,
-    IonSegmentButton, IonSpinner,
-    IonText,
-    Platform
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonLabel,
+  IonRow,
+  IonSegment,
+  IonSegmentButton,
+  IonSpinner,
+  IonText,
+  Platform
 } from "@ionic/angular/standalone";
 import {NgOptimizedImage} from '@angular/common';
 import {MatToolbar} from '@angular/material/toolbar';

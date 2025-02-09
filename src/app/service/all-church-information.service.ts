@@ -5,7 +5,6 @@ import {rxResource} from "@angular/core/rxjs-interop";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
 import {sortByDateEvent} from "../utils/utils";
-import {delay, tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'

@@ -14,7 +14,8 @@ import {
   IonCol,
   IonGrid,
   IonRow,
-  IonSearchbar, IonSpinner
+  IonSearchbar,
+  IonSpinner
 } from "@ionic/angular/standalone";
 import {DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 

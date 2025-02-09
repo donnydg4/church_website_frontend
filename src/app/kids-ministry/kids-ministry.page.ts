@@ -1,7 +1,10 @@
 import {Component, HostListener, inject} from '@angular/core';
 import {
-  IonCard, IonCardContent, IonCardHeader,
-  IonCardSubtitle, IonCardTitle,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
