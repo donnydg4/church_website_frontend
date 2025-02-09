@@ -117,7 +117,6 @@ export class CalendarPage implements OnInit {
   navigateToStandardLayout(calendarEvent: CalendarEvent): void {
     this.navExtras.setCalendarEvent(calendarEvent);
     localStorage.setItem('calendar', JSON.stringify(this.navExtras.getCalendarEvents()));
-    console.log(JSON.stringify(this.navExtras.getCalendarEvents()));
     this.router.navigate(['/calendar', convertSpaceToDash(calendarEvent.title)]);
   }
 
