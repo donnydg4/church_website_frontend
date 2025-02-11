@@ -12,6 +12,7 @@ import {
   IonRow,
   IonSegment,
   IonSegmentButton,
+  IonSpinner,
   IonText,
   Platform
 } from "@ionic/angular/standalone";

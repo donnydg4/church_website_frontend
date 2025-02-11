@@ -4,19 +4,19 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
 import {NgOptimizedImage} from '@angular/common';
 import {EventComponent} from './event/event.component';
 import {FooterComponent} from '../shared-components/footer/footer.component';
-import {IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
+import {IonCol, IonContent, IonGrid, IonRow, IonSpinner} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-all-events',
   templateUrl: './all-events.page.html',
   styleUrls: ['./all-events.page.scss'],
   standalone: true,
-  imports: [
-    NgOptimizedImage,
-    EventComponent,
-    FooterComponent,
-    IonContent, IonGrid, IonRow, IonCol
-  ]
+    imports: [
+        NgOptimizedImage,
+        EventComponent,
+        FooterComponent,
+        IonContent, IonGrid, IonRow, IonCol, IonSpinner
+    ]
 })
 export class AllEventsPage {
 

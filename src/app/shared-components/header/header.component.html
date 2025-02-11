@@ -1,13 +1,6 @@
 <ion-header style="height: 100%">
   <mat-toolbar style="height: 100%; background: white" class="mat-elevation-z1">
 
-    <!--    <ion-buttons slot="start" class="left-side" style="padding-top: 7px">-->
-    <!--      <a href="/home">-->
-    <!--        <picture type="image/webp">-->
-    <!--          <img ngSrc="assets/icon/church_home_logo.svg" style="height: 12vh; padding: 5px" decoding="sync">-->
-    <!--        </picture>-->
-    <!--      </a>-->
-    <!--    </ion-buttons>-->
     <ion-buttons slot="start" class="left-side" style="padding-top: 7px">
       <a href="/home">
         <img src="assets/icon/church_home_logo.svg" style="height: 12vh; padding: 5px" alt="">
@@ -25,7 +18,7 @@
             </ion-button>
           </div>
           <div class="dropdown-content">
-            <a routerLink="/our-church">OUR CHURCH</a>
+            <a routerLink="/our-church">OUR STORY</a>
             <a routerLink="/faith-statement">STATEMENT OF FAITH</a>
             <a routerLink="/leadership">LEADERSHIP</a>
             <a routerLink="/missions">MISSIONS</a>
@@ -130,7 +123,7 @@
                 <div class="div-padding" slot="content">
                   <ion-item-group>
                     <ion-item button lines="none" (click)="navigateToPage('our-church')">
-                      <a class="changes">our church</a>
+                      <a class="changes">our story</a>
                     </ion-item>
                     <ion-item button lines="none" (click)="navigateToPage('faith-statement')">
                       <a class="changes">statement of faith</a>

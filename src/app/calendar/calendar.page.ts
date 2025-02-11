@@ -29,6 +29,9 @@ import {
   IonContent,
   IonGrid,
   IonRow,
+  IonSpinner,
+  IonText,
+  Platform,
   IonText
 } from "@ionic/angular/standalone";
 
@@ -62,6 +65,7 @@ export class CalendarPage implements OnInit {
   private dataService = inject(AllChurchInformationService);
   private router = inject(Router);
   private navExtras = inject(ExtrasService);
+  platform = inject(Platform);
 
   dateRange: FormGroup;
   minDate: Date;
@@ -114,7 +118,6 @@ export class CalendarPage implements OnInit {
   navigateToStandardLayout(calendarEvent: CalendarEvent): void {
     this.navExtras.setCalendarEvent(calendarEvent);
     localStorage.setItem('calendar', JSON.stringify(this.navExtras.getCalendarEvents()));
-    console.log(JSON.stringify(this.navExtras.getCalendarEvents()));
     this.router.navigate(['/calendar', convertSpaceToDash(calendarEvent.title)]);
   }
 

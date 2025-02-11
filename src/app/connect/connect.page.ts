@@ -38,7 +38,7 @@ export class ConnectPage {
   @ViewChild('form') form;
   contactModel: ContactFormModel;
   formDirective: FormGroupDirective;
-  categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Event(s)', 'Our Ministries', 'Ministries We Support', 'Guest Speakers', 'Other'];
+  categoryList: string[] = ['Prayer Request', 'Missions Trips', 'Community Outreach', 'Our Ministries', 'Sozo', 'Other'];
 
 
   contactForm = new FormGroup({
