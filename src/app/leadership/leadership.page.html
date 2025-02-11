@@ -1,28 +1,18 @@
 <ion-content style="--background: white; --color: black">
-  @if (leadership()) {
-    <ion-grid class="ion-no-padding">
+  <ion-grid class="ion-no-padding">
+    @if (leadership()){
       <ion-row>
         <ion-col size="12">
           <div class="outside">
-            <img ngSrc="{{leadership()?.leadershipPage?.coverPhoto}}" priority fill alt=""
-                 ngSrcset="1200w, 1920w, 2560w">
+            <img ngSrc="{{leadership()?.leadershipPage?.coverPhoto}}" priority fill alt="" ngSrcset="100w, 200w, 400w, 800w, 1200w, 1920w, 2560w">
             <div class="inside">
-              <h1>{{ leadership()?.leadershipPage?.title }}</h1>
+              <h1>{{leadership()?.leadershipPage?.title}}</h1>
             </div>
           </div>
         </ion-col>
       </ion-row>
-
-    </ion-grid>
-    <app-display-cards [displayCards]="leadership()?.leadershipPage?.displayCards"></app-display-cards>
-    <app-footer></app-footer>
-  } @else {
-    <ion-grid [fixed]="true" style="height: 100%">
-      <ion-row style="height: 100%" class="ion-text-center">
-        <ion-col style="height: 100%" class="ion-text-center">
-          <ion-spinner name="lines"></ion-spinner>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  }
+    }
+  </ion-grid>
+  <app-display-cards [displayCards]="leadership()?.leadershipPage?.displayCards"></app-display-cards>
+  <app-footer></app-footer>
 </ion-content>

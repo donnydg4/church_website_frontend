@@ -10,7 +10,6 @@ import {StatementOfFaithModel} from "./sub-models/statement-of-faith.model";
 import {MainEventModel} from "./sub-models/main-event.model";
 import {WorshipPageModel} from "./sub-models/worship.model";
 import {SozoPageModel} from "./sub-models/sozo.model";
-import {KidYouthModel} from "./sub-models/kid-youth.model";
 
 export interface AllWebsiteInformationModel {
   id: string;
@@ -26,5 +25,4 @@ export interface AllWebsiteInformationModel {
   statementOfFaith: StatementOfFaithModel;
   sozoPage: SozoPageModel;
   worshipPage: WorshipPageModel;
-  kidYouthPage: KidYouthModel;
 }

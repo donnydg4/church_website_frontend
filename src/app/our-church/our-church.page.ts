@@ -29,19 +29,19 @@ import {FooterComponent} from '../shared-components/footer/footer.component';
   templateUrl: './our-church.page.html',
   styleUrls: ['./our-church.page.scss'],
   standalone: true,
-    imports: [
-        NgOptimizedImage,
-        MatToolbar,
-        MatIconButton,
-        MatMenuTrigger,
-        MatIcon,
-        MatMenu,
-        MatMenuItem,
-        TimelineComponent,
-        FooterComponent,
-        IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardContent, IonCardHeader,
-        IonCardTitle, IonText, IonSegment, IonSegmentButton, IonLabel, IonSpinner
-    ]
+  imports: [
+    NgOptimizedImage,
+    MatToolbar,
+    MatIconButton,
+    MatMenuTrigger,
+    MatIcon,
+    MatMenu,
+    MatMenuItem,
+    TimelineComponent,
+    FooterComponent,
+    IonContent, IonGrid, IonRow, IonCol, IonCard, IonCardContent,IonCardHeader,
+    IonCardTitle, IonText, IonSegment, IonSegmentButton, IonLabel
+  ]
 })
 export class OurChurchPage {
   private dataService = inject(AllChurchInformationService);

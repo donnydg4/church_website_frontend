@@ -19,6 +19,9 @@ import {
 } from "@ionic/angular/standalone";
 import {DatePipe, NgClass, NgOptimizedImage, SlicePipe} from "@angular/common";
 import {AllChurchInformationService} from "../service/all-church-information.service";
+import {Component, OnInit} from '@angular/core';
+import {FooterComponent} from '../shared-components/footer/footer.component';
+import {IonCol, IonContent, IonGrid, IonRow} from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-sozo',
@@ -30,37 +33,13 @@ import {AllChurchInformationService} from "../service/all-church-information.ser
     IonCol,
     IonContent,
     IonGrid,
-    IonRow,
-    IonSpinner,
-    NgOptimizedImage,
-    IonText,
-    DatePipe,
-    IonCard,
-    IonCardHeader,
-    IonCardSubtitle,
-    IonCardTitle,
-    IonCardContent,
-    NgClass,
-    SlicePipe,
-    IonButton,
-    IonItem,
-    IonLabel
-  ]
+    IonRow]
 })
-export class SozoPage {
-
-  private platform = inject(Platform);
-  private dataService = inject(AllChurchInformationService);
-
-  public platformWidth = this.platform.width()
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event?) {
-    this.platformWidth = this.platform.width();
-  }
-
-  sozo = this.dataService.allWebsiteInformationTwo.value;
+export class SozoPage implements OnInit {
 
   constructor() { }
+
+  ngOnInit() {
+  }
 
 }

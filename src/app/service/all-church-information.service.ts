@@ -44,7 +44,6 @@ export class AllChurchInformationService {
   allWebsiteInformationTwo = rxResource({
     loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
   });
-
   //
   // eff = effect(() => {
   //   console.log('Status:', ResourceStatus[this.allWebsiteInformationTwo.status()]);
