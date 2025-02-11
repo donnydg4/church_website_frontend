@@ -5,6 +5,8 @@ import {DisplayCardModel} from "../models/sub-models/display-card.model";
 import {Category} from "../models/sub-models/categories.model";
 import {IndividualHistoryModel} from "../models/sub-models/individual-history.model";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
+import {HttpErrorResponse} from "@angular/common/http";
+import {ErrorModel} from "../models/sub-models/error.model";
 
 export function sortByDate(a: WatchModel, b: WatchModel) {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -49,5 +51,26 @@ export function convertSpaceToDash(title: string): string {
   let re = /\ /gi;
   let result = title.toLowerCase().replace(re, "-");
   return result;
+}
+
+export function setErrorMessage(err: HttpErrorResponse, dataName?: string): ErrorModel {
+  let errorModel: ErrorModel = {
+    description: '',
+    status: 0,
+    statusText: ''
+  }
+  if (err) {
+    if (err.error instanceof ErrorEvent) {
+      //client side or network error
+      errorModel.status = err.status;
+      errorModel.statusText = err.statusText;
+      errorModel.description = err.message;
+    } else {
+      errorModel.status = err.status;
+      errorModel.statusText = err.statusText;
+      errorModel.description = err.message;
+    }
+    return errorModel;
+  }
 }
 

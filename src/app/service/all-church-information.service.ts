@@ -1,10 +1,10 @@
 import {computed, inject, Injectable, signal} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {AllWebsiteInformationModel} from "../models/all-website-information.model";
 import {rxResource} from "@angular/core/rxjs-interop";
 import {CalendarEvent} from "../models/sub-models/calendar-events.model";
 import {CalendarModel} from "../models/sub-models/calendar.model";
-import {sortByDateEvent} from "../utils/utils";
+import {setErrorMessage, sortByDateEvent} from "../utils/utils";
 
 @Injectable({
   providedIn: 'root'
@@ -33,38 +33,13 @@ export class AllChurchInformationService {
   //signal
   searchQuerySignal = signal('');
 
-  // //http call
-  // private allWebsiteInformation$ = this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
-  //   .pipe(
-  //     shareReplay(1),
-  //     tap(data => console.log(data))
-  //   );
-
   //async rxresource call
   allWebsiteInformationTwo = rxResource({
     loader: () => this.httpClient.get<AllWebsiteInformationModel>(this.allWebsiteInformationUrl)
   });
 
-  //
-  // eff = effect(() => {
-  //   console.log('Status:', ResourceStatus[this.allWebsiteInformationTwo.status()]);
-  //   console.log('Value: ', this.allWebsiteInformationTwo.value());
-  // })
-
-  // //convert http call to signal
-  // allChurchInformation = toSignal(this.allWebsiteInformation$, {initialValue: {} as AllWebsiteInformationModel});
-
-
-  // featuredEvents = computed(() =>
-  //   this.allChurchInformation()
-  //     ?.allCalendarInformation
-  //     ?.reduce((acc: CalendarEvent[], cur: CalendarModel) => [...acc, ...cur.events], [] as CalendarEvent[])
-  //     .filter((event: CalendarEvent) =>
-  //       event.type === 'event' &&
-  //       event.featured === true &&
-  //       event.startDate && new Date(event.startDate).getTime() >= new Date().setHours(0, 0, 0, 0))
-  //     .sort(sortByDateEvent)
-  // );
+  error = computed(() => this.allWebsiteInformationTwo.error() as HttpErrorResponse);
+  errorMessage = computed(() => setErrorMessage(this.error(),'church'));
 
   featuredEventsTwo = computed(() =>
     this.allWebsiteInformationTwo.value()?.allCalendarInformation?.reduce((acc: CalendarEvent[], cur: CalendarModel) => [...acc, ...cur.events], [] as CalendarEvent[]).filter((event: CalendarEvent) =>
