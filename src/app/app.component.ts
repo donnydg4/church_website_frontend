@@ -1,6 +1,7 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, inject} from '@angular/core';
 import {register, register as registerSwiperElements} from 'swiper/element/bundle';
 import {IonApp, IonRouterOutlet} from "@ionic/angular/standalone";
+import {AllChurchInformationService} from "./service/all-church-information.service";
 
 
 register();
@@ -14,6 +15,8 @@ registerSwiperElements();
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
+
   constructor() {
   }
+
 }

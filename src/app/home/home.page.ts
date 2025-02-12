@@ -17,6 +17,8 @@ import {
   IonText,
   NavController
 } from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {arrowBackOutline, create, shareSocialOutline, warningOutline} from "ionicons/icons";
 
 @Component({
   selector: 'app-home',
@@ -33,6 +35,11 @@ import {
 })
 export class HomePage {
 
+  constructor() {
+    addIcons({ warningOutline });
+  }
+
+  //injects
   private dataService = inject(AllChurchInformationService);
   private navCtrl = inject(NavController);
 
